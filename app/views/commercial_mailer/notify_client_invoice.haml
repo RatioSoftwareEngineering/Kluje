@@ -1,0 +1,9 @@
+%p
+  = _('Dear %s,') % client.first_name || client.last_name
+
+%p
+  = _("%s has provided a final invoice for your viewing.") % contractor.company_name
+%p{align: 'center'}
+  /#= link_to _('Please login to you account to view or download the invoice.'), commercial_invoices_path(locale: current_locale_country)
+
+

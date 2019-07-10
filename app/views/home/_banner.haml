@@ -1,0 +1,31 @@
+.top-banner
+  .banner-slider
+    .commercial-banner
+      .slide-background
+    .contractor-banner
+      .slide-background
+    .person-banner
+      .slide-background
+  .container.text-center.title
+    %h1.text-center.upcase.white
+      - header = _('Find a <em>Contractor</em> in %{location}') % { location: FastGettext._(@city.try(:name) || current_country.name) }
+      = header.html_safe
+    = link_to new_job_path(locale: current_locale_country, country_id: current_country.id, city_id: @city.try(:id)), class: 'btn button-orange upcase', rel: 'canonical' do
+      %span.get-quote-heading= _('Post a Residential Job Now!')
+    - if current_country.commercial? && current_city && current_city.commercial?
+      = link_to new_commercial_job_path(locale: current_locale_country, country_id: current_country.id, city_id: @city.try(:id)), class: 'btn button-dark upcase', rel: 'canonical' do
+        %span.get-quote-heading= _('Post a Commercial Job Now!')
+    .padding-top-30.white
+      %h3= _('Up to 3 Contractors Will Contact you to Do a Quote')
+  .text-center.footer
+    .first-position
+      .logo-first
+      - if current_country.cca2 == 'sg'
+        - header = _('Job site in %{location}') % { location: 'Singapore' }
+        .locale= header.html_safe
+      - else
+        - header = _('Job site in %{location}') % { location: 'Asia' }
+        .locale= header.html_safe
+      .separate_jobs
+        - header = _('%{number} jobs posted') % { number: jobs_counter }
+      .jobs= header.html_safe

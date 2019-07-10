@@ -1,0 +1,62 @@
+- content_for(:title, _('Kluje | Contractors - How it Works Guide'))
+- content_for(:description, _("Looking for more work? Kluje.com is the only online platform that helps you find leads, saves you money and helps build your reputation in #{current_country.name}."))
+- content_for(:keywords, _('contractor, contractors, how it works, sign up, leads, new customers, jobs, ratings, reviews, word of mouth, leads, win work, professional, homeowner'))
+- content_for :extra_footer_tags do
+  = javascript_include_tag :facebook
+.container.margin-top-20.how-it-work
+  .row
+    .col-md-8
+      %content.contractors.content-static-page
+        .text-center
+          %h1.page-title= _('How it Works')
+        .container{style: "width: 80%;"}
+          .youtube
+            %iframe.fluid{ frameborder: 0, src: "https://www.youtube.com/embed/Ohl1mApPLEE?rel=0&showinfo=0&autohide=1" }
+        %p.margin-top-20= _("Jobs are posted by Homeowners and Contractors can buy the leads to obtain the homeowner's contact details. Contractors then contact the Homeowner and arrange a time to quote on the work. The homeowner will then decide on the right Contractor for that job. Homeowners can then rate the Contractor after the work is complete to share their experience with others.")
+        %br
+        %h2.font-weight-600=_("How do I get the most from Kluje.com once I have joined?")
+        %ul.fa-ul.spaced
+          %li
+            %i.fa.fa-li.fa-diamond.orange.fa-2x
+            %h3=_("Get the right leads:")
+            %p=_("Adjust your skills and map setting to receive the right quality and quantity of leads.")
+          %li
+            %i.fa.fa-li.fa-paint-brush.orange.fa-2x
+            %h3=_("Update your Kluje.com page:")
+            %p=_("This is the first thing a Homeowner will see. Add photos of work, list qualifications and write a business description.")
+          %li
+            %i.fa.fa-li.fa-bell.orange.fa-2x
+            %h3=_("Buying leads and quote to win work:")
+            %p=_("Only 3 Contractors can purchase the lead posted. You can buy leads online via Kluje.com (leads start from $1). Once a lead is purchased you need to contact the customer immediately to arrange a time to quote on the work.")
+          %li
+            %i.fa.fa-li.fa-star.orange.fa-2x
+            %h3=_("Get Rated :")
+            %p=_("Every lead you purchase should enable you to quote on that job. Once you have finished the job you should ask the homeowner to rate you. The more positive ratings you receive the better chance you have to win more work.")
+        %div.col-md-12.contractor-signup-divisor
+        .infor-wrapper
+          %h2.font-weight-600.font-size-16= _('How do I get high ratings?')
+          %p
+            = _("The key to getting high ratings is to:")
+            %strong= _("Always be professional")
+          %p= _('Our mission is to connect homeowners with quality, local Contractors. We achieve this by providing a service to homeowners that presents them with rated Contractors and lets them choose the Contractors that are right for them. A key part of the selection criteria is the ratings system, which lets homeowners choose between Contractors based on the reviews of previous customers. In addition to these ratings the homeowner will also take into account how well a Contractor presents themselves, and their quote for the proposed work.It is also true that Homeowners only want to engage with Contractors who act responsibly, behave politely and are generally nice to work with. This simply is called being "professional."')
+          %p= _("Upon joining Kluje.com’s service, we therefore ask that all of our Contractors adhere to a few basic principles when working with our homeowner community:")
+          %ul.space-bot
+            %li= _('Be polite and courteous in your dealings with homeowners, remember, their ratings of you will be used by other homeowners in the future.')
+            %li= _('Communicate clearly and completely with homeowners, so that both parties know what is going to be done and when, along with the timing of payments.')
+            %li= _('Perform work to a high standard and make sure you adhere to the relevant industry standards.')
+            %li= _('Deliver on what you agreed to deliver.')
+            %li= _('Create a satisfied homeowner (this guarantees future work as you know!).')
+          %br
+          %p= _("Contractor accounts, their ratings and performance may be monitored for the purpose of ensuring that we retain only the highest caliber of Contractors for our service. We reserve the right to remove Contractors from our service that does not adhere to the high standards that we expect.")
+        .text-center.margin-top-20.margin-bottom-40
+          - if current_account.try(:homeowner?)
+            - session[:after_sign_out_url] = '/en/contractors/signup'
+            %h3.font-weight-600=_("You need to sign out before contractor sign up")
+            = form_for :account, url: destroy_account_session_path, method: :delete, html: { class: 'frm-signout' } do |f|
+              = submit_tag _("Sign out and Sign up for my FREE contractor account"), class: :'a btn btn-warning btn-lg'
+            %p=_("Now you login as homeowner. Before contractor sign up, you need to sign out from your homeowner's account.")
+          - elsif current_account.nil?
+            %a.btn.btn-warning.btn-lg{href: signup_contractors_path,class: 'font-size-18',rel: "canonical"}=_("Sign up for my FREE account")
+
+    .col-md-4
+      = render 'contractors/side_bar'

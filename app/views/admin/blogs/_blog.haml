@@ -1,0 +1,12 @@
+:javascript
+  $(document).ready(function(){
+    refreshStatusOfCountries($('#blog_visible_all_countries').is(':checked'));
+
+    $('#blog_visible_all_countries').change(function() {
+      refreshStatusOfCountries(this.checked);
+    });
+
+    function refreshStatusOfCountries(checked){
+      $('#blog_countries_input>fieldset.choices').attr('disabled', checked);
+    }
+  });

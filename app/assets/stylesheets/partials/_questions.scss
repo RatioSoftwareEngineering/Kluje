@@ -1,0 +1,165 @@
+.ask-expert {
+  background: image_url('banners/qna.png') no-repeat scroll 0 0;
+  background-size: cover;
+  color: white;
+  .head {
+    h1 {
+      font-size: 90px;
+      font-weight: bold;
+
+      span.h-3 {
+        display: block;
+      }
+    }
+    /*.h3 {
+      font-size: 40px;
+      letter-spacing: 4px;
+    }*/
+    .sub-title {
+      font-size: 20px;
+      font-weight: 300;
+    }
+    input.form-control, select.form-control {
+      height: 44px;
+      line-height: 44px;
+      padding: 0 12px;
+    }
+
+    #ask-expert-form {
+      max-width: 600px;
+      margin: auto;
+      .btn {
+        height: 44px;
+        line-height: 44px;
+        padding: 0 15px;
+      }
+
+      label.error{
+        font-size: 13px;
+        color: color('orange-light');
+        font-weight: 600;
+      }
+      input.error, select.error, textarea.error {
+        border: solid 1px color('red');
+      }
+
+      .mt-checkbox input.error + label:before{
+        border: solid 1px color('red');
+      }
+    }
+
+    .h-3{
+      font-size: 40px;
+      letter-spacing: 4px;
+      font-weight: 200;
+      margin-top: 5px;
+    }
+
+    .p {
+      margin: 0 0 10px;
+    }
+  }
+
+}
+
+.search-form {
+  .input-group {
+    width: 100%;
+    .form-control {
+      border-right: none;
+    }
+    .input-group-btn {
+      width: 1%;
+
+      .btn {
+        border-left: none;
+      }
+    }
+  }
+}
+
+#info-modal {
+  .modal-dialog {
+    margin-top: 200px;
+  }
+  .modal-header {
+    &.success{
+      background: color('green');
+      color: white;
+    }
+
+    &.error{
+      background: color('red');
+      color: white
+    }
+  }
+  .modal-body {
+    padding: 30px;
+    min-height: 100px;
+    font-size: 17px;
+  }
+  .modal-title {
+    font-weight: 400;
+  }
+}
+.info-block {
+  .alert {
+    padding: 2px 5px;
+    margin-bottom: 0;
+    font-size: 13px;
+    &.approved{
+      color: color('blue');
+      border: solid 1px color('blue');
+      background: rgba(31, 182, 255, 0.05);
+    }
+
+    &.pending{
+      color: color('orange');
+      border: solid 1px color('orange');
+      background: rgba(249, 178, 51, 0.05);
+    }
+
+    &.rejected{
+      color: color('red');
+      border: solid 1px color('red');
+      background: rgba(249, 17, 67, 0.05);
+    }
+  }
+}
+
+.answer-status {
+  &.pending {
+    color: color('orange');
+  }
+
+  &.approved {
+    color: color('blue');
+  }
+
+  &.rejected {
+    color: color('red');
+  }
+}
+
+.questions{
+  .h-3 {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    font-size: 18px;
+  }
+
+  .body {
+    .h-4{
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #333333;
+      font-weight: normal;
+    }
+  }
+}
+
+.question-category {
+  a {
+    color: #F4AF2C;
+  }
+}

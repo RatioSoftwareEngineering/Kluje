@@ -1,0 +1,6 @@
+= form_tag job_bid_path(locale: current_locale_country, job_id: job_id), :method => :post do
+  = link_to _('Back'), jobs_path(locale: current_locale_country), class: 'btn btn-danger'
+  - if @contractor.can_bid_for_job?(@job)
+    = submit_tag _('Bid for lead'), :class => 'btn btn-success', :disable_with => _('Bidding'), style: 'margin-left: 10px;'
+  - else
+    = link_to _('Top up to bid'), billing_top_up_contractors_path(locale: current_locale_country), class: 'btn btn-success', style: 'margin-left: 10px;'

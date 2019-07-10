@@ -1,0 +1,48 @@
+- if level < 5
+  .widget.margin-bottom-0{ class: "level-#{level} " + "#{level == 0 ? 'margin-top-30' : 'margin-top-5'}" }
+    .body.with-image.padding-left-80
+      - if question.anonymous && question.account_id.eql?(answer.account_id)
+        .avatar= image_tag 'avatar.png', height: '48px'
+        .medium Anonymous
+      - else
+        .avatar= image_tag answer.author_avatar || 'avatar.png', height: '48px'
+        - if !answer.anonymous && answer.account.present? && answer.account.contractor.present?
+          = link_to answer.author_name, answer.account.contractor.profile_url, class: 'medium'
+        - else
+          .medium= answer.author_name
+      .text-color= simple_format answer.body, {}, sanitize: false
+      %p
+        - if signed_in?
+          - if answer.voters.include?(current_account)
+            %span{id: "answer-#{answer.id}"}= link_to 'Agreed', disagree_answer_path(answer, format: :js), remote: true, method: :post, class: 'highlight medium'
+            %span &middot;
+          - else
+            %span{id: "answer-#{answer.id}"}= link_to 'Agree', agree_answer_path(answer, format: :js), remote: true, method: :post, class: 'highlight'
+            %span &middot;
+
+          - if level < 1
+            %span.highlight.pointer.answer-action{ id: "answer-action-#{answer.id}", data: {post: answer.id}} Comment
+            %span &middot;
+
+        - else
+          %span.highlight.pointer{ data: { toggle: 'modal', target: '#signin' } } Agree
+          %span &middot;
+
+          - if level < 1
+            %span.highlight.pointer{ data: { toggle: 'modal', target: '#signin' } } Comment
+            %span &middot;
+
+        %span.color-grey= answer.created_at.strftime('%d %b %Y %H:%M %p')
+
+      - if level < 2
+        .margin-top-20.hide{ id: "answer-form-#{answer.id}" }
+          = form_for :answer, url: answers_path(format: :js), method: :post, remote: true, html: { class: 'remote-form' } do |f|
+            .form-group
+              = f.hidden_field :parent_id, value: answer.id, id: "answer-parent-#{answer.id}"
+              = f.text_area :body, rows: 4, placeholder: 'Write your comment...', class: 'form-control', id: "answer-body-#{answer.id}"
+            .form-group.text-right
+              = f.button 'Cancel', type: :button, class: 'btn btn-dark answer-cancel', data: { post: answer.id }
+              = f.button 'Post Your Comment', type: :submit, class: 'btn btn-primary', disable_with: _("Posting")
+
+  - answer.childs.approved.includes(:voters).includes(:account).find_each do |child|
+    = render 'questions/answer', answer: child, level: level + 1, question: @question

@@ -1,0 +1,63 @@
+.widget.margin-bottom-30
+  .body.with-image
+    - if current_page?(me_questions_path(locale: current_locale_country))
+      .info-block
+        .alert.inline-block{ class: question.state }= question.state_name
+        - if 'rejected'.eql?(question.state) && question.childs.reject_post.count > 0
+          - reason = question.childs.reject_post.last
+          %i.fa.fa-info-circle.padding-left-5.pointer{ title: reason.body, rel: :tooltip, data: { placement: :right } }
+    = image_tag "#{question.children_count > 0 ? 'ic-question-green.svg' : 'ic-question-yellow.svg'}", class: 'image' + (current_page?(me_questions_path(locale: current_locale_country)) ? ' margin-top-30' : '')
+    %h3.h-3
+      = link_to question.title, question_path(locale: current_locale_country, id: question.slug_url), class: 'title', target: '_blank'
+    .meta
+      Post by
+      %span.black #{question.author_name}
+      on #{question.created_at.strftime('%A %d %b %Y %H:%M %p')}
+    %p= simple_format question.body.squish, {}, sanitize: false
+
+    .div.margin-bottom-10
+      %span.status
+        = image_tag 'ic-view.svg', class: "#{'grayscale' if question.hits == 0 }"
+        #{pluralize(question.hits, 'View')}
+      %span.status
+        = image_tag 'ic-answer.svg', class: "#{'grayscale' if question.children_count === 0 }"
+        #{pluralize(question.children_count, 'Answer')}
+
+      .categories.margin-top-10
+        - if question.category
+          - url = add_category_param question.category
+          = link_to(question.category.name, url, {class: 'item'})
+
+      - if answer.eql?(true) && current_account.contractor?
+        %button.btn.btn-dark.pull-right.answer-action{ id: "answer-action-#{question.id}", data: {post: question.id}} Answer Now
+
+        .hide.margin-top-20{ id: "answer-form-#{question.id}" }
+          = form_for :answer, url: answers_path(format: :js), method: :post, remote: true, html: { class: 'remote-form' } do |f|
+            .form-group
+              = f.hidden_field :parent_id, value: question.id
+              = f.text_area :body, rows: 6, placeholder: 'Write your comment...', class: 'form-control'
+            .form-group.text-right
+              = f.button 'Cancel', type: :button, class: 'btn btn-dark answer-cancel', data: { post: question.id }
+              = f.button 'Post Your Answer', type: :submit, class: 'btn btn-primary', disable_with: _("Posting")
+
+      - if answer.eql?(true) && question.childs.answer.count > 0
+        %hr.grey
+        - childs = question.childs.answer
+        - childs = childs.where(account_id: current_account.id) if current_page?(me_answers_path(locale: current_locale_country))
+        - childs.includes(:voters).includes(:account).find_each do |a|
+          - if params[:state].blank? || params[:state].to_a.include?(a.state)
+            .margin-bottom-5
+              %i.fa.fa-quote-left.answer-status{ class: a.state }
+              .inline-block= simple_format a.body.squish, {}, sanitize: false
+              - if a.state.eql?('rejected') && a.childs.reject_post.count > 0
+                - reason = a.childs.reject_post.last
+                %i.fa.fa-info-circle.padding-left-5.pointer{ title: reason.body, rel: :tooltip }
+
+  - if !answer.eql?(true) && question.children_count > 0
+    .footer.padding-10
+      - last_answer = question.childs.answer.approved.last
+      = last_answer.author
+      .pull-right
+        last answered
+        = time_ago_in_words last_answer.created_at
+        ago

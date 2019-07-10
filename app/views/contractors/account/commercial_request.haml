@@ -1,0 +1,32 @@
+- content_for :extra_head_tags do
+  = javascript_include_tag 'commercial'
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'commercial/date'
+%h2.text-left=_('Commercial Request')
+.row
+  = form_for current_account.contractor, url: commercial_request_contractors_path, method: :put, role: :form, class: 'frm-cmp-detail', id: 'frmContractor' do |f|
+    .form-group
+      = f.hidden_field(:request_commercial, :value => 1)
+    .clearfix.margin-bottom-15
+      .col-md-12.margin-bottom-15
+        %h3.margin-bottom-5= _('What is Commercial?')
+        %p=_('If you are accepted to join Kluje Commercial, you will start to receive commercial renovation leads, which are not available through the normal Kluje lead system.')
+        %p
+        %p
+          %b
+            =_("So How Does it Work?")
+        %li
+          =_("You will receive leads for free")
+        %li
+          =_("There is no bid cost to bid on the leads")
+        %li
+          =_("You will get to submit your quote for free")
+        %li
+          =_("We take a 10% commission from the completed job once you have been paid by the client")
+        %li
+          =_("You will receive the commission bill through your account and you will have 30 days to pay the commission")
+        %p
+        %p=_("There is a limited number of slots for your area, so if you are not accepted at this time you will be added to the waiting list and will be notified when a slot opens.")
+    .clear.clearfix.text-left.col-md-12
+      = submit_tag _('Apply Now'), class: 'btn btn-danger btn-lg', disable_with: _('Submitting'), id: 'btnSubmit'
+      %p=_("You will be notified via email if your request is successful.")

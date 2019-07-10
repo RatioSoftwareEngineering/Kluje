@@ -1,0 +1,25 @@
+- content_for(:title, _('Contractors - Jobs'))
+
+- content_for :content do
+  - tabs = [ [:top_up_account, billing_top_up_contractors_path(locale: current_locale_country), 'credit-card'],
+      [:billing_history, billing_history_contractors_path(locale: current_locale_country), 'bar-chart'] ]
+
+  .container.margin-top-20.margin-bottom-30
+    .row
+      .col-md-3
+        .widget
+          .header
+            %h2= _('My menu')
+          .body-without-padding
+            %ul.nav.nav-pills.nav-stacked
+              - tabs.each do |tab, url, icon|
+                - next if tab == :locations && current_account.country && current_account.country.cities.available.length <= 1
+                - active = ( request.path == url )
+                %li{class: active && 'active'}
+                  = link_to "<i class='fa fa-fw fa-#{icon}'></i> #{_(tab.to_s.humanize)}".html_safe, url
+
+      .col-md-9
+        = render 'layouts/flash_messages'
+        = yield
+
+= render file: 'layouts/application', layout: false

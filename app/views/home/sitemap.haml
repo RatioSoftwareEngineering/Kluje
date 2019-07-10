@@ -1,0 +1,77 @@
+- content_for(:title, _('Kluje Sitemap'))
+
+.container.margin-bottom-30
+  .row.smaller
+    .col-md-8
+      %h1= _('Sitemap')
+      %ul
+        %li
+          %h2= link_to _("Home"), home_path
+          %ul
+            %li= link_to _('About Us'), about_us_path, rel: :canonical
+            %li= link_to _('Contact Us'), contact_us_path, rel: :canonical
+            %li= link_to _('Locations'), locations_path, rel: :canonical
+            %li= link_to _('Ask An Expert'), questions_path(locale: current_locale_country), rel: :canonical
+        %li
+          %h2= link_to _("Homeowner"), home_path
+          %ul
+            %li
+              = link_to(_('Post a new job'), new_job_path(locale: current_locale_country), rel: "canonical")
+            %li
+              = link_to(_('How it Works'), how_it_works_homeowners_path, rel: "canonical")
+            %li
+              = link_to(_('Checklist'), checklist_homeowners_path, rel: "canonical")
+            %li
+              = link_to(_('FAQ'), faq_homeowners_path, rel: "canonical")
+      %ul
+        %li
+          %h2= link_to _("Contractor"), contractors_path, rel: "canonical"
+          %ul
+            %li
+              = link_to(_('Sign up'), signup_contractors_path,rel: "canonical")
+            %li
+              = link_to(_('How it Works'), how_it_works_contractors_path, rel: "canonical")
+            %li
+              = link_to(_('FAQ'), faq_contractors_path,  rel: "canonical")
+      %ul
+        %li
+          %h2= _("Landing pages")
+          %ul
+            - LandingPage.published.each do |page|
+              %li
+                = link_to(page.title, page.landing_page_url(current_locale, current_locale_country), rel: "canonical")
+      %ul
+        %li
+          %h2= link_to _("Blog"), blog_path()
+          %ul
+            %li
+              %h3= _("Categories")
+              %ul
+                - Category.all.each do |category|
+                  - count = category.posts.published.count
+                  - if count > 0
+                    %li
+                      = link_to blog_path(category: category.slug_url), rel: :canonical, dir: :ltr do
+                        = category.name
+                        ="(#{count})"
+            %li
+              %h3= _("Posts")
+              %ul
+                - Blog.published.each do |post|
+                  %li
+                    = link_to post.blog_url(current_locale, current_locale_country), rel: :canonical, dir: :ltr do
+                      = post.title
+      %ul
+        %li
+          %h2= link_to _("List of contractors"), members_path(locale: current_locale_country, category: :all)
+          %ul
+            - Contractor.top.includes(account: [:country]).each do |contractor|
+              %li
+                = link_to contractor.company_name, contractor.profile_url
+      %ul
+        %li
+          %h2= _("Legal documents")
+          %ul
+            - LegalDocument.where(language: params[:lang]).each do |document|
+              %li
+                = link_to document.title, legal_path(slug: document.slug)

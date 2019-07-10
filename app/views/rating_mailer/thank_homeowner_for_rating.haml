@@ -1,0 +1,21 @@
+%p
+  = _('Hi')
+  = homeowner.first_name + ','
+
+%p
+  = _("Thank you for rating %s for this job:") % contractor.company_name
+
+%p
+  %strong= _('Id') + ':'
+  = job.id
+  %br
+  - if job.skill.present?
+    %strong= _('Skill') + ':'
+    = job.skill.name
+    %br
+  %strong= _('Description') + ':'
+  = job.description
+
+%p= _('As you know, Ratings are used by other homeowners to make a more informed decision about which Contractor to hire for their renovation jobs. These ratings are a very powerful tool for Good Contractors to build their reputation.')
+
+%p= _('We thank you for helping us create "Better Quality Contractors”.')

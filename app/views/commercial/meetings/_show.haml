@@ -1,0 +1,43 @@
+.table-responsive.white-bg.margin-bottom-15
+  %table.table.table-nonborder
+    - if current_account.homeowner?
+      %tr
+        %td.text-nowrap
+          = _('Contractor')
+        %td
+          = "#{contractor.company_name} (#{contractor.verified ? '' : 'un'}verified)"
+    - elsif current_account.contractor?
+      %tr
+        %td.text-nowrap
+          = _('Client')
+        %td
+          = @job.homeowner.first_name
+    %tr
+      %td.text-nowrap
+        = _('Date')
+      %td
+        = meeting.date
+    %tr
+      %td.text-nowrap
+        = _('Time')
+      %td
+        =meeting.time.strftime('%r')
+    %tr
+      %td.text-nowrap
+        = _('Place')
+      %td
+        = meeting.place
+    %tr
+      %td.text-nowrap
+        = _('Accept')
+      %td
+        - if meeting.accept == true
+          =_('Accepted')
+        - else
+          =_('Not accept')
+    - if meeting.accept != true
+      %tr
+        %td{colspan: 2}
+          = render 'commercial/meetings/edit', job: @job, meeting: meeting
+
+

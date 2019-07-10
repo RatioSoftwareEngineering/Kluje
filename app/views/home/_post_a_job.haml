@@ -1,0 +1,12 @@
+- skill_id ||= nil
+- country_id ||= nil
+- city_id ||= nil
+- url = new_job_path(locale: current_locale_country, skill_id: skill_id, country_id: country_id, city_id: city_id)
+
+%div{class: black ? 'post-job-2' : 'post-job-1'}
+  .container
+    %h2.upcase.light.text{class: black ? 'black' : 'white'}
+      = _('Ready to get started?')
+    %div{class: black ? 'text-right' : ''}
+      %a.upcase.btn{href: url, rel: 'canonical', class: black ? 'button-white' : 'button-orange'}
+        = _('Post a Job Now!')

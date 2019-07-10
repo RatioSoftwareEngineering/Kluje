@@ -1,0 +1,40 @@
+%h3
+  = _('My Account')
+.row
+  .col-md-6
+    %h4{style: 'margin-bottom:20px;'}=_("Your Personal Details")
+    = form_for current_account, url: homeowner_path, method: :put,:id=>'frmAccount' do |f|
+      .form-group
+        = f.label _('First Name')
+        = f.text_field :first_name, class: 'form-control',data:{msg:{required: "Please enter the first name!"}},required: true
+      .form-group
+        = f.label _('Last Name')
+        = f.text_field :last_name, class: 'form-control',data:{msg:{required: "Please enter the last name!"}},required: true
+      .form-group
+        = f.label _('Email')
+        = f.text_field :email, class: 'form-control',data:{msg:{required: "Please enter the email!"}},disabled: true
+      .form-group
+        = f.label _('Mobile number')
+        = f.text_field :mobile_number, class: 'form-control', required: true,data:{msg:{required: "Please enter the mobile number!"}},disabled: current_account.mobile_number.present?
+      .form-group
+        = f.label _('Country')
+        - if current_account.country
+          = f.text_field :country_id, value: _(current_account.country.name), class: 'form-control', disabled: true
+        - else
+          = f.select :country_id, Country.available.map{|c| [_(c.name), c.id]}, { selected: current_country.id }, { class: 'form-control' }
+      = submit_tag _('Update'), class: 'btn btn-warning', disable_with: _('Updating'),:id=>'btnUpdate'
+  - if current_account.uid.nil?
+    .col-md-6
+      %h4{style: 'margin-bottom:20px;'}=_("Change Password")
+      = form_for :account, url: change_password_account_path, method: :post,:id=>'frmAccount' do |f|
+        .form-group
+          = f.label _('Current password')
+          = f.password_field :old_password, class: 'form-control',data:{msg:{required: "Please enter the password!"}}
+        .form-group
+          = f.label _('New password')
+          = f.password_field :password, class: 'form-control',data:{msg:{required: "Please enter the password!"}}
+        .form-group
+          = f.label _('Password confirmation')
+          = f.password_field :password_confirmation, class: 'form-control',data:{msg:{required: "Please enter the password confirmation!",requalTo: "Retype your password!"}}
+          %br
+          = submit_tag _('Change'), class: 'btn btn-warning', disable_with: _('Updating'),:id=>'btnUpdate'

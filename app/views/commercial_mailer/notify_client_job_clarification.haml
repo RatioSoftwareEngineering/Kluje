@@ -1,0 +1,13 @@
+%p
+  = _('Dear %s,') % client.first_name || client.last_name
+
+%p
+  = _("%s has asked a question about your job.") % contractor.company_name
+  %br
+  %br
+  = _('Question:')
+  %br
+  =_("%s") % clarification.question
+  %br
+  %br
+  = _('To answer the question please login to your account and select your job.')

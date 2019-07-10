@@ -1,0 +1,34 @@
+- content_for(:title, _('Contractors - Update profile'))
+
+- content_for :content do
+  .container.margin-top-20.margin-bottom-30
+    .row
+      .col-md-3
+        .widget
+          .header
+            %h2= _('My menu')
+          .body-without-padding.padding-bottom-50
+            %ul.nav.nav-pills.nav-stacked
+              - if !current_account.contractor.verified?
+                %li{ class: (action_name == 'verification') && 'active' }
+                  = link_to "<i class='fa fa-fw fa-briefcase'></i> #{_('Verify account')}".html_safe, verification_request_contractors_path(locale: current_locale_country)
+              - if !current_account.commercial?
+                %li{ class: (action_name == 'commercial_request') && 'active' }
+                  = link_to "<i class='fa fa-fw fa-briefcase'></i> #{_('Apply Commercial')}".html_safe, commercial_request_contractors_path(locale: current_locale_country)
+              %li{ class: (action_name == 'account_details') && 'active' }
+                = link_to "<i class='fa fa-fw fa-info'></i> #{_('Account details')}".html_safe, account_details_contractors_path(locale: current_locale_country)
+              - if current_account.country.cities.available.count > 1
+                %li{ class: (action_name == 'locations') && 'active' }
+                  = link_to "<i class='fa fa-fw fa-user'></i> #{_('Locations')}".html_safe, locations_contractors_path(locale: current_locale_country)
+              %li{ class: (action_name == 'skills') && 'active' }
+                = link_to "<i class='fa fa-fw fa-wrench'></i> #{_('Skills')}".html_safe, skills_contractors_path(locale: current_locale_country)
+              %li{ class: (action_name == 'change_password') && 'active' }
+                = link_to "<i class='fa fa-fw fa-key'></i> #{_('Change password')}".html_safe, change_password_contractors_path(locale: current_locale_country)
+              %li{ class: (action_name == 'notifications') && 'active' }
+                = link_to "<i class='fa fa-fw fa-mobile'></i> #{_('Notifications')}".html_safe, notifications_contractors_path(locale: current_locale_country)
+
+      .col-md-9
+        = render 'layouts/flash_messages'
+        = yield
+
+= render file: 'layouts/application', layout: false

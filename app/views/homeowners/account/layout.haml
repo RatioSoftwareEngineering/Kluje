@@ -1,0 +1,23 @@
+- content_for :content do
+  .container.margin-top-20.margin-bottom-30
+    .row
+      .col-md-3
+        .widget
+          .header
+            %h2= _('My menu')
+          .body-without-padding.padding-bottom-100
+            %ul.nav.nav-pills.nav-stacked
+              %li{ class: request.path =~ /jobs\/?$/ && params[:state] != 'archived' ? 'active' : '' }
+                = link_to "<i class='fa fa-briefcase fa-fw'></i> #{_('Jobs')}".html_safe, jobs_path(locale: current_locale_country)
+              %li{ class: request.path =~ /jobs/ && params[:state] == 'archived' ? 'active' : '' }
+                = link_to "<i class='fa fa-archive fa-fw'></i> #{_('Archived')}".html_safe, jobs_index_path(locale: current_locale_country, state: :archived)
+              %li{ class: request.path =~ /account/ ? 'active' : '' }
+                = link_to "<i class='fa fa-user fa-fw'></i> #{_('Account details')}".html_safe, account_path(locale: current_locale_country)
+              %li{ class: current_page?(me_questions_path(locale: current_locale_country)) ? 'active' : '' }
+                = link_to "<i class='fa fa-question fa-fw'></i> #{_('My Q&A')}".html_safe, me_questions_path(locale: current_locale_country)
+      .col-md-9
+        = render 'layouts/flash_messages'
+        .main
+          = yield
+
+= render file: 'layouts/application', layout: nil

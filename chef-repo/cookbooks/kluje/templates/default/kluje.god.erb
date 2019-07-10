@@ -1,0 +1,10 @@
+God.watch do |w|
+  w.name = "resque-scheduler"
+  w.dir = "/var/proj/kluje-<%= node.chef_environment %>/current"
+  w.start = "bundle exec rake resque:scheduler RACK_ENV=<%= node.chef_environment %>"
+  w.log = "/var/proj/kluje-<%= node.chef_environment %>/shared/log/resque.log"
+  w.log = "/var/proj/kluje-<%= node.chef_environment %>/shared/log/resque.log"
+  w.uid = "ubuntu"
+  w.gid = "ubuntu"
+  w.keepalive
+end

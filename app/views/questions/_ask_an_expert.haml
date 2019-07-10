@@ -1,0 +1,48 @@
+#ask-expert.ask-expert.padding-top-80.padding-bottom-80
+  .container
+    .row
+      .col-md-12
+        = render 'layouts/flash_messages'
+    .row.head
+      .col-md-6.col-xs-12.text-center
+        %h1
+          %span.h-3= _('Ask An Expert')
+          = _('In %{country}') % { country: FastGettext._(current_country.name) }
+        %h3.sub-title.p= _('Get free help from our community of Contractors')
+      .col-md-6.col-xs-12
+        = form_for :ask_expert, url: questions_path({format: :js}), role: :form, method: :post, remote: true, html: { class: 'remote-form', id: 'ask-expert-form' } do |f|
+          .row
+            .col-sm-12.padding-5
+              = f.select :category_id, Category.pluck(:name, :id), { prompt: _("Select Category *") }, class: 'form-control', required: true
+          .row
+            .col-sm-12.padding-5
+              = f.text_field :title, class: 'form-control', required: true, placeholder: _("Give your question a title *")
+          .row
+            .col-sm-12.padding-5
+              = f.text_area :body, class: 'form-control', rows: '6', required: true, placeholder: _("What would you like to know? (The more details you can provide, the better)*"), title: "50 to 1000 characters", maxlength: "1000", minlength: "50"
+
+          .row
+            .col-sm-12.padding-left-5.padding-right-5
+              .mt-checkbox.margin-bottom-5.margin-top-10
+                = f.check_box :anonymous
+                = f.label :anonymous, 'Show me as Anonymous.'
+          .row
+            .col-sm-12.padding-left-5.padding-right-5.margin-bottom-20
+              .mt-checkbox
+                %input{ name: 'ask_expert[agree_terms]', type: :checkbox, required: true, checked: true, id: 'agree_terms' }
+
+                %label{ for: 'agree_terms' }
+                  %span I agree to the
+                  %span= link_to _('Terms and Conditions'), legal_path(slug: 'terms-and-conditions-for-referral-program'), target: '_blank', class: 'highlight'
+                  %span and
+                  %span= link_to _('Privacy Policy'), legal_path(slug: 'privacy-policy'), target: '_blank', class: 'highlight'
+                  %span of Kluje.
+
+          - if signed_in?
+            .row
+              .col-sm-12.padding-left-5.padding-right-5
+                = f.submit _('Ask an expert'), class: 'btn btn-primary btn-block upcase', data: { disable_with: _("Asking") }
+          - else
+            .row
+              .col-sm-12.padding-left-5.padding-right-5
+                = f.button _('Ask an expert'), type: :button, class: 'btn btn-primary btn-block upcase', id: 'btn-need-info', data: { disable_with: _("Asking") }

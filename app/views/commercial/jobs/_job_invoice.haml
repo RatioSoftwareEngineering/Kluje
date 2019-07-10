@@ -1,0 +1,28 @@
+%table.table.table-condensed.margin-bottom-0
+  %thead{style: 'background-color:#f5f5f5'}
+    %tr
+      %th= _('Invoice ID')
+      %th= _('Create at')
+      %th= _('Total Amount')
+      %th=_('Invoice Details')
+  %tbody
+    - if @job.has_invoices?
+      - invoice = @job.invoice
+      %tr
+        %td
+          = _("# #{invoice.id}")
+        %td
+          = I18n.localize(invoice.created_at.in_time_zone(current_country.time_zone), format: :short)
+        %td
+          = number_to_currency(invoice.amount, :unit => "#{invoice.currency}")
+        %td
+          - if invoice.file.present?
+            - if invoice.image?
+              = link_to "#{invoice.file}", target: '_blank' do
+                %img{src: "#{invoice.file}",style: 'max-width:100%;max-height:50px;'}
+            - else
+              = link_to "Attachment (click to open)", "#{invoice.file}", target: '_blank'
+    - else
+      %tr
+        %td{ colspan: 4 }
+          %p= _('No Contractors have placed any Invoices on Job yet.')

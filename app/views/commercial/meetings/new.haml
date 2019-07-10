@@ -1,0 +1,8 @@
+.container
+  .page-header
+    %h2= _('Schedule Meeting')
+  .margin-top-10
+    - if current_account.contractor?
+      = render 'commercial/meetings/form'
+    - elsif current_account.homeowner?
+      = render 'commercial/meetings/form'

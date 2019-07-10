@@ -1,0 +1,53 @@
+test:
+  aes_key: 
+  apns:
+    passphrase: 12345
+  aws:
+    access_key_id: <%= ENV['aws_access_key_id'] %>
+    secret_access_key: <%= ENV['aws_secret_access_key'] %>
+  braintree:
+    environment: sandbox
+    merchant_id: <%= ENV['bt_merchant_id'] %>
+    public_key: <%= ENV['bt_public_key'] %>
+    private_key: <%= ENV['bt_private_key'] %>
+  contractors_cash:
+    base_url:
+    registration_path:
+    login_path:
+    token:
+  facebook:
+    id:
+    secret:
+  gcm:
+    api_key: 
+  google:
+    id: 
+    secret:
+  host:
+  mail:
+    authentication:
+    enable_starttls_auto:
+  mandrill:
+    api_key:
+  max_usage:
+  nexmo:
+    from:
+    key:
+    secret:
+  paypal:
+    business_email:
+    business_id:
+    submit_url: https://www.sandbox.paypal.com/cgi-bin/webscr
+    mode: sandbox
+    app_id:
+    username:
+    password: 
+    signature: 
+    commercial_subscription_id:
+      sg: AAA
+    commercial_unsubscription_id:
+      sg: BBB
+  pepper: 
+  region_id: 2
+  session_id: 
+

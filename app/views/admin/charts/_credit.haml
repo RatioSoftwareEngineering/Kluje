@@ -1,0 +1,33 @@
+- currency = country.currency_code.upcase
+.credit_chart{ id: "#{currency}_credit_chart", style: 'display: inline-block' }
+- sign_up = Credit.where(currency: currency, deposit_type: 'sign_up_bonus').sum(:amount).to_f
+- sms = country.accounts.contractor.count * country.sms_bundle_price.to_f
+- top_up = Paypal::TopUp.where(status: 'processed').joins(contractor: :account).where('accounts.country_id' => country.id).sum(:amount).to_f
+- admin_top_up = Credit.where(currency: currency, deposit_type: 'admin_top_up').sum(:amount).to_f
+- data = [["#{country.name}", currency], ['Top ups', top_up], ['Sign up bonus', sign_up], ['SMS', sms], ['Admin top up', admin_top_up]]
+- #data = [['Total', 'Sign up bonus', 'SMS', 'Admin top up'], [total, sign_up, sms, admin_top_up]]
+
+:javascript
+  google.setOnLoadCallback(drawBar);
+
+  function drawBar() {
+    var data = google.visualization.arrayToDataTable(#{data});
+    var formatter = new google.visualization.NumberFormat({suffix: ' #{currency}'});
+    formatter.format(data, 1);
+
+    var container = document.getElementById("#{currency}_credit_chart");
+    var chart = new google.visualization.PieChart(container);
+
+    var options = {
+      backgroundColor: { fill: '#f4f4f4' },
+      bars: 'vertical',
+      hAxis: { textPosition: 'in', slantedText: true, slantedTextAngle: 45 },
+      height: '300',
+      legend: { position: 'top', textStyle: { fontSize: 11 } },
+      pieSliceText: 'value',
+      sliceVisibilityThreshold: 0,
+      title: 'Total',
+      width: '500'
+    }
+    smartDraw(chart, data, options, container);
+  }

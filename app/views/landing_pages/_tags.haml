@@ -1,0 +1,10 @@
+:css
+  .hero{
+    height: 450px;
+  }
+- content_for(:title, title)
+- content_for(:description, description)
+- content_for(:keywords, keywords)
+- content_for :extra_head_tags do
+  /#= stylesheet_link_tag :'skills', :async => true, :cache => true
+  /#= stylesheet_link_tag :'index'

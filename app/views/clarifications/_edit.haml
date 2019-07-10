@@ -1,0 +1,7 @@
+= form_for [:commercial, clarification], :html => { :multipart => true } do |f|
+  .form-group
+    = f.hidden_field :job_id, value: @job.id
+    = f.text_area :answer, :class => 'form-control non-border', :rows => '4', :required => true
+  .padding-bottom-15.text-right
+    = submit_tag _('Submit your Answer '), class: 'btn btn-danger ', :disable_with => _("Submiting")
+

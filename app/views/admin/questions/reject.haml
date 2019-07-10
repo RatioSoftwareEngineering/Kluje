@@ -1,0 +1,16 @@
+= form_for resource, url: do_reject_admin_question_path(resource), method: :put do |f|
+  %fieldset.inputs
+    %ol
+      %li.text
+        %label Content
+        = resource.body
+      %li.text.input
+        %label Reject Reason
+        = f.text_area :reject_reason, required: true, rows: 8
+
+  %fieldset.actions
+    %ol
+      %li.action.input_action
+        = f.submit 'Reject'
+      %li.cancel
+        = link_to 'Cancel', admin_answer_post_path(resource)

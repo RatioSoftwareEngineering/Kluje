@@ -1,0 +1,9 @@
+.row.margin-bottom-10
+  - @job.photos.each do |photo|
+    - if photo.image_name_url.present?
+      .col-md-4.col-sm-6.col-xs-12
+        - if photo.image?
+          = link_to photo.image_name_url, target: '_blank' do
+            %img{src: "#{photo.image_name}",style: 'max-width:100%;max-height:150px;'}
+        - else
+          = link_to "Attachment (click to open)", photo.image_name_url, target: '_blank'

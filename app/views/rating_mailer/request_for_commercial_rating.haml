@@ -1,0 +1,27 @@
+%p
+  = _('Hi %s,') % homeowner.first_name || homeowner.last_name
+
+%p
+  = _("%s is requesting a rating for this job:") % contractor.company_name
+
+%p
+  %strong= _('Id') + ':'
+  = job.id
+  %br
+  - if job.skill.present?
+    %strong= _('Skill') + ':'
+    = job.skill.name
+    %br
+  %strong= _('Description') + ':'
+  = job.description
+
+%p
+  = _('Please take a moment and Rate them now by following this link:')
+%p{align: 'center'}
+  = link_to _('Click to rate the contractor'), url, style: 'color: #fcb61a; font-weight: 600;'
+%p
+  = _("Rating your Contractor is the best way to reward good contractors for a job well done.")
+  = _("If you didn't hire this contractor, it may be an error and you may safely disregard this email.")
+
+%p
+  = _('We thank you for your time and for helping us create "Better Quality Contractors"')

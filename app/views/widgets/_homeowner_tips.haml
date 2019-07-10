@@ -1,0 +1,17 @@
+.widget
+  .header
+    %h2= _("Tips to Hire a Contractor")
+  .body
+    %ul.diamond
+      - [_('Ensure contractor is properly licensed'),
+         _('Check references and ratings'),
+         _('Always get more than 1 Quote'),
+         _('Be clear on what you want done'),
+         _('Do your homework on your budget'),
+         _('Be clear on the time frame for the job'),
+         _('All costs must be included in the estimate'),
+         _('Get an invoice for a deposit payment')].each do |tip|
+        %li= tip
+    .menu.bigger.full-width.text-center
+      %i= _('For more tips check out the')
+      %i= link_to _('Check List'), checklist_homeowners_path

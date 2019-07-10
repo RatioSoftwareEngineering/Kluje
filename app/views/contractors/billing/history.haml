@@ -1,0 +1,74 @@
+- content_for(:extra_footer_tags) do
+  = javascript_include_tag 'billing'
+.history
+  %h2= _('Billing history')
+  = select_tag "Year", options_for_select(@earliest.year..@latest.year), { id: 'year-select' }
+  %table.table.table-bordered.table-hover
+    %thead
+      %tr
+        %th{width: '10%'}= _('Month')
+        %th{colspan: 2}= _('Bids')
+        %th{colspan: 2}= _('SMS')
+        %th{colspan: 2}= _('Top-ups')
+        %th{width: '20px'}
+    %tbody
+      - time = @earliest
+      - while time <= @latest
+        - entries = (@entries[time.year] || {})[time.month] || {}
+        - bids = entries['bids'] || {}
+        - top_ups = entries['top_ups'] || {}
+        - feature_payments = entries['feature_payments'] || {}
+        - entries_present = bids.present? || top_ups.present? || feature_payments.present?
+        %tr.month{id: "#{time.year}-#{time.month}", class: "#{time.year} #{entries_present ? 'expandable' : ''}"}
+          %td= Date::MONTHNAMES[time.month]
+          %td{width: '17%'}= bids.length
+          %td= current_country.formatted_price( bids.sum(&:amount) )
+          %td{width: '17%'}= feature_payments.length*100
+          %td= current_country.formatted_price( feature_payments.sum(&:amount) )
+          %td{width: '20%'}= top_ups.length
+          %td= current_country.formatted_price( top_ups.select{|t| t.processed?}.sum(&:amount) )
+          - if entries_present
+            %td
+              %i.fa.fa-plus
+          - else
+            %td
+        - if entries_present
+          %tr.entry{class: "#{time.year}-#{time.month} #{time.year}"}
+            %th= _('Job ID')
+            %th= _('Date')
+            %th= _('Amount')
+            %th= _('Date')
+            %th= _('Amount')
+            %th{colspan: 2}= _('Top-up details')
+        - [bids.length, top_ups.length*3, feature_payments.length].max.times do |i|
+          - bid = bids[i]
+          - job_url = bid && job_path(locale: current_locale_country, id: bid.job_id)
+          - top_up = top_ups[i/3]
+          - feature_payment = feature_payments[i]
+          %tr.entry{class: "#{time.year}-#{time.month}"}
+            %td
+              - if bid
+                = link_to job_url do
+                  %u= bid.job_id
+
+            %td= bid && bid.created_at.to_s(:short)
+            %td= bid && current_country.formatted_price(bid.amount)
+            %td= feature_payment && feature_payment.created_at.to_s(:short)
+            %td= feature_payment && current_country.formatted_price(feature_payment.amount)
+            - if top_up
+              - border = i<top_ups.length*3-1 ? 'border-bottom: solid grey 1px' : ''
+              - if i%3 == 0
+                %td= _('Date')
+                %td= top_up && top_up.created_at.to_s(:short)
+              - elsif i%3 == 1
+                %td= _('Amount')
+                %td= top_up && (current_country.price_format % top_up.amount)
+              - else
+                %td{style: border}= _('Txn ID')
+                %td{style: border}= top_up && top_up.txn_id || 'Declined'
+            - else
+              %td
+              %td
+            %td
+
+        - time += 1.month

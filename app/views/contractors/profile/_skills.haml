@@ -1,0 +1,11 @@
+.box
+  %h3= _('Skills')
+  %hr
+  .row.skills
+    - @contractor.skills.each do |skill_category|
+      .col-xs-4
+        .skill-box
+          - icon = skill_category.name.downcase.split(' ')[0]
+          %span.center
+            = inline_svg "skills/#{icon}.svg"
+            = _(skill_category.name).gsub('Contractor','')

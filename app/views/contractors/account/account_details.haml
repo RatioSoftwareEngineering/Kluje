@@ -1,0 +1,55 @@
+%h2.text-left=_('Account Details')
+.row
+  = form_for current_account.contractor, url: account_details_contractors_path(locale: current_locale_country), method: :put, role: :form, class: 'frm-cmp-detail', id: 'frmContractor' do |f|
+    .col-md-6
+      %h3= _('Contact Details')
+      = f.fields_for :account do |fa|
+        .form-group
+          = fa.label _('First Name:')
+          %span.require= '*'
+          = fa.text_field :first_name, class: 'form-control', value: current_account.first_name, required: true,data:{msg:{required: "Please enter the first name!"}}
+
+        .form-group
+          = fa.label _('Last Name:')
+          %span.require= '*'
+          = fa.text_field :last_name, class: 'form-control', value: current_account.last_name,required: true,data:{msg:{required: "Please enter the last name!"}}
+
+        .form-group
+          = fa.label _('Email:')
+          = fa.email_field :email,:disabled=>'disabled', value: current_account.email,class: 'form-control', disabled: true
+
+        .form-group
+          = fa.label _('Mobile No:'), data: {msg:{required: "Please enter mobile number!"}}
+          = fa.text_field :mobile_number, class: 'form-control', value: current_account.mobile_number, required: true,disabled: true
+
+        .form-group
+          = fa.label _('Country:'), data: { msg: {required: "Please enter mobile number!"} }
+          = fa.text_field :country, class: 'form-control', value: current_account.country.name, required: true, disabled: true
+    .col-md-6
+      %h3= _('Company Details')
+      .form-group
+        = f.label _('Company name:')
+        %span.require= '*'
+        = f.text_field :company_name ,:disabled=>'disabled',class: 'form-control'
+
+      .form-group
+        = f.label _('Company street no:')
+        = f.text_field :company_street_no, class: 'form-control'
+
+      .form-group
+        = f.label _('Company street name:')
+        = f.text_field :company_street_name, class: 'form-control'
+
+      .form-group
+        = f.label _('Company unit no:')
+        = f.text_field :company_unit_no, class: 'form-control'
+
+      .form-group
+        = f.label _('Company building name:')
+        = f.text_field :company_building_name, class: 'form-control'
+
+      .form-group
+        = f.label _('Company postal code:')
+        = f.text_field :company_postal_code, class: 'form-control'
+
+      = submit_tag _('Submit'), class: 'btn btn-warning', disable_with: _('Submitting'), id: 'btnSubmit'

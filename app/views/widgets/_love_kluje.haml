@@ -1,0 +1,21 @@
+.widget
+  .header
+    %h2= _('Why you will love Kluje.com')
+  .body
+    %ul.fa-ul
+      %li
+        %i.fa-li.fa.fa-check
+        - html = _('%{num} jobs have been posted') % { num: "<span class='black-bg pill white'>#{jobs_counter}</span>" }
+        = html.html_safe
+      %li
+        %i.fa-li.fa.fa-check
+        = _('Finding contractor is very easy')
+      %li
+        %i.fa-li.fa.fa-check
+        = _('No Obligation')
+      %li
+        %i.fa-li.fa.fa-check
+        = _('Contractor will contact you')
+      %li
+        %i.fa-li.fa.fa-check
+        = _('Safe and Secure')

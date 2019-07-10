@@ -1,0 +1,10 @@
+.widget
+  .header
+    %h2= _("We're in")
+  .body
+    %ul
+      - Country.available.each do |country|
+        %li= _(country.name)
+        %ul
+          - country.cities.available.each do |city|
+            %li= link_to _(city.name), home_path(city)

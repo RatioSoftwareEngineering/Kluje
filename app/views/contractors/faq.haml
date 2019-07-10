@@ -1,0 +1,199 @@
+- content_for(:title, _('Kluje | Contractors - Advice & tips'))
+- content_for(:description, _('Need advice on how to use your kluje.com account? We answer your most common questions.'))
+- content_for(:keywords, _('contractor, contractors, how it works, sign up, leads, new customers, jobs, ratings, reviews, word of mouth, leads, win work, professional, homeowner, account, reputation,'))
+
+.container.margin-top-20
+  .row
+    .col-md-8
+      %content.content-static-page
+        .text-center
+          %h1.page-title= _('FAQ')
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapse19'}
+                %h3=_('How do I purchase credit?')
+            #collapse19.panel-collapse.collapse
+              - amounts = current_country.top_up_amounts || ['$50', '$100', '$250']
+              .panel-body=_('%{amount1}, %{amount2} and %{amount3} top ups are available for lead purchases. Simply login to your account and click on billing.') % { amount1: amounts[0], amount2: amounts[1], amount3: amounts[2] }
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseOne'}
+                %h3=_('What are job leads?')
+            #collapseOne.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('Job leads are the requests for Contractors that Homeowners post on Kluje.com. We sort these requests by postcode, trade and skill type and then pass the details along to our Contractors.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseTwo'}
+                %h3=_('Where do I view and buy job leads?')
+            #collapseTwo.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('When you log in to your account you will automatically land on your ‘Job Leads’ screen and your job lead list. Here you can scroll through the leads available for you to purchase.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseThree'}
+                %h3=_('How do I control which job leads I receive?')
+            #collapseThree.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('You can change the settings for job leads by logging in to your account and click Edit "Account". You will now be able to change your work location. The skills are set when you select your price plan. These cannot be changed.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseFour'}
+                  %h3=_('How do I bid a job lead?')
+            #collapseFour.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('To bid a job lead simply clicks the ‘Buy’ button on the lead. You can also buy the lead through SMS, simply reply with the code in the SMS.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseFive'}
+                  %h3=_('What happens after I bid a job lead?')
+            #collapseFive.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('When you bid a job lead, we will send you the customer’s mobile number and email address so you may contact them directly to provide a quote. We also send your profile page, ratings and contact details to the Homeowner.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseSix'}
+                  %h3=_('How do I view the job leads I have bought?')
+            #collapseSix.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('Login to your account and click ‘Purchased Jobs’ from the main navigation. Here you will see a list of jobs you have purchased.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseSeven'}
+                  %h3=_('Why should I request a rating?')
+            #collapseSeven.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('Ratings serve as your word-of-mouth online and help you build your reputation. Every time you purchase a job lead, we send your profile and ratings to the customer. The more positive ratings you have, the easier it will be to win more work.')
+                %i.fa.fa-book
+                %strong= _('Read more about:')
+                %a{href: 'https://www.kluje.com/en/blog/contractor-ratings-how-they-help-you', target: '_blank',rel: 'canonical'}=_('Contractor ratings: How they help you?')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseEight'}
+                  %h3=_('How do I request a rating?')
+            #collapseEight.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('Login to your account, find the job on your Purchased Jobs list and select ‘Request rating’ We also recommend that you ask the customer directly to rate you when you’ve completed the job.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseNine'}
+                  %h3=_('What if I receive a negative or unfair rating?')
+            #collapseNine.panel-collapse.collapse
+              .panel-body
+                %p
+                  =_('If you feel a rating is particularly unfair, factually incorrect or slanderous, please')
+                  %a{href: 'mailto:contractorservice@kluje.com'}=_('contact us')
+                  =_('to investigate.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseTen'}
+                  %h3=_('Can I delete ratings?')
+            #collapseTen.panel-collapse.collapse
+              .panel-body
+                %p.space-bot
+                  %strong
+                    =_('No') + '.'
+                  =_('If you receive a rating that is particularly unfair, please')
+                  %a{href: 'mailto:contractorservice@kluje.com'}=_('contact us')
+                  =_('to report the rating. The rating will be flagged as under investigation until the investigation has finished. Kluje.com reserves the right to keep or remove any ratings. Only if the rating is deemed unfair will we remove the rating.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseEleven'}
+                  %h3=_('I’m new to Kluje.com and I don’t have any ratings. How do I win work?')
+            #collapseEleven.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('We know it can be difficult when you first join Kluje.com, so we give you free lead credit to help you trial the service and get started winning work. The best way to win work without ratings is to:')
+                %ul
+                  %li=_('Update your profile with your qualifications, specialties and photos of past work')
+                  %li=_('Start with low-cost, easy-to-service leads where homeowners are less likely to rely on ratings')
+                  %li=_('Contact the homeowner immediately when you bid a job lead')
+                  %li=_('Give a thorough, detailed quote and provide references')
+                  %li
+                    %strong
+                    =_('Always ask for ratings')
+                %p=_('Once you have built-up a few ratings, it will be easier to go after bigger jobs and keep winning.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseThirdteen'}
+                  %h3=_('How does a Homeowner know that my ratings are genuine?')
+            #collapseThirdteen.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('Unlike other recommendation sites, we operate a closed ratings system. Only homeowners who have hired a Contractor via Kluje.com can submit a rating of that Contractor. Ratings and comments are screened for offensive language and random spot checks are carried out on both positive and negative ratings. We have also place automated checks to catch Contractors who try to rate themselves.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseFourteen'}
+                  %h3=_('What is my profile page?')
+            #collapseFourteen.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('This page showcases your ratings as well as any company information, certifications and photos of your work that you provide. Remember that this is the first thing a homeowner will see once you bid a lead, so take some time to complete your profile.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseFifteen'}
+                  %h3=_('What if I have forgotten my password?')
+            #collapseFifteen.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('If you have forgotten your password or need to change it for any reason, you may change your password by clicking on this link.')
+                %a{href: new_account_password_path, target:'_blank',rel: 'canonical'}=_('Change password.')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapseSixteen'}
+                  %h3=_('How do I change/update my contact details?')
+            #collapseSixteen.panel-collapse.collapse
+              .panel-body
+                %p
+                  =_('Login to your account and from there you can edit your contact info or change your address. You will not be able to change your')
+                  %strong=_('company came, e-mail and NRIC number.')
+                  =_('If you need to make changes.Contact us:')
+                  %a{href: 'mailto:contractorservice@kluje.com'}=_('contractorservice@kluje.com')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapse17'}
+                  %h3=_('How do I cancel my account?')
+            #collapse17.panel-collapse.collapse
+              .panel-body
+                %p=_('If you wish to cancel your account, you may do so at any time by contacting us.')
+                =_('Contact us:')
+                %a{href: 'mailto:contractorservice@kluje.com'}=_('contractorservice@kluje.com')
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: '#collapse18'}
+                  %h3=_('What do I do if I have been overcharged?')
+            #collapse18.panel-collapse.collapse
+              .panel-body
+                %p=_('If you think you have been overcharged for any reason or want to query a payment.')
+                =_('Contact us')
+                %a{href: 'mailto:contractorservice@kluje.com'}=_('contractorservice@kluje.com')
+
+        %br
+        %br
+        .text-center.margin-top-20.margin-bottom-40
+
+          - if current_account.try(:homeowner?)
+            - session[:after_sign_out_url] = '/en/contractors/signup'
+            %h3.font-weight-600=_('You need to sign out before contractor sign up')
+            = form_for :account, url: destroy_account_session_path, method: :delete, html: { class: 'frm-signout' } do |f|
+              = submit_tag _('Sign out and Sign up for my FREE contractor account'), class: :'a btn btn-warning btn-lg'
+            %p=_("Now you login as homeowner. Before contractor sign up, you need to sign out from your homeowner's account.")
+          - elsif current_account.nil?
+            %a.btn.btn-warning.btn-lg{href: signup_contractors_path,class: 'font-size-18',rel: 'canonical'}=_('Sign up for my FREE account')
+    .col-md-4
+      = render 'contractors/side_bar'

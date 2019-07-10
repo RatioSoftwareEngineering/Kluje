@@ -1,0 +1,24 @@
+machine:
+  services:
+    - redis
+
+  ruby:
+    version:
+      2.1.9
+
+dependencies:
+  pre:
+    - gem install bundler
+
+  override:
+    - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
+    - mv config/secrets.ci.yml config/secrets.yml
+    - mv config/application.ci.yml config/application.yml
+
+database:
+  override:
+    - mv config/database.ci.yml config/database.yml
+    - bundle exec rake db:create db:migrate db:seed --trace:
+        environment:
+          RAILS_ENV: test
+

@@ -1,0 +1,12 @@
+%p
+  = _('Hi')
+  = contractor.company_name + ','
+
+%p
+  = _('You have just been rated!')
+
+%p
+  = _('Click the link below to take a look.')
+
+%p{align: 'center'}
+  = link_to _('Click to view the rating'), Kluje.settings.host + Kluje.url(:jobs, :show, id: job.id) + '#rating', style: 'color: #fcb61a; font-weight: 600;'

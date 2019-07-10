@@ -1,0 +1,37 @@
+- title = _("Renovation and Interior Design Blog")
+- title = "Page #{params[:page]} | #{title}" if params[:page]
+- title = "#{@category.name} Articles | #{title}" if @category.present?
+- title = "#{@keyword} Articles | #{title}" if @keyword.present?
+- content_for(:title, title)
+- content_for(:description, _('Kluje blog renovation contractor homeowner home'))
+- content_for(:keywords, _('kluje blog, blog, home improvement blog,repair blog, renovate blog, post your job, quotes, ratings, contractor blog, contractors blog'))
+- content_for :head do
+  %meta{content: "website", property: "og:type"}/
+  %meta{content: "Kluje.com Blog", property: "og:title"}/
+  %meta{content: "url", property: "#{@base_url}"}/
+
+- content_for :extra_head_tags do
+  %link{ rel: "alternate", type: "application/rss+xml", title: "Kluje Blog RSS Feed", href: blog_url(format: :rss)}
+
+.container.margin-top-20.margin-bottom-30.blog
+  .row
+    .col-md-8
+      = render 'layouts/flash_messages'
+      %h1.h2.full-width.full-height.text-center{itemprop: :headline}
+        - if @category
+          = @category.name
+          = _("Articles")
+        - elsif @keyword
+          = @keyword.underscore.humanize.titleize
+          = _("Articles")
+        - else
+          = _("Recent Articles")
+      %hr
+      .row
+        - unless @posts.empty?
+          - @posts.each do |post|
+            .col-sm-6
+              = render 'blog/post_preview', post: post
+      = will_paginate @posts, renderer: BootstrapPagination::Rails
+    .col-md-4
+      = render 'blog/sidebar'

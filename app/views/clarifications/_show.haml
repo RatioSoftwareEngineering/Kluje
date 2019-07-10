@@ -1,0 +1,13 @@
+%ul.meetings
+  - if clarification.job_id == @job.id
+    - if clarification.question.present?
+      %li
+        %strong
+          = _("Q.")
+          %span= clarification.question
+          - if clarification.answer.present?
+            %strong
+              = _("A.")
+              %span= clarification.answer
+          - elsif current_account && current_account.homeowner?
+            = render 'clarifications/edit', job: @job, clarification: clarification

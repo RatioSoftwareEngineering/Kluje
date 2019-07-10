@@ -1,0 +1,8 @@
+.white-noise-bg.padding-top-30.padding-bottom-30
+  .container.how-it-works.text-center
+    = image_tag 'errors/404page.png', alt: '404', style: 'max-width: 100%;'
+    .row
+      %h3 The page you were looking for doesn't exist.
+      %h3 You may have mistyped the address or the page may have moved.
+      %a.button-dark.upcase.btn.margin-top-20{rel: 'canonical', href: home_path}
+        = _('Go to homepage')

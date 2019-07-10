@@ -1,0 +1,9 @@
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'facebook'
+
+.widget
+  .header
+    %h3.h-3= _('Find us on Facebook')
+  .body
+    #fb-root
+    .fb-page{ data: { href: "https://www.facebook.com/KlujeSingapore", width: 500, height: 300} }

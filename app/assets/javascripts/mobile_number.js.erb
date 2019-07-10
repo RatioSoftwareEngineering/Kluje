@@ -1,0 +1,30 @@
+$(document).ready(function(){
+    var input_field = $('#mobile_number_input');
+
+    if (input_field.length) {
+	var update_number = function() {
+	    var value = input_field.intlTelInput("getNumber");
+	    var number_field = $('#mobile_number');
+	    var number_field2 = $('#mobile_number2');
+	    if (value) {
+		number_field.val(value);
+		number_field2.val(value);
+		$('.number-reliant').prop('disabled', false);
+	    } else {
+		$('.number-reliant').prop('disabled', true);
+	    }
+	};
+
+	input_field.intlTelInput({
+	    defaultCountry: input_field.data('country'),
+	    utilsScript: "<%= asset_path 'intlTelInputUtils.js' %>"
+	});
+	input_field.change(function() {
+	    update_number();
+	});
+	$('#send_verification_code').click(function() {
+	    update_number();
+	    return true;
+	});
+    };
+});

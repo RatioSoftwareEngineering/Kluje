@@ -1,0 +1,7 @@
+.widget
+  .header
+    %h3.h-3= _('Need help?')
+  .body
+    = _('Not Ready to Post a Job but still have a question about your home renovation project?')
+    .text-center.margin-top-20
+      %a.btn.btn-default.btn-lg{href: questions_path(locale: current_locale_country),rel: "canonical"}=_('Ask an expert')

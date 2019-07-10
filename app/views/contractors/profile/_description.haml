@@ -1,0 +1,26 @@
+- contact_details ||= false
+.box
+  %h3
+    = @contractor.company_name
+    - if edit
+      %small= link_to 'Edit description', '#', class: 'inline_edit', id: '#company_description_edit'
+  %hr
+  - if @contractor.residential_subscribe?
+    %ul
+      %li
+        %i.fa.fa-envelope-o{title: "Email"}
+        = @contractor.account.email
+      %li
+        %i.fa.fa-phone{title: "Phone number"}
+        - number = @contractor.account.mobile_number
+        = number && Phony.format(number)
+      %li
+        %i.fa.fa-briefcase{title: "Business Registration Number"}
+        = @contractor.uen_number
+    %hr
+  - if edit
+    %span.editable{id: 'company_description',
+                   data: { url: update_profile_contractors_path,
+                           token: 'a' } }= @contractor.company_description
+  - else
+    = @contractor.company_description

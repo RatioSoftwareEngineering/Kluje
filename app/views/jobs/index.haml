@@ -1,0 +1,52 @@
+= render 'jobs/marks'
+
+%section.row
+  - if @jobs.to_a.count == 0
+    .col-sm-12.text-center.margin-bottom-30 You have no jobs
+  - else
+    %table.table.table-condensed
+      %thead.light-grey-bg
+        %tr
+          %th
+          %th= _('ID')
+          %th= _('Job Category')
+          - if current_account.homeowner?
+            %th= _('Skill')
+          %th= _('Budget')
+          - if current_account.contractor?
+            %th= _('Lead Price')
+            %th= _('Property Type')
+            %th= _('Availability')
+          %th= _('Posted at')
+          - if current_account.homeowner?
+            %th= _('Bids')
+          %th
+      %tbody
+        - @jobs.each do |job|
+          %tr
+            %td
+              - if current_account.homeowner? && !job.archived?
+                - if job.is_bidded?
+                  .fa.fa-certificate.orange
+                - elsif job.is_approved?
+                  .fa.fa-certificate.grey
+              - elsif current_account.contractor?
+                - if job.is_not_bidded?
+                  .fa.fa-certificate.orange
+                - elsif @rated_jobs && @rated_jobs.include?(job.id)
+                  .fa.fa-certificate.orange
+            %td= job.id
+            %td= truncate( _(job.job_category.name) )
+            - if current_account.homeowner?
+              %td= truncate( _(job.skill.name) )
+            %td
+              = _(job.budget.try(:range))
+            - if current_account.contractor?
+              %td= job.lead_price_formatted
+              %td= _(job.property_type_name)
+              %td= _(job.availability)
+            %td= I18n.localize(job.created_at.in_time_zone(current_country.time_zone), format: :short)
+            - if current_account.homeowner?
+              %td= job.bids.count
+            %td= link_to _('View'), job_path(locale: current_locale_country, id: job.id), class: 'btn btn-danger btn-xs'
+    = will_paginate @jobs, renderer: BootstrapPagination::Rails

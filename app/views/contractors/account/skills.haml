@@ -1,0 +1,19 @@
+= form_for :skill, url: skills_contractors_path(locale: current_locale_country) do |f|
+  = hidden_field_tag :account_id, value: current_account.id
+  .skills.row
+    - Skill.all.each do |skill_category|
+      .col-lg-15.col-md-3.col-xs-4
+        .skill-select
+          - icon = skill_category.name.downcase.split(' ')[0]
+          %label
+            = f.check_box "#{skill_category.id}", checked: @skills.include?(skill_category.id)
+            %span
+              = inline_svg "skills/#{icon}.svg"
+              -# image_tag "skills/#{icon}.svg", class: 'svg', id: "#{icon}"
+              %br
+              = skill_category.name.gsub('Contractor','')
+          -# %a{class: @skills.include?(skill_category.id)? "box selected #{icon}" : "box #{icon}"}
+
+  .row
+    .col-lg-15.col-md-3.col-xs-4.pull-right
+      = submit_tag _('Save'), class: 'btn btn-success btn-lg btn-block', :disable_with => _('Saving')

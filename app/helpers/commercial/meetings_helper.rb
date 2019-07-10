@@ -1,0 +1,2 @@
+module Commercial::MeetingsHelper
+end

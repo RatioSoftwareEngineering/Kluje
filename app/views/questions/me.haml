@@ -1,0 +1,36 @@
+.bg-grey.padding-top-50
+  .container
+    .row
+      .col-md-3
+        = render 'questions/client_filter'
+
+        .info-block.margin-bottom-30
+          .alert.approved.inline-block Published
+          .text-color The questions is approved by the admin will be published.
+
+          .alert.pending.inline-block.margin-top-15 Waiting for Approve
+          .text-color The questions is waiting for administrator approval.
+
+          .alert.rejected.inline-block.margin-top-15 Rejected
+          .text-color The questions was rejected by the administrator for violating the rules.
+
+          .inline-block.margin-top-15
+            %i.fa.fa-info-circle.padding-right-5
+            Rejected reason
+          .text-color Click on the icon to see details
+
+      .col-md-9
+        %h2.pull-left My Questions
+        = link_to 'Ask an Expert', questions_path(locale: current_locale_country), class: 'btn btn-primary pull-right'
+
+        = search_form_for @q, url: me_questions_path(locale: current_locale_country), html: { role: 'search', class: 'search-form form-inline margin-top-30 margin-bottom-30'} do |f|
+          .input-group
+            = f.search_field :title_or_body_cont, placeholder: 'Search', class: 'form-control'
+            .input-group-btn
+              %button.btn.btn-default{ type: :submit }
+                %i.fa.fa-search
+
+        - @questions.each do |question|
+          = render 'questions/question', question: question, answer: false
+
+        = will_paginate @questions, renderer: BootstrapPagination::Rails

@@ -1,0 +1,13 @@
+- if @contractor.clarifications.length()>0
+  %ul.meetings
+    - @contractor.clarifications.each do |clarification|
+      - if clarification.job_id == @job.id
+        - if clarification.question.present?
+          %li
+            %strong
+              = _("Q.")
+              %span= clarification.question
+              - if clarification.answer.present?
+                %strong
+                  = _("A.")
+                  %span= clarification.answer

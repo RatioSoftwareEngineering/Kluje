@@ -1,0 +1,6 @@
+= form_for :ask_expert, url: questions_path(), role: :form, :method => :post do |f|
+  .form-group
+    = f.label _("Your Question"), :class => 'w-400'
+    = f.text_area :question, :class => 'form-control non-border', :rows => '4', :required => true
+  .padding-bottom-15.text-right
+    = submit_tag _('Submit your Queston '), class: 'btn btn-danger ', :disable_with => _("Submiting")

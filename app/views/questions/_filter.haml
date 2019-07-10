@@ -1,0 +1,91 @@
+.widget#filter
+  .header
+    %h2.upcase Filter
+  .body
+    = search_form_for q, url: questions_path(locale: current_locale_country), html: { role: 'search', class: 'search-form form-inline margin-bottom-20'} do |f|
+      .input-group
+        = f.search_field :title_or_body_cont, placeholder: 'Search', class: 'form-control'
+        .input-group-btn
+          %button.btn.btn-default{ type: :submit }
+            %i.fa.fa-search
+
+    %hr.grey
+
+    %h4.upcase.margin-bottom-10.h-4 By Answer
+
+    .mt-radio.inline-block.margin-right-5.margin-bottom-5
+      %input{ type: :radio, name: :answer, value: :all, checked: 'all'.eql?(params[:answer]) || params[:answer].blank?, id: 'answer-all' }
+      %label{ for: 'answer-all'} All
+
+    .mt-radio.inline-block.margin-right-5.margin-bottom-5
+      %input{ type: :radio, name: :answer, value: :unanswered, checked: 'unanswered'.eql?(params[:answer]), id: 'answer-unanswered' }
+      %label{ for: 'answer-unanswered'} Need answered
+
+    .mt-radio.inline-block.margin-right-5.margin-bottom-5
+      %input{ type: :radio, name: :answer, value: :answered, checked: 'answered'.eql?(params[:answer]), id: 'answer-answered' }
+      %label{ for: 'answer-answered'} Answered
+
+    %h4.upcase.margin-top-30.margin-bottom-10.h-4 By Category
+
+    .row.well.margin-5.padding-10
+      .col-xs-6
+        .mt-checkbox
+          %input{ type: :checkbox, id: 'select-all', class: 'action' }
+          %label{ for: 'select-all' } Select all
+      .col-xs-6
+        .mt-checkbox
+          %input{ type: :checkbox, id: 'unselect-all', class: 'action'  }
+          %label{ for: 'unselect-all'} Unselect all
+
+    .row.margin-top-15
+      - Category.all.find_each do |category|
+        .col-xs-6
+          .mt-checkbox.margin-bottom-15
+            %input{type: :checkbox, name: 'category[]', value: category.id, id: "category-#{category.id}", checked: params[:category].to_a.include?(category.id.to_s) }
+            %label.dot-3{ for: "category-#{category.id}" }= category.name
+
+= content_for :extra_footer_tags do
+  :javascript
+    function reload(){
+      var url = window.location.pathname + '?';
+
+      var params = [];
+      if ($("#filter input[name='status[]']:checked").length > 0) {
+        params.push($("#filter input[name='status[]']:checked").serialize());
+      }
+
+      if ($("#filter input[name='answer']:checked").length > 0){
+        params.push($('input[name="answer"]:checked').serialize());
+      }
+
+      if ($("input[name='q[title_or_body_cont]']").val() !== '' && $("input[name='q[title_or_body_cont]']").val() !== undefined){
+        params.push($("input[name='q[title_or_body_cont]']").serialize());
+      }
+
+      if ($("#filter input[name='category[]']:checked").length > 0){
+        params.push($("#filter input[name='category[]']:checked").serialize());
+      }
+
+      window.location = url + params.join('&');
+    }
+    $('document').ready(function(){
+      $('#filter input:not(.action)').on('change', function(){
+        reload();
+      });
+
+      $('#select-all').on('change', function(){
+        if($('#select-all:checked').length > 0){
+          $("#filter input[name='category[]']").prop('checked', true);
+          $('#unselect-all').prop('checked', false);
+          reload();
+        }
+      });
+
+      $('#unselect-all').on('change', function(){
+        if($('#unselect-all:checked').length > 0){
+          $("#filter input[name='category[]']").prop('checked', false);
+          $('#select-all').prop('checked', false);
+          reload();
+        }
+      });
+    });

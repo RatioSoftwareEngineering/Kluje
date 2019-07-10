@@ -1,0 +1,16 @@
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'slider'
+
+.top-banner
+  .banner-slider
+    .cb1
+      .slide-background
+    .cb2
+      .slide-background
+    .cb3
+      .slide-background
+  .container.text-center.title.commercial
+    %h1.text-center.upcase.white= ( _('Looking to <em>Renovate</em> <span>Your Commercial Property?</span>')).html_safe
+    .padding-top-20
+      = link_to _('Post your Requirements'), new_commercial_job_path(locale: current_locale_country, country_id: current_country.id, city_id: @city.try(:id)), class: 'btn button-dark upcase'
+      %h3.padding-top-20.margin-0.w-300.white= _('Get 3 Quotes from our Verified Contractors!')

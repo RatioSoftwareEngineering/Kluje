@@ -1,0 +1,50 @@
+DEPENDENCIES
+  apt
+  logrotate
+  magic_shell
+  nginx
+    git: https://github.com/shinyaK2014/nginx.git
+    revision: c672960e9ad23ab0574f74f7ea5016bb7b94563f
+  ntp
+  rvm
+    git: https://github.com/fnichol/chef-rvm.git
+    revision: eddd733694a1d3e0872f5692e8dda93aa2752791
+
+GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  apt (2.9.2)
+  bluepill (2.4.3)
+    rsyslog (>= 2.0)
+  build-essential (2.4.0)
+    7-zip (>= 0.0.0)
+  chef_gem (0.1.0)
+  chef_handler (1.3.0)
+  compat_resource (12.9.1)
+  java (1.39.0)
+    apt (>= 0.0.0)
+  logrotate (1.9.2)
+  magic_shell (1.0.0)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ntp (1.11.0)
+    windows (>= 1.38.0)
+  ohai (2.1.0)
+  packagecloud (0.2.0)
+  rsyslog (4.0.0)
+    compat_resource (>= 0.0.0)
+  runit (1.7.6)
+    packagecloud (>= 0.0.0)
+  rvm (0.10.1)
+    chef_gem (>= 0.0.0)
+    java (>= 0.0.0)
+  windows (1.40.0)
+    chef_handler (>= 0.0.0)
+  yum (3.10.0)
+  yum-epel (0.7.0)
+    yum (>= 3.6.3)

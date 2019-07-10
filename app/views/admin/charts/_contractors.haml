@@ -1,0 +1,19 @@
+- [:day, :week, :month].each do |range|
+  :javascript
+    $(document).ready(function(){
+      $.ajax({
+        url: '/en/api/v1/charts/contractor_sign_up?range=' + '#{range}',
+        crossDomain: true,
+        success: function(data){
+          drawLineChart(
+            "#{range}_contractors_chart",
+            data,
+            {
+              chartArea: { width: '65%' },
+              title: 'Residential Contractors Sign Ups per #{range}',
+              width: window.innerWidth * 0.4
+            }
+          )
+        }
+      });
+    });

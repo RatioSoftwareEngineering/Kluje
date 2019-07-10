@@ -1,0 +1,13 @@
+.gtmetrix-button-white, .gtmetrix-banner-back, .gtmetrix-banner-next, .gtmetrix-button-menu, .gtmetrix-noise, 
+.gtmetrix-banner-slide, .gtmetrix-banner-slide-select, .gtmetrix-separate-jobs, .gtmetrix-bullet-ellipse
+{ display: inline-block; background: image_url('icons/sprite-icon-gt.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.gtmetrix-button-white { background-position: -5px -0px; width: 105px; height: 66px; }
+.gtmetrix-banner-back { background-position: -5px -71px; width: 35px; height: 61px; }
+.gtmetrix-banner-next { background-position: -45px -71px; width: 35px; height: 61px; }
+.gtmetrix-button-menu { background-position: -5px -137px; width: 32px; height: 32px; }
+.gtmetrix-noise { background-position: -42px -137px; width: 23px; height: 23px; }
+.gtmetrix-banner-slide { background-position: -85px -71px; width: 15px; height: 15px; }
+.gtmetrix-banner-slide-select { background-position: -85px -91px; width: 15px; height: 15px; }
+.gtmetrix-separate-jobs { background-position: -85px -111px; width: 13px; height: 46px; }
+.gtmetrix-bullet-ellipse { background-position: -70px -137px; width: 8px; height: 8px; }

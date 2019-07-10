@@ -1,0 +1,40 @@
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'commercial/meeting'
+- if current_account.contractor?
+  = form_for [@job, @meeting=Meeting.new()] do |f|
+    .form-group
+      = f.label _("Date"), :class => 'w-400'
+      %br/
+      = f.text_field :date, :class => 'form-control date', :required => true
+    .form-group
+      = f.label _("Time"), :class => 'w-400'
+      %br/
+      .input-append.bootstrap-timepicker-component
+        = f.text_field :time, :class => 'form-control dateselect-time input-small', :required => true
+        %span.add-on
+          %i.fa.fa-clock-o
+    .form-group
+      = f.label _("Place"), :class => 'w-400'
+      = f.text_area :place, :class => 'form-control', :rows => '4', :required => true
+    .padding-bottom-15.text-right
+      = submit_tag _('Submit your Meeting '), class: 'btn btn-danger ', :disable_with => _("Submiting")
+- elsif current_account.homeowner?
+  = form_for [@job, @meeting=Meeting.new()] do |f|
+    = f.hidden_field(:contractor_id, :value => contractor.id)
+    = f.hidden_field(:homeowner_id, :value => @job.homeowner.id)
+    .form-group
+      = f.label _("Date"), :class => 'w-400'
+      %br/
+      = f.text_field :date, :class => 'form-control date', :required => true
+    .form-group
+      = f.label _("Time"), :class => 'w-400'
+      %br/
+      .input-append.bootstrap-timepicker-component
+        = f.text_field :time, :class => 'form-control dateselect-time input-small', :required => true
+        %span.add-on
+          %i.fa.fa-clock-o
+    .form-group
+      = f.label _("Place"), :class => 'w-400'
+      = f.text_area :place, :class => 'form-control', :rows => '4', :required => true
+    .padding-bottom-15.text-right
+      = submit_tag _('Submit your Meeting '), class: 'btn btn-danger ', :disable_with => _("Submiting")

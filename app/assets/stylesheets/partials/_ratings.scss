@@ -1,0 +1,61 @@
+$unchecked-star: '\f006';
+$unchecked-color: color('yellow');
+$checked-star: '\f005';
+$checked-color: color('yellow');
+
+#rating_form {
+    label.error {
+	color: red;
+    }
+}
+
+.rating {
+    .title {
+	font-weight: 500;
+    }
+}
+
+.star-cb-group {
+    font-family: $font-awesome;
+
+    font-size: 0;
+    * {
+	font-size: 15px;
+    }
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    & > input {
+	display: none;
+	& + label {
+	    /* only enough room for the star */
+	    display: inline-block;
+	    overflow: hidden;
+	    text-indent: 9999px;
+	    width: 1em;
+	    white-space: nowrap;
+	    cursor: pointer;
+	    &:before {
+		display: inline-block;
+		text-indent: -9999px;
+		content: $unchecked-star;
+		color: $unchecked-color;
+	    }
+	}
+	&:checked ~ label:before,
+	& + label:hover ~ label:before,
+	& + label:hover:before {
+	    content: $checked-star;
+	}
+    }
+
+    &:hover > input + label:before {
+	content: $unchecked-star;
+	color: $unchecked-color;
+    }
+    &:hover > input + label:hover ~ label:before,
+    &:hover > input + label:hover:before {
+	content: $checked-star;
+	color: $checked-color;
+    }
+}

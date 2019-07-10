@@ -1,0 +1,18 @@
+.container.margin-top-20.margin-bottom-40
+  = render 'layouts/flash_messages'
+  .row
+    .col-md-6
+      %h4
+        = _('Rate')
+        = @contractor.company_name
+      %hr
+      = render 'commercial/ratings/form', locals: { readonly: false }
+    .col-md-6
+      %h4= _('Job details')
+      %hr
+      = render 'commercial/jobs/job_details'
+    .col-md-6
+      %h4= _('Why Rate your Contactor?')
+      %hr
+      %p
+        = _('By rating a contractor you are not only helping other home-owners to find better quality contractors for their jobs, You are also helping contractors build their reputation in the marketplace. We at Kluje.com firmly believe that using ratings creates a win-win situation for everyone!')

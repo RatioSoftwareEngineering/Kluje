@@ -1,0 +1,113 @@
+- @answers = signed_in? ? @question.childs.answer.approved.includes(:voters).includes(:account) : @question.childs.answer.approved.includes(:account)
+
+- content_for(:description, truncate(strip_tags(@question.body.squish), length: 300, omission: '', separator: /\s/))
+
+= render 'questions/ask_an_expert'
+.white-bg
+  .container
+    %ul.breadcrumb.white-bg
+      %li= link_to 'Home', home_path
+      %li= link_to 'Ask An Expert', questions_path(locale: current_locale_country)
+      %li.active= @question.title
+
+%section.bg-grey.padding-top-20.padding-bottom-50
+  .container
+    .row
+      .col-md-8
+        %h2 Question
+
+        .widget
+          .body
+            .with-image.margin-bottom-10
+              .image= image_tag "#{@question.children_count > 0 ? 'ic-question-green.svg' : 'ic-question-yellow.svg'}"
+              .medium= @question.author_name
+              - if @question.category
+                - url = question_in_category_url @question.category
+                %span in
+                %span.question-category
+                  %span
+                    = link_to(@question.category.name, url)
+
+              .meta Asked #{@question.created_at.strftime('%A %d %b %Y %H:%M %p')}
+            %h3.title.h-3= @question.title
+            %p
+              %span.status
+                = image_tag 'ic-view.svg', class: "#{'grayscale' if @question.hits == 0 }"
+                #{pluralize(@question.hits, 'View')}
+              %span.status
+                = image_tag 'ic-answer.svg', class: "#{'grayscale' if @question.children_count === 0 }"
+                #{pluralize(@question.children_count, 'Answer')}
+
+            %hr.grey
+
+            %p= simple_format @question.body, {}, sanitize: false
+
+            .text-right
+              - if signed_in?
+                - if current_account.contractor? || current_account.admin?
+                  .answer-action.btn.btn-primary{ id: "answer-action-#{@question.id}", data: {post: @question.id}}= _('Answer Now')
+              - else
+                .btn.btn-primary{ data: { toggle: 'modal', target: '#signin' } }= _('Answer Now')
+
+            .hide{ id: "answer-form-#{@question.id}"}
+              = form_for :answer, url: answers_path(format: :js), method: :post, remote: true do |f|
+                .form-group
+                  = f.hidden_field :parent_id, value: @question.id
+                  = f.text_area :body, rows: 6, placeholder: 'Write your comment...', class: 'form-control'
+                .form-group.text-right
+                  = f.button 'Cancel', type: :button, class: 'btn answer-cancel btn-dark', data: { post: @question.id }
+                  = f.button 'Post Your Answer', type: :submit, class: 'btn btn-primary'
+
+        %h2 Answers
+
+        .row.margin-bottom-20
+          .col-sm-6
+            #{pluralize(@question.children_count, 'Answer')}
+
+          .col-sm-6.text-right
+            - unless signed_in?
+              Please #{link_to 'Login', '#', data: { toggle: 'modal', target: '#signin' }, class: 'highlight' } or #{link_to 'Register', signup_contractors_path, class: 'highlight' } to Submit Answer
+
+        - @answers.find_each do |answer|
+          = render 'questions/answer', answer: answer, level: 0, question: @question
+
+      .col-md-4
+        .widget
+          .header
+            %h3.h-3 Recent Questions
+          .body.padding-top-0
+            - @recent_questions.each do |question|
+              .flex.flex-top.padding-top-10.padding-bottom-10
+                = image_tag "#{question.children_count > 0 ? 'ic-question-green.svg' : 'ic-question-yellow.svg'}", class: 'padding-right-10'
+                .flex-100
+                  %h4.h-4
+                    = link_to question.title, question_path(locale: current_locale_country, id: question.slug_url), class: 'medium'
+                  .meta
+                    %span #{question.author_name}
+                    %span &middot;
+                    %span #{question.hits} Views
+              %hr.grey.margin-0
+
+        .widget.blog
+          .header
+            %h3.h-3 Recent Blogs
+          .body.padding-top-0
+            - @blogs.each do |blog|
+              = render 'blog/post_preview', post: blog
+              %hr.grey.margin-0
+
+= content_for :extra_footer_tags do
+  :javascript
+    $(document).ready(function(){
+      $('.answer-action').on('click', function(){
+        var postId = $(this).attr('data-post');
+        $('#answer-form-' + postId).removeClass('hide');
+        $('#answer-action-' + postId).addClass('hide');
+      });
+
+      $('.answer-cancel').on('click', function(){
+        var postId = $(this).attr('data-post');
+        $('#answer-form-' + postId).addClass('hide');
+        $('#answer-action-' + postId).removeClass('hide');
+      });
+    });

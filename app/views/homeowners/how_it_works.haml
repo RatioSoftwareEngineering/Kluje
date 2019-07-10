@@ -1,0 +1,39 @@
+- content_for(:title, _('Kluje | Homeowners  - How it Works Guide'))
+- content_for(:description, _("Are you looking for a commercial or residential contractor in? kluje.com can help you do this! Here is a step by step guide on How kluje.com can do this."))
+- content_for(:keywords, _('how does kluje work, select contractor, budget, kluje, add a photo, add a description'))
+
+.container.margin-top-20.margin-bottom-30.how-it-work
+  .row
+    .col-md-8
+      %content.content-static-page
+        .text-center
+          %h1.page-title= _('How it Works')
+        .container{style: "width: 80%;"}
+          .youtube
+            %iframe.fluid{ frameborder: 0, src: "https://www.youtube.com/embed/K2px2YN0cB8?rel=0&showinfo=0&autohide=1" }
+        .margin-top-40
+          = render "homeowners/steps"
+        .margin-top-40
+          = render "homeowners/faq"
+        .margin-top-40.text-center
+          %a.btn.btn-warning.btn-lg{href: new_job_path(locale: current_locale_country),rel: "canonical"}= _("Post a Job Now!")
+
+    .col-md-4
+      = render 'home/hw_sidebar'
+
+/ /Container
+/ Modal
+#ratingsModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "ratingsModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4.modal-title Ratings
+      .modal-body
+        %p=_('Genuine homeowner ratings help you to choose the best Contractor.')
+        %p=_('Unlike other services, only homeowners that have found their Contractor through Kluje.com can leave ratings, so they are always based on the genuine real experiences of previous users.')
+        %p=_('Every time we connect you with a local Contractor we’ll share their ratings with you, so you can make a smarter choice.')
+        %p=_('Homeowners rate their Contractors on quality, value and proffesionalism and also leave relevant comments for others to see.')
+        %p=_('Ratings not only help you to make an informed decision but also reward brilliant service by helping the best contractor build strong reputations and stand out from the crowd.')
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close

@@ -1,0 +1,14 @@
+= _('Dear %s,') % contractor.company_name
+%p
+  = _("%s has answered your question about their job.") % client.first_name || client.last_name
+  %br
+  %br
+  = _('Question:')
+  %br
+  =_("%s") % clarification.question
+  %br
+  %br
+  =_('Answer:')
+  %br
+  =_("%s") % clarification.answer
+  %br

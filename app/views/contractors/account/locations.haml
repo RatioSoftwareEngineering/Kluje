@@ -1,0 +1,15 @@
+%h2.text-left Locations
+
+- all = current_account.country.cities.available
+- selected = current_account.contractor.cities.pluck(:id)
+
+= form_for current_account.contractor, url: update_contractor_contractors_path, method: :put, class: 'form' do |f|
+  .form-group
+    %label= _('Select locations you can work in')
+    - all.each do |city|
+      .checkbox
+        %label
+          = f.check_box "cities[#{city.id}]", value: 1, checked: selected.include?(city.id)
+          = city.name
+  .form-group
+    = f.submit 'Save changes', class: 'btn btn-success'

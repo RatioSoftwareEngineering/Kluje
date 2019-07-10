@@ -1,0 +1,5720 @@
+# English translations for kluje package.
+# Copyright (C) 2016 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the kluje package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kluje 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2016-04-04 21:35+0700\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+
+msgid " and "
+msgstr ""
+
+msgid ""
+" as a reference when making a payment. This is so that we can track your payme"
+"nt."
+msgstr ""
+
+msgid "%s"
+msgstr ""
+
+msgid "%s %"
+msgstr ""
+
+msgid "%s has answered your question about their job."
+msgstr ""
+
+msgid "%s has asked a question about your job."
+msgstr ""
+
+msgid "%s has provided a final invoice for your viewing."
+msgstr ""
+
+msgid "%s has provided a quote for your viewing."
+msgstr ""
+
+msgid "%s has selected you to do their project."
+msgstr ""
+
+msgid "%s is requesting a rating for this job:"
+msgstr ""
+
+msgid ""
+"%s just bid on your job! Please expect them to contact you shortly. Remember o"
+"ur contractors pay a fee for the opportunity to quote on your job so please al"
+"low them every opportunity to do so!"
+msgstr ""
+
+msgid ""
+"%s just showed interest  in your job! You will be contacted by the Kluje team "
+"to arrange a time to visit the site with"
+msgstr ""
+
+msgid "%s to provide a quote."
+msgstr ""
+
+msgid ""
+"%{amount1}, %{amount2} and %{amount3} top ups are available for lead purchases"
+". Simply login to your account and click on billing."
+msgstr ""
+
+msgid "%{category} in %{city}"
+msgstr ""
+
+msgid "%{number} jobs posted"
+msgstr ""
+
+msgid "%{num} jobs have been posted"
+msgstr ""
+
+msgid "%{role} are not allowed to perform this action"
+msgstr ""
+
+msgid "(Final Invoice is which you send to Client and Kluje Commerial)"
+msgstr ""
+
+msgid "(Initial Quote is quote which you would provide to client for the job)"
+msgstr ""
+
+msgid "* Required fields"
+msgstr ""
+
+msgid ","
+msgstr ""
+
+msgid "---Select client type---"
+msgstr ""
+
+msgid "---Select the floor size---"
+msgstr ""
+
+msgid "---Select the property type---"
+msgstr ""
+
+msgid "---Select the renovation type---"
+msgstr ""
+
+msgid "."
+msgstr ""
+
+msgid "1 Room  Wall Tiling Installation"
+msgstr ""
+
+msgid "1 Room  Wall Tiling Supply and Fit"
+msgstr ""
+
+msgid "1 Room Marble Floor Polishing"
+msgstr ""
+
+msgid "1 Room floor Tiling Installation"
+msgstr ""
+
+msgid "1 Room floor Tiling Supply and Fit"
+msgstr ""
+
+msgid "1,001 - 2,001 Sq Feet"
+msgstr ""
+
+msgid "1-2 Rooms Carpet Laying Supply and Fit"
+msgstr ""
+
+msgid "1-2 Rooms Internal Painting"
+msgstr ""
+
+msgid "1-2 Rooms Linoleum/wood/Laminate"
+msgstr ""
+
+msgid "1-2 Rooms Parquet Floor Installation"
+msgstr ""
+
+msgid "1-2 Rooms Parquet Floor Supply and Fit"
+msgstr ""
+
+msgid "1. Definitions"
+msgstr ""
+
+msgid ""
+"1. You Job Description is not detailed enough. Use as much detail as you can. "
+"Include details, as applicable, such as room size, number of rooms, or dimensi"
+"ons. Really try to explain the problem as clearly as you can."
+msgstr ""
+
+msgid "1.5% "
+msgstr ""
+
+msgid "10. The Company's Rights"
+msgstr ""
+
+msgid "11. Intellectual Property Rights"
+msgstr ""
+
+msgid "12. Indemnity"
+msgstr ""
+
+msgid "13. Limitations of Liability"
+msgstr ""
+
+msgid "14. Disputes Between Members"
+msgstr ""
+
+msgid "15. Disputes with the Company"
+msgstr ""
+
+msgid "16. Governing Law"
+msgstr ""
+
+msgid "17. Suspension and Termination"
+msgstr ""
+
+msgid "18 General"
+msgstr ""
+
+msgid "2 Or More Rooms Carpet Laying Supply and Fit"
+msgstr ""
+
+msgid "2 Or More Rooms Linoleum/wood/Laminate"
+msgstr ""
+
+msgid "2 Or More Rooms Wall Tiling Installation"
+msgstr ""
+
+msgid "2 Or More Rooms Wall Tiling Supply and Fit"
+msgstr ""
+
+msgid "2 Storey Room Addition"
+msgstr ""
+
+msgid "2 room (including accessories)"
+msgstr ""
+
+msgid "2 room Renovation (excluding accessories)"
+msgstr ""
+
+msgid "2 rooms Or More floor Tiling Installation"
+msgstr ""
+
+msgid "2 rooms Or More floor Tiling Supply and Fit"
+msgstr ""
+
+msgid "2,001 - 3,001 Sq Feet"
+msgstr ""
+
+msgid "2. General Disclaimer - Customer"
+msgstr ""
+
+msgid ""
+"2. Your estimated budget should match your job description. Contractors choose"
+" to buy your lead based on whether they think your chosen budget is achievable"
+". So try to adjust your budget up one notch."
+msgstr ""
+
+msgid "3 room (including accessories)"
+msgstr ""
+
+msgid "3 room Renovation (excluding accessories)"
+msgstr ""
+
+msgid "3,001 - 4,001 Sq Feet"
+msgstr ""
+
+msgid "3,001 - 4,001 SqFeet"
+msgstr ""
+
+msgid "3-5 Rooms Internal Painting"
+msgstr ""
+
+msgid "3. General Disclaimer - Contractor"
+msgstr ""
+
+msgid ""
+"3. Your timing may be either too short or too long for your job. For example, "
+"if your job is a whole interior renovation then make sure you choose at least "
+"one month. Conversely, if your job is to hang some pictures on the wall, then "
+"shorter timeframe like one week is better."
+msgstr ""
+
+msgid "4 characters minimum"
+msgstr ""
+
+msgid "4 room (including accessories)"
+msgstr ""
+
+msgid "4 room Renovation (excluding accessories)"
+msgstr ""
+
+msgid "4,001 - 5,001 Sq Feet"
+msgstr ""
+
+msgid "4,001 - 5,001 SqFeet"
+msgstr ""
+
+msgid "4. Privacy and Data Protection"
+msgstr ""
+
+msgid "5 room (including accessories)"
+msgstr ""
+
+msgid "5 room Renovation (excluding accessories)"
+msgstr ""
+
+msgid "5. Exchange of Information"
+msgstr ""
+
+msgid "6 characters minimum"
+msgstr ""
+
+msgid "6,001 - 7,001 Sq Feet"
+msgstr ""
+
+msgid "6,001 - 7,001 SqFeet"
+msgstr ""
+
+msgid "6. Disclaimer of Warranties"
+msgstr ""
+
+msgid "7,001 - 8,001 Sq Feet"
+msgstr ""
+
+msgid "7,001 - 8,001 SqFeet"
+msgstr ""
+
+msgid "7. Your Information"
+msgstr ""
+
+msgid "73 Loewen Road, #01-21 Singapore 248843"
+msgstr ""
+
+msgid "8. Your Obligation"
+msgstr ""
+
+msgid "9. Tradesperson Qualifications"
+msgstr ""
+
+msgid "9:00 am - 5:00 pm"
+msgstr ""
+
+msgid "<em>Exterior</em> contractors"
+msgstr ""
+
+msgid "<em>General</em> contractors"
+msgstr ""
+
+msgid "<em>Interior</em> contractors"
+msgstr ""
+
+msgid "?"
+msgstr ""
+
+msgid ""
+"A 10-year veteran in home renovations with vast experience in many aspects of "
+"the industry, Andrew has been CEO of UK companies specializing in home renovat"
+"ions – Propertytask and Ezzies. As co-founder of kluje.com, Andrew is able to "
+"provide professional advice for contractors and homeowners alike."
+msgstr ""
+
+msgid ""
+"A Service Providers should guarantee their workmanship for a period of time. M"
+"ake sure you have clarified what this period is and that you have the relevant"
+" paperwork available if you need to make a claim at a later stage."
+msgstr ""
+
+msgid ""
+"A deposit should always be documented with a detailed invoice. The deposit sho"
+"uld not be more than 30%-50% of the overall job price, but should cover the Se"
+"rvice Providers tools, materials and travel. The deposit % will vary from one "
+"Service Providers to another."
+msgstr ""
+
+msgid ""
+"A good, quality Contractor should have a portfolio of previous work. Contracto"
+"rs are asked to fill out their profile page with their, qualifications, a desc"
+"ription of their services and to upload pictures of previous jobs. We always a"
+"dvise you to ask for previous customer references.Contractors without ratings "
+"have most likely just joined. Although they don’t have any ratings yet, it doe"
+"sn’t mean they’re not quality Contractors. In fact, this means that Contractor"
+"s are encouraged to do a quality job to ensure that they get a brilliant first"
+" rating, allowing them to start building their reputation online and gain more"
+" work in the future."
+msgstr ""
+
+msgid "A meeting has been scheduled by the Kluje Team for %s to provide a quote."
+msgstr ""
+
+msgid ""
+"A quote should outline the payment schedule the contractor expects, this will "
+"avoid any misunderstanding later on. Each stage of the payment schedule should"
+" be documented with an invoice, and should only cover work that has clearly be"
+"en completed."
+msgstr ""
+
+msgid "A verification email has been sent to"
+msgstr ""
+
+msgid "A."
+msgstr ""
+
+msgid "ACRA: Accounting and Corporate Regulatory Authority (Business registration)"
+msgstr ""
+
+msgid "About Kluje"
+msgstr ""
+
+msgid "About Us"
+msgstr ""
+
+msgid "About us"
+msgstr ""
+
+msgid "Above"
+msgstr ""
+
+msgid "Above 6 months"
+msgstr ""
+
+msgid "Above 8,001 Sq Feet"
+msgstr ""
+
+msgid "Above 8,001 SqFeet"
+msgstr ""
+
+msgid "Accept"
+msgstr ""
+
+msgid "Accept "
+msgstr ""
+
+msgid "Accept requesting to access to commercial"
+msgstr ""
+
+msgid "Accepted"
+msgstr ""
+
+msgid "Accepting"
+msgstr ""
+
+msgid "Access Control / Door Entry Repair"
+msgstr ""
+
+msgid "Access Control / Door Entry installation"
+msgstr ""
+
+msgid "Access Control services"
+msgstr ""
+
+msgid "Account"
+msgstr ""
+
+msgid "Account Details"
+msgstr ""
+
+msgid "Account Name: KLUJE PTE LTD."
+msgstr ""
+
+msgid "Account Number: 626029227001"
+msgstr ""
+
+msgid "Account Verification Failed"
+msgstr ""
+
+msgid "Account details"
+msgstr ""
+
+msgid "Account not found"
+msgstr ""
+
+msgid "Account settings updated!"
+msgstr ""
+
+msgid "Activate E-mail alerts"
+msgstr ""
+
+msgid "Activate SMS alerts"
+msgstr ""
+
+msgid "Add a description."
+msgstr ""
+
+msgid "Add a photo to help the contractor to understand the work you need done."
+msgstr ""
+
+msgid "Add a photo."
+msgstr ""
+
+msgid "Additional Information:"
+msgstr ""
+
+msgid "Additional comments (optional):"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Address:"
+msgstr ""
+
+msgid "Address:\t"
+msgstr ""
+
+msgid "Adelaide"
+msgstr ""
+
+msgid ""
+"Adjust your skills and map setting to receive the right quality and quantity o"
+"f leads."
+msgstr ""
+
+msgid "Admin"
+msgstr ""
+
+msgid ""
+"After personally going through the long and painful process of finding and int"
+"erviewing contractors for a job, receiving quotations, and the uncertainty of "
+"choosing the right one, our founders realized that there had to be a better wa"
+"y."
+msgstr ""
+
+msgid "After the initial 100 we charge %s per 100 SMS."
+msgstr ""
+
+msgid ""
+"After the work has been completed the Contractor will request a rating from yo"
+"u on the quality, value and professionalism of their work. This feedback is in"
+"valuable for future customers to choose the right Contractor and is really imp"
+"ortant to help a good Contractor grow their businesses."
+msgstr ""
+
+msgid ""
+"After you post your job, we will forward your job lead to all relevant contrac"
+"tors in your area. The contractors who are interested in completing your job w"
+"ill pay to see your contact details and contact you to quote. Up to 3 contract"
+"ors will contact you to provide a quotation.Once a contractor has purchased yo"
+"ur job lead we will send you the contractors details and ratings. If you have "
+"not been contacted by at least 1 contractor within 3 days, consider updating y"
+"our job description with more details or a revised budget."
+msgstr ""
+
+msgid "Afternoon (12pm - 6pm)"
+msgstr ""
+
+msgid "Air-conditioning"
+msgstr ""
+
+msgid "Air-conditioning Contractor"
+msgstr ""
+
+msgid "Aircon Compressor Repair"
+msgstr ""
+
+msgid "Aircon Compressor Supply and Fit"
+msgstr ""
+
+msgid "Aircon Not Switching On"
+msgstr ""
+
+msgid "Aircon Repair"
+msgstr ""
+
+msgid "Aircon Repair Fan not working"
+msgstr ""
+
+msgid "Aircon Servicing 1 off"
+msgstr ""
+
+msgid "Aircon System 2 Supply and Fit"
+msgstr ""
+
+msgid "Aircon System 3 Supply and Fit"
+msgstr ""
+
+msgid "Aircon System 4 Supply and Fit"
+msgstr ""
+
+msgid "Aircon System single Split Supply and Fit"
+msgstr ""
+
+msgid "All Kluje Commercial Contractors have been screened, certified and verified."
+msgstr ""
+
+msgid "All Rights Reserved"
+msgstr ""
+
+msgid "All costs must be included in the estimate"
+msgstr ""
+
+msgid "All licenses to carry out M&E works"
+msgstr ""
+
+msgid ""
+"All transactions under this invoice and these terms shall be governed by and c"
+"onstructed according to the laws of Singapore and the parties submit to the no"
+"n-exclusive jurisdiction of the courts in Singapore."
+msgstr ""
+
+msgid ""
+"All you need to do now is login and accept the user agreement to access Kluje "
+"Commercial leads."
+msgstr ""
+
+msgid "Already submitted previously!"
+msgstr ""
+
+msgid ""
+"Although it depends on many factors, be as specific as possible. Describe the "
+"problem to the best of your ability. One key things to include are if the cont"
+"ractor have to supply the parts for the job (supply and fit?) or you already h"
+"ave the items and you just need them installed (fit only). Also include, if th"
+"ey are relevant, room dimensions, number of rooms, and so forth. <h6>Note: DO "
+"NOT put your contact details in the description box, as your privacy will not "
+"be protected. Use the included forms on page 3.</h6>"
+msgstr ""
+
+msgid "Although it has been viewed by %d contractors, no one has bid on your lead."
+msgstr ""
+
+msgid "Always ask for ratings"
+msgstr ""
+
+msgid "Always be professional"
+msgstr ""
+
+msgid "Always get more than 1 Quote"
+msgstr ""
+
+msgid "Amnat Charoen"
+msgstr ""
+
+msgid "Amount"
+msgstr ""
+
+msgid "Andrew Esmonde-White"
+msgstr ""
+
+msgid "Ang Thong"
+msgstr ""
+
+msgid "Answer:"
+msgstr ""
+
+msgid "Apartment/Flat"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Apply Commercial"
+msgstr ""
+
+msgid "Apply Now"
+msgstr ""
+
+msgid "Approved"
+msgstr ""
+
+msgid "Approximate Project Start Date"
+msgstr ""
+
+msgid ""
+"Archive your job as it has already been done or forgotten about. This will rem"
+"ove it from the active queue."
+msgstr ""
+
+msgid "Archived"
+msgstr ""
+
+msgid "Are homeowner ratings genuine?"
+msgstr ""
+
+msgid "Articles"
+msgstr ""
+
+msgid "As part of Kluje.com’s service to you, only"
+msgstr ""
+
+msgid "As seen in"
+msgstr ""
+
+msgid "As soon as possible"
+msgstr ""
+
+msgid ""
+"As you know, Ratings are used by other homeowners to make a more informed deci"
+"sion about which Contractor to hire for their renovation jobs. These ratings a"
+"re a very powerful tool for Good Contractors to build their reputation."
+msgstr ""
+
+msgid "Ask An Expert"
+msgstr ""
+
+msgid "Ask an Expert"
+msgstr ""
+
+msgid "Ask an expert"
+msgstr ""
+
+msgid ""
+"Ask for a quotation for the work described, this differs from an estimate, whi"
+"ch is a rough price and not binding. The quote should include a detailed job s"
+"pecification, price, conditions and a payment schedule. GST/VAT - It is a good"
+" idea to clarify up front whether the Service Providers is GST/VAT registered "
+"and whether you will be charged any GST/VAT."
+msgstr ""
+
+msgid "Ask!"
+msgstr ""
+
+msgid "Asked at"
+msgstr ""
+
+msgid "Asking"
+msgstr ""
+
+msgid "Assistance in hiring the right contractor for the job"
+msgstr ""
+
+msgid "Assisting in hiring the right contractor for the project."
+msgstr ""
+
+msgid "Association/Authority Name"
+msgstr ""
+
+msgid ""
+"Attached is the commission invoice for your recent completed commercial job # "
+"%s"
+msgstr ""
+
+msgid "Attached is the paid commission for recent completed commercial job # %s"
+msgstr ""
+
+msgid ""
+"Attached is the paid commission invoice for your recent completed commercial j"
+"ob # %s"
+msgstr ""
+
+msgid "Australia"
+msgstr ""
+
+msgid "Availability"
+msgstr ""
+
+msgid "Availability:"
+msgstr ""
+
+msgid "Available only for premium contractors"
+msgstr ""
+
+msgid "Average Contractor Rating:"
+msgstr ""
+
+msgid "Awnings/Skylights Installation"
+msgstr ""
+
+msgid "Awnings/Skylights Repair"
+msgstr ""
+
+msgid "Awnings/Skylights Supply and Fit"
+msgstr ""
+
+msgid "Ayutthaya"
+msgstr ""
+
+msgid "BCA: The Building and Construction Authority (Construction)"
+msgstr ""
+
+msgid "BIC Code: OCBCSGSGXXX"
+msgstr ""
+
+msgid "BIC Name: OVERSEA - CHINESE BANKING CORPORATION"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Bandung"
+msgstr ""
+
+msgid "Bangkok"
+msgstr ""
+
+msgid "Basic"
+msgstr ""
+
+msgid "Basin Replacement (Excluding Parts)"
+msgstr ""
+
+msgid "Basin Replacement (Including Parts)"
+msgstr ""
+
+msgid "Bath Tub Installation"
+msgstr ""
+
+msgid "Bath Tub Installation supply and Fit"
+msgstr ""
+
+msgid "Bathroom"
+msgstr ""
+
+msgid "Bathroom Contractor"
+msgstr ""
+
+msgid "Bathroom Design Service"
+msgstr ""
+
+msgid "Bathroom Renovation"
+msgstr ""
+
+msgid "Be clear on the time frame for the job"
+msgstr ""
+
+msgid "Be clear on what you want done"
+msgstr ""
+
+msgid ""
+"Be polite and courteous in your dealings with homeowners, remember, their rati"
+"ngs of you will be used by other homeowners in the future."
+msgstr ""
+
+msgid "Before you get started, here are a few tips:"
+msgstr ""
+
+msgid "Bekasi"
+msgstr ""
+
+msgid "Below 1,000 Sq Feet"
+msgstr ""
+
+msgid "Benefits:"
+msgstr ""
+
+msgid "Bespoke Kitchen Furniture Design"
+msgstr ""
+
+msgid "Bid for lead"
+msgstr ""
+
+msgid "Bidded"
+msgstr ""
+
+msgid "Bidded at"
+msgstr ""
+
+msgid "Bidding"
+msgstr ""
+
+msgid "Bids"
+msgstr ""
+
+msgid "Bids:"
+msgstr ""
+
+msgid "Bill to:"
+msgstr ""
+
+msgid "Billing"
+msgstr ""
+
+msgid "Billing history"
+msgstr ""
+
+msgid "Biên Hòa"
+msgstr ""
+
+msgid "Blog"
+msgstr ""
+
+msgid "Blog Categories"
+msgstr ""
+
+msgid "Brick Wall and Fencing Installation"
+msgstr ""
+
+msgid "Brick/Stone/Concrete Paving"
+msgstr ""
+
+msgid "Bricklayer"
+msgstr ""
+
+msgid "Brisbane"
+msgstr ""
+
+msgid "Browse Contractors"
+msgstr ""
+
+msgid "Budget"
+msgstr ""
+
+msgid "Budget:"
+msgstr ""
+
+msgid "Bueng Kan"
+msgstr ""
+
+msgid "Build In Wardrobe Installation"
+msgstr ""
+
+msgid "Build In Wardrobe Supply and fit"
+msgstr ""
+
+msgid "Building Associations / Authorities You Are Registered With"
+msgstr ""
+
+msgid "Bungalow"
+msgstr ""
+
+msgid "Buriram"
+msgstr ""
+
+msgid "Buying leads and quote to win work:"
+msgstr ""
+
+msgid ""
+"By clicking the button below, you declare you have read and agreed to Kluje.co"
+"m's"
+msgstr ""
+
+msgid ""
+"By clicking the button, I declare that the facts contained in this application"
+" form supporting documents are true to the best of my knowledge. I understand "
+"that false declaration or providing false information may result in penalties "
+"including delisting of my firm.I authorise Kluje Pte Ltd to conduct any enquir"
+"y on the particulars and neither Kluje Pte Ltd nor its officers shall be held "
+"liable for any los, injury, or damages howsoever caused by Kluje Pre LTD proce"
+"ssing of a decision on this application. I accept the Terms and Conditions of "
+"Registration.  "
+msgstr ""
+
+msgid "By clicking this button, you declare you have read and agreed to kluje.com's"
+msgstr ""
+
+msgid ""
+"By rating a contractor you are not only helping other home-owners to find bett"
+"er quality contractors for their jobs, You are also helping contractors build "
+"their reputation in the marketplace. We at Kluje.com firmly believe that using"
+" ratings creates a win-win situation for everyone!"
+msgstr ""
+
+msgid "COO and Co-Founder"
+msgstr ""
+
+msgid "Caloocan"
+msgstr ""
+
+msgid "Can I add multiple jobs to one posting?"
+msgstr ""
+
+msgid "Can I cancel job alerts?"
+msgstr ""
+
+msgid "Can I delete ratings?"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Carpenter"
+msgstr ""
+
+msgid "Carpenter / Joiner"
+msgstr ""
+
+msgid "Carpenters"
+msgstr ""
+
+msgid "Carpet Installation Labour Only"
+msgstr ""
+
+msgid "Carpet Installation Supply and Fit"
+msgstr ""
+
+msgid "Carpet/ Rug Cleaning Service Single item"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Category not found"
+msgstr ""
+
+msgid "Cebu City"
+msgstr ""
+
+msgid "Ceiling Installation Large room"
+msgstr ""
+
+msgid "Ceiling Installation Small room"
+msgstr ""
+
+msgid "Chachoengsao"
+msgstr ""
+
+msgid "Chainat"
+msgstr ""
+
+msgid "Chaiyaphum"
+msgstr ""
+
+msgid "Change"
+msgstr ""
+
+msgid "Change Password"
+msgstr ""
+
+msgid "Change my password"
+msgstr ""
+
+msgid "Change password"
+msgstr ""
+
+msgid "Change password."
+msgstr ""
+
+msgid "Changing"
+msgstr ""
+
+msgid "Chanthaburi"
+msgstr ""
+
+msgid "Cheapest quote"
+msgstr ""
+
+msgid "Check List"
+msgstr ""
+
+msgid "Check if there is a need for PE endorsement and submission to the authorities"
+msgstr ""
+
+msgid "Check references and ratings"
+msgstr ""
+
+msgid "Check the profiles and hire"
+msgstr ""
+
+msgid "Checklist"
+msgstr ""
+
+msgid "Chemical Overhaul per Fan Coil"
+msgstr ""
+
+msgid ""
+"Cheques should be crossed and made payable to KLUJE PTE LTD or monies transfer"
+"ed to:"
+msgstr ""
+
+msgid "Chiang Mai"
+msgstr ""
+
+msgid "Chiang Rai"
+msgstr ""
+
+msgid "Chonburi"
+msgstr ""
+
+msgid "Choose \"Yes\" you will need to pay for Concierges Service a Fee"
+msgstr ""
+
+msgid "Choose Language"
+msgstr ""
+
+msgid "Choose a budget."
+msgstr ""
+
+msgid "Choose and Hire"
+msgstr ""
+
+msgid "Choose one of the options below to Top Up your account:"
+msgstr ""
+
+msgid "Choosing a Contractor"
+msgstr ""
+
+msgid "Chumphon"
+msgstr ""
+
+msgid "Clean 2-4 Aircon's"
+msgstr ""
+
+msgid "Clean Single Aircon"
+msgstr ""
+
+msgid "Click on the following link to verify your email address."
+msgstr ""
+
+msgid "Click the link below to take a look."
+msgstr ""
+
+msgid "Click to archive the job"
+msgstr ""
+
+msgid "Click to rate the contractor"
+msgstr ""
+
+msgid "Click to repost the job"
+msgstr ""
+
+msgid "Click to verify"
+msgstr ""
+
+msgid "Click to view the contractor's profile"
+msgstr ""
+
+msgid "Click to view the job"
+msgstr ""
+
+msgid "Click to view the rating"
+msgstr ""
+
+msgid "Client"
+msgstr ""
+
+msgid "Client Details"
+msgstr ""
+
+msgid "Client Email"
+msgstr ""
+
+msgid "Client First Name"
+msgstr ""
+
+msgid "Client Information"
+msgstr ""
+
+msgid "Client Last Name"
+msgstr ""
+
+msgid "Client Mobile Number"
+msgstr ""
+
+msgid "Client Type"
+msgstr ""
+
+msgid "Client has answered your question about their job"
+msgstr ""
+
+msgid ""
+"Co-ordinate with client on the status of the project, including rectifications"
+" and alterations as needed."
+msgstr ""
+
+msgid "Co-ordinating with client on the status of the project."
+msgstr ""
+
+msgid "Commercial"
+msgstr ""
+
+msgid "Commercial Jobs"
+msgstr ""
+
+msgid "Commercial Request"
+msgstr ""
+
+msgid "Commercial jobs"
+msgstr ""
+
+msgid "Commision Total"
+msgstr ""
+
+msgid "Commision for completed job #"
+msgstr ""
+
+msgid "Commission Rate %"
+msgstr ""
+
+msgid "Commission Rate Amount"
+msgstr ""
+
+msgid ""
+"Communicate clearly and completely with homeowners, so that both parties know "
+"what is going to be done and when, along with the timing of payments."
+msgstr ""
+
+msgid "Communication"
+msgstr ""
+
+msgid "Companies Commission of Malaysia (Business Registration)"
+msgstr ""
+
+msgid "Company Address"
+msgstr ""
+
+msgid "Company Details"
+msgstr ""
+
+msgid "Company Name:"
+msgstr ""
+
+msgid "Company Registration Expiry Date:"
+msgstr ""
+
+msgid "Company Registration Number:"
+msgstr ""
+
+msgid "Company building name:"
+msgstr ""
+
+msgid "Company name:"
+msgstr ""
+
+msgid "Company postal code:"
+msgstr ""
+
+msgid "Company street name:"
+msgstr ""
+
+msgid "Company street no:"
+msgstr ""
+
+msgid "Company unit no:"
+msgstr ""
+
+msgid "Compare quotes and hire the best for your job."
+msgstr ""
+
+msgid "Complete the job and get<br> rated to build your reputation"
+msgstr ""
+
+msgid "Complete the online form with your job details."
+msgstr ""
+
+msgid "Completed"
+msgstr ""
+
+msgid "Completed and Current Projects "
+msgstr ""
+
+msgid "Concealed pipe leak"
+msgstr ""
+
+msgid "Concierge Service"
+msgstr ""
+
+msgid "Concierge Service fee"
+msgstr ""
+
+msgid "Concierge Services:"
+msgstr ""
+
+msgid "Concrete Repair"
+msgstr ""
+
+msgid "Condo"
+msgstr ""
+
+msgid "Conduct inspections on M&E works done, together with relevant authorities."
+msgstr ""
+
+msgid "Conducting inspections on the project, together with relevant authorities."
+msgstr ""
+
+msgid "Confirm"
+msgstr ""
+
+msgid "Congratulation "
+msgstr ""
+
+msgid "Congratulations you have been accepted to join Kluje Commercial."
+msgstr ""
+
+msgid "Congratulations! You are now a Verified Contractor."
+msgstr ""
+
+msgid "Connect to customers via mobile or tablet"
+msgstr ""
+
+msgid "Connect with contractors on your mobile or tablet"
+msgstr ""
+
+msgid "Contact Details"
+msgstr ""
+
+msgid "Contact Kluje"
+msgstr ""
+
+msgid "Contact Us"
+msgstr ""
+
+msgid "Contact the customers<br> to do quotes"
+msgstr ""
+
+msgid "Contact the homeowner immediately when you bid a job lead"
+msgstr ""
+
+msgid "Contact us"
+msgstr ""
+
+msgid "Contact us for help"
+msgstr ""
+
+msgid "Contact us:"
+msgstr ""
+
+msgid "Contract Maintenance 1-2 unit (Twice per Year)"
+msgstr ""
+
+msgid "Contract Maintenance 3-6 Unit (Three per year)"
+msgstr ""
+
+msgid "Contract ratings: How they help you?"
+msgstr ""
+
+msgid "Contractor"
+msgstr ""
+
+msgid "Contractor %s not found"
+msgstr ""
+
+msgid "Contractor Price Guide"
+msgstr ""
+
+msgid "Contractor Rating: How they help you?"
+msgstr ""
+
+msgid "Contractor Verification Form"
+msgstr ""
+
+msgid ""
+"Contractor accounts, their ratings and performance may be monitored for the pu"
+"rpose of ensuring that we retain only the highest caliber of Contractors for o"
+"ur service. We reserve the right to remove Contractors from our service that d"
+"oes not adhere to the high standards that we expect."
+msgstr ""
+
+msgid "Contractor has asked a question about your job"
+msgstr ""
+
+msgid "Contractor has requested a rating"
+msgstr ""
+
+msgid "Contractor ratings: How they help you?"
+msgstr ""
+
+msgid "Contractor will contact you"
+msgstr ""
+
+msgid "Contractor:"
+msgstr ""
+
+msgid "Contractors"
+msgstr ""
+
+msgid "Contractors - Jobs"
+msgstr ""
+
+msgid "Contractors - Update profile"
+msgstr ""
+
+msgid "Contractors are available for all home needs"
+msgstr ""
+
+msgid "Contractors in %s"
+msgstr ""
+
+msgid ""
+"Contractors that have signed up to Kluje.com operate as independent companies "
+"and are not working on behalf of Kluje.com, therefore we cannot guarantee the "
+"quality of their work.Contractors are rated by previous customers. The ratings"
+" are based on:"
+msgstr ""
+
+msgid ""
+"Contractors use this to determine if they have the time to do your job based o"
+"n their current schedule of jobs."
+msgstr ""
+
+msgid "Contractors want good ratings"
+msgstr ""
+
+msgid "Contractors will contact you"
+msgstr ""
+
+msgid "Copyright © 2018 Kluje.com"
+msgstr ""
+
+msgid "Copyright © 2018 Kluje.com"
+msgstr ""
+
+msgid "Cornice / Beading 4-5 Room HDB Flats "
+msgstr ""
+
+msgid "Cornice / Beading Per Room"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "Country:"
+msgstr ""
+
+msgid "Create a satisfied homeowner (this guarantees future work as you know!)."
+msgstr ""
+
+msgid "Create at"
+msgstr ""
+
+msgid "Create your Agent Account"
+msgstr ""
+
+msgid "Create your FREE Contractor Account"
+msgstr ""
+
+msgid "Created:"
+msgstr ""
+
+msgid ""
+"Credit doesn't expire and will be carried over to the next month. If you want "
+"to cancel your account you will need to ensure that all credit is used. Any cr"
+"edit remaining in the account will not be refunded."
+msgstr ""
+
+msgid "Credits are used for purchasing job leads."
+msgstr ""
+
+msgid "Current Company Brochure"
+msgstr ""
+
+msgid "Current Company Project"
+msgstr ""
+
+msgid "Current Company Registration Doc  :"
+msgstr ""
+
+msgid "Current password"
+msgstr ""
+
+msgid "Curtain & Blinds Installation"
+msgstr ""
+
+msgid "Custom Design & Build Furniture"
+msgstr ""
+
+msgid "Customer Safety When Hiring a Contractor"
+msgstr ""
+
+msgid "Customize your profile page as it is the first thing homeowner will see"
+msgstr ""
+
+msgid "DBSS Full Renovation"
+msgstr ""
+
+msgid "Da Nang"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Date of Incorporation:"
+msgstr ""
+
+msgid "Davao City"
+msgstr ""
+
+msgid "Deactivate E-mail alerts"
+msgstr ""
+
+msgid "Deactivate SMS alerts"
+msgstr ""
+
+msgid "Dear"
+msgstr ""
+
+msgid "Dear %s,"
+msgstr ""
+
+msgid "Decking/Wood and Composite"
+msgstr ""
+
+msgid "Decking/Wood and Composite Supply and Fit"
+msgstr ""
+
+msgid "Declaration"
+msgstr ""
+
+msgid "Decorative Painting Per Room"
+msgstr ""
+
+msgid "Decorative Painting Whole Home"
+msgstr ""
+
+msgid "Deliver on what you agreed to deliver."
+msgstr ""
+
+msgid "Demolition/Hacking"
+msgstr ""
+
+msgid ""
+"Depending on the type of job, ask to speak to previous customers and if possib"
+"le, visit previous jobs that they have completed. Don’t forget to view the Ser"
+"vice Provider's Kluje profile page."
+msgstr ""
+
+msgid "Deposit"
+msgstr ""
+
+msgid "Describe"
+msgstr ""
+
+msgid "Describe Your Renovation"
+msgstr ""
+
+msgid "Describe Your Renovation *"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Description:"
+msgstr ""
+
+msgid "Detached"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Discover our contractors"
+msgstr ""
+
+msgid "Dismantle and Reassemble Wardrobe/Furniture"
+msgstr ""
+
+msgid "Disposal Service"
+msgstr ""
+
+msgid "Do NOT put your contact details here, as your privacy will not be protected."
+msgstr ""
+
+msgid "Do we guarantee the quality of the Contractors work?"
+msgstr ""
+
+msgid "Do you blacklist or suspend accounts?"
+msgstr ""
+
+msgid "Do your homework on your budget"
+msgstr ""
+
+msgid "Document not found"
+msgstr ""
+
+msgid "Does my credit expire?"
+msgstr ""
+
+msgid ""
+"Don't forget to work on your profile as this is the first thing that potential"
+" client will see."
+msgstr ""
+
+msgid ""
+"Don't panic yet there are still a few things you can do. In our experience the"
+"re are three main reasons why contractors don't bid on your job lead:"
+msgstr ""
+
+msgid ""
+"Don’t always go for the cheapest quote, but this does not mean that you should"
+" discard the lowest straight away. Check all the tips given above first. If yo"
+"u go for the cheapest make sure you have got a detailed quote with materials, "
+"waste disposal and labour detailed clearly in the quote. Also ask if GST/VAT i"
+"s included; make sure it is clear on the quote."
+msgstr ""
+
+msgid "Door Frame Repair"
+msgstr ""
+
+msgid "Drain Cleaning Services / Blocked Drains"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "EMA: Energy Market Authority (Electrical Licensing)"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit Job Details"
+msgstr ""
+
+msgid "Edit Profile"
+msgstr ""
+
+msgid "Electrical Appliance Installation"
+msgstr ""
+
+msgid "Electrical Appliance Repair"
+msgstr ""
+
+msgid "Electrical Inspecting / Testing"
+msgstr ""
+
+msgid "Electrician"
+msgstr ""
+
+msgid "Electricians"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Email Address"
+msgstr ""
+
+msgid "Email Notifications"
+msgstr ""
+
+msgid "Email Verification Success!"
+msgstr ""
+
+msgid "Email already verified"
+msgstr ""
+
+msgid "Email not verified"
+msgstr ""
+
+msgid "Email:"
+msgstr ""
+
+msgid "Emergency Lockout Services"
+msgstr ""
+
+msgid "Ensure contractor is properly licensed"
+msgstr ""
+
+msgid ""
+"Ensure that M&E works are done according to the correct design, cost, safety r"
+"equirements and agreed timelines."
+msgstr ""
+
+msgid "Ensure that construction safety practices are adhered by contractors."
+msgstr ""
+
+msgid ""
+"Ensuring that the project is completed according to the correct design, cost, "
+"safety requirements and timelines."
+msgstr ""
+
+msgid "Epoxy Coating"
+msgstr ""
+
+msgid "Epoxy Painting Services"
+msgstr ""
+
+msgid "Error processing transaction"
+msgstr ""
+
+msgid "Evening (6pm - 9pm)"
+msgstr ""
+
+msgid ""
+"Every lead you purchase should enable you to quote on that job. Once you have "
+"finished the job you should ask the homeowner to rate you. The more positive r"
+"atings you receive the better chance you have to win more work."
+msgstr ""
+
+msgid ""
+"Every time we connect you with a local Contractor we’ll share their ratings wi"
+"th you, so you can make a smarter choice."
+msgstr ""
+
+msgid ""
+"Example MBMA Malaysia, BCA Singapore, HKCA Hong Kong, TCA Thailand or VACC Vie"
+"tnam "
+msgstr ""
+
+msgid "Example:"
+msgstr ""
+
+msgid "Exhaust Fan Installation"
+msgstr ""
+
+msgid "Expires on:"
+msgstr ""
+
+msgid "Exterior contractors"
+msgstr ""
+
+msgid "External Door Installation Supply and Fit"
+msgstr ""
+
+msgid "External Tiling Installation"
+msgstr ""
+
+msgid "External Tiling Supply and Fit"
+msgstr ""
+
+msgid "FAQ"
+msgstr ""
+
+msgid "FREE Contractor Sign Up"
+msgstr ""
+
+msgid "Facilities Management"
+msgstr ""
+
+msgid "Fascias / Soffits / Cladding Repair Install"
+msgstr ""
+
+msgid "Fault Wiring Repair"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid ""
+"Fill in the online form and 3 verified renovation contractors will be in touch"
+" to do quotes for your renovation project."
+msgstr ""
+
+msgid "Final Invoice"
+msgstr ""
+
+msgid "Find More <em>Work</em> in %s"
+msgstr ""
+
+msgid "Find More <em>Work</em> in %{city}"
+msgstr ""
+
+msgid "Find New Customers The Easy Way"
+msgstr ""
+
+msgid "Find a <em>Contractor</em> in %{location}"
+msgstr ""
+
+msgid "Find a Contractor"
+msgstr ""
+
+msgid "Find a Contractor in %{location} | Kluje"
+msgstr ""
+
+msgid "Find a contractor"
+msgstr ""
+
+msgid "Find new customers quickly and easily with live alerts"
+msgstr ""
+
+msgid "Find the page in My Account"
+msgstr ""
+
+msgid "Find the ‘jobs’ page in ‘My account’"
+msgstr ""
+
+msgid "Find us on Facebook"
+msgstr ""
+
+msgid "Finding contractor is very easy"
+msgstr ""
+
+msgid "Finish Editing"
+msgstr ""
+
+msgid "First Name"
+msgstr ""
+
+msgid "First Name:"
+msgstr ""
+
+msgid "First name:"
+msgstr ""
+
+msgid ""
+"Firstly, we encourage you and the contractor to try and resolve the situation "
+"between yourselves. However, if asked to do so, Kluje.com can act as a mediato"
+"r. Please remember that Kluje.com cannot resolve any legal situation and can o"
+"nly try to help resolve the situation before it becomes a legal matter. Compla"
+"ints are handled on a case by case basis.If you’re not happy with the quality "
+"of workmanship you should leave a rating stating why the Contractor did not li"
+"ve up to your expectations. Contractors who fail to deliver quality work can b"
+"e permanently suspended from Kluje.com."
+msgstr ""
+
+msgid "Fittings and Fixtures"
+msgstr ""
+
+msgid "Flat Pack Furniture Assembly"
+msgstr ""
+
+msgid "Flatpack & Fitted Furniture assembly Only"
+msgstr ""
+
+msgid "Floor Leveling"
+msgstr ""
+
+msgid "Floor Sanding & Finishing"
+msgstr ""
+
+msgid "Floor Size"
+msgstr ""
+
+msgid "Floor Size:"
+msgstr ""
+
+msgid "Flooring"
+msgstr ""
+
+msgid "Flooring Contractor"
+msgstr ""
+
+msgid "Follow us on"
+msgstr ""
+
+msgid "Food & Beverage"
+msgstr ""
+
+msgid "Food and Beverage"
+msgstr ""
+
+msgid "For more advice:"
+msgstr ""
+
+msgid "For more tips check out the"
+msgstr ""
+
+msgid "Forgot Password"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+
+msgid "Founder"
+msgstr ""
+
+msgid "Free"
+msgstr ""
+
+msgid "Free Contractor Sign Up"
+msgstr ""
+
+msgid "Frequently Asked Questions"
+msgstr ""
+
+msgid "From:"
+msgstr ""
+
+msgid "Full Bathroom Installation Supply and Fit"
+msgstr ""
+
+msgid "Furniture Cleaning per item"
+msgstr ""
+
+msgid "Garden Clearance"
+msgstr ""
+
+msgid "Garden Design Service"
+msgstr ""
+
+msgid "Garden Maintenance Service"
+msgstr ""
+
+msgid "Garden Service/Landscaping"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "General Bathroom Repair & Maintenance"
+msgstr ""
+
+msgid "General Contractor"
+msgstr ""
+
+msgid "General Electrical fitting and fixtures"
+msgstr ""
+
+msgid "General External Property Maintenance"
+msgstr ""
+
+msgid "General Flooring Installation Labour only"
+msgstr ""
+
+msgid "General Flooring Repair"
+msgstr ""
+
+msgid "General Garden Maintenance"
+msgstr ""
+
+msgid "General Kitchen Repair & Maintenance"
+msgstr ""
+
+msgid "General Maintenance & Decorating"
+msgstr ""
+
+msgid "General Plumbing Repair"
+msgstr ""
+
+msgid "General Worktop Installation"
+msgstr ""
+
+msgid "General Worktop Supply and Fit"
+msgstr ""
+
+msgid "General building Work"
+msgstr ""
+
+msgid "General contractors"
+msgstr ""
+
+msgid "Genuine homeowner ratings help you to choose the best Contractor."
+msgstr ""
+
+msgid "Get 3 Quotes from our Verified Contractors!"
+msgstr ""
+
+msgid "Get Quotations"
+msgstr ""
+
+msgid "Get Rated :"
+msgstr ""
+
+msgid "Get a Quote"
+msgstr ""
+
+msgid "Get a Quote Today - it's Free"
+msgstr ""
+
+msgid "Get a personalized profile page"
+msgstr ""
+
+msgid "Get an invoice for a deposit payment"
+msgstr ""
+
+msgid "Get the right leads:"
+msgstr ""
+
+msgid "Get unlimited job leads"
+msgstr ""
+
+msgid "Get unlimited job leads - pay only for the ones you want"
+msgstr ""
+
+msgid ""
+"Getting quotes on Kluje.com is free. Just fill in the form telling us the type"
+" of work that needs doing. A detailed description and an approximate, but real"
+"istic, budget for the job."
+msgstr ""
+
+msgid "Getting your 3 quotes"
+msgstr ""
+
+msgid "Give a thorough, detailed quote and provide references"
+msgstr ""
+
+msgid ""
+"Give as much detail about the work that needs to be done. This will help the C"
+"ontractor to decide if they want to accept your job and will draw more interes"
+"t to your job post."
+msgstr ""
+
+msgid ""
+"Give as much detail about your job, consider the size, location and whether ma"
+"terials are included. The more detail the easier it is for a contractor to dec"
+"ide to purchase your lead. Don't add any personal details in the description."
+msgstr ""
+
+msgid "Giving feedback and ratings"
+msgstr ""
+
+msgid "Glass Curtain Wall Supply and Fit"
+msgstr ""
+
+msgid "Glass Cutting"
+msgstr ""
+
+msgid "Glass Repair or Repalcement/Furniture"
+msgstr ""
+
+msgid "Go to homepage"
+msgstr ""
+
+msgid "Go to my account"
+msgstr ""
+
+msgid "Go with Kluje Concierge Service for your next renovation project."
+msgstr ""
+
+msgid "Guarantees"
+msgstr ""
+
+msgid "HDB Help"
+msgstr ""
+
+msgid "HDB: The Housing & Development Board"
+msgstr ""
+
+msgid "Haiphong"
+msgstr ""
+
+msgid "Handyman"
+msgstr ""
+
+msgid "Handyman Services"
+msgstr ""
+
+msgid "Hanoi"
+msgstr ""
+
+msgid "Hard Landscaping"
+msgstr ""
+
+msgid "Has been suspended"
+msgstr ""
+
+msgid "Hat Yai"
+msgstr ""
+
+msgid "Have a Question for Kluje?"
+msgstr ""
+
+msgid ""
+"Have a question about your home improvement project? Our resident contractor i"
+"s very happy to help. Simply post your question and we will answer it!"
+msgstr ""
+
+msgid ""
+"He is the lowest bidder and it seems like a really good deal, or the timeline "
+"seems too short (or too long). Either of these scenarios is a red flag that si"
+"gnals he may be inexperienced at handling your type of project or he may be cu"
+"tting corners to win the job. If your Service Provider seems pushy or desperat"
+"e for your work, you should also consider this as a red flag."
+msgstr ""
+
+msgid "Hello"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Help build a better renovation industry"
+msgstr ""
+
+msgid "Hi"
+msgstr ""
+
+msgid "Hi %s,"
+msgstr ""
+
+msgid "Hi, %{name}"
+msgstr ""
+
+msgid "Hide Details"
+msgstr ""
+
+msgid "Hide Meeting Details"
+msgstr ""
+
+msgid "Hide Schedule Meeting"
+msgstr ""
+
+msgid "Hide question"
+msgstr ""
+
+msgid "Hide rating"
+msgstr ""
+
+msgid "High quality contractors at your service"
+msgstr ""
+
+msgid "Ho Chi Minh City"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Home Cleaning Service Mothly"
+msgstr ""
+
+msgid "Homeowner"
+msgstr ""
+
+msgid "Homeowner Details"
+msgstr ""
+
+msgid "Homeowners"
+msgstr ""
+
+msgid "Homeowners - Advice & tips"
+msgstr ""
+
+msgid ""
+"Homeowners rate their Contractors on quality, value and proffesionalism and al"
+"so leave relevant comments for others to see."
+msgstr ""
+
+msgid "Hong Kong"
+msgstr ""
+
+msgid ""
+"Hooray, you've found a contractor for your job! Remember to rate your contract"
+"or after the job is completed."
+msgstr ""
+
+msgid "House Moving Service"
+msgstr ""
+
+msgid "How :"
+msgstr ""
+
+msgid "How do I become a Premium Member?"
+msgstr ""
+
+msgid "How do I bid a job lead?"
+msgstr ""
+
+msgid "How do I buy a job lead through SMS?"
+msgstr ""
+
+msgid "How do I cancel my account?"
+msgstr ""
+
+msgid "How do I change/update my contact details?"
+msgstr ""
+
+msgid "How do I choose a budget?"
+msgstr ""
+
+msgid "How do I control which job leads I receive?"
+msgstr ""
+
+msgid "How do I get high ratings?"
+msgstr ""
+
+msgid "How do I get the most from Kluje.com once I have joined?"
+msgstr ""
+
+msgid "How do I purchase credit?"
+msgstr ""
+
+msgid "How do I rate the contractor and why?"
+msgstr ""
+
+msgid "How do I request a rating?"
+msgstr ""
+
+msgid "How do I update a job?"
+msgstr ""
+
+msgid "How do I view the job leads I have bought?"
+msgstr ""
+
+msgid "How do you know which is the best one?"
+msgstr ""
+
+msgid "How does Kluje help you find a Contractor?"
+msgstr ""
+
+msgid "How does a Homeowner know that my ratings are genuine?"
+msgstr ""
+
+msgid "How it Works"
+msgstr ""
+
+msgid "How it works"
+msgstr ""
+
+msgid "How long does it take?"
+msgstr ""
+
+msgid "How to get quotes?"
+msgstr ""
+
+msgid "I have posted a job what now?"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "INVOICE"
+msgstr ""
+
+msgid "Id"
+msgstr ""
+
+msgid ""
+"If a Contractor has received a total of 3 medium to high level complaints from"
+" a homeowner"
+msgstr ""
+
+msgid ""
+"If a Contractor is acting unscrupulously: including inappropriate language, ra"
+"cism, sexism, threats, bullying and abusing the trust of the homeowner"
+msgstr ""
+
+msgid ""
+"If a Contractor receives any serious complaints from a homeowner in their firs"
+"t month of having joined our service"
+msgstr ""
+
+msgid ""
+"If a Service Provider is not properly licensed to handle the work you need don"
+"e, the work they are doing is most likely suspect at best and, in the worst-ca"
+"se scenario, could even be hazardous."
+msgstr ""
+
+msgid ""
+"If a Service Provider is willing to work without pulling the correct permits o"
+"r completing the proper inspections, he’s not doing so to save your time or mo"
+"ney. It’s typically because he is not qualified to pull the permit, or he know"
+"s that he is doing sub-par work."
+msgstr ""
+
+msgid "If at anytime you have a question, contact us at"
+msgstr ""
+
+msgid "If at anytime you have any questions or feedback, please email us at:"
+msgstr ""
+
+msgid ""
+"If no contractors have responded within 1 day, you can update your budget or d"
+"escription to try increase the interest in your job."
+msgstr ""
+
+msgid ""
+"If no contractors respond in the next 12 hours, log onto your account and revi"
+"ew your job details, remember you need to be clear, the more details the bette"
+"r.Additionally, the most common reason no one buys your lead is that your ente"
+"red budget does't match your job details. Try adjusting it and see if that hel"
+"ps."
+msgstr ""
+
+msgid ""
+"If the Service Provider doesn’t seem to have expertise in your type of project"
+" – whether it’s renovation, event planning or project management – you should "
+"be very wary. Some projects may require true experts to manage, not to mention"
+" successfully and efficiently navigating any issues that may emerge."
+msgstr ""
+
+msgid "If you are a contractor"
+msgstr ""
+
+msgid "If you are a homeowner"
+msgstr ""
+
+msgid ""
+"If you are accepted to join Kluje Commercial, you will start to receive commer"
+"cial renovation leads, which are not available through the normal Kluje lead s"
+"ystem."
+msgstr ""
+
+msgid ""
+"If you are happy with this contractors quote, you will need to select them in "
+"your account. This will then let them know that you are interested in them com"
+"pleting you job.  Always make sure that you have considered all 3 quotes befor"
+"e making a choice."
+msgstr ""
+
+msgid ""
+"If you are interested in buying the lead, simply reply using the code provided"
+" in the SMS."
+msgstr ""
+
+msgid "If you did not recieve the email please click on the button below."
+msgstr ""
+
+msgid ""
+"If you didn't hire this contractor, it may be an error and you may safely disr"
+"egard this email."
+msgstr ""
+
+msgid "If you didn't request this change, please ignore this email."
+msgstr ""
+
+msgid ""
+"If you don't want to do either then you can simply wait for your job to expire"
+" and it will automatically be removed from our lead boards."
+msgstr ""
+
+msgid "If you experience any problems, please email us at:"
+msgstr ""
+
+msgid ""
+"If you feel a rating is particularly unfair, factually incorrect or slanderous"
+", please"
+msgstr ""
+
+msgid "If you have any questions or feedback, please email us at"
+msgstr ""
+
+msgid "If you have any questions you can email us at"
+msgstr ""
+
+msgid ""
+"If you have forgotten your password or need to change it for any reason, you m"
+"ay change your password by clicking on this link."
+msgstr ""
+
+msgid "If you need to make changes.Contact us:"
+msgstr ""
+
+msgid "If you receive a rating that is particularly unfair, please"
+msgstr ""
+
+msgid ""
+"If you requested the concierge service we will call you to schedule a meeting "
+"with a contractor and get a proper understanging of your requirements."
+msgstr ""
+
+msgid ""
+"If you think you have been overcharged for any reason or want to query a payme"
+"nt."
+msgstr ""
+
+msgid ""
+"If you wish to cancel your account, you may do so at any time by contacting us"
+"."
+msgstr ""
+
+msgid "If you're interested in buying this lead, click the link below"
+msgstr ""
+
+msgid ""
+"If your Service Provider does not carry General Liability or Workers Compensat"
+"ion insurance, any mishap could become your very costly responsibility."
+msgstr ""
+
+msgid "Images"
+msgstr ""
+
+msgid "Images are removed!"
+msgstr ""
+
+msgid "Immediate access to all jobs"
+msgstr ""
+
+msgid "Important"
+msgstr ""
+
+msgid "Important:"
+msgstr ""
+
+msgid ""
+"In the unlikely event that a Contractor has acted unscrupulously, we can suspe"
+"nd an account. Our policy is to close accounts under the following circumstanc"
+"es:"
+msgstr ""
+
+msgid "Increase your company's online presence"
+msgstr ""
+
+msgid "Indonesia"
+msgstr ""
+
+msgid "Inexperience"
+msgstr ""
+
+msgid ""
+"Input the email address you use to login on the site and we will send you a li"
+"nk to reset your password."
+msgstr ""
+
+msgid "Install Glass Partition"
+msgstr ""
+
+msgid "Install Glass Shop Front"
+msgstr ""
+
+msgid "Install Glass Sliding Doors"
+msgstr ""
+
+msgid "Install New Light Fixture Supply and Fit"
+msgstr ""
+
+msgid "Install New Light Switches Supply and Fit"
+msgstr ""
+
+msgid "Install Outside Lights Supply and Fit"
+msgstr ""
+
+msgid "Install Partition Wall"
+msgstr ""
+
+msgid "Install TV Mounting"
+msgstr ""
+
+msgid "Install Wall or Ceiling Fan"
+msgstr ""
+
+msgid "Install new Kitchen Door Fixtures"
+msgstr ""
+
+msgid "Interior"
+msgstr ""
+
+msgid "Interior Design"
+msgstr ""
+
+msgid "Interior Design Consultant"
+msgstr ""
+
+msgid "Interior Designer"
+msgstr ""
+
+msgid "Internal Door Installation Supply and Fit"
+msgstr ""
+
+msgid "Internal Server Error"
+msgstr ""
+
+msgid "Internal/External Door Installation/Repair"
+msgstr ""
+
+msgid "Internal/External Door Repair Installation"
+msgstr ""
+
+msgid "International Moving Service"
+msgstr ""
+
+msgid "Invalid email or password."
+msgstr ""
+
+msgid "Invalid mobile number"
+msgstr ""
+
+msgid "Invisible Window Grilles per Window 2x3 feet"
+msgstr ""
+
+msgid "Invisible Window Grilles per Window 5x3 feet"
+msgstr ""
+
+msgid "Invisible Window Grilles per Window 6x6 feet"
+msgstr ""
+
+msgid "Invoice"
+msgstr ""
+
+msgid "Invoice Details"
+msgstr ""
+
+msgid "Invoice History"
+msgstr ""
+
+msgid "Invoice ID"
+msgstr ""
+
+msgid "Invoice No."
+msgstr ""
+
+msgid "Invoice No:"
+msgstr ""
+
+msgid "Invoices History"
+msgstr ""
+
+msgid "Ipoh"
+msgstr ""
+
+msgid "Ironmongery/Metalwork"
+msgstr ""
+
+msgid ""
+"It is important to choose a contractor that is best suited for the job you wan"
+"t done.  This will help ensure that you are contacted by a contractor who is q"
+"ualified to do your job."
+msgstr ""
+
+msgid ""
+"It is important to note that each complaint must be dealt on a case by case ba"
+"sis as circumstances vary. Kluje.com conducts each investigation, usually with"
+"in 5-10 business days"
+msgstr ""
+
+msgid ""
+"It is your responsibility to select a suitable contractor and to negotiate the"
+" terms of any Project to be performed by the contractor selected. We do not gu"
+"arantee any specific contractors information, accreditation, or registration. "
+"We make no warranty regarding any goods or services purchased or obtained thro"
+"ugh listing a Project on the Service or any transactions entered into through "
+"the Service, and you should in all cases make your own enquiries. In particula"
+"r, it is your responsibility to carry out appropriate checks on any contractor"
+" that you are considering engaging and to request evidence of relevant trade o"
+"r industry accreditations, and to satisfy yourself that the contractor is solv"
+"ent and has appropriately qualified and certified personnel to complete the Pr"
+"oject prior to contracting. You should not engage any contractor or make any d"
+"eposit or other payment to them without having conducted such checks to your f"
+"ull satisfaction. While our hope is that you will be happy with every contract"
+"or you find through the Service, you should not engage any contractor if you h"
+"ave any doubts or concerns about it."
+msgstr ""
+
+msgid "It only takes 5 min to post."
+msgstr ""
+
+msgid ""
+"It's never been easier to sign up with kluje.com, the only online service that"
+" helps you find customers and build your reputation at the same time."
+msgstr ""
+
+msgid ""
+"It’s simple. You post your renovation project with us and our courteous staff "
+"will schedule a time for our commercial contractors to come by for a visit. We"
+" will provide 3 quotes from 3 different contractors, so you will be able to ma"
+"ke a informed decision on which contractor to use."
+msgstr ""
+
+msgid ""
+"It’s very concerning if important details are only vaguely addressed. If your "
+"Service Provider makes statements like, “Don’t worry, you’ll love the cabinets"
+"!” but you never get to select or even see them, it’s a signal that you might "
+"not be getting what you expect or have paid for."
+msgstr ""
+
+msgid "I’m new to Kluje.com and I don’t have any ratings. How do I win work?"
+msgstr ""
+
+msgid "Jakarta"
+msgstr ""
+
+msgid "Job Alert from Kluje.com!"
+msgstr ""
+
+msgid "Job Amount"
+msgstr ""
+
+msgid "Job Category"
+msgstr ""
+
+msgid "Job Details"
+msgstr ""
+
+msgid "Job Details:"
+msgstr ""
+
+msgid "Job ID"
+msgstr ""
+
+msgid "Job ID not found"
+msgstr ""
+
+msgid "Job Invoice"
+msgstr ""
+
+msgid "Job Invoice Amount"
+msgstr ""
+
+msgid "Job Quotes"
+msgstr ""
+
+msgid "Job Status:"
+msgstr ""
+
+msgid "Job cannot be cancelled at the moment."
+msgstr ""
+
+msgid "Job cannot be reposted at the moment."
+msgstr ""
+
+msgid "Job category"
+msgstr ""
+
+msgid "Job details"
+msgstr ""
+
+msgid "Job is archived."
+msgstr ""
+
+msgid "Job is not archived."
+msgstr ""
+
+msgid ""
+"Job is not editable because there are already contractors whom have purchased "
+"this job lead."
+msgstr ""
+
+msgid "Job is not editable."
+msgstr ""
+
+msgid "Job is successfully archived."
+msgstr ""
+
+msgid "Job lead bided!"
+msgstr ""
+
+msgid "Job lead purchased!"
+msgstr ""
+
+msgid ""
+"Job leads are the requests for Contractors that Homeowners post on Kluje.com. "
+"We sort these requests by postcode, trade and skill type and then pass the det"
+"ails along to our Contractors."
+msgstr ""
+
+msgid "Job site in %{location}"
+msgstr ""
+
+msgid "Job updated successfully"
+msgstr ""
+
+msgid "Jobs"
+msgstr ""
+
+msgid "Jobs Posted:"
+msgstr ""
+
+msgid ""
+"Jobs are posted by Homeowners and Contractors can buy the leads to obtain the "
+"homeowner's contact details. Contractors then contact the Homeowner and arrang"
+"e a time to quote on the work. The homeowner will then decide on the right Con"
+"tractor for that job. Homeowners can then rate the Contractor after the work i"
+"s complete to share their experience with others."
+msgstr ""
+
+msgid ""
+"Jobs leads with an unrealistic budget or very short descriptions may not get a"
+" response from Contractors. If no Contractors have responded within 1 day we a"
+"sk you to update the job."
+msgstr ""
+
+msgid "Johor Bahru"
+msgstr ""
+
+msgid ""
+"Just to let you know your job has been approved and your lead has been sent ou"
+"t to qualified local contractors for review."
+msgstr ""
+
+msgid "Just trust me"
+msgstr ""
+
+msgid "Kalasin"
+msgstr ""
+
+msgid "Kamphaeng Phet"
+msgstr ""
+
+msgid "Kanchanaburi"
+msgstr ""
+
+msgid "Khon Kaen"
+msgstr ""
+
+msgid "Kitchen"
+msgstr ""
+
+msgid "Kitchen Contractor"
+msgstr ""
+
+msgid "Kitchen Design and Installation"
+msgstr ""
+
+msgid "Kitchen Renovation"
+msgstr ""
+
+msgid "Kluje"
+msgstr ""
+
+msgid "Kluje Commercial Commission Invoice"
+msgstr ""
+
+msgid "Kluje Commercial Invoice"
+msgstr ""
+
+msgid "Kluje Commercial Paid Commission"
+msgstr ""
+
+msgid "Kluje Commercial Paid Commission Invoice"
+msgstr ""
+
+msgid "Kluje Concierge Service"
+msgstr ""
+
+msgid "Kluje Disclaimer"
+msgstr ""
+
+msgid "Kluje Pte Ltd 73 Loewen Road, #01-21 Singapore 248843"
+msgstr ""
+
+msgid "Kluje Pte Ltd,"
+msgstr ""
+
+msgid "Kluje Sitemap"
+msgstr ""
+
+msgid "Kluje as featured in the Media"
+msgstr ""
+
+msgid "Kluje | Agents - Sign up"
+msgstr ""
+
+msgid "Kluje | Ask an Expert"
+msgstr ""
+
+msgid "Kluje | Contractors - Advice & tips"
+msgstr ""
+
+msgid "Kluje | Contractors - How it Works Guide"
+msgstr ""
+
+msgid "Kluje | Contractors - Sign up"
+msgstr ""
+
+msgid "Kluje | Homeowners  - How it Works Guide"
+msgstr ""
+
+msgid "Kluje | Homeowners - Checklist"
+msgstr ""
+
+msgid "Kluje, forgot password, reset password"
+msgstr ""
+
+msgid ""
+"Kluje.com was founded in Singapore but aims to make life easier for homeowners"
+" globally. Currently we're available in 4 countries in South-East Asia and are"
+" planning on broadening our reach in the near future"
+msgstr ""
+
+msgid ""
+"Kluje.com was founded to provide homeowners with a reliable and easy way to fi"
+"nd contractors for their home improvement projects, routine maintenance or jus"
+"t a few odd jobs around the house."
+msgstr ""
+
+msgid ""
+"Kluje.com was founded to provide homeowners with an easy way to find contracto"
+"rs for not only"
+msgstr ""
+
+msgid ""
+"Kluje.com will notify you when a contractor buys your lead via email, so pleas"
+"e check periodically."
+msgstr ""
+
+msgid "Krabi"
+msgstr ""
+
+msgid "Kuala Lumpur"
+msgstr ""
+
+msgid "Kuching"
+msgstr ""
+
+msgid "Kuje Concierge Service"
+msgstr ""
+
+msgid "Lack of a license"
+msgstr ""
+
+msgid "Lampang"
+msgstr ""
+
+msgid "Lamphun"
+msgstr ""
+
+msgid "Landing pages"
+msgstr ""
+
+msgid "Landscaping"
+msgstr ""
+
+msgid "Landscaping Contractor"
+msgstr ""
+
+msgid "Last Name"
+msgstr ""
+
+msgid "Last Name:"
+msgstr ""
+
+msgid "Last name:"
+msgstr ""
+
+msgid "Lawn Mowing"
+msgstr ""
+
+msgid "Lay New Lawn Turf"
+msgstr ""
+
+msgid "Lead Price"
+msgstr ""
+
+msgid "Lead Price:"
+msgstr ""
+
+msgid "Lead price"
+msgstr ""
+
+msgid "Legal documents"
+msgstr ""
+
+msgid "Liability insurance"
+msgstr ""
+
+msgid "Licenses"
+msgstr ""
+
+msgid "Light Bulbs Replacement"
+msgstr ""
+
+msgid "Lighting Fittings Repair and Installation"
+msgstr ""
+
+msgid "List Your Business"
+msgstr ""
+
+msgid "List of contractors"
+msgstr ""
+
+msgid "Location:"
+msgstr ""
+
+msgid "Locations"
+msgstr ""
+
+msgid "Lock Change/Installation"
+msgstr ""
+
+msgid "Lock Opening Service"
+msgstr ""
+
+msgid "Lock Repair Service"
+msgstr ""
+
+msgid "Loei Province"
+msgstr ""
+
+msgid "Log In"
+msgstr ""
+
+msgid "Log in before continuing"
+msgstr ""
+
+msgid "Log in to Kluje.com"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid ""
+"Login to your account and click ‘Purchased Jobs’ from the main navigation. Her"
+"e you will see a list of jobs you have purchased."
+msgstr ""
+
+msgid ""
+"Login to your account and from there you can edit your contact info or change "
+"your address. You will not be able to change your"
+msgstr ""
+
+msgid ""
+"Login to your account, find the job on your Purchased Jobs list and select ‘Re"
+"quest rating’ We also recommend that you ask the customer directly to rate you"
+" when you’ve completed the job."
+msgstr ""
+
+msgid ""
+"Looking for advice on how to use kluje.com? This page has all the answers. Pos"
+"t your job, choosing a contractor, its all here."
+msgstr ""
+
+msgid "Looking to <em>Renovate</em> <span>Your Commercial Property?</span>"
+msgstr ""
+
+msgid "Looking to Renovate Your Commercial Property?"
+msgstr ""
+
+msgid "Lopburi Province"
+msgstr ""
+
+msgid "Mae Hong Son"
+msgstr ""
+
+msgid "Maha Sarakham"
+msgstr ""
+
+msgid "Major Building Structure Works"
+msgstr ""
+
+msgid "Major External Painting"
+msgstr ""
+
+msgid "Major Kitchen Repairs"
+msgstr ""
+
+msgid "Major Lighting & Power - Internal"
+msgstr ""
+
+msgid "Major Lighting & Power - external"
+msgstr ""
+
+msgid "Major Plumbing Works"
+msgstr ""
+
+msgid "Major Roofing Installation"
+msgstr ""
+
+msgid "Major Roofing Repair/maintenance"
+msgstr ""
+
+msgid "Major Sealing/Treatment/Waterproofing"
+msgstr ""
+
+msgid "Major Single Room Renovation"
+msgstr ""
+
+msgid "Major Wood Work Repair/Maintenance"
+msgstr ""
+
+msgid ""
+"Make sure that your budget is sufficient for the work to be completed. If your"
+" budget is too low, you may not get any interest. So if you want your kitchen "
+"tiled, your budget should be $500 not $100. Try to be realistic with the budge"
+"t."
+msgstr ""
+
+msgid ""
+"Make sure you select the contractor that will be best suited to complete the j"
+"ob correctly."
+msgstr ""
+
+msgid "Malaysia"
+msgstr ""
+
+msgid "Management of contractors and sub-contractors in carrying out M&E works."
+msgstr ""
+
+msgid "Managing contractors and sub-contractors in carrying out the project."
+msgstr ""
+
+msgid "Manila"
+msgstr ""
+
+msgid "Medan"
+msgstr ""
+
+msgid "Meeting Request"
+msgstr ""
+
+msgid "Meeting scheduled "
+msgstr ""
+
+msgid "Melbourne"
+msgstr ""
+
+msgid "Members"
+msgstr ""
+
+msgid "Membership Number"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Minor Bathroom Plumbing"
+msgstr ""
+
+msgid "Minor Bathroom Repair"
+msgstr ""
+
+msgid "Minor Building Structure Works"
+msgstr ""
+
+msgid "Minor External Painting Repairs"
+msgstr ""
+
+msgid "Minor Kitchen Repairs"
+msgstr ""
+
+msgid "Minor Lighting & Power - Internal"
+msgstr ""
+
+msgid "Minor Lighting & Power - external"
+msgstr ""
+
+msgid "Minor Painting Repairs"
+msgstr ""
+
+msgid "Minor Plumbing Repair & Maintenance"
+msgstr ""
+
+msgid "Minor Renovation"
+msgstr ""
+
+msgid "Minor Roofing Installation"
+msgstr ""
+
+msgid "Minor Roofing Repair/maintenance"
+msgstr ""
+
+msgid "Minor Sealing/Treatment/Waterproofing"
+msgstr ""
+
+msgid "Minor Single Room Renovation"
+msgstr ""
+
+msgid "Minor Window Repair"
+msgstr ""
+
+msgid "Minor Wood Work Repair/Maintenance"
+msgstr ""
+
+msgid "Mobile No:"
+msgstr ""
+
+msgid "Mobile number"
+msgstr ""
+
+msgid "Monday to Friday"
+msgstr ""
+
+msgid "Monday to Friday, 10am to 5pm"
+msgstr ""
+
+msgid "Money Saving Tips"
+msgstr ""
+
+msgid "Month"
+msgstr ""
+
+msgid "More Details"
+msgstr ""
+
+msgid "Morning (8am - 12pm)"
+msgstr ""
+
+msgid "Mounting of Cloths Dryer"
+msgstr ""
+
+msgid "Mukdahan"
+msgstr ""
+
+msgid "My Account"
+msgstr ""
+
+msgid "My Clarifications"
+msgstr ""
+
+msgid "My Contractors"
+msgstr ""
+
+msgid "My Initial Quote"
+msgstr ""
+
+msgid "My Job Options"
+msgstr ""
+
+msgid "My menu"
+msgstr ""
+
+msgid "NEA: National Environment Agency (Food Hygiene Licensing)"
+msgstr ""
+
+msgid "NO"
+msgstr ""
+
+msgid "Nakhon Nayok"
+msgstr ""
+
+msgid "Nakhon Pathom"
+msgstr ""
+
+msgid "Nakhon Phanom"
+msgstr ""
+
+msgid "Nakhon Ratchasima"
+msgstr ""
+
+msgid "Nakhon Sawan"
+msgstr ""
+
+msgid "Nakhon Si Thammarat Province"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Nan"
+msgstr ""
+
+msgid "Narathiwat"
+msgstr ""
+
+msgid "National Water Services Commission (Plumbing)"
+msgstr ""
+
+msgid "Need a Residential Renovation Done?"
+msgstr ""
+
+msgid ""
+"Need advice on how to use your kluje.com account? We answer your most common q"
+"uestions."
+msgstr ""
+
+msgid "Need any Clarification on Job?"
+msgstr ""
+
+msgid "Need help?"
+msgstr ""
+
+msgid ""
+"Need to talk to us? All our contact details are here. We are happy to respond "
+"to your requests."
+msgstr ""
+
+msgid "Neque porro quisquam, <span>lorem ipsum</span>"
+msgstr ""
+
+msgid "New Ask an Expert Question!"
+msgstr ""
+
+msgid "New Light Fixture Installation Only"
+msgstr ""
+
+msgid "New Light Switches Installation Only"
+msgstr ""
+
+msgid "New Password"
+msgstr ""
+
+msgid "New Password Confirmation"
+msgstr ""
+
+msgid "New jobs"
+msgstr ""
+
+msgid "New password"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No Contractors have placed any Invoices on Job yet."
+msgstr ""
+
+msgid "No Contractors have placed any Quotes on Job yet."
+msgstr ""
+
+msgid "No Obligation"
+msgstr ""
+
+msgid "No account exists with that email address."
+msgstr ""
+
+msgid "No activity to show"
+msgstr ""
+
+msgid "No contractors have any question on your job yet."
+msgstr ""
+
+msgid "No contractors have placed any bids on your job yet."
+msgstr ""
+
+msgid "No insurance"
+msgstr ""
+
+msgid "No long-term commitment and no contract"
+msgstr ""
+
+msgid "No long-term commitment and no contract."
+msgstr ""
+
+msgid "No preference"
+msgstr ""
+
+msgid "No rating"
+msgstr ""
+
+msgid ""
+"No. Your contact details will never be made public on the platform. Your conta"
+"ct details are only available to the contractors that purchase your job lead,"
+msgstr ""
+
+msgid ""
+"No. Your contact details will never be made public on the platform. Your conta"
+"ct details are only available to the contractors that purchase your job lead."
+msgstr ""
+
+msgid "Nong Bua Lamphu"
+msgstr ""
+
+msgid "Nong Khai"
+msgstr ""
+
+msgid "Nonthaburi"
+msgstr ""
+
+msgid ""
+"Not Ready to Post a Job but still have a question about your home renovation p"
+"roject?"
+msgstr ""
+
+msgid "Not accept"
+msgstr ""
+
+msgid ""
+"Not all Service Providers who do the quote carry out the work themselves. They"
+" may work alongside other subcontractors, or hire subcontractors to complete t"
+"he entire job. While this is perfectly normal it is good to clarify this up fr"
+"ont."
+msgstr ""
+
+msgid "Not bidded"
+msgstr ""
+
+msgid "Not verified"
+msgstr ""
+
+msgid ""
+"Note : Your account may not be topped up immediately as we will conduct a sear"
+"ch on your company to verify your details."
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "Note: Do not reply to this email"
+msgstr ""
+
+msgid ""
+"Note: Don't add too many separate jobs to a single post instead split the job "
+"up into smaller jobs. It's easy to post job from within your account."
+msgstr ""
+
+msgid "Note: Image size up to 5MB (jpeg, jpg, pdf, png)"
+msgstr ""
+
+msgid "Note: Image size up to 5MB (jpeg, jpg, png)"
+msgstr ""
+
+msgid "Note: This will help contractors give a better quotation."
+msgstr ""
+
+msgid ""
+"Nothing herein confers or purports to confer on any third party any bene t or "
+"any right to enforce any of the rights accruing from these Terms pursuant to t"
+"he Contracts (Rights of Third Parties) Act, Cap. 53B."
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid ""
+"Now it seems your job is about to expire and we are wondering what you want to"
+" do:"
+msgstr ""
+
+msgid "Number of Quotes"
+msgstr ""
+
+msgid "OH NO! You have no bids on your job lead!"
+msgstr ""
+
+msgid "Office"
+msgstr ""
+
+msgid "Office Cleaning Service Monthly"
+msgstr ""
+
+msgid "Office Moving Service"
+msgstr ""
+
+msgid ""
+"Oh My! Where did the time go? Our contractors are very,very busy and it seems "
+"they are not interested in your job. Although it has been viewed by %d contrac"
+"tors, no one has bought your lead."
+msgstr ""
+
+msgid ""
+"Once you have built-up a few ratings, it will be easier to go after bigger job"
+"s and keep winning."
+msgstr ""
+
+msgid ""
+"Once you have posted your job, we will then contact all of the Contractors who"
+" have the right skills and location to be able to quote. Up to 3 Contractors w"
+"ill be provided with your contact details. You’ll receive a phone call or mess"
+"age from the Contractor so that they can proceed with a quote."
+msgstr ""
+
+msgid ""
+"Once you have received quotes from the contractors you can choose which Contra"
+"ctor to proceed with. Every Kluje.com Contractor has a profile page showing th"
+"eir description, qualifications, accreditations and any previous ratings from "
+"past customers. We advise using all of this information together with the quot"
+"e to make a decision on whom to proceed with. This way you get good quality at"
+" a fair price."
+msgstr ""
+
+msgid ""
+"Once you have run out of the SMS you will automatically be topped up with anot"
+"her 100 SMS. The cost of %s will automatically be deducted from your credits. "
+"If you want to stop SMS you need to deactivate SMS before you run out of SMS."
+msgstr ""
+
+msgid "Once your contractor has finished the job you can rate them on kluje.com"
+msgstr ""
+
+msgid "One Off Cleaning Service Spring Cleaning"
+msgstr ""
+
+msgid ""
+"Only 3 Contractors can purchase the lead posted. You can buy leads online via "
+"Kluje.com (leads start from $1). Once a lead is purchased you need to contact "
+"the customer immediately to arrange a time to quote on the work."
+msgstr ""
+
+msgid ""
+"Only homeowners who have hired a Contractor via Kluje.com can submit a rating "
+"for that specific Contractor. Ratings are done once the job has been finished."
+" Homeowners are able to amend their rating at any time and the Contractor can "
+"comment/respond. We additionally screen ratings for offensive language. Random"
+" spot checks on both positive and negative ratings are conducted to ensure tha"
+"t homeowners can confidently hire a Contractor."
+msgstr ""
+
+msgid "Operating Hours"
+msgstr ""
+
+msgid "Or"
+msgstr ""
+
+msgid "Our Commercial contractors"
+msgstr ""
+
+msgid "Our Concierge Service"
+msgstr ""
+
+msgid "Our Kluje verified contractors will now view your job. "
+msgstr ""
+
+msgid "Our concierge service comes with:"
+msgstr ""
+
+msgid ""
+"Our contractors are given a profile page, which you can review before selectio"
+"n. It will contain their qualifications, photos of previous work, and ratings "
+"given to them by previous kluje.com users. After the job has been done by your"
+" selected contractor, we ask that you provide a rating for the job done in ter"
+"ms of value, reliability and quality. This will be attached to the contractors"
+" profile page and will be visible by all of our community."
+msgstr ""
+
+msgid ""
+"Our contractors pay for the opportunity to quote on your job, please give them"
+" every opportunity to do so."
+msgstr ""
+
+msgid ""
+"Our mission is to connect homeowners with quality, local Contractors. We achie"
+"ve this by providing a service to homeowners that presents them with rated Con"
+"tractors and lets them choose the Contractors that are right for them. A key p"
+"art of the selection criteria is the ratings system, which lets homeowners cho"
+"ose between Contractors based on the reviews of previous customers. In additio"
+"n to these ratings the homeowner will also take into account how well a Contra"
+"ctor presents themselves, and their quote for the proposed work.It is also tru"
+"e that Homeowners only want to engage with Contractors who act responsibly, be"
+"have politely and are generally nice to work with. This simply is called being"
+" \"professional.\""
+msgstr ""
+
+msgid "Our ratings are by people like you- they use our service"
+msgstr ""
+
+msgid "Outside Door Gate Supply and Fit"
+msgstr ""
+
+msgid "Outside Lights Installation Only"
+msgstr ""
+
+msgid "Overall Ratings"
+msgstr ""
+
+msgid "PUB: Water Service Plumbers (Plumbing Licensing)"
+msgstr ""
+
+msgid "Packing & Unpacking Service"
+msgstr ""
+
+msgid "Page not found"
+msgstr ""
+
+msgid "Paid"
+msgstr ""
+
+msgid "Paint 1 Room Ceiling"
+msgstr ""
+
+msgid "Paint 1-2 Walls"
+msgstr ""
+
+msgid "Paint Internal Doors"
+msgstr ""
+
+msgid "Paint Kitchen Doors"
+msgstr ""
+
+msgid "Paint whole Property Ceilings"
+msgstr ""
+
+msgid "Paint wood Internal Staircase Railings"
+msgstr ""
+
+msgid "Painter"
+msgstr ""
+
+msgid "Painter / Decorator"
+msgstr ""
+
+msgid "Parquet Flooring Refinishing"
+msgstr ""
+
+msgid "Partner code"
+msgstr ""
+
+msgid "Partners Sign Up"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Password Reset Instructions"
+msgstr ""
+
+msgid "Password confirmation"
+msgstr ""
+
+msgid "Password updated!"
+msgstr ""
+
+msgid "Password was successfully changed."
+msgstr ""
+
+msgid "Pathum Thani"
+msgstr ""
+
+msgid "Pattani"
+msgstr ""
+
+msgid "PayPal"
+msgstr ""
+
+msgid "Payment Status"
+msgstr ""
+
+msgid "Payment Terms"
+msgstr ""
+
+msgid "Payment details:"
+msgstr ""
+
+msgid "Payment schedule"
+msgstr ""
+
+msgid "Pending"
+msgstr ""
+
+msgid ""
+"Perform work to a high standard and make sure you adhere to the relevant indus"
+"try requirements."
+msgstr ""
+
+msgid ""
+"Perform work to a high standard and make sure you adhere to the relevant indus"
+"try standards."
+msgstr ""
+
+msgid "Perth"
+msgstr ""
+
+msgid "Petaling Jaya"
+msgstr ""
+
+msgid "Phang Nga"
+msgstr ""
+
+msgid "Phatthalung"
+msgstr ""
+
+msgid "Phayao"
+msgstr ""
+
+msgid "Phetchabun"
+msgstr ""
+
+msgid "Phetchaburi"
+msgstr ""
+
+msgid "Phichit"
+msgstr ""
+
+msgid "Philippines"
+msgstr ""
+
+msgid "Phitsanulok"
+msgstr ""
+
+msgid "Phone: (e.g. 6597793099)"
+msgstr ""
+
+msgid "Photo gallery"
+msgstr ""
+
+msgid "Phrae"
+msgstr ""
+
+msgid "Phuket"
+msgstr ""
+
+msgid "Picture Hanging"
+msgstr ""
+
+msgid "Pipe Leak Repair"
+msgstr ""
+
+msgid "Place"
+msgstr ""
+
+msgid "Plant Trimming and Watering"
+msgstr ""
+
+msgid "Plasterer / Renderer"
+msgstr ""
+
+msgid "Please Verify Your E-mail"
+msgstr ""
+
+msgid "Please accept our User Agreement to access to Kluje Commercial"
+msgstr ""
+
+msgid ""
+"Please be sure to review our user agreement, privacy policy, and payment terms"
+"."
+msgstr ""
+
+msgid "Please complete the form before send request."
+msgstr ""
+
+msgid "Please complete the verification form before apply Kluje commercial."
+msgstr ""
+
+msgid "Please create your Account"
+msgstr ""
+
+msgid "Please enter a Quote amount"
+msgstr ""
+
+msgid "Please enter a new password."
+msgstr ""
+
+msgid "Please enter a valid amount."
+msgstr ""
+
+msgid "Please enter your partner code if you have partner"
+msgstr ""
+
+msgid "Please log in before continuing"
+msgstr ""
+
+msgid "Please log in to continue"
+msgstr ""
+
+msgid "Please login to you account to view or download the quote."
+msgstr ""
+
+msgid "Please rate things like accuracy of quotation, price paid, overall impression."
+msgstr ""
+
+msgid "Please rate things like appearance of finished job, materials used, etc."
+msgstr ""
+
+msgid "Please rate things like punctuality, communication, reliability etc."
+msgstr ""
+
+msgid "Please select at least one skill"
+msgstr ""
+
+msgid ""
+"Please submit your Company brochure plus a separate list of your completed and"
+" current projects which should include the following information"
+msgstr ""
+
+msgid "Please supply Reference number "
+msgstr ""
+
+msgid "Please take a moment and Rate them now by following this link:"
+msgstr ""
+
+msgid ""
+"Please take the time to read the how it works in your account. This is very im"
+"portant so that you understand the processes involved to use Kluje Commercial."
+" "
+msgstr ""
+
+msgid "Please tell us about your requirements"
+msgstr ""
+
+msgid "Please update your country"
+msgstr ""
+
+msgid "Please update your country and mobile number"
+msgstr ""
+
+msgid "Please update your mobile number and country information"
+msgstr ""
+
+msgid "Please verify your email"
+msgstr ""
+
+msgid "Please verify your email before bidding"
+msgstr ""
+
+msgid "Please write the description for your job"
+msgstr ""
+
+msgid "Plumber"
+msgstr ""
+
+msgid "Plumbers"
+msgstr ""
+
+msgid "Pond & Water Feature Instal"
+msgstr ""
+
+msgid "Pond & Water Feature Maintenance"
+msgstr ""
+
+msgid "Pond & Water Feature Supply and Fit"
+msgstr ""
+
+msgid "Post Requirements"
+msgstr ""
+
+msgid "Post a Commercial Job Now!"
+msgstr ""
+
+msgid "Post a Job Now!"
+msgstr ""
+
+msgid "Post a Job and up to 3 contractors will contact you"
+msgstr ""
+
+msgid "Post a Residential Job Now!"
+msgstr ""
+
+msgid "Post a job and up to 3 contractors will contact you"
+msgstr ""
+
+msgid "Post a new job"
+msgstr ""
+
+msgid "Post not found"
+msgstr ""
+
+msgid "Post the Job"
+msgstr ""
+
+msgid "Post your %{skill} job"
+msgstr ""
+
+msgid "Post your Requirements"
+msgstr ""
+
+msgid ""
+"Post your home improvement job on kluje.com today. It's completely free, Up to"
+" 3 quilified contractors will contact you to quote on your job."
+msgstr ""
+
+msgid "Post your job"
+msgstr ""
+
+msgid "Post your job for free"
+msgstr ""
+
+msgid "Postal Code"
+msgstr ""
+
+msgid "Postal Code:"
+msgstr ""
+
+msgid "Posted at"
+msgstr ""
+
+msgid "Posting your job:"
+msgstr ""
+
+msgid "Posts"
+msgstr ""
+
+msgid "Prachinburi"
+msgstr ""
+
+msgid "Prachuap Khiri Khan"
+msgstr ""
+
+msgid "Preferred Contact Time"
+msgstr ""
+
+msgid "Preferred contact time"
+msgstr ""
+
+msgid "Preferred contact time:"
+msgstr ""
+
+msgid "Premium"
+msgstr ""
+
+msgid "Premium membership"
+msgstr ""
+
+msgid "Premium only"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Previous work"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr ""
+
+msgid "Private"
+msgstr ""
+
+msgid "Professional quotes from 3 contractors"
+msgstr ""
+
+msgid "Professionalism"
+msgstr ""
+
+msgid "Profile"
+msgstr ""
+
+msgid "Project Start Date:"
+msgstr ""
+
+msgid "Project checklist to make life easier"
+msgstr ""
+
+msgid "Property Type"
+msgstr ""
+
+msgid "Property Usage"
+msgstr ""
+
+msgid "Property Usage:"
+msgstr ""
+
+msgid "Providing a project checklist to make life easier."
+msgstr ""
+
+msgid "Purchased leads"
+msgstr ""
+
+msgid "Q."
+msgstr ""
+
+msgid "Qualifications/Licensing"
+msgstr ""
+
+msgid "Quality"
+msgstr ""
+
+msgid ""
+"Quality Local Contractors will review your job requirements and decide if they"
+" can do the work based on the details you provided."
+msgstr ""
+
+msgid "Quality of work"
+msgstr ""
+
+msgid "Question"
+msgstr ""
+
+msgid "Question:"
+msgstr ""
+
+msgid "Quezon City"
+msgstr ""
+
+msgid "Quote file"
+msgstr ""
+
+msgid "Quote was accepted"
+msgstr ""
+
+msgid "Quote was not updated"
+msgstr ""
+
+msgid "Quote was not uploaded"
+msgstr ""
+
+msgid "Quote was uploaded"
+msgstr ""
+
+msgid "Quoted at"
+msgstr ""
+
+msgid "RSS feed"
+msgstr ""
+
+msgid "Ranong"
+msgstr ""
+
+msgid "Ratchaburi"
+msgstr ""
+
+msgid "Rate"
+msgstr ""
+
+msgid "Rate the service"
+msgstr ""
+
+msgid "Rated"
+msgstr ""
+
+msgid "Rating"
+msgstr ""
+
+msgid "Rating request sent!"
+msgstr ""
+
+msgid ""
+"Rating your Contractor is the best way to reward good contractors for a job we"
+"ll done."
+msgstr ""
+
+msgid "Ratings"
+msgstr ""
+
+msgid ""
+"Ratings not only help you to make an informed decision but also reward brillia"
+"nt service by helping the best contractor build strong reputations and stand o"
+"ut from the crowd."
+msgstr ""
+
+msgid ""
+"Ratings serve as your word-of-mouth online and help you build your reputation."
+" Every time you purchase a job lead, we send your profile and ratings to the c"
+"ustomer. The more positive ratings you have, the easier it will be to win more"
+" work."
+msgstr ""
+
+msgid "Ratings submitted!"
+msgstr ""
+
+msgid "Rayong"
+msgstr ""
+
+msgid "Re enter Password"
+msgstr ""
+
+msgid "Read more about:"
+msgstr ""
+
+msgid "Ready to get started?"
+msgstr ""
+
+msgid "Receive 99 SMS free"
+msgstr ""
+
+msgid "Receive a free top up to get started"
+msgstr ""
+
+msgid "Receive a free top up to get you started"
+msgstr ""
+
+msgid "Recent Articles"
+msgstr ""
+
+msgid "Recommended Posts:"
+msgstr ""
+
+msgid "Redirecting"
+msgstr ""
+
+msgid "Reduce the overall cost for marketing"
+msgstr ""
+
+msgid "Reference number:"
+msgstr ""
+
+msgid "Register"
+msgstr ""
+
+msgid "Registered Company Name"
+msgstr ""
+
+msgid "Registration No.: 201313800W"
+msgstr ""
+
+msgid "Reinstatement of Space"
+msgstr ""
+
+msgid ""
+"Remember, your Login is your email address and the password as entered during "
+"sign up."
+msgstr ""
+
+msgid ""
+"Remember, your Login is your email address and the password as entered during "
+"sign up. "
+msgstr ""
+
+msgid "Renovation"
+msgstr ""
+
+msgid "Renovation  / Interior Designer"
+msgstr ""
+
+msgid "Renovation Contractor / Interior Designer"
+msgstr ""
+
+msgid "Renovation Contractor/Interior Design"
+msgstr ""
+
+msgid "Renovation Excluding Furniture"
+msgstr ""
+
+msgid "Renovation Including Furniture"
+msgstr ""
+
+msgid "Renovation Services"
+msgstr ""
+
+msgid "Renovation Type"
+msgstr ""
+
+msgid "Renovation Type:"
+msgstr ""
+
+msgid "Renovation and Interior Design Blog"
+msgstr ""
+
+msgid "Renovation budget: How to set the right one"
+msgstr ""
+
+msgid "Renovation budget: How to set the right one?"
+msgstr ""
+
+msgid "Repair Laminate or Wood Flooring"
+msgstr ""
+
+msgid "Repair Leaking Toilet"
+msgstr ""
+
+msgid "Replace / Repair Grille Lock or Latch"
+msgstr ""
+
+msgid "Replace 1 Aircon With New"
+msgstr ""
+
+msgid "Replace Kitchen Sink Supply and Fit"
+msgstr ""
+
+msgid "Replace Window Glass"
+msgstr ""
+
+msgid "Replace/Repair Kitchen Doors"
+msgstr ""
+
+msgid "Replace/Repair Kitchen Doors Supply and Fit"
+msgstr ""
+
+msgid "Replace/Repair Kitchen Sink"
+msgstr ""
+
+msgid "Replace/Repair Kitchen Unit"
+msgstr ""
+
+msgid "Replace/Repair Kitchen Unit Supply and Fit"
+msgstr ""
+
+msgid ""
+"Repost your job, after editing the description and budget to attract contracto"
+"rs to buy your lead."
+msgstr ""
+
+msgid "Reputation"
+msgstr ""
+
+msgid "Requesting quotes"
+msgstr ""
+
+msgid "Resend Verification Email"
+msgstr ""
+
+msgid "Reset password instructions have been sent, please check your email."
+msgstr ""
+
+msgid "Reset your password if your forgot your password Kluje.com"
+msgstr ""
+
+msgid "Residential"
+msgstr ""
+
+msgid "Residential Jobs"
+msgstr ""
+
+msgid "Residential jobs"
+msgstr ""
+
+msgid "Retail"
+msgstr ""
+
+msgid "Retype your current password:"
+msgstr ""
+
+msgid "Roi Et"
+msgstr ""
+
+msgid "Roofing / Waterproofing"
+msgstr ""
+
+msgid "Roofing / Waterproofing Contractor"
+msgstr ""
+
+msgid "Room Dividers/Sound Booths"
+msgstr ""
+
+msgid "SMS"
+msgstr ""
+
+msgid "SMS Notifications"
+msgstr ""
+
+msgid "SMS Remaining"
+msgstr ""
+
+msgid ""
+"SMS alerts are very much like E-mail alerts with one notable difference. SMS a"
+"lerts allow you to bid on the job directly from your phone by replying to the "
+"alert with job's unique ID."
+msgstr ""
+
+msgid "ST: Energy Commission of Malaysia (Electrical)"
+msgstr ""
+
+msgid "Sa Kaeo"
+msgstr ""
+
+msgid "Safe and Secure"
+msgstr ""
+
+msgid "Safe/ Piano & Organ Removal Service"
+msgstr ""
+
+msgid "Safes - Opening / Combination Change"
+msgstr ""
+
+msgid "Safety"
+msgstr ""
+
+msgid "Sakon Nakhon"
+msgstr ""
+
+msgid "Samut Prakan"
+msgstr ""
+
+msgid "Samut Sakhon"
+msgstr ""
+
+msgid "Samut Songkhram"
+msgstr ""
+
+msgid "Saraburi"
+msgstr ""
+
+msgid "Satun"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Save time looking for contractor"
+msgstr ""
+
+msgid "Saving"
+msgstr ""
+
+msgid "Scaffolding"
+msgstr ""
+
+msgid "Schedule Meeting"
+msgstr ""
+
+msgid "Screeding/Polished Concrete"
+msgstr ""
+
+msgid "Search Blog"
+msgstr ""
+
+msgid "Security Solutions"
+msgstr ""
+
+msgid "See photos, rating and qualifications on the contractor profile"
+msgstr ""
+
+msgid "Seems too good to be true."
+msgstr ""
+
+msgid "Select a Contractor."
+msgstr ""
+
+msgid "Select city"
+msgstr ""
+
+msgid "Select country"
+msgstr ""
+
+msgid "Select locations you can work in"
+msgstr ""
+
+msgid "Select the budget"
+msgstr ""
+
+msgid "Select the contractor type"
+msgstr ""
+
+msgid "Select the job category"
+msgstr ""
+
+msgid "Select the property type"
+msgstr ""
+
+msgid "Select the timing"
+msgstr ""
+
+msgid ""
+"Selecting a contractor can be hard. Make sure you check relevant qualification"
+" and if needed ask for referrals."
+msgstr ""
+
+msgid "Selecting the right contractor"
+msgstr ""
+
+msgid "Selecting the right contractor: Part 2"
+msgstr ""
+
+msgid "Semi Detached"
+msgstr ""
+
+msgid "Send a request for rating"
+msgstr ""
+
+msgid "Send reset password"
+msgstr ""
+
+msgid "Sending"
+msgstr ""
+
+msgid "Services we offer:"
+msgstr ""
+
+msgid "Shah Alam"
+msgstr ""
+
+msgid "Share"
+msgstr ""
+
+msgid "Share This Profile"
+msgstr ""
+
+msgid "Show rating"
+msgstr ""
+
+msgid "Shower Installation Supply and Fit"
+msgstr ""
+
+msgid "Shower Mixer Replacement (Excluding Parts)"
+msgstr ""
+
+msgid "Shower Mixer Replacement (Including Parts)"
+msgstr ""
+
+msgid "Shower Repair"
+msgstr ""
+
+msgid "Sign Out"
+msgstr ""
+
+msgid "Sign Up Now!"
+msgstr ""
+
+msgid "Sign in to Kluje"
+msgstr ""
+
+msgid "Sign in with Facebook"
+msgstr ""
+
+msgid "Sign in with Google"
+msgstr ""
+
+msgid "Sign in with social media"
+msgstr ""
+
+msgid "Sign up"
+msgstr ""
+
+msgid "Sign up for a<br> FREE account"
+msgstr ""
+
+msgid "Sign up for my FREE account"
+msgstr ""
+
+msgid "Signing In"
+msgstr ""
+
+msgid ""
+"Simple top up with %{cost} in credit and you will automatically become a premi"
+"um member for 30 days from the date you topped up.  After the 30 days premium "
+"membership has expired you will automatically become a free member again. To r"
+"eactivate premium membership for a further 30 days you just have to top up wit"
+"h %{cost} in credit."
+msgstr ""
+
+msgid "Simply repost your job by clicking below:"
+msgstr ""
+
+msgid "Sincerely,"
+msgstr ""
+
+msgid "Sing Buri"
+msgstr ""
+
+msgid "Singapore"
+msgstr ""
+
+msgid "Single Floor Room Addition"
+msgstr ""
+
+msgid "Sisaket"
+msgstr ""
+
+msgid "Sitemap"
+msgstr ""
+
+msgid "Skill"
+msgstr ""
+
+msgid "Skills"
+msgstr ""
+
+msgid "Skirting the law"
+msgstr ""
+
+msgid "Small Room Additions (Toilet/ Bathroom)"
+msgstr ""
+
+msgid "So How Does it Work?"
+msgstr ""
+
+msgid ""
+"So what you need to do is log on to your account and edit your job details, ta"
+"king into consideration the points above. Once you do that we will re-approve "
+"your job and re-send alerts to contractors who fit your amended requirements."
+msgstr ""
+
+msgid ""
+"So you have a question about your home improvement project? That’s great! We a"
+"re happy to help. Just fill in the fields below and we shall respond as soon a"
+"s we can. (We ask for your details so we can reply promptly. We always respect"
+" your Privacy)."
+msgstr ""
+
+msgid "Solar Heating System"
+msgstr ""
+
+msgid "Songkhla"
+msgstr ""
+
+msgid "Sorry, %{role} are not allowed to post jobs."
+msgstr ""
+
+msgid "Sorry, something went wrong"
+msgstr ""
+
+msgid "Sorry, the page you are looking for doesn't exist!"
+msgstr ""
+
+msgid "Sound & Audio Visual Installation "
+msgstr ""
+
+msgid "Spa & Jacuzzi  Pump Repair"
+msgstr ""
+
+msgid "Spa & Jacuzzi Installation"
+msgstr ""
+
+msgid "Spa & Jacuzzi Maintenance"
+msgstr ""
+
+msgid "Spa & Jacuzzi Pump Replacement"
+msgstr ""
+
+msgid "Spa & Jacuzzi Supply and Fit"
+msgstr ""
+
+msgid "Space Planning"
+msgstr ""
+
+msgid "Specialist Worktop Installation"
+msgstr ""
+
+msgid "Specialist Worktop Supply and Fit"
+msgstr ""
+
+msgid "Standard Kitchen Installation Supply and Fit"
+msgstr ""
+
+msgid "Start bidding for hot leads<br> from real customers"
+msgstr ""
+
+msgid "Start buying Job leads and winning work today!"
+msgstr ""
+
+msgid "Start my Agent account"
+msgstr ""
+
+msgid "Start my FREE account"
+msgstr ""
+
+msgid ""
+"Start with low-cost, easy-to-service leads where homeowners are less likely to"
+" rely on ratings"
+msgstr ""
+
+msgid "Statistics"
+msgstr ""
+
+msgid "Steam Cleaning Services Single Item"
+msgstr ""
+
+msgid "Storage Services"
+msgstr ""
+
+msgid "Subcontractors"
+msgstr ""
+
+msgid "Submit"
+msgstr ""
+
+msgid "Submit Application"
+msgstr ""
+
+msgid "Submit the changes"
+msgstr ""
+
+msgid "Submit your Answer "
+msgstr ""
+
+msgid "Submit your Meeting"
+msgstr ""
+
+msgid "Submit your Meeting "
+msgstr ""
+
+msgid "Submit your Question"
+msgstr ""
+
+msgid "Submit your Question "
+msgstr ""
+
+msgid "Submit your Queston "
+msgstr ""
+
+msgid "Submiting"
+msgstr ""
+
+msgid "Submitting"
+msgstr ""
+
+msgid "Successfully topped up %s"
+msgstr ""
+
+msgid "Sukhothai"
+msgstr ""
+
+msgid "Suphan Buri"
+msgstr ""
+
+msgid "Surabaya"
+msgstr ""
+
+msgid "Surat Thani"
+msgstr ""
+
+msgid "Surin"
+msgstr ""
+
+msgid "Swimming Pool / Water Feature"
+msgstr ""
+
+msgid "Swimming Pool Cleaning Service"
+msgstr ""
+
+msgid "Swimming Pool Design"
+msgstr ""
+
+msgid "Swimming Pool Installation"
+msgstr ""
+
+msgid "Swimming Pool Maintenance Service"
+msgstr ""
+
+msgid "Swimming Pool Pump Replacement"
+msgstr ""
+
+msgid "Swimming Pool pump Repair"
+msgstr ""
+
+msgid "Sydney"
+msgstr ""
+
+msgid "Tak"
+msgstr ""
+
+msgid "Take a look around your account"
+msgstr ""
+
+msgid "Tap Repair/Replace (Excluding Parts)"
+msgstr ""
+
+msgid "Tap Repair/Replace (Including Parts)"
+msgstr ""
+
+msgid "Terms and Conditions"
+msgstr ""
+
+msgid "Terraced"
+msgstr ""
+
+msgid "Thailand"
+msgstr ""
+
+msgid "Thank you for posting your Job!"
+msgstr ""
+
+msgid "Thank you for posting your job on Kluje Commercial!"
+msgstr ""
+
+msgid "Thank you for posting your job!"
+msgstr ""
+
+msgid "Thank you for rating %s for this job:"
+msgstr ""
+
+msgid "Thank you for rating your Contractor!"
+msgstr ""
+
+msgid ""
+"Thank you for registering for Kluje.com, the best lead generation portal for q"
+"uality contractors. We are very excited to have you onboard and we look forwar"
+"d to providing you with the best service possible!"
+msgstr ""
+
+msgid "Thank you for requesting quotes through Kluje.com"
+msgstr ""
+
+msgid "Thank you for signing up for kluje commercial!"
+msgstr ""
+
+msgid "Thank you for signing up for kluje.com!"
+msgstr ""
+
+msgid "Thank you for signing up with kluje.com!"
+msgstr ""
+
+msgid "Thank you for submitting verification form"
+msgstr ""
+
+msgid ""
+"Thank you for submitting your documents. Our team will verify them and update "
+"your account"
+msgstr ""
+
+msgid "Thank you for using Kluje.com!"
+msgstr ""
+
+msgid ""
+"Thank you for your commercial request! We will notify you once we have checked"
+" your details."
+msgstr ""
+
+msgid ""
+"Thank you for your verification request! We will notify you once we have check"
+"ed your details."
+msgstr ""
+
+msgid "Thanks again for joining Kluje.com!"
+msgstr ""
+
+msgid "Thanks again for joining kluje.com!"
+msgstr ""
+
+msgid "Thanks again for using kluje.com!"
+msgstr ""
+
+msgid ""
+"That better way is kluje.com. Our service empowers home owners to post their ‘"
+"jobs to be done’ on our website for free, those jobs are then viewed by our ve"
+"tted and qualified contractors and up to 3 of them will bid on your job. These"
+" contractors will then quote on your job and you select the best one."
+msgstr ""
+
+msgid ""
+"That is going to depend on two critical issues, your description and your budg"
+"et. For best result on the platform, you need to make them match. The size of "
+"the job determines the attractiveness of the budget to the contractor. Again, "
+"be realistic."
+msgstr ""
+
+msgid "The Contractor I have hired has asked me to pay a deposit, what should I do?"
+msgstr ""
+
+msgid ""
+"The Contractor shall pay the amount under this invoice without any counterclai"
+"ms, set offs or deductions, within thirty (30) days of the date of the invoice"
+". The Contractor shall be liable to pay interest on all invoiced sums which re"
+"main unpaid after their due date at the rate of "
+msgstr ""
+
+msgid ""
+"The Kluje Team will be contacting you shortly to make the necessary arrangemen"
+"ts to get the project started."
+msgstr ""
+
+msgid "The Kluje.com Team"
+msgstr ""
+
+msgid ""
+"The Service Provider that doesn’t understand the importance of good communicat"
+"ion. If he can’t handle the relatively simple task of effectively communicatin"
+"g with clients on the front end, imagine how quickly things can spiral out of "
+"control once the job begins. You simply do not seem to be a good fit. Whether "
+"you are considering renovating or doing a repair job, a project is in many way"
+"s like a marriage. You’ll be in close contact and communication with your Serv"
+"ice Provider for the duration, and if you don’t feel comfortable with him/her,"
+" or your personalities simply don’t mesh, it won’t be a pleasant process. Ther"
+"e are many qualified, professional Service Providers out there; you just need "
+"to find the one who is right for you."
+msgstr ""
+
+msgid "The account has been suspended"
+msgstr ""
+
+msgid ""
+"The account you are trying to access is no longer active. To reactivate please"
+" contact us."
+msgstr ""
+
+msgid ""
+"The amount invoiced indicates the commission amount owed by the Contractor to "
+"Kluje arising from the invoiced Project and pursuant to the Kluje Terms and Co"
+"nditions"
+msgstr ""
+
+msgid ""
+"The budget is an estimated budget and will help The contractor decide whether "
+"they can do your job. Consider labour and materials costs when choosing a budg"
+"et."
+msgstr ""
+
+msgid "The contract"
+msgstr ""
+
+msgid "The cost for the SMS is deducted from your credits in your account."
+msgstr ""
+
+msgid "The cost for the lead will be automatically deducted from your credit."
+msgstr ""
+
+msgid ""
+"The job posted may not have had sufficient detail in the description, or the b"
+"udget was unrealistic. You can repost the job with more information in the des"
+"cription box, and adjust your budget higher or lower. With multiple quotes you"
+" can be confident of finding a fair price, so you do not need to be cautious a"
+"bout putting in a high budget."
+msgstr ""
+
+msgid "The key to getting high ratings is to:"
+msgstr ""
+
+msgid ""
+"The link to reset your password is invalid, or has expired. Please enter your "
+"email address below and a new one will be sent to you."
+msgstr ""
+
+msgid "The quote"
+msgstr ""
+
+msgid ""
+"The reason is quite simple: our customers generally choose a verified and rate"
+"d kluje.com contractor over someone who isn't. Wouldn't you?"
+msgstr ""
+
+msgid ""
+"The reason is quite simple: out customers generally choose a verified and rate"
+"d kluje.com contractor over someone who isn't. Wouldn't you?"
+msgstr ""
+
+msgid ""
+"There are two types of credit that make up your account balance: free credit a"
+"nd new-credit. Free credit is any credit included in your 30 day free trial pe"
+"riod. New-credit is any credit purchased from the top ups in your account. The"
+"re are 3 top up options: %{amounts}."
+msgstr ""
+
+msgid ""
+"There is a limited number of slots for your area, so if you are not accepted a"
+"t this time you will be added to the waiting list and will be notified when a "
+"slot opens."
+msgstr ""
+
+msgid "There is no bid cost to bid on the leads"
+msgstr ""
+
+msgid ""
+"There is no cost for premium membership. You only need to top up with %{cost} "
+"to become a member for 30 days."
+msgstr ""
+
+msgid ""
+"These ratings are used by other homeowners to make a more informed decision ab"
+"out which Contractor to hire. All Contractors who join our service agree to ab"
+"ide to the Kuje.com Code of Conduct. Contractors not doing so are permanently "
+"removed from our community."
+msgstr ""
+
+msgid ""
+"They are required to provide the following documents prior to being listed on "
+"Kluje Commercial Renovation platform:"
+msgstr ""
+
+msgid ""
+"This Contractor doesn't have any ratings yet. It does not mean they are not a "
+"Quality Contractor! Chances are they just joined our service and have not gott"
+"en a job through us yet. This means that the contractor really wants to receiv"
+"e a great first rating in order to secure more work and build their online rep"
+"utation!"
+msgstr ""
+
+msgid ""
+"This is an estimated budget and will help the contractor decide whether they c"
+"an do your job. Consider labour and materials costs when choosing a budget."
+msgstr ""
+
+msgid ""
+"This is for the commission paid to the Partner, the 2% from the invoice amount"
+"."
+msgstr ""
+
+msgid ""
+"This is the first thing a Homeowner will see. Add photos of work, list qualifi"
+"cations and write a business description."
+msgstr ""
+
+msgid "This is the general category. Choose the closest work type."
+msgstr ""
+
+msgid "This is the subcategory. Be more specific here."
+msgstr ""
+
+msgid ""
+"This page showcases your ratings as well as any company information, certifica"
+"tions and photos of your work that you provide. Remember that this is the firs"
+"t thing a homeowner will see once you bid a lead, so take some time to complet"
+"e your profile."
+msgstr ""
+
+msgid "Tile Repair"
+msgstr ""
+
+msgid "Tiler / Paver"
+msgstr ""
+
+msgid "Tiling"
+msgstr ""
+
+msgid "Tiling Contractor"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Tips to Hire a Contractor"
+msgstr ""
+
+msgid ""
+"To bid a job lead simply clicks the ‘Buy’ button on the lead. You can also buy"
+" the lead through SMS, simply reply with the code in the SMS."
+msgstr ""
+
+msgid "To complete this request simply click the link below."
+msgstr ""
+
+msgid ""
+"To kick things off on the right foot, we sit down with you and the contractor "
+"to assess your project.  We will then work with you and the contractor through"
+" out the project until the end."
+msgstr ""
+
+msgid "Toilet Cistern Repair"
+msgstr ""
+
+msgid "Toilet Replacement (Excluding Parts)"
+msgstr ""
+
+msgid "Toilet Replacement (Including Parts)"
+msgstr ""
+
+msgid "Toilet/basin Replacement"
+msgstr ""
+
+msgid "Toilet/basin Supply and Fit"
+msgstr ""
+
+msgid "Top Up %s Now"
+msgstr ""
+
+msgid "Top Up %{cost} now"
+msgstr ""
+
+msgid "Top Up Now"
+msgstr ""
+
+msgid "Top Up your Kluje account"
+msgstr ""
+
+msgid "Top up account"
+msgstr ""
+
+msgid ""
+"Top up credit is any credit purchased in your account. There are 3 top up opti"
+"ons: %{amounts}."
+msgstr ""
+
+msgid "Top up to bid"
+msgstr ""
+
+msgid "Top-up details"
+msgstr ""
+
+msgid "Top-ups"
+msgstr ""
+
+msgid "Total Amount"
+msgstr ""
+
+msgid "Total including VAT:"
+msgstr ""
+
+msgid "Total value:"
+msgstr ""
+
+msgid "Townhouse"
+msgstr ""
+
+msgid "Trang"
+msgstr ""
+
+msgid "Trat"
+msgstr ""
+
+msgid "Tree Surgeon Service"
+msgstr ""
+
+msgid "Txn ID"
+msgstr ""
+
+msgid "Type:"
+msgstr ""
+
+msgid "Ubon Ratchathani"
+msgstr ""
+
+msgid "Udon Thani"
+msgstr ""
+
+msgid ""
+"Unlike other recommendation sites, we operate a closed ratings system. Only ho"
+"meowners who have hired a Contractor via Kluje.com can submit a rating of that"
+" Contractor. Ratings and comments are screened for offensive language and rand"
+"om spot checks are carried out on both positive and negative ratings. We have "
+"also place automated checks to catch Contractors who try to rate themselves."
+msgstr ""
+
+msgid ""
+"Unlike other services, only homeowners that have found their Contractor throug"
+"h Kluje.com can leave ratings, so they are always based on the genuine real ex"
+"periences of previous users."
+msgstr ""
+
+msgid "Unlimited number of locations"
+msgstr ""
+
+msgid "Unlimited number of skills"
+msgstr ""
+
+msgid "Unpaid"
+msgstr ""
+
+msgid "Up to 3 Contractors Will Contact you to Do a Quote"
+msgstr ""
+
+msgid "Up to 3 Contractors will BUY"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Update your Kluje.com page:"
+msgstr ""
+
+msgid "Update your job with more information"
+msgstr ""
+
+msgid "Update your location and contact details"
+msgstr ""
+
+msgid ""
+"Update your profile with your qualifications, specialties and photos of past w"
+"ork"
+msgstr ""
+
+msgid "Update your profile with your<br> previous jobs"
+msgstr ""
+
+msgid "Updating"
+msgstr ""
+
+msgid "Upgrade to Premium to bid"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Upload Company Brochure"
+msgstr ""
+
+msgid "Upload Company Registration Doc  :"
+msgstr ""
+
+msgid "Upload Current and Completed Projects "
+msgstr ""
+
+msgid "Upload Floor Plan (Optional)"
+msgstr ""
+
+msgid "Upload Images (Optional)"
+msgstr ""
+
+msgid "Upload Images (Optional) "
+msgstr ""
+
+msgid "Upload up to 5 photos (Optional):"
+msgstr ""
+
+msgid "Uploading"
+msgstr ""
+
+msgid ""
+"Upon joining Kluje.com’s service, we ask that all of our Contractors adhere to"
+" a few basic principles when working with our Homeowner community:"
+msgstr ""
+
+msgid ""
+"Upon joining Kluje.com’s service, we therefore ask that all of our Contractors"
+" adhere to a few basic principles when working with our homeowner community:"
+msgstr ""
+
+msgid ""
+"Use as much detail as you can. Include as applicable; room size, number of roo"
+"ms, whether the contractor needs to supply materials or items, dimensions. Rea"
+"lly try to explain the problem as clearly as you can."
+msgstr ""
+
+msgid ""
+"Use kluje.com's checklist when selecting your contractor. We always suggest ch"
+"ecking the ratings and profile page to help you make the best decision."
+msgstr ""
+
+msgid "Use of the Service"
+msgstr ""
+
+msgid "Use our application now. It’s free!"
+msgstr ""
+
+msgid "User Agreement"
+msgstr ""
+
+msgid "Uthai Thani"
+msgstr ""
+
+msgid "Uttaradit"
+msgstr ""
+
+msgid "Valid business license"
+msgstr ""
+
+msgid ""
+"Validation is a method of ensuring that there is an actual user behind created"
+" accounts and that your email address was typed in correctly. This also ensure"
+"s that there is a valid contact detail for the contractor.Note: If you receive"
+" a request to verify an email address that you didn't initiate, contact us imm"
+"ediately . Someone else might be trying to use your email address for their ac"
+"count."
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Value for money"
+msgstr ""
+
+msgid "Verification Acceptance"
+msgstr ""
+
+msgid "Verification Form"
+msgstr ""
+
+msgid "Verify account"
+msgstr ""
+
+msgid "Verify your Kluje.com account"
+msgstr ""
+
+msgid "Verify your business with us and win more jobs"
+msgstr ""
+
+msgid "Verify your business with us and win more jobs."
+msgstr ""
+
+msgid "Vietnam"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View Details"
+msgstr ""
+
+msgid "View Meeting Details"
+msgstr ""
+
+msgid "View question"
+msgstr ""
+
+msgid ""
+"View the Service Providers profile page to check their ratings to find out wha"
+"t experiences other customers have had. The ratings are the online word of mou"
+"th recommendations. The Service Providers on Kluje are rated on quality, profe"
+"ssionalism and value, so that you can make a more informed decision on which S"
+"ervice Providers to hire."
+msgstr ""
+
+msgid "Wallpapering Supply and Fit per Wall"
+msgstr ""
+
+msgid "Wallpapering per Wall Installation"
+msgstr ""
+
+msgid "Warning Signs"
+msgstr ""
+
+msgid "Waste Pipe Repair / Replace"
+msgstr ""
+
+msgid "Water Feature Pump Maintenance"
+msgstr ""
+
+msgid "Water Feature Pump Repair"
+msgstr ""
+
+msgid "Water Feature Pump Replacement"
+msgstr ""
+
+msgid "Water Feature Supply and Fit"
+msgstr ""
+
+msgid "Water Feature installation"
+msgstr ""
+
+msgid "Water Heating Installation Only"
+msgstr ""
+
+msgid "Water Heating Repair"
+msgstr ""
+
+msgid "Water Heating Supply and Fix"
+msgstr ""
+
+msgid "We are always happy to respond to your concerns."
+msgstr ""
+
+msgid ""
+"We are confident that using contractors that have been rated by fellow homeown"
+"ers will take the uncertainty out of home improvement and allow you to actuall"
+"y enjoy creating your dream home!"
+msgstr ""
+
+msgid "We are independent"
+msgstr ""
+
+msgid "We are on app store now"
+msgstr ""
+
+msgid ""
+"We believe that providing ratings will help sort out the great contractors fro"
+"m the bad. Together we can build “Better Quality Contractors”"
+msgstr ""
+
+msgid "We charge %s per 100 SMS."
+msgstr ""
+
+msgid "We do not do refunds for SMS."
+msgstr ""
+
+msgid ""
+"We don't generally recommend this, as some jobs may require different skill se"
+"ts (such as plumbing and electrical) and/or create confusion. However, for sma"
+"ll handyman style jobs you can include a list of things that need to be done. "
+"Just make sure your budget matches the amount of work required."
+msgstr ""
+
+msgid ""
+"We encourage all homeowners to look at the Contactors profile page for reviews"
+" and qualifications. It is very important to ask about these credentials befor"
+"e hiring any Contractor. If in doubt, ask the contractor for past customers' r"
+"eferences."
+msgstr ""
+
+msgid "We have a job lead that you may be interested in!"
+msgstr ""
+
+msgid "We have received request to reset your password for the Kluje.com website."
+msgstr ""
+
+msgid ""
+"We know it can be difficult when you first join Kluje.com, so we give you free"
+" lead credit to help you trial the service and get started winning work. The b"
+"est way to win work without ratings is to:"
+msgstr ""
+
+msgid ""
+"We look forward to being your preferred method for finding customers and build"
+"ing your reputation."
+msgstr ""
+
+msgid ""
+"We need your details so that our contractors can contact you to provide a quot"
+"e. Your contact details are sent to a contractor once they have purchased your"
+" job lead.To protect your personal information, a maximum of 3 contractor will"
+" only be able to view your name and contact details."
+msgstr ""
+
+msgid ""
+"We never recommend paying the entire amount up front; you shouldn’t part with "
+"a substantial sum without knowing what you’re getting. The deposit should not "
+"be more than 30% of the overall job cost and the Contractor should be able to "
+"explain what it’s covering. If you pay a deposit make sure you have it in writ"
+"ing and you have received an invoice with the deposit clearly stated on it."
+msgstr ""
+
+msgid ""
+"We offer the VIP treatment for your commercial renovation projects at no cost "
+"to you. We save you time, money and frustration by matching you with certified"
+" contractors to complete the job right the first time."
+msgstr ""
+
+msgid ""
+"We send your lead by e-mail and SMS to all the relevant contractors in your ar"
+"ea. Up to 3 contractors, who are interested in quoting on your job, will buy y"
+"our job lead and contact you."
+msgstr ""
+
+msgid ""
+"We take a 10% commission from the completed job once you have been paid by the"
+" client"
+msgstr ""
+
+msgid "We thank you for helping us create \"Better Quality Contractors”."
+msgstr ""
+
+msgid ""
+"We thank you for your time and for helping us create \"Better Quality Contracto"
+"rs\""
+msgstr ""
+
+msgid ""
+"We understand that it is not easy to find good contractor and the experience c"
+"an be very stressful. So we do all the legwork for you, no more endless phone "
+"calls, waiting for the contractors to call you back, or even being told they a"
+"re too busy or simply can’t do your job. With kluje.com, simply post your job "
+"for FREE on our quick form and we will match your request to relevant contract"
+"ors. They will contact you to arrange a quotation. No hassle No fuss."
+msgstr ""
+
+msgid "We vet our homeowners with the relevant authorities"
+msgstr ""
+
+msgid ""
+"We will not be a party to any contract made between you and any contractor and"
+" therefore we shall not be liable for any loss or damage that results from any"
+" dealings between you and any contractor including but not limited to any dire"
+"ct, indirect or consequential or inconsequential loss of any kind."
+msgstr ""
+
+msgid ""
+"We will send you the profile and Genuine Ratings of each interested contractor"
+" when they bid on your lead, you can also view the contractors contact details"
+" by login in to your account."
+msgstr ""
+
+msgid ""
+"We will send you the profile and Genuine Ratings of the 3 contractors that are"
+" interested in your job."
+msgstr ""
+
+msgid "We're in"
+msgstr ""
+
+msgid ""
+"We're working on bringing payments to your country. Please check this page in "
+"a few days."
+msgstr ""
+
+msgid ""
+"Welcome to Kluje Commercial, the only online marketplace that connects you wit"
+"h Better Quality Contractors! Let me share with you how this will work now tha"
+"t you have posted your job:"
+msgstr ""
+
+msgid "Welcome to Kluje.com"
+msgstr ""
+
+msgid ""
+"Welcome to Kluje.com, the only online marketplace that connects you with Bette"
+"r Quality Contractors! Let me share with you how this will work now that you h"
+"ave posted your job:"
+msgstr ""
+
+msgid "What a renovation will cost?"
+msgstr ""
+
+msgid "What are E-mail alerts?"
+msgstr ""
+
+msgid "What are SMS alerts?"
+msgstr ""
+
+msgid "What are job leads?"
+msgstr ""
+
+msgid "What are the Benefits?"
+msgstr ""
+
+msgid "What are the benefits?"
+msgstr ""
+
+msgid "What can I do if I am not happy with the Contractors work?"
+msgstr ""
+
+msgid "What country is the property in?"
+msgstr ""
+
+msgid "What do I do if I have been overcharged?"
+msgstr ""
+
+msgid "What do I use credits for?"
+msgstr ""
+
+msgid "What does a renovation cost?"
+msgstr ""
+
+msgid "What happens after I bid a job lead?"
+msgstr ""
+
+msgid "What happens after I post my job?"
+msgstr ""
+
+msgid "What if I have forgotten my password?"
+msgstr ""
+
+msgid "What if I receive a negative or unfair rating?"
+msgstr ""
+
+msgid "What is Commercial?"
+msgstr ""
+
+msgid "What is Concierge Service?"
+msgstr ""
+
+msgid "What is Your Approximate Budget"
+msgstr ""
+
+msgid "What is Your Approximate Budget (%{currency})"
+msgstr ""
+
+msgid "What is a Premium Member?"
+msgstr ""
+
+msgid "What is a good description?"
+msgstr ""
+
+msgid "What is included in my free account?"
+msgstr ""
+
+msgid "What is my profile page?"
+msgstr ""
+
+msgid "What is the cost and how do I pay for SMS alerts?"
+msgstr ""
+
+msgid "What is the cost of Premium membership?"
+msgstr ""
+
+msgid "What is top up credit?"
+msgstr ""
+
+msgid "What is your approximate"
+msgstr ""
+
+msgid "What is your mobile number?"
+msgstr ""
+
+msgid ""
+"What kluje .com does differently is provide contractors with a unique public p"
+"rofile page, which you can review before selection. We ask contractors to prov"
+"ide their qualifications, photos of previous work and ratings. It is important"
+" that you review the contractor and"
+msgstr ""
+
+msgid "What people are saying"
+msgstr ""
+
+msgid "What region is the property in?"
+msgstr ""
+
+msgid "What should I do if no Contractor contacts me?"
+msgstr ""
+
+msgid "What type of"
+msgstr ""
+
+msgid "What type of contractor do you need?"
+msgstr ""
+
+msgid "What's the postal code?"
+msgstr ""
+
+msgid ""
+"When a Contractor signs up they have no ratings, how do I know if I am getting"
+" a quality Contractor?"
+msgstr ""
+
+msgid ""
+"When a contractor buy's your lead an e-mail with the contractors details and a"
+" link to their profile page is sent to you. This is to help you with  the sele"
+"ction process."
+msgstr ""
+
+msgid ""
+"When choosing a budget it is important to take into consideration two points:<"
+"h5>1. How much are you willing to spend?</h5>This should be your maximum budge"
+"t for the project. Remember a budget is not a quotation nor a finally contract"
+"ed price. It is just an indicator. You will have to negotiate with the contrac"
+"tor for the actual price paid. However, be aware Contrators do use the budget "
+"to gauge how serious you are about your project. See our handy pricing guide f"
+"or help.<h5>2. What is a realistic amount?</h5>This should be your maximum bud"
+"get for the project. Remember a budget is not a quotation nor a finally contra"
+"cted price. It is just an indicator. You will have to negotiate with the contr"
+"actor for the actual price paid. However, be aware Contrators do use the budge"
+"t to gauge how serious you are about your project."
+msgstr ""
+
+msgid "When do you prefer to be contacted?"
+msgstr ""
+
+msgid ""
+"When the work is completed you can rate the  contractor on Quality, Profession"
+"alism and Value. By rating the contractor you are sharing your experience with"
+" others in your community, thereby creating an online community of curated"
+msgstr ""
+
+msgid "When would you like the job to"
+msgstr ""
+
+msgid ""
+"When you become a premium member you get to view the job leads 3 hours before "
+"the free members. This means that you increase your chance to bid on the best "
+"leads before anyone else."
+msgstr ""
+
+msgid ""
+"When you bid a job lead, we will send you the customer’s mobile number and ema"
+"il address so you may contact them directly to provide a quote. We also send y"
+"our profile page, ratings and contact details to the Homeowner."
+msgstr ""
+
+msgid ""
+"When you log in to your account you will automatically land on your ‘Job Leads"
+"’ screen and your job lead list. Here you can scroll through the leads availab"
+"le for you to purchase."
+msgstr ""
+
+msgid "When you sign up you receive 100 SMS for free."
+msgstr ""
+
+msgid "When:"
+msgstr ""
+
+msgid "Where do I view and buy job leads?"
+msgstr ""
+
+msgid "Where to find us"
+msgstr ""
+
+msgid "Where: %s"
+msgstr ""
+
+msgid "Which contractor do you want to use?"
+msgstr ""
+
+msgid "Which type of property?"
+msgstr ""
+
+msgid "Who: %s"
+msgstr ""
+
+msgid "Whole Home Window Grille Installation"
+msgstr ""
+
+msgid "Whole Home Window Installation"
+msgstr ""
+
+msgid "Whole Internal Refurbishment"
+msgstr ""
+
+msgid "Whole Renovation"
+msgstr ""
+
+msgid "Why :"
+msgstr ""
+
+msgid "Why Rate your Contactor?"
+msgstr ""
+
+msgid "Why do I validate my email"
+msgstr ""
+
+msgid "Why do you need my name and contact details?"
+msgstr ""
+
+msgid "Why have I been asked to update a job?"
+msgstr ""
+
+msgid "Why should I add a photo to my job?"
+msgstr ""
+
+msgid "Why should I request a rating?"
+msgstr ""
+
+msgid "Why should you get verified?"
+msgstr ""
+
+msgid "Why use Kluje.com?"
+msgstr ""
+
+msgid "Why you should join Kluje"
+msgstr ""
+
+msgid "Why you will love Kluje.com"
+msgstr ""
+
+msgid "Will a contractor contact me?"
+msgstr ""
+
+msgid "Will you publish my contact details when I post a job?"
+msgstr ""
+
+msgid "Window / Glass"
+msgstr ""
+
+msgid "Window / Glass Contractor"
+msgstr ""
+
+msgid "Window Cleaning Services"
+msgstr ""
+
+msgid "Window Grille Installation 2X3 feet"
+msgstr ""
+
+msgid "Window Grille Installation 5X3 feet"
+msgstr ""
+
+msgid "Window Grille Installation 6X6 feet"
+msgstr ""
+
+msgid "Window Installation per Window Large"
+msgstr ""
+
+msgid "Window Installation per Window Small"
+msgstr ""
+
+msgid "With 3 Easy Steps"
+msgstr ""
+
+msgid ""
+"With Kluje.com you can request a quote from a specific contractor <br/> or pos"
+"t a job for everyone to see!"
+msgstr ""
+
+msgid "With kluje.com, simply post your job for FREE"
+msgstr ""
+
+msgid "Within 1 month"
+msgstr ""
+
+msgid "Within 3 months"
+msgstr ""
+
+msgid "Within 6 months"
+msgstr ""
+
+msgid "Wood Furniture Repair"
+msgstr ""
+
+msgid "Wood Kitchen Worktop Refinish/Repair"
+msgstr ""
+
+msgid "Wood Staircase Repair"
+msgstr ""
+
+msgid "Work location"
+msgstr ""
+
+msgid "YES, Fee %s"
+msgstr ""
+
+msgid "Yala"
+msgstr ""
+
+msgid "Yasothon"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid ""
+"Yes, if you a have photo to add, you should. A photo of your job will help con"
+"tractors to better understand your job requirements and provide a more accurat"
+"e quote. Contractors are also more likely to respond to a job that includes ex"
+"tra information, such as a photo. A photo can be plans, drawings or images of "
+"what needs to be done."
+msgstr ""
+
+msgid ""
+"Yes, simply login to your account. In the Notifications tab click 'Deactivate "
+"E-mail alerts' and 'Deactivate SMS alerts'. You will no longer receive job ale"
+"rts. If you have unused SMS they will remain in your account until you reactiv"
+"ate."
+msgstr ""
+
+msgid ""
+"You are responsible for ensuring that you are legally entitled to publish any "
+"information, which you upload. You may only use the Service to request quotes "
+"for genuine Projects where you have authority to appoint one or more contracto"
+"rs and your intention is to do so subject to agreeing appropriate terms. You m"
+"ay not request quotes for any Project, which is not legal."
+msgstr ""
+
+msgid "You can also view the contractors details under your job in your account."
+msgstr ""
+
+msgid "You can cancel your job anytime. It will be hidden from contractors."
+msgstr ""
+
+msgid ""
+"You can change the settings for job leads by logging in to your account and cl"
+"ick Edit \"Account\". You will now be able to change your work location. The ski"
+"lls are set when you select your price plan. These cannot be changed."
+msgstr ""
+
+msgid ""
+"You can rate a contractor by simply login in to your account on kluje.com, sel"
+"ect the job you have posted and then select the rate this contractor button. T"
+"he contractor can also send a request for a rating, click on the link in the e"
+"mail you have received from the contractor and you will be able to rate the co"
+"ntractor."
+msgstr ""
+
+msgid ""
+"You can receive job alerts via E-mail. Every time a new job matching your skil"
+"ls is posted you will receive an email with the details. You can then proceed "
+"to the website to bid on the job. If you're not a premium contractor the notif"
+"ications will be delayed by 3h."
+msgstr ""
+
+msgid "You can view the contractors profile under your job in your account."
+msgstr ""
+
+msgid "You don't have enough credits to purchase this lead"
+msgstr ""
+
+msgid "You have already bidded for this job"
+msgstr ""
+
+msgid "You have been rated on Kluje.com"
+msgstr ""
+
+msgid "You have just been rated!"
+msgstr ""
+
+msgid "You have no permission to access this site."
+msgstr ""
+
+msgid "You will be notified via email if your request is successful."
+msgstr ""
+
+msgid ""
+"You will be notified via email of acceptance once we have checked your detail."
+" "
+msgstr ""
+
+msgid "You will get 3 quotes from 3 different contractors."
+msgstr ""
+
+msgid "You will get to submit your quote for free"
+msgstr ""
+
+msgid "You will now receive another SMS with the contact details for the Homeowner."
+msgstr ""
+
+msgid "You will receive a job alert via SMS to your mobile."
+msgstr ""
+
+msgid "You will receive leads for free"
+msgstr ""
+
+msgid ""
+"You will receive the commission bill through your account and you will have 30"
+" days to pay the commission"
+msgstr ""
+
+msgid "You've already rated the contractor previously!"
+msgstr ""
+
+msgid ""
+"Your 30-day free trial begins now. When your free trial expires, we will promp"
+"t you to choose your skills and one of our affordable plans. We are also toppi"
+"ng up"
+msgstr ""
+
+msgid "Your Job has been approved!"
+msgstr ""
+
+msgid "Your Personal Details"
+msgstr ""
+
+msgid "Your Question"
+msgstr ""
+
+msgid "Your account has been suspended"
+msgstr ""
+
+msgid ""
+"Your budget should match your job description. Contractors choose to bid your "
+"lead based on whether they think your chosen budget is achievable."
+msgstr ""
+
+msgid "Your current plan:"
+msgstr ""
+
+msgid "Your job has been bided on Kluje.com!"
+msgstr ""
+
+msgid "Your job has been purchased on Kluje.com!"
+msgstr ""
+
+msgid ""
+"Your job will then be viewed by quality, local contractors. These contractors "
+"will BID on your job details and contact you to quote – expect their call"
+msgstr ""
+
+msgid "Your message was not sent because an error occurred, please try again later."
+msgstr ""
+
+msgid "Your photo is uploaded!"
+msgstr ""
+
+msgid "Your question has been sent, someone will contact you shortly."
+msgstr ""
+
+msgid "Your quote has been accepted on Kluje.com!"
+msgstr ""
+
+msgid "Your quote has been submitted on Kluje.com!"
+msgstr ""
+
+msgid ""
+"Your rating request was not sent because an error occurred, please try again l"
+"ater."
+msgstr ""
+
+msgid "a) Title of Project"
+msgstr ""
+
+msgid "and"
+msgstr ""
+
+msgid "and we will be happy to answer your queries."
+msgstr ""
+
+msgid "b) Commencement and Completion Date"
+msgstr ""
+
+msgid "better quality contractors."
+msgstr ""
+
+msgid "budget"
+msgstr ""
+
+msgid "but also to find"
+msgstr ""
+
+msgid "c) Name of Owner and Consultant"
+msgstr ""
+
+msgid "company came, e-mail and NRIC number."
+msgstr ""
+
+msgid "contact us"
+msgstr ""
+
+msgid "contractor"
+msgstr ""
+
+msgid ""
+"contractor, contractors, how it works, sign up, leads, new customers, jobs, ra"
+"tings, reviews, word of mouth, leads, win work, professional, homeowner"
+msgstr ""
+
+msgid ""
+"contractor, contractors, how it works, sign up, leads, new customers, jobs, ra"
+"tings, reviews, word of mouth, leads, win work, professional, homeowner, accou"
+"nt, reputation,"
+msgstr ""
+
+msgid ""
+"contractor, contractors, reputation, leads, customers,trades, Air-conditioning"
+", Flooring ,Painter, Decorator, Swimming Pool, Water Feature, Bathroom, Garden"
+", Landscaping, Plumber, Tiler,Paver, Carpenter, Joiner, General Contractor, Re"
+"novation, Window,Electrician.Kitchen, Roofing, Waterproofing,Handyman"
+msgstr ""
+
+msgid "contractors will bid for your job."
+msgstr ""
+
+msgid "contractors will call you about your job."
+msgstr ""
+
+msgid "contractorservice@kluje.com"
+msgstr ""
+
+msgid "d) Location"
+msgstr ""
+
+msgid "do you need?"
+msgstr ""
+
+msgid "e) Contract Value"
+msgstr ""
+
+msgid "for each month of delay till payment."
+msgstr ""
+
+msgid ""
+"for the job done in terms of value, reliability and quality. This will be atta"
+"ched to the contractors profile page and will be visible by all of our communi"
+"ty."
+msgstr ""
+
+msgid ""
+"homeowner, contractor, renovation, budget, quote, qualified,references, rating"
+"s,workmanship, guarantee, subcontractors, rated, reviewed"
+msgstr ""
+
+msgid ""
+"homeowner, contractor, update, quailty, renovation, budget, quote, qualified,r"
+"eferences, finding a contractor, ratings,workmanship, guarantee, qualification"
+"s, reviews, profile"
+msgstr ""
+
+msgid "in %{city}, %{country}"
+msgstr ""
+
+msgid "in %{country}"
+msgstr ""
+
+msgid "interested"
+msgstr ""
+
+msgid "is invalid."
+msgstr ""
+
+msgid "is it?"
+msgstr ""
+
+msgid "job"
+msgstr ""
+
+msgid ""
+"kluje blog, blog, home improvement blog,repair blog, renovate blog, post your "
+"job, quotes, ratings, contractor blog, contractors blog"
+msgstr ""
+
+msgid "kluje, contact, address, phone number"
+msgstr ""
+
+msgid "on our quick form and we will match your request to relevant contractors."
+msgstr ""
+
+msgid "or"
+msgstr ""
+
+msgid ""
+"query, question, home improvement, ask our expert, contractor, project, renova"
+"tion"
+msgstr ""
+
+msgid ""
+"renovation, repair, recommended contractors, singaporean contractors, contract"
+"or reviews, contractors, Kluje, recommended tradseman, local contractors, hand"
+"yman"
+msgstr ""
+
+msgid "required"
+msgstr ""
+
+msgid "start"
+msgstr ""
+
+msgid ""
+"their qualification with the relevant authorities before hiring them. After yo"
+"ur selected contractor has done the job, we ask that you provide a"
+msgstr ""
+
+msgid "to investigate."
+msgstr ""
+
+msgid ""
+"to report the rating. The rating will be flagged as under investigation until "
+"the investigation has finished. Kluje.com reserves the right to keep or remove"
+" any ratings. Only if the rating is deemed unfair will we remove the rating."
+msgstr ""
+
+msgid ""
+"your job lead and contact you to arrange a time to quote on the job. Please ex"
+"pect their call and afford them every opportunity to do so."
+msgstr ""
+
+msgid ""
+"“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae elit mi"
+". Morbi interdum, neque eu pulvinar sodales, libero litgula hendrerit tellus”"
+msgstr ""

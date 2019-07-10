@@ -1,0 +1,116 @@
+%table.table.padding-15.table-nonborder
+  %tbody
+    %tr
+      %td
+        = _('Job Status:')
+      %td
+        %span.text-capitalize= _("#{@job.state}")
+    %tr
+      %td
+        = _('Property Usage:')
+      %td= @job.property_type_name
+    %tr
+      %td
+        = _('Renovation Type:')
+      %td= @job.renovation_type_name
+    %tr
+      %td
+        = _('Concierge Services:')
+      %td
+        - if @job.concierge_service == true
+          = _("YES, Fee %s") % number_to_currency(@job.concierges_service_amount, :unit => "#{@job.country.currency_code}")
+        - else
+          =_("NO")
+    %tr
+      %td
+        = _('Floor Size:')
+      %td= @job.floor_size_name
+    %tr
+      %td
+        = _('Created:')
+      %td= I18n.localize(@job.created_at.in_time_zone('Asia/Singapore'), format: :short)
+    %tr
+      %td
+        = _('Description:')
+      %td
+        %span{style: 'display:block; max-width: 580px; overflow: hidden;'}= truncate(@job.description, length: 256)
+    %tr
+      %td
+        = _('Project Start Date:')
+      %td= I18n.localize(@job.start_date.to_date, format: :long)
+    %tr
+      %td
+        = _('Budget:')
+      %td= @job.budget_value
+    %tr
+      %td
+        = _('Address:')
+      %td= _(@job.address)
+    %tr
+      %td
+        = _('Postal Code:')
+      %td= _(@job.postal_code)
+    %tr
+      %td
+        = _('Preferred contact time:')
+      %td= _(@job.contact_time)
+    - unless @job.photos.blank?
+      %tr
+        %td{:colspan => "2"}
+          = _('Additional Information:')
+      %tr
+        %td{:colspan => "2"}
+          = render 'jobs/images'
+    - if current_account.homeowner? && !current_account.agent?
+      - if @job.partner.present?
+        %tr
+          %td
+            = _('Partner:')
+          %td
+            = _(@job.partner.first_name)
+            = _(@job.partner.last_name)
+        %tr
+          %td
+            = _('Partner email:')
+          %td
+            = mail_to(@job.partner.email)
+        %tr
+          %td
+            = _('Partner phone:')
+          %td
+            = number_to_phone(@job.partner.mobile_number)
+    - elsif current_account.homeowner? && current_account.agent?
+      - if @job.homeowner.id == current_account.id
+        %tr
+          %td
+            = _('Client:')
+          %td
+            = _(@job.client_first_name)
+            = _(@job.client_last_name)
+        %tr
+          %td
+            = _('Client email:')
+          %td
+            = mail_to(@job.client_email)
+        %tr
+          %td
+            = _('Client phone:')
+          %td
+            = number_to_phone(@job.client_mobile_number)
+      - else
+        %tr
+          %td
+            = _('Client:')
+          %td
+            = _(@job.homeowner.first_name)
+            = _(@job.homeowner.last_name)
+        %tr
+          %td
+            = _('Client email:')
+          %td
+            = mail_to(@job.homeowner.email)
+        %tr
+          %td
+            = _('Client phone:')
+          %td
+            = number_to_phone(@job.homeowner.mobile_number)

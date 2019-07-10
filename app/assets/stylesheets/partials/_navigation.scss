@@ -1,0 +1,224 @@
+/* Header =============================== */
+$navbar-height: 100px;
+
+body {
+  padding-top: $navbar-height;
+}
+
+@media (max-width: $grid-float-breakpoint - 1) {
+  body {
+    padding-top: $navbar-height;
+  }
+}
+
+.navbar-nav > li > a {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navbar {
+  border: none;
+  background: none;
+  height: $navbar-height;
+
+  .nav-background {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background: rgb(54, 54, 54);
+  }
+
+  .container{
+    position: relative;
+  }
+
+  .navbar-header {
+    float: left;
+    margin-left: 0;
+  }
+
+  .navbar-header, .navbar-nav {
+    margin: 20px 0;
+  }
+
+  .sign-in {
+    background: none;
+    height: 50px;
+    margin: 0 10px;
+    padding: 0 20px;
+    color: color('white');
+    border: none;
+  }
+
+  .menu {
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    padding: 9px;
+
+    span {
+      /*background: image_url('buttons/button_menu.png') no-repeat;*/
+      background: image_url('icons/sprite-icon-gt.png') no-repeat;
+      background-position: -5px -137px; width: 32px; height: 32px;
+
+      width: 32px;
+      height: 32px;
+      border: none;
+      display: inline-block;
+    }
+
+  }
+
+  .desktop-item {
+    display: none;
+  }
+
+  @media (min-width: $container-tablet) {
+    .desktop-item {
+      display: block;
+      float: left;
+    }
+
+    .menu-wrapper {
+      float: left;
+    }
+  }
+
+  &.sticky {
+    padding: 2px;
+    transition: all 0.4s ease;
+  }
+
+  .navbar-brand {
+    background: image_url('logos/kluje_logos.png') no-repeat;
+    background-size: 90%;
+    background-position-y: 10%;
+    width: 210px;
+    margin-left: 0;
+
+    &.commercial-logo {
+      background-position-y: 86%;
+    }
+  }
+
+  .navbar-right {
+    margin-right: 0;
+    float: right;
+
+    .btn-success {
+      color: color('white');
+    }
+  }
+  .btn {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .lang {
+    margin-right: 5px;
+  }
+
+  .text .lang {
+    padding-top: 20px;
+  }
+
+  .frm-signout {
+    height: 50px;
+    color: color('white');
+  }
+
+  .locale-menu {
+    width: 400px;
+    height: 200px;
+
+    h6 {
+      font-weight: 500;
+    }
+
+    label {
+      font-weight: normal;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      text-align: right;
+      .btn {
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: $grid-float-breakpoint) and (max-width: 991px) {
+  .navbar > .container {
+    width: 850px;
+  }
+}
+
+/* Footer =============================== */
+
+footer {
+
+  &.bordered {
+    border: solid color("orange");
+    border-width: 1px 0 0 0;
+  }
+
+  .linked {
+    background: color('brown');
+    color: color('white');
+    padding: 20px 0;
+    h5 {
+      color: color('orange-light');
+      a {
+        color: color('orange-light');
+      }
+    }
+
+    a {
+      color: color('white');
+    }
+
+    .h-4{
+      color: color('orange-light');
+      a {
+        color: color('orange-light');
+      }
+
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  }
+}
+
+footer .linked .sm-icon:hover, footer .linked .sm-icon:focus {
+  text-decoration: none;
+}
+
+/* Tabs =============================== */
+
+ul.nav-tabs {
+  li.active a {
+    background-color: color('orange');
+  }
+}
+
+/* Pagination =============================== */
+
+.pagination > li > a {
+  color: color('black');
+}
+
+.pagination > li.active > span {
+  border-color: color('orange');
+  background-color: color('orange');
+
+  &:hover {
+    border-color: color('yellow');
+    background-color: color('yellow');
+  }
+}

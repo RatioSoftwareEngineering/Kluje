@@ -1,0 +1,110 @@
+- content_for :extra_head_tags do
+  = stylesheet_link_tag :profile
+  :javascript
+    $(document).ready( function() {
+      $('.carousel-inner :first-child').addClass('active');
+    });
+.container
+  = render 'layouts/flash_messages'
+  .row
+    .col-md-3
+      .container.container-profile
+        .container
+          - if !@contractor.nil?
+            %img{src: @contractor.company_logo.url, width: '100%'}
+        %hr
+        .container
+          %h3
+            = @contractor.company_name
+          %h6
+            = @contractor.company_description
+        %hr
+        .container.section-container
+          %h2=_('Licenses')
+          %ul.logo-container
+            %li
+              %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                %tr
+                  %td
+                    - if @contractor.uen_number.present?
+                      %img{:src=>'/images/logo-image1.jpg'}
+                    - else
+                      %img{:src=>'/images/logo-image1.jpg', :class=>"disabled"}
+            %li
+              %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                %tr
+                  %td
+                    - if @contractor.case_member == 'true'
+                      %img{:src=>'/images/logo-image2.jpg'}
+                    - else
+                      %img{:src=>'/images/logo-image2.jpg', :class=>"disabled"}
+            %li
+              %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                %tr
+                  %td
+                    - if @contractor.scal_member == 'true'
+                      %img{:src=>'/images/logo-image3.jpg'}
+                    - else
+                      %img{:src=>'/images/logo-image3.jpg', :class=>"disabled"}
+            %li
+              %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                %tr
+                  %td
+                    - if @contractor.bizsafe_member == 'true'
+                      %img{:src=>'/images/logo-image4.jpg'}
+                    - else
+                      %img{:src=>'/images/logo-image4.jpg', :class=>"disabled"}
+            %li
+              %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                %tr
+                  %td
+                    - if @contractor.bca_license.present?
+                      %img{:src=>'/images/logo-image5.jpg'}
+                    - else
+                      %img{:src=>'/images/logo-image5.jpg', :class=>"disabled"}
+            %li
+              %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                %tr
+                  %td
+                    - if @contractor.hdb_license.present?
+                      %img{:src=>'/images/logo-image6.jpg'}
+                    - else
+                      %img{:src=>'/images/logo-image6.jpg', :class=>"disabled"}
+            %li
+              %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                %tr
+                  %td
+                    - if @contractor.pub_license.present?
+                      %img{:src=>'/images/logo-image7.jpg'}
+                    - else
+                      %img{:src=>'/images/logo-image7.jpg', :class=>"disabled"}
+            %li
+              %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                %tr
+                  %td
+                    - if @contractor.ema_license.present?
+                      %img{:src=>'/images/logo-image8.jpg'}
+                    - else
+                      %img{:src=>'/images/logo-image8.jpg', :class=>"disabled"}
+      %br
+      .container.container-profile
+        .container.section-container
+          %h2=_('Overall Ratings')
+          - if @contractor.average_rating > 0
+            .raty{"data-score"=> @contractor.average_rating}
+          - else
+            %p=_("No rating")
+      %br
+
+      .container.container-profile
+        .container.section-container
+          %h2=_('Share This Profile')
+          <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='265546376947262'></div>
+    .col-md-9
+      = render 'contractors/carousel'
+      %div.container.details-container
+        %h2=_('Ratings')
+        %div.separator
+        %div.ratings-container
+          = render 'contractors/ratings'
+    #fb-root

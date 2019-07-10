@@ -1,0 +1,26 @@
+.top-banner
+  .banner-slider
+    .contractor-banner
+      .slide-background
+    .commercial-banner
+      .slide-background
+    .person-banner
+      .slide-background
+  .container.text-center.title
+    %h1.home-h1.text-center.upcase.white= ( _('Find More <em>Work</em> in %{city}') % { city: _(current_country.name) } ).html_safe
+    .padding-top-10
+      = link_to _('Free Contractor Sign Up'), signup_contractors_path, class: 'btn button-dark upcase'
+    .padding-top-30.white
+      %h3= _('Find New Customers The Easy Way')
+  .text-center.footer
+    .first-position
+      .logo-first
+      - if current_country.cca2 == 'sg'
+        - header = _('Job site in %{location}') % { location: 'Singapore' }
+        .locale= header.html_safe
+      - else
+        - header = _('Job site in %{location}') % { location: 'Asia' }
+        .locale= header.html_safe
+      .separate_jobs
+        - header = _('%{number} jobs posted') % { number: jobs_counter }
+      .jobs= header.html_safe

@@ -1,0 +1,45 @@
+- content_for(:extra_footer_tags) do
+  = javascript_include_tag skills_path
+  = javascript_include_tag 'homeowner'
+
+- tooltip_params = {class: 'glyphicon glyphicon-question-sign', rel: 'tooltip', data: {placement: 'right', html: 'true'}}
+
+%table.table.table-condensed.margin-bottom-0
+  %thead{style: 'background-color:#f5f5f5'}
+    %tr
+      %th= _('Contractor')
+      %th= _('Bidded at')
+      %th
+  %tbody
+    - if @job.has_bids?
+      - @job.bids.each do |bid|
+        - rating = @job.ratings.find_by_contractor_id(bid.contractor_id)
+        %tr
+          %td
+            - name = "#{bid.contractor.company_name} (#{bid.contractor.verified ? '' : 'un'}verified)"
+            = link_to name, bid.contractor.profile_url
+          %td
+            = I18n.localize(bid.created_at.in_time_zone(current_country.time_zone), format: :short)
+          %td
+            - if rating
+              = link_to _('Show rating'), '#', class: "toggle-rating", id: "show#{bid.id}"
+              = link_to _('Hide rating'), '#', class: "toggle-rating", id: "hide#{bid.id}", hidden: true
+            - else
+              = link_to _('Rate'), new_job_ratings_path(locale: current_locale_country, job_id: @job.id, contractor_id: bid.contractor_id), class: 'btn btn-primary rate_contractors', style: 'font-size:12px'
+        - if rating
+          %tr.rating{id: "rating#{bid.id}", hidden: true}
+            %td{colspan: 3}
+              = render 'ratings/rating', rating: @job.ratings.where(contractor_id: bid.contractor_id).first
+    - else
+      %tr
+        %td{ colspan: 2 }
+          %p= _('No contractors have placed any bids on your job yet.')
+
+.homeowner.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "conductModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4.modal-title
+      .modal-body
+      .modal-footer

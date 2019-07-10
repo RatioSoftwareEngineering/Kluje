@@ -1,0 +1,4 @@
+= form_tag commercial_job_bid_path(locale: current_locale_country, job_id: job_id), :method => :post do
+  = link_to _('Back'), commercial_jobs_path(locale: current_locale_country), class: 'btn btn-danger'
+  - if @contractor.can_bid_for_commercial_job?(@job)
+    = submit_tag _('Bid for lead'), :class => 'btn btn-success', :disable_with => _('Bidding'), style: 'margin-left: 10px;'

@@ -1,0 +1,17 @@
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'slider'
+
+.white-noise-bg.padding-top-50.padding-bottom-50
+  .container.how-it-works.text-center
+    .text-center.padding-bottom-20
+      %h2.orange-light.upcase=_('High quality contractors at your service')
+    .row.slider
+      - @contractors.each do |contractor|
+        .col-md-4.col-sm-6.col-xs-12.slide
+          = render 'home/contractor', contractor: contractor
+    .text-center.padding-top-10
+      %hr.black{style: 'width: 80%'}
+      %h3=_('With Kluje.com you can request a quote from a specific contractor <br/> or post a job for everyone to see!').html_safe
+      %hr.black{style: 'width: 80%'}
+      %a.button-orange.upcase.btn.margin-top-20{rel: 'canonical', href: members_path(locale: current_locale_country, category: :all, city: params[:city])}
+        = _('Discover our contractors')

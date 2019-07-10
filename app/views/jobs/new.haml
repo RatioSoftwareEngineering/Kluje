@@ -1,0 +1,32 @@
+- title = _('Post your job')
+- if @city
+  - location = _("in %{city}, %{country}") % { city: @city.name, country: @country.name }
+- else
+  - location = _("in %{country}") % { country: @country.name }
+- if @job.skill_id
+  - title = _("Post your %{skill} job") % { skill: @job.skill.try(:name) }
+- if location
+  - title = "#{title} #{location}"
+- if @contractor
+  - title = "#{title} | #{@contractor.company_name}"
+- title = "#{title} | Kluje"
+
+- content_for(:title, title)
+- content_for(:description, _("Post your home improvement job on kluje.com today. It's completely free, Up to 3 quilified contractors will contact you to quote on your job."))
+- content_for(:keywords, _('renovation, repair, recommended contractors, singaporean contractors, contractor reviews, contractors, Kluje, recommended tradseman, local contractors, handyman'))
+
+- questions = { _("How do I choose a budget?") => _("When choosing a budget it is important to take into consideration two points:<h5>1. How much are you willing to spend?</h5>This should be your maximum budget for the project. Remember a budget is not a quotation nor a finally contracted price. It is just an indicator. You will have to negotiate with the contractor for the actual price paid. However, be aware Contrators do use the budget to gauge how serious you are about your project. See our handy pricing guide for help.<h5>2. What is a realistic amount?</h5>This should be your maximum budget for the project. Remember a budget is not a quotation nor a finally contracted price. It is just an indicator. You will have to negotiate with the contractor for the actual price paid. However, be aware Contrators do use the budget to gauge how serious you are about your project."),
+                _("What is a good description?") => _("Although it depends on many factors, be as specific as possible. Describe the problem to the best of your ability. One key things to include are if the contractor have to supply the parts for the job (supply and fit?) or you already have the items and you just need them installed (fit only). Also include, if they are relevant, room dimensions, number of rooms, and so forth. <h6>Note: DO NOT put your contact details in the description box, as your privacy will not be protected. Use the included forms on page 3.</h6>"),
+                _("Can I add multiple jobs to one posting?") => _("We don't generally recommend this, as some jobs may require different skill sets (such as plumbing and electrical) and/or create confusion. However, for small handyman style jobs you can include a list of things that need to be done. Just make sure your budget matches the amount of work required."),
+                _("Will a contractor contact me?") => _("That is going to depend on two critical issues, your description and your budget. For best result on the platform, you need to make them match. The size of the job determines the attractiveness of the budget to the contractor. Again, be realistic.") }
+
+
+.container.margin-top-20
+  .row
+    .col-md-8
+      .orange-bg= render 'layouts/flash_messages'
+      = render 'jobs/job_form', include_registration: current_account.nil?
+    .col-md-4
+      = render 'widgets/love_kluje'
+      = render 'widgets/faq', questions: questions
+      = render 'widgets/facebook'

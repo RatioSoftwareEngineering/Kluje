@@ -1,0 +1,29 @@
+%h2.margin-bottom-25=_('My Subscription Invoices')
+%section
+  %table.table.table-condensed
+    %thead.black-bg.white
+      %tr
+        %th.w-300= _("ID")
+        %th.w-300= _("Plan")
+        -# %th.w-300= _("Purchased Date")
+        %th.w-300= _("Expiry Date")
+        %th.w-300= _("Amount")
+        %th.w-300= _("PDF")
+    %tbody
+      - @subscriptions.each do |subscription|
+        %tr.grey-bg
+          %td= _("# #{subscription.id}")
+          %td= "Monthly Subscription - Residential"
+          -# %td= subscription.created_at.strftime("%d/%m/%y")
+          %td= subscription.expired_at.strftime("%d/%m/%y")
+          %td= number_to_currency(subscription.price, :unit => "#{subscription.currency}")
+          %td
+            = link_to request.url + '/' + subscription.id.to_s + '.pdf' do
+              %span.glyphicon.glyphicon-download-alt
+  = will_paginate @subscriptions, renderer: BootstrapPagination::Rails
+
+  - if Subscription.payment_active?(@contractor)
+    %br
+    %h5=_('* Do you want to unsubscribe? Please click below button.')
+    = link_to _('Unsubscribe'), unsubscribe_contractors_path, class: 'btn btn-default'
+

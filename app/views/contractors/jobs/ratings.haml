@@ -1,0 +1,13 @@
+.margin-10
+  - if !@ratings.empty?
+    - @ratings.order('created_at DESC').each do |rating|
+      .col-md-6
+        = render 'ratings/rating', rating: rating
+      %div.separator
+  - else
+    .col-md-12
+      .row
+        .col-md-2
+          = image_tag 'no-rating.png', style: 'width: 80px;'
+        .col-md-10
+          %p=_("This Contractor doesn't have any ratings yet. It does not mean they are not a Quality Contractor! Chances are they just joined our service and have not gotten a job through us yet. This means that the contractor really wants to receive a great first rating in order to secure more work and build their online reputation!")

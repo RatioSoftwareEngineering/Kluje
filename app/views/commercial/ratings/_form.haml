@@ -1,0 +1,29 @@
+= form_for :rating, url: commercial_job_ratings_path(locale: current_locale_country, job_id: @job.id, contractor_id: @contractor.id), :html => {:id => "rating_form", :class => "form"} do |f|
+  - unless @job.is_purchased?
+    .form-group
+      = f.label 'Did this contractor do your job?'
+      .pull-right
+        %label.radio-inline
+          = f.radio_button :purchased_by, @contractor.id, id: :purchased, checked: true
+          Yes
+        %label.radio-inline
+          = f.radio_button :purchased_by, '', id: :not_purchased, checked: false
+          No
+  - [[:professionalism, _('Please rate things like punctuality, communication, reliability etc.')],
+     [:quality, _('Please rate things like appearance of finished job, materials used, etc.')],
+     [:value, _('Please rate things like accuracy of quotation, price paid, overall impression.')]].each do |aspect, hint|
+    .form-group
+      = f.label aspect
+      .pull-right
+        .fieldset
+          %span.star-cb-group
+            - 5.downto(1).each do |i|
+              = f.radio_button aspect, i, id: "#{aspect}_#{i}", required: true
+              %label{for: "#{aspect}_#{i}"}
+      %p
+        = hint
+  .form-group
+    = f.label :comments, caption: _('Additional comments (optional):')
+    = f.text_area :comments, class: 'form-control', rows: 3
+  .form-group
+    = submit_tag _('Submit'), class: 'btn btn-warning', :disable_with => _('Submitting')

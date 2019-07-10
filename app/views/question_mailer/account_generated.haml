@@ -1,0 +1,20 @@
+%p
+  Hi #{account.full_name},
+
+%p
+  We have created an account for you on Kluje
+
+%p
+  Your sign-in credentials are as below:
+
+%p
+  Sign-in Id:
+  %b= account.email
+  %br
+  Password:
+  %b= password
+
+%p Click on the following link to verify your email address.
+
+%p{align: 'center'}
+  = link_to _('Click to verify'), confirmation_url(account, confirmation_token: account.confirmation_token, locale: 'en'), style: 'color: #fcb61a; font-weight: 600;'

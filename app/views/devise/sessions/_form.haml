@@ -1,0 +1,24 @@
+.vertical-center
+  = form_for :account, url: new_account_session_url, role: :form, class: 'full-width' do |f|
+    .col-md-5.full-height
+      .form-group
+        = f.email_field :email, :autofocus => true, class: 'form-control', placeholder: 'Email'
+      .form-group
+        = f.password_field :password, class: 'form-control', placeholder: 'Password'
+      = submit_tag _('Login'), class: 'btn btn-warning full-width', :disable_with => _("Signing In")
+      = link_to _('Forgot password?'), new_account_password_path, class: 'subscript pull-right'
+    .col-md-2.text-center
+      .vertical-separator
+        %hr.fading
+        %span.fa-stack.fa-2x
+          %span.fa.fa-circle.black.fa-stack-2x
+          %span.fa-stack-1x.white.upcase.subscript= _("or")
+    .col-md-5.full-height
+      %h4{style: "line-height: 33px"}= _('Sign in with social media')
+      %a.btn.btn-social.btn-facebook.margin-bottom-10.full-width{href: '/auth/facebook'}
+        %span.fa.fa-facebook
+        = _('Sign in with Facebook')
+      %a.btn.btn-social.btn-google-plus.full-width{href: '/auth/google_oauth2'}
+        %span.fa.fa-google-plus
+        = _('Sign in with Google')
+    .clearfix

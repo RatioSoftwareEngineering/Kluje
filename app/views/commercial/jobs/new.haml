@@ -1,0 +1,26 @@
+- title = _('Post your job')
+- if @city
+  - location = _("in %{city}, %{country}") % { city: @city.name, country: @country.name }
+- else
+  - location = _("in %{country}") % { country: @country.name }
+- if @job.skill_id
+  - title = _("Post your %{skill} job") % { skill: @job.skill.name }
+- if location
+  - title = "#{title} #{location}"
+- if @contractor
+  - title = "#{title} | #{@contractor.company_name}"
+- title = "#{title} | Kluje Commercial"
+
+- content_for(:title, title)
+- content_for(:description, _("Post your home improvement job on kluje.com today. It's completely free, Up to 3 quilified contractors will contact you to quote on your job."))
+- content_for(:keywords, _('renovation, repair, recommended contractors, singaporean contractors, contractor reviews, contractors, Kluje, recommended tradseman, local contractors, handyman'))
+
+.container.margin-top-20
+  .row
+    .col-md-10.margin-bottom-30
+      .page-header.margin-bottom-5.padding-0
+        %h2.padding-bottom-10.margin-0.w-100= _('Please tell us about your requirements')
+      %p.required.text-right= _('* Required fields')
+    .col-md-10
+      = render 'layouts/flash_messages'
+      = render 'commercial/jobs/job_form', locals: { include_registration: current_account.nil? }

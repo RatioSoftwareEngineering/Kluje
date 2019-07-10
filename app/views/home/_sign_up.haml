@@ -1,0 +1,9 @@
+- url = signup_contractors_path
+
+.padding-top-30.padding-bottom-30{class: black ? 'post-job-2' : 'post-job-1'}
+  .container
+    %h2.upcase.light.text{class: black ? 'black' : 'white'}
+      = _('Ready to get started?')
+    %div{class: black ? 'text-right' : ''}
+      %a.upcase.btn{href: url, rel: 'canonical', class: black ? 'button-white' : 'button-orange'}
+        = _('Sign Up Now!')

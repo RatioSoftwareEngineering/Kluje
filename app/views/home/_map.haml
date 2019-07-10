@@ -1,0 +1,6 @@
+- content_for :extra_head_tags do
+  %script{:src => "https://maps.googleapis.com/maps/api/js"}
+  = javascript_include_tag 'google_maps'
+
+#map-container
+  #map-canvas{ data: { lat: lat, lng: lng, zoom: zoom, title: title } }

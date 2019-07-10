@@ -1,0 +1,4 @@
+.content-wrpper.black-bg
+  .container.ready-to-start.text-center
+    %span=_('Ready to get started?')
+    %a.btn.btn-warning.btn-xl{href: new_job_path(locale: current_locale_country, skill_id: @page.skill_id),rel: "canonical"}=_("Post a Job Now!")

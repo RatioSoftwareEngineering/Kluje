@@ -1,0 +1,26 @@
+.white-noise-bg.padding-top-50.padding-bottom-30
+  .container.how-it-works.text-center
+    .row
+      %h2.orange-light.upcase=_('How it works')
+    .row
+      %h3.dark-grey= _('With 3 Easy Steps')
+    .row.padding-boxttom-50.padding-top-50
+      .col-sm-4
+        .white-noise-bg.padding-30
+          .square.post
+          %h4.text-uppercase.w-400= _('Post Requirements')
+          %p.w-200= _('Complete the online form with your job details.')
+      .col-sm-4
+        .white-noise-bg.padding-30
+          .square.get-quote
+          %h4.text-uppercase.w-400= _('Get Quotations')
+          %p.w-200= _('You will get 3 quotes from 3 different contractors.')
+      .col-sm-4
+        .white-noise-bg.padding-30
+          .square.choose-hide
+          %h4.text-uppercase.w-400= _('Choose and Hire')
+          %p.w-200= _('Compare quotes and hire the best for your job.')
+    .row.text-center
+      %h3.dark-grey.text-center.line-height-50.margin-bottom-30= _('Fill in the online form and 3 verified renovation contractors will be in touch to do quotes for your renovation project.')
+    .text-center.padding-bottom-20
+      = link_to _('Post your Requirements'), new_commercial_job_path(locale: current_locale_country, country_id: current_country.id, city_id: @city.try(:id)), class: 'button-dark upcase btn'

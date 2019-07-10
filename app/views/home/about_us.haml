@@ -1,0 +1,27 @@
+- content_for(:title, _('About Kluje'))
+- content_for :description, _('About Kluje, kluje.com is the easiest way to find handyman, plumbers, electricians, carpenters and commercial renovation contractors online.')
+- content_for :keywords, _('kluje, about us, about kluje, founder, contractors')
+
+.container.margin-top-20
+  .row
+    .col-md-5.col-md-push-3
+      %h1.page-title= _('About Us')
+      %p=_('Kluje.com was founded to provide homeowners with a reliable and easy way to find contractors for their home improvement projects, routine maintenance or just a few odd jobs around the house.')
+      %p=_('After personally going through the long and painful process of finding and interviewing contractors for a job, receiving quotations, and the uncertainty of choosing the right one, our founders realized that there had to be a better way.')
+      %p=_('That better way is kluje.com. Our service empowers home owners to post their ‘jobs to be done’ on our website for free, those jobs are then viewed by our vetted and qualified contractors and up to 3 of them will bid on your job. These contractors will then quote on your job and you select the best one.')
+      %br/
+      %h3= _('How do you know which is the best one?')
+      %p=_('Our contractors are given a profile page, which you can review before selection. It will contain their qualifications, photos of previous work, and ratings given to them by previous kluje.com users. After the job has been done by your selected contractor, we ask that you provide a rating for the job done in terms of value, reliability and quality. This will be attached to the contractors profile page and will be visible by all of our community.')
+      %p=_('We are confident that using contractors that have been rated by fellow homeowners will take the uncertainty out of home improvement and allow you to actually enjoy creating your dream home!')
+      %br/
+    .col-md-3.col-md-pull-5
+      .light-grey-bg.margin-top-20.padding-10
+        .header
+          %h2= _('Founder')
+        .body
+          .text-center
+            = image_tag 'andrew_narrow.jpg', style: 'width: 100%; margin-right: 10px;'
+          %h4= 'Andrew Esmonde-White'
+          %p= _('A 10-year veteran in home renovations with vast experience in many aspects of the industry, Andrew has been CEO of UK companies specializing in home renovations – Propertytask and Ezzies. As co-founder of kluje.com, Andrew is able to provide professional advice for contractors and homeowners alike.')
+    .col-md-4
+      = render 'widgets/map', lat: 1.2967418, lng: 103.7866636, zoom: 11, title: 'Kluje'

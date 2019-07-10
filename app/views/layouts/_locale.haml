@@ -1,0 +1,32 @@
+- languages = { en: 'English', th: 'ไทย', zh_HK: '中文' }.with_indifferent_access
+- countries = Country.available
+
+%li.dropdown.lang
+  %a.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}
+    %i.fa.fa-globe
+    = "#{current_country.name} - #{_(current_city.name)} - #{languages[ session[:locale] ]}"
+  .dropdown-menu.locale-menu
+    = form_tag change_locale_session_path, method: :put do
+      = hidden_field_tag :controller_name, controller_name
+      = hidden_field_tag :action_name, action_name.to_s.gsub(/^\/:/, '')
+      = hidden_field_tag :query, params.except(:contractor, :action, :locale, :utf8).to_query
+      .language.col-xs-6
+        %h6= _('Choose Language')
+        - languages.each do |lang, name|
+          %label
+            = radio_button_tag :new_locale, lang, locale.to_s == lang.to_s, id: "locale_#{lang}"
+            = _(name)
+          %br
+      .location.col-xs-6
+        .country
+          %h6= _('Select country')
+          = select_tag :country_id, options_for_select(Country.available.map{|c| [_(c.name), c.id]}, current_country.id),  id: 'country-selector', class: 'form-control'
+        .city
+          %h6= _('Select city')
+          = select_tag :city_id, options_for_select(current_country.cities.map{|c| [_(c.name), c.id]}, current_city.id), id: 'city-selector', class: 'form-control'
+      .buttons.col-xs-12
+        = button_tag 'Cancel', id: 'locale-cancel', class: 'btn btn-sm btn-danger'
+        = submit_tag 'Apply', class: 'btn btn-sm btn-success'
+
+:javascript
+  var locale = { 'lang': '#{locale}', 'country_id': #{current_country.id}, 'city_id': #{current_city.id} };

@@ -1,0 +1,70 @@
+- sitemap = { kluje: { about_us: about_us_path,
+                         contact_us: contact_us_path,
+                         blog: blog_path(),
+                         locations: locations_path,
+                         sitemap: sitemap_path },
+              homeowners: { how_it_works: how_it_works_homeowners_path,
+                            post_your_job: new_job_path(locale: current_locale_country),
+                            checklist: checklist_homeowners_path,
+                            faq: faq_homeowners_path,
+                            ask_an_expert: questions_path(locale: current_locale_country) },
+              contractors: { _('Members') => members_path(locale: current_locale_country, category: :all),
+                             how_it_works: how_it_works_contractors_path,
+                             sign_up: signup_contractors_path,
+                             faq: faq_contractors_path } }
+- social_media = { facebook: 'http://www.facebook.com/KlujeSingapore',
+                   :'google-plus' => 'https://plus.google.com/u/0/b/106017641517383796746/',
+                   :'youtube-play' => 'http://www.youtube.com/channel/UCgcx0y9YchSY4J8DcBD0Spw' ,
+                   twitter: 'http://twitter.com/KlujeSingapore',
+                   :'pinterest-p' => 'http://www.pinterest.com/klujesingapore/',
+                 }
+
+%footer.white-noise-bg#footer
+  .linked
+    .container
+      .row
+        - sitemap.each do |group, links|
+          .col-sm-3
+            %h4.h-4= _(group.to_s.humanize)
+            %ul.list-unstyled
+              - links.each do |name, path|
+                - next if name == :sign_up && current_account
+                - next if name == :post_your_job && current_account.try(:contractor?)
+                %li
+                  - link = name.to_s.humanize
+                  - link = link.titleize if name == :about_us
+                  = link_to(_(link), path)
+        .col-sm-3
+          %h4.h-4= _('Follow us on')
+          %p
+            - social_media.each do |key, path|
+              %a.sm-icon{href: path, target: '_blank'}
+                %span.fa-stack.fa-lg
+                  %span.fa.fa-circle.fa-stack-2x
+                  %span.black.fa.fa-stack-1x{class: "fa-#{key}"}
+          - if current_page?(blog_path)
+            %h5= _('RSS feed')
+            %p
+              %a.sm-icon{href: blog_path(:format =>'rss'), target: "_blank"}
+                %span.fa-stack.fa-lg
+                  %span.fa.fa-circle.fa-stack-2x
+                  %span.black.fa.fa-stack-1x.fa-rss
+          %br
+  .container.padding-top-40
+    .row.text-center.padding-bottom-20.light.subscript
+      = link_to(_('Terms and Conditions'), legal_path(slug: 'terms-and-conditions-for-referral-program'))
+      |
+      = link_to(_('Privacy Policy'), legal_path(slug: 'privacy-policy'))
+      |
+      = link_to(_('Payment Terms'), legal_path(slug: 'payment-terms'))
+      %br
+      = _('Copyright © 2018 Kluje.com')
+      %br
+      = _('All Rights Reserved')
+
+- unless account_signed_in?
+  = render 'layouts/login_modal'
+= render 'layouts/home_menu'
+= render 'layouts/info_modal'
+= render 'layouts/google_analytics' if Padrino.env == :production
+= content_for :extra_footer_tags

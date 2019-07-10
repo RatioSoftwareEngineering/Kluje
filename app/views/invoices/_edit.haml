@@ -1,0 +1,10 @@
+= form_for [job, invoice], :html => { :multipart => true } do |f|
+  .form-group
+    %label= _("File")
+    = f.file_field :file, class: 'form-ipt'
+  .form-group
+    %label= _("Amount")
+    = f.text_field :amount, class: 'form-control'
+  .form-button.margin-bottom-15
+    = f.submit "Upload Invoice", class: "btn btn-primary"
+

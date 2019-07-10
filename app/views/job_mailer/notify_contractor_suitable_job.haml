@@ -1,0 +1,52 @@
+%p
+  = _('Hello')
+  = contractor.company_name + ','
+%p
+  = _('We have a job lead that you may be interested in!')
+
+%p
+  = _("If you're interested in buying this lead, click the link below")
+
+%p{align: 'center'}
+  = link_to _('Click to view the job'), url, style: 'color: #fcb61a; font-weight: 600;'
+
+%table
+  %tr
+    %td
+      %strong= _('Job category')
+    %td
+      = job.job_category.name
+  %tr
+    %td
+      %strong= _('Skill')
+    %td
+      = job.skill.name
+  %tr
+    %td
+      %strong= _('Work location')
+    %td
+      = job.location
+  %tr
+    %td
+      %strong= _('Budget')
+    %td
+      = job.budget.try(:range)
+  %tr
+    %td
+      %strong= _('Lead price')
+    %td
+      = job.lead_price_formatted
+  %tr
+    %td
+      %strong Availability
+    %td
+      = job.availability
+  %tr
+    %td
+      %strong Description
+    %td
+      = job.description
+  %tr
+    %td{colspan: 2, valign: 'top', style: 'padding: 15px 5px 5px 5px;'}
+      - job.photos.each do |photo|
+        %img{width: "250", src: "#{photo.image_name.url}", alt: "image", style: 'vertical-align: top;'}

@@ -1,0 +1,58 @@
+- content_for :extra_head_tags do
+  = javascript_include_tag :exit_msg, :contractor_signup
+
+= form_for :account, url: create_agents_path, role: :form, id: 'frmContractor', class: 'form-horizontal' do |f|
+  - f.hidden_field :role, value: :homeowner
+  - f.hidden_field :agent, value: 1
+  .top_title
+    %h2= _("Create your Partner Account")
+    .clearfix
+  .contract_acct
+    .form-group.row
+      .col-md-5
+        = f.label _('Country')
+      .col-md-7
+        = f.select :country_id, Country.where(commercial: true).map{|c| [_(c.name), c.id, {data: { postal_codes: c.postal_codes }}]}, { selected: _(@account.try(:country).try(:id) || current_country.id) }, { class: 'form-control' }
+    .form-group.row
+      .col-md-5
+        = f.label _('First Name')
+      .col-md-7
+        = f.text_field :first_name, class: 'form-control'
+    .form-group.row
+      .col-md-5
+        = f.label _('Last Name')
+      .col-md-7
+        = f.text_field :last_name, class: 'form-control', required: true
+    .form-group.row
+      .col-md-5
+        = f.label _('Mobile number')
+      .col-md-7
+        = f.text_field :mobile_number, class: 'form-control', required: true
+    .form-group.row
+      .col-md-5
+        = f.label _('E-mail')
+      .col-md-7
+        = f.email_field :email, class: 'form-control', required: true
+    .form-group.row
+      .col-md-5
+        = f.label _('Password')
+      .col-md-7
+        = f.password_field :password, class: 'form-control', value: '', pattern: '.{6,}', title: _('6 characters minimum'), required: true
+    .form-group.row
+      .col-md-12
+        %span
+          = _("By clicking this button, you declare you have read and agreed to kluje.com's")
+          = link_to(_('Terms and Conditions'), legal_path(slug: 'terms-and-conditions-for-referral-program'),target: '_blank')
+          = _('and')
+          = link_to(_('Privacy Policy'), legal_path(slug: 'privacy-policy'),target: '_blank')
+    .cb16
+    .form-group.row.text-center
+      .col-md-12
+        %br
+        = submit_tag _('Start my Patner account'), class: 'btn btn-warning btn-lg',align: 'center',disable_with: "Start my FREE account"
+
+:javascript
+  $("#btnCreate").click(function(event){
+  event.preventDefault();
+  $('.inputDisabled').prop("disabled", false);
+  });

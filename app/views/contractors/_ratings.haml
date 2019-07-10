@@ -1,0 +1,11 @@
+- if @ratings
+  - @ratings.order('created_at DESC').each do |rating|
+    = render 'ratings/rating', rating: rating
+    %div.separator
+- else
+  %div.col-md-12
+    %div.row
+      %div.col-md-2
+        %img{:src=>'/images/no-rating.png',:style=>"width:80px;"}
+      %div.col-md-10
+        %p= _("This Contractor doesn't have any ratings yet. It does not mean they are not a Quality Contractor! Chances are they just joined our service and have not gotten a job through us yet. This means that the contractor really wants to receive a great first rating in order to secure more work and build their online reputation!")

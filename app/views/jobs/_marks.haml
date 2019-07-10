@@ -1,0 +1,22 @@
+- if current_account.homeowner? && @state != 'archived'
+  .margin-10.pull-left
+    .fa.fa-certificate.grey
+    = _('Approved')
+  .margin-10.pull-left
+    .fa.fa-certificate.orange
+    = _('Bidded')
+  .pull-right
+    = link_to(_('Post a new job'), new_job_path(locale: current_locale_country), class: 'btn btn-warning pull-right')
+  .clearfix
+- elsif current_account.contractor?
+  - if @state != 'purchased'
+    .pull-left.margin-10
+      .fa.fa-certificate.orange
+      = _('Not bidded')
+  - else
+    .pull-left.margin-10
+      .fa.fa-certificate.orange
+      = _('Rated')
+    .clearfix
+- else
+  .margin-bottom-40

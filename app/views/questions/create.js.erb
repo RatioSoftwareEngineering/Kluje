@@ -1,0 +1,23 @@
+<% if @notice.present? %>
+  $('.modal').modal('hide');
+
+  $('#info-modal .modal-title').html('Thank you for submitting your question');
+  $('#info-modal .message').html('<%= @notice %>');
+  $('#info-modal .modal-button').html('Browse Expert Questions');
+  $('#info-modal').modal('show');
+
+  $('.remote-form input:not([type="submit"]), .remote-form textarea').val('');
+  $('.remote-form option:selected').prop('selected', false);
+  $('.remote-form input[type="checkbox"]').prop('checked', false);
+
+  $("#ask-expert-form input:not([type='submit']), #ask-expert-form select, #ask-expert-form textarea").each(function(){
+    Cookies.remove($(this).attr('name'));
+  });
+
+<% elsif @error.present? %>
+  $('.modal').modal('hide');
+
+  $('#info-modal .modal-title').html('Error');
+  $('#info-modal .message').html("<p class='error'><%= @error %></p>");
+  $('#info-modal').modal('show');
+<% end %>

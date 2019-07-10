@@ -1,0 +1,24 @@
+- content_for(:title, _('Contractors - Jobs'))
+
+- content_for :content do
+  .container.margin-top-20.margin-bottom-30
+    .row
+      .col-md-3
+        .widget
+          .header
+            %h2= _('My menu')
+          .body-without-padding.padding-bottom-50
+            %ul.nav.nav-pills.nav-stacked
+              %li{ class: ( request.path == jobs_path(locale: current_locale_country) && 'active') }
+                = link_to "<i class='fa fa-fw fa-list-ul}'></i> #{_('New jobs')}".html_safe, jobs_path(locale: current_locale_country)
+              %li{ class: ( request.path == jobs_index_path(locale: current_locale_country, state: 'purchased') ) && 'active' }
+                = link_to "<i class='fa fa-fw fa-folder-open}'></i> #{_('Purchased leads')}".html_safe, jobs_index_path(locale: current_locale_country, state: :purchased)
+              %li{ class: ( request.path == ratings_contractors_path(locale: current_locale_country) ) && 'active' }
+                = link_to "<i class='fa fa-fw fa-star}'></i> #{_('Ratings')}".html_safe, ratings_contractors_path(locale: current_locale_country)
+
+
+      .col-md-9
+        = render 'layouts/flash_messages'
+        = yield
+
+= render file: 'layouts/application', layout: false

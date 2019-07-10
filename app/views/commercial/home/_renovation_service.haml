@@ -1,0 +1,24 @@
+.black-bg.padding-top-30.padding-bottom-30
+  .container.renovation-service.text-center
+    .row
+      %h2.white.upcase=_('Renovation Services')
+    .row.padding-boxttom-50.padding-top-30
+      .col-sm-4.margin-bottom-15
+        .white-noise-bg.padding-30
+          %h4.text-uppercase.w-400.margin-0.margin-bottom-15= _('Office')
+          %p.text-center.margin-bottom-15
+            = image_tag 'commercial/banners/office-banner.jpg', alt: 'Office', class: 'img-responsive inline-block'
+      .col-sm-4.margin-bottom-15
+        .white-noise-bg.padding-30
+          %h4.text-uppercase.w-400.margin-0.margin-bottom-15= _('Food & Beverage')
+          %p.text-center.margin-bottom-15
+            = image_tag 'commercial/banners/food-banner.jpg', alt: 'Food & Beverage', class: 'img-responsive inline-block'
+      .col-sm-4.margin-bottom-154
+        .white-noise-bg.padding-30
+          %h4.text-uppercase.w-400.margin-0.margin-bottom-15= _('Retail')
+          %p.text-center.margin-bottom-15
+            = image_tag 'commercial/banners/retail-banner.jpg', alt: 'Retail', class: 'img-responsive inline-block'
+    .row
+      .padding-top-20.padding-bottom-20
+        = link_to _('Post your Requirements'), new_commercial_job_path(locale: current_locale_country, country_id: current_country.id, city_id: @city.try(:id)), class: 'button-orange upcase btn'
+      %h4.white.text-center.margin-bottom-30= _('Get 3 Quotes from our Verified Contractors!')

@@ -1,0 +1,24 @@
+%h2.text-left=_('Top up account')
+%h4= _('Choose one of the options below to Top Up your account:')
+
+.row
+  - current_country.top_up_amounts.each.with_index do |amount, i|
+    .col-md-4
+      .top-up-wrapper{class: "amount#{i+1}"}
+        .row.text-center.padding-20.white
+          .col-xs-12
+            %h3= current_country.price_format % amount
+          .col-xs-12
+            = link_to _('Top Up Now'), '#topup_modal', class: 'btn btn-warning top-up-btn', data: { toggle: 'modal', amount: amount, currency_code: current_country.currency_code.upcase, item_name: "#{current_country.price_format % amount} top up", custom: "TopUp,#{current_account.contractor.id},#{amount}" }
+%br
+%br
+
+- amounts = current_country.top_up_amounts.map{|a| current_country.price_format % a}.to_sentence
+- questions = { _('What is top up credit?') => _('Top up credit is any credit purchased in your account. There are 3 top up options: %{amounts}.') % { amounts: amounts },
+                _('What do I use credits for?') => _('Credits are used for purchasing job leads.'),
+                _('Does my credit expire?') => _("Credit doesn't expire and will be carried over to the next month. If you want to cancel your account you will need to ensure that all credit is used. Any credit remaining in the account will not be refunded.") }
+
+%h3.text-left=_('Frequently Asked Questions')
+= render 'home/faq', questions: questions
+
+= render 'contractors/billing/payment_modal', fields: fields

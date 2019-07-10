@@ -1,0 +1,52 @@
+.bg-grey.padding-top-50
+  .container
+    .row
+      .col-md-3
+        = render 'answers/client_filter'
+
+        .info-block.margin-bottom-30
+          %i.fa.fa-quote-left.blue
+          %span.blue Published
+          .text-color The answers is approved by the admin will be published.
+
+          %i.fa.fa-quote-left.orange.margin-top-15
+          %span.orange Waiting for Approve
+          .text-color The answers is waiting for administrator approval.
+
+          %i.fa.fa-quote-left.red.margin-top-15
+          %span.red Rejected
+          .text-color The answers was rejected by the administrator for violating the rules.
+
+          .inline-block.margin-top-15
+            %i.fa.fa-info-circle.padding-right-5
+            Rejected reason
+          .text-color Click on the icon to see details
+
+      .col-md-9
+        %h2 Answers
+
+        = search_form_for @q, url: me_answers_path(locale: current_locale_country), html: { role: 'search', class: 'search-form form-inline margin-top-30 margin-bottom-30'} do |f|
+          .input-group
+            = f.search_field :title_or_body_cont, placeholder: 'Search', class: 'form-control'
+            .input-group-btn
+              %button.btn.btn-default{ type: :submit }
+                %i.fa.fa-search
+
+        - @questions.each do |question|
+          = render 'questions/question', question: question, answer: true
+
+        = will_paginate @questions, renderer: BootstrapPagination::Rails
+
+= content_for :extra_footer_tags do
+  :javascript
+    $('.answer-action').on('click', function(){
+      var postId = $(this).attr('data-post');
+      $('#answer-form-' + postId).removeClass('hide');
+      $('#answer-action-' + postId).addClass('hide');
+    });
+
+    $('.answer-cancel').on('click', function(){
+      var postId = $(this).attr('data-post');
+      $('#answer-form-' + postId).addClass('hide');
+      $('#answer-action-' + postId).removeClass('hide');
+    });

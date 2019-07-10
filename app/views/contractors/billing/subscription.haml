@@ -1,0 +1,51 @@
+- price = current_country.residential_subscription_price
+- cost = current_country.price_format % price
+
+%h4
+  - if @contractor.residential_subscribe?
+    = _("Now you're subscribing")
+
+.row.margin-bottom-20
+  .col-md-5.plan.basic
+    .plan-name
+      %h2= _('Basic')
+    .plan-price.padding-5
+      = _('Free')
+    .plan-benefits.padding-10
+      = _('Benefits:')
+      %ul.benefits-list{:align=>'left'}
+        %li= _('Unlimited number of skills')
+        %li= _('Unlimited number of locations')
+        %li= _('Top up credit to pay for bids')
+
+  .col-md-5.plan.premium
+    .plan-name
+      %h2= _('Subscription')
+    .plan-price.padding-5
+      = _('%{cost} per Month') % { cost: cost }
+    .plan-benefits.padding-10
+      = _('Benefits:')
+      %ul.benefits-list{:align=>'left'}
+        %li= _('Unlimited number of skills')
+        %li= _('Unlimited number of locations')
+        %li= _('Unmimited number of bids (Bid as many jobs as you want)')
+        %li= _('Listing contact information on profile page')
+      .price-btn.margin-top-10
+        -# = link_to _("Subscribe now") % { cost: cost }, billing_subscribe_contractors_path, class: 'btn btn-warning', disable_with: 'Redirecting'
+        - unless @contractor.residential_subscribe?
+          = link_to _('Subscribe now') % { cost: cost }, '#subscribe_modal', class: 'btn btn-warning top-up-btn', data: { toggle: 'modal', amount: price, currency_code: current_country.currency_code.upcase, item_name: "Kluje Residential Subscription", custom: "Subscription,#{current_account.contractor.id},#{ price }" }
+
+
+- questions = { _('What is Monthly Subscription?') => _('This is a recurring monthly payment to get unlimited access to Kluje services'),
+                _('What is in the Subscription?') => _("- Unlimited number of skills<br>- Unlimited number of locations<br>- Immediate access to all jobs<br>- Unlimited bidding on leads<br>- No bid price to pay<br>- Your contact details on your profile page<br>- You will also get free access to any new services or feature that are added in the future"),
+                _('Do I pay for leads?') => _('No, once you are on the monthly subscription the bid price is no longer applicable.'),
+                _('What does it cost?') => _('%{cost} per month recurring.') % { cost: cost },
+                _('Can I cancel?') => _('Yes, this can be done at anytime via your PayPal account.'),
+                _('Can I get a refund?') => _('No, we normal do not give refunds, but if you did encounter a problem, you can contact us (add contractor email here)'),
+                _('What will happen to my unused credit?') => _('If you do have credit, it will be used up for your first monthly payment. We do not give refunds for unused credit, so we advise to try use up your credit before switching to the monthly subscription.') }
+
+%h3.text-left=_("Frequently Asked Questions")
+= render "home/faq", questions: questions
+
+
+= render 'contractors/billing/subscribe_modal', fields: fields

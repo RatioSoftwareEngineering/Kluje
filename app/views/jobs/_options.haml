@@ -1,0 +1,35 @@
+- tooltip_params = {class: 'glyphicon glyphicon-question-sign', rel: 'tooltip', data: {placement: 'top', html: 'true'}}
+
+- if current_account.homeowner?
+  .form-inline
+    - if @job.approved? || @job.pending? || @job.bidded? || @job.purchased?
+      %h4= _("My Job Options")
+      - if @job.is_not_bidded? && !@job.is_archived?
+        .form-group.edit
+          = link_to _('Edit'), edit_job_path(locale: current_locale_country, id: @job.id), class: 'btn btn-success'
+          %span.help{tooltip_params.merge(title: _("If no contractors have responded within 1 day, you can update your budget or description to try increase the interest in your job."))}
+      .form-group.cancel
+        = form_tag job_cancel_path(job_id: @job.id), method: "post", onsubmit: "return confirm('Are you sure you want to cancel the job?');" do |f|
+          = submit_tag _("Cancel"), class: 'btn btn-danger'
+          %span.help.text-center{tooltip_params.merge(title: _("You can cancel your job anytime. It will be hidden from contractors."))}
+
+- elsif current_account.contractor?
+
+  - if @contractor.has_bidded_for_job?(@job)
+    - if !@job.homeowner.nil?
+      = render 'jobs/homeowner_details'
+    - if @rating
+      .col-md-12{id: 'rating'}
+        %h4{style: 'margin-bottom:20px;'}
+          = _('Rating')
+        = render 'ratings/rating', rating: @rating
+        = link_to _('Back'), jobs_index_path(locale: current_locale_country, state: :purchased), class: 'btn btn-danger'
+    - else
+      = form_tag request_job_ratings_path(job_id: @job.id), method: :post do
+        %br
+        = link_to _('Back'), jobs_index_path(locale: current_locale_country, state: :purchased), class: 'btn btn-danger'
+        = submit_tag _('Send a request for rating'), class: 'btn btn-warning', style: 'float: right', disable_with: _('Sending')
+  - else
+    .row.margin-top-20
+      .col-md-12
+        = render 'jobs/bid_form.haml', job_id: @job.id

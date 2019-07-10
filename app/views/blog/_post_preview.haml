@@ -1,0 +1,15 @@
+%article.post.preview{itemprop: "blogPost", itemscope: "itemscope", itemtype: "http://schema.org/BlogPosting"}
+  .body.preview
+    .header.preview
+      %h3
+        %a{href: post.blog_url(current_locale, current_locale_country),rel: "canonical", itemprop: :headline}= post.title
+    .content
+      - if post.image_url.present?
+        .thumb
+          %a{href: post.blog_url(current_locale, current_locale_country), rel: "canonical"}
+            %img.preview{ src: post.image_url, itemprop: :image }
+        = HTML_Truncator.truncate(post.body, 38).html_safe
+      - else
+        = HTML_Truncator.truncate(post.body, 80).html_safe
+  .footer.preview
+    = render 'blog/post_footer', post: post, read_more: true

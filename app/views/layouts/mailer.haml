@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+%html{xmlns: 'http://www.w3.org/1999/xhtml'}
+  %head
+    %meta{:'http-equiv' => 'Content-Type', content: 'text/html; charset=UTF-8'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %title
+      Kluje.com email
+  %body{style: 'margin: 0; padding: 0;', bgcolor: '#fcfcfc'}
+    %table{align: 'center', bgcolor: '#ffffff', border: 0, cellpadding: 0, cellspacing: 0, width: '600', style: 'font-family: Arial, sans-serif; font-size: 15px; color: #000000;'}
+      %tr{align: 'center'}
+        %td{style: 'padding: 15px 30px 15px 30px;'}
+          = image_tag asset_url('kluje-logo.png', host: Kluje.settings.host), alt: 'Kluje.com', height: '50', style: 'display: block;'
+      %tr
+        %td{height: '1', bgcolor: '#fcb61a', style: 'font-size: 0; line-height: 0;'}
+          &nbsp;
+      %tr
+        %td{style: 'padding: 15px 30px 15px 30px;'}
+          = yield
+      %tr
+        %td{align: 'center', bgcolor: '#f6f6f6', style: 'padding: 15px 15px 15px 15px; font-size: 15px;'}
+          %b= _('Note: Do not reply to this email')
+          %br
+          %br
+          = _('If you have any questions or feedback, please email us at')
+          %br
+          - email = (@account.try(:homeowner?) && 'homeownerservice@kluje.com')
+          - email ||= (@account.try(:contractor?) && 'contractorservice@kluje.com')
+          - email ||= 'support@kluje.com'
+          = link_to email, "mailto:#{email}", style: 'color: #fcb61a; font-weight: 600;'
+
+      %tr
+        %td{bgcolor: '#fcb61a', style: 'color: white; padding: 15px 30px 15px 30px; font-size: 13px;'}
+          %table{border: 0, cellpadding: 0, cellspacing: 0, width: '100%'}
+            %tr
+              %td
+                = _('Follow us on')
+                %br
+                - social_media = { facebook: 'http://www.facebook.com/KlujeSingapore',
+                         googleplus: 'https://plus.google.com/u/0/b/106017641517383796746/',
+                         pinterest: 'http://www.pinterest.com/klujesingapore/',
+                         twitter: 'http://twitter.com/KlujeSingapore',
+                         youtube: 'http://www.youtube.com/channel/UCgcx0y9YchSY4J8DcBD0Spw' }
+                - social_media.each do |page, url|
+                  = link_to url, { style: 'text-decoration: none;' } do
+                    = image_tag asset_url("email/#{page}.png", host: Kluje.settings.host), alt: page.to_s.humanize, width: '25', height: '25', style: 'display: inline-block;'
+              %td{align: 'right'}
+                Copyright © 2018 Kluje.com

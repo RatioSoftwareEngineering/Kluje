@@ -1,0 +1,104 @@
+- content_for :content do
+  .container.position-relactive
+    .row
+      %aside.col-md-3
+        .widget.sidebar.light-grey-bg
+          .header
+            %h2= _('My menu')
+          .body-without-padding.padding-bottom-100
+            %ul.nav.nav-pills.nav-stacked
+              %li{ class: request.path =~ /invoices\/?$/ ? 'active' : '' }
+                = link_to _('Invoices History'), commercial_invoices_path(locale: current_locale_country), class: 'links-invoices'
+
+      .col-md-9.margin-top-10.margin-bottom-30
+        = render 'layouts/flash_messages'
+        .main
+          .content
+            %h2.margin-bottom-25=_('Invoice History')
+            %section
+              %table.table.table-condensed
+                %thead.black-bg.white
+                  %tr
+                    %th.w-300= _("Month")
+                    %th.w-300= _("Date")
+                    %th.w-300= _("Invoice")
+                    %th.w-300= _("Download")
+                    %th.w-300= _("Job ID")
+                    %th.w-300= _("Total Amount")
+                    %th.w-300= _("Payment Status")
+                    %th
+                %tbody
+                  - @invoices.each do |invoice|
+                    %tr.grey-bg
+                      %td= invoice.created_at.strftime("%B")
+                      %td= invoice.created_at.strftime("%d - %m - %y")
+                      %td= _("# #{invoice.id}")
+                      %td
+                        - if current_account.homeowner? && !current_account.agent?
+                          - if invoice.file.present? && invoice.file.file.present?
+                            = link_to invoice.file.file.url do
+                              %span.glyphicon.glyphicon-download-alt
+                        - elsif !(current_account.agent? && !invoice.paid?)
+                          = link_to request.url + '/' + invoice.id.to_s + '.pdf' do
+                            %span.glyphicon.glyphicon-download-alt
+                      %td= invoice.job_id
+                      %td
+                        - if current_account.contractor?
+                          = number_to_currency((((invoice.amount * invoice.job.commission_rate) / 100) + invoice.job.concierges_service_amount), :unit => "#{invoice.currency}")
+                        - elsif current_account.homeowner?
+                          = number_to_currency((invoice.amount + invoice.job.concierges_service_amount), :unit => "#{invoice.currency}")
+                      %td
+                        - if current_account.agent?
+                          - if invoice.partner_commission_paid?
+                            =_("Paid")
+                          - else
+                            =_("Unpaid")
+                        - elsif current_account.contractor?
+                          - if invoice.paid.nil? || invoice.paid == false
+                            =_("Unpaid")
+                          - else
+                            =_('Paid')
+                      %td
+                        = link_to '#', class: "toggle-invoice", id: "show#{invoice.id}" do
+                          %span.fa-stack.fa-md
+                            %span.fa.fa-circle-thin.fa-stack-2x
+                            %span.fa.fa-plus.fa-stack-1x
+                        = link_to '#', class: "toggle-invoice", id: "hide#{invoice.id}", hidden: true do
+                          %span.fa-stack.fa-md
+                            %span.fa.fa-circle-thin.fa-stack-2x
+                            %span.fa.fa-minus.fa-stack-1x
+                    %tr.white-bg.invoice{id: "invoice#{invoice.id}", hidden: true}
+                      %td{ colspan: 7 }
+                        %table.table.table-condensed
+                          %thead.black
+                            %tr
+                              %th.w-300= _("Job ID")
+                              %th.w-300= _("Date")
+                              %th.w-300.text-center= _("Job Amount")
+                              %th.w-300.text-center= _("Concierge Service")
+                              - if current_account.contractor?
+                                %th.w-300.text-center= _("Commission Rate %")
+                                %th.w-300.text-center= _("Commission Rate Amount")
+                              - if current_account.contractor?
+                                %th
+                              - elsif current_account.homeowner?
+                                %th{ colspan: 3 }
+                          %tbody
+                            %tr
+                              %td= link_to "# #{invoice.job.id}", commercial_job_path(locale: current_locale_country, id: invoice.job.id)
+                              %td= invoice.job.created_at.strftime("%d - %m - %y")
+                              %td.text-center= number_to_currency(invoice.amount, :unit => "#{invoice.currency}")
+                              %td.text-center= number_to_currency(invoice.job.concierges_service_amount, :unit => "#{invoice.currency}")
+                              - if current_account.agent?
+                                %td= number_to_currency((invoice.amount * Fee::PARTNER_COMMISSION_RATE), :unit => "#{invoice.currency}")
+                              - if current_account.contractor?
+                                %td.text-center= _("%s %") % invoice.job.commission_rate
+                                %td.text-center=  number_to_currency((invoice.amount * invoice.job.commission_rate) / 100, :unit => "#{invoice.currency}")
+                              - if current_account.contractor?
+                                %td
+                              - elsif current_account.homeowner?
+                                %td{ colspan: 3 }
+              = will_paginate @invoices, renderer: BootstrapPagination::Rails
+
+
+

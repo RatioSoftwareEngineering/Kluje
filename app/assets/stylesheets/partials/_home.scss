@@ -1,0 +1,699 @@
+.skill-list {
+  border-radius: 10px;
+  background-color: color('widget-grey');
+  padding: 0 0 100px;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  .item {
+    height: 40px;
+    width: 100%;
+
+    padding: 10px;
+
+    &.active {
+      background-color: color('yellow');
+    }
+  }
+}
+
+.top-banner {
+  height: 600px;
+  margin-top: -108px;
+  background-size: cover;
+  position: relative;
+
+  .banner-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+    .slide-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background: rgba(54, 54, 54, 0.05);
+    }
+  }
+
+  .cb1 {
+    background: image_url("commercial/banners/modern_restaurant_renovation.jpg");
+    background-size: cover;
+    height: 600px;
+  }
+
+  .cb2 {
+    background: image_url("commercial/banners/modern_office_renovation_design.jpg");
+    background-size: cover;
+    height: 600px;
+
+  }
+
+  .cb3 {
+    background: image_url("commercial/banners/office_renovation_planning.jpg");
+    background-size: cover;
+    height: 600px;
+  }
+
+  .commercial-banner {
+    background: image_url("banners/modern-appartment-renovation.jpg");
+    background-size: cover;
+    height: 600px;
+  }
+
+  .contractor-banner {
+    background: image_url("banners/office-board-room-renovation.jpg");
+    background-size: cover;
+    height: 600px;
+
+  }
+
+  .person-banner {
+    background: image_url("banners/handyman-on-building-site.jpg");
+    background-size: cover;
+    height: 600px;
+  }
+
+  .slick-prev, .slick-next {
+
+    &:before {
+      content: '';
+    }
+
+    width: 35px;
+    height: 61px;
+    margin-top: -30px;
+
+    @media (max-width: $screen-md-min - 1) {
+      display: none !important;
+    }
+  }
+  .slick-prev {
+    left: 20px;
+    /*background: image_url("buttons/banner_back.png");*/
+    background: image_url('icons/sprite-icon-gt.png') no-repeat;
+    background-position: -5px -71px; width: 35px; height: 61px;
+
+    &:hover, &:focus {
+      /*background: image_url("buttons/banner_back.png");*/
+      background: image_url('icons/sprite-icon-gt.png') no-repeat;
+      background-position: -5px -71px; width: 35px; height: 61px;
+    }
+  }
+
+  .slick-next {
+    right: 20px;
+    /*background: image_url("buttons/banner_next.png");*/
+    background: image_url('icons/sprite-icon-gt.png') no-repeat;
+    background-position: -45px -71px; width: 35px; height: 61px;
+
+    &:hover, &:focus {
+      /*background: image_url("buttons/banner_next.png");*/
+      background: image_url('icons/sprite-icon-gt.png') no-repeat;
+      background-position: -45px -71px; width: 35px; height: 61px;
+    }
+  }
+
+  .slick-dots {
+    bottom: 25px;
+
+    @media (max-width: $screen-sm) {
+      display: none !important;
+    }
+  }
+
+  .title {
+    position: absolute;
+    top: 150px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-left: -$container-sm/2;
+      left: 50%;
+    }
+    @media (min-width: $screen-md-min) {
+      margin-left: -$container-md/2;
+    }
+    @media (min-width: $screen-lg-min) {
+      margin-left: -$container-lg/2;
+      top: 250px;
+
+      &.commercial {
+        top: 150px;
+      }
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 57px;
+    }
+  }
+
+  .btn {
+    width: 400px;
+    margin: 5px 10px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: -44px;
+    height: 88px;
+    width: 100%;
+
+    .first-position {
+      display: inline-block;
+      height: 88px;
+      background: color('orange-light');
+      border-radius: 44px;
+
+      .logo-first{
+        width: 89px;
+        height: 88px;
+        background: image_url("icons/number1.png") no-repeat center center;
+        float: left;
+        margin: 0 15px 0 44px;
+      }
+
+      .locale {
+        text-align: left;
+        font-size: 22px;
+        line-height: 88px;
+        float: left;
+        padding-right: 20px;
+      }
+
+      .separate_jobs {
+        /*width: 13px;
+        height: 88px;
+        background: image_url("icons/separate_jobs.png") no-repeat center center;*/
+        float: left;
+
+        background: image_url('icons/sprite-icon-gt.png') no-repeat center center;
+        background-position: -85px -88px; width: 13px; height: 88px;
+      }
+
+      .jobs {
+        text-align: left;
+        font-size: 22px;
+        line-height: 88px;
+        float: left;
+        padding: 0 44px 0 20px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    .title {
+      h1 {
+        font-size: 45px;
+      }
+
+    }
+
+    h3 {
+      font-size: 23px;
+    }
+
+    .footer {
+      bottom: -34px;
+      height: 68px;
+      border-radius: 34px;
+
+      .first-position {
+        height: 68px;
+
+        .logo-first {
+          width: 68px;
+          height: 68px;
+          background-size: 68px auto;
+          margin: 0 5px 0 20px;
+        }
+
+        .locale {
+          line-height: 68px;
+          padding-right: 10px;
+          font-size: 1.4em;
+        }
+
+        .separate_jobs {
+          width: 11px;
+          height: 68px;
+          background-size: 11px auto;
+        }
+
+        .jobs {
+          line-height: 68px;
+          padding: 0 25px 0 10px;
+          font-size: 1.4em;
+
+        }
+
+      }
+
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    .title {
+      h1 {
+        font-size: 42px;
+      }
+
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    .btn {
+      width: 270px;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .footer {
+      bottom: -22px;
+      height: 44px;
+
+      .first-position {
+        height: 44px;
+
+        .logo-first {
+          width: 44px;
+          height: 44px;
+          background-size: 44px auto;
+          margin: 0 0 0 7px;
+        }
+
+        .locale {
+          line-height: 44px;
+          padding-right: 5px;
+          font-size: 13px;
+        }
+
+        .separate_jobs {
+          width: 6px;
+          height: 44px;
+          background-size: 7px auto;
+        }
+
+        .jobs {
+          line-height: 44px;
+          padding: 0 10px 0 5px;
+          font-size: 13px;
+
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.business-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: color('white');
+  width: 350px;
+  height: 350px;
+  border: solid 1px color('grey');
+  position: relative;
+  display: inline-block;
+
+  .body {
+    height: 270px;
+    & > * {
+      vertical-align: middle;
+    }
+
+    .logo {
+      display: table-cell;
+      height: 270px;
+      width: 348px;
+      text-align: center;
+      padding: 10px;
+      vertical-align: middle;
+
+      img {
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle;
+      }
+    }
+
+  }
+  .footer {
+    .bids-count {
+      font-size: 12px;
+      color: color('orange');
+    }
+    padding: 2px 10px 2px 10px;
+    background-color: color('brown');
+    height: 80px;
+    color: white;
+    text-align: left;
+
+    .com-name {
+      font-size: 18pt;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .com-rate {
+      font-size: 20px;
+    }
+  }
+
+  .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(64, 64, 64, 0.95);
+    color: color('white');
+    font-size: 13pt;
+    padding: 20px;
+    display: none;
+    text-align: left;
+
+    .button {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      width: 100%;
+      margin-left: -20px;
+
+      .more {
+        display: inline-block;
+        width: 160px;
+        border: 1px solid color('white');
+        left: 94px;
+        color: color('white');
+        height: 63px;
+        line-height: 63px;
+        border-radius: 6px;
+      }
+    }
+
+  }
+
+  &:hover {
+    .info {
+      display: block;
+    }
+  }
+
+  @media (max-width: 380px) {
+    width: 100%;
+  }
+}
+
+.as-seen-in {
+  img {
+    max-width: 25%;
+    max-height: 70px;
+    margin: 30px;
+  }
+}
+
+.post-job-1 {
+  height: 256px;
+  background: image_url("banners/readytogetstart1.jpg") no-repeat scroll 0 0;
+  background-size: cover;
+}
+
+.post-job-1 .text {
+  padding-top: 10px;
+  font-size: 40px;
+
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: 70px;
+  }
+
+}
+
+.post-job-2 {
+  height: 256px;
+  background: image_url("banners/readytogetstart2.jpg") no-repeat scroll 0 0;
+  background-size: cover;
+}
+
+.post-job-2 .text {
+  padding-top: 10px;
+  text-align: right;
+  font-size: 40px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: 70px;
+  }
+}
+
+.alert-home {
+  position: fixed;
+  top: 108px;
+  width: 100%;
+  z-index: 3;
+}
+
+.modal-backdrop {
+  position: fixed;
+}
+
+.mobile-apps {
+  height: 300px;
+
+  .first-text {
+    font-size: 30px;
+  }
+
+  .second-text {
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 300;
+  }
+
+  .logo-apps {
+    text-align: center;
+  }
+
+  .logo {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    background: image_url("home/mobile.png") no-repeat scroll 0 0;
+    height: 300px;
+    background-size: contain;
+
+    .first-text {
+      margin-left: 240px;
+      margin-top: 15px;
+      font-size: 30px;
+    }
+
+    .second-text {
+      margin-left: 320px;
+    }
+
+    .logo-apps {
+      text-align: left;
+      margin-left: 430px;
+    }
+
+  }
+
+  @media (min-width: $screen-md-min) {
+    background: image_url("home/mobile.png") no-repeat scroll 0 0;
+    height: 400px;
+
+    .first-text {
+      font-size: 40px;
+      margin-left: 325px;
+      margin-top: 15px;
+    }
+
+    .second-text {
+      font-size: 30px;
+      margin-left: 475px;
+    }
+
+    .logo-apps {
+      text-align: right;
+      padding-top: 45px;
+      margin-left: 595px;
+    }
+
+  }
+}
+
+.menu-dialog {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  background: color('brown');
+  color: color('white');
+
+  .menu-content {
+    padding: 25px;
+    background: color('brown');
+
+    .menu-header {
+      height: 32px;
+
+      h4 {
+        margin: 0;
+        line-height: 32px;
+      }
+
+      button.close {
+        background: image_url('buttons/button_close_menu.png') no-repeat;
+        background-size: contain;
+        width: 28px;
+        height: 28px;
+        opacity: 1;
+      }
+    }
+
+    .menu-body {
+      .mobile-item {
+        display: block;
+      }
+
+      @media (min-width: $container-tablet) {
+        .mobile-item {
+          display: none;
+        }
+      }
+
+      .btnf {
+        width: 100%;
+      }
+
+      .button-orange {
+        color: color('white');
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          a {
+            padding: 10px 15px 10px 0;
+            display: block;
+            color: color('white');
+          }
+        }
+      }
+
+      .form-control {
+        height: 56px;
+        text-indent: 14px;
+      }
+
+      .dropdown-menu {
+        padding-left: 15px;
+        a {
+          color: color('black');
+        }
+      }
+    }
+
+  }
+
+  @media (min-width: $screen-xs-min) {
+    width: 300px;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    width: 370px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: 448px;
+    .menu-content {
+      padding: 50px;
+
+      .menu-header {
+        button.close {
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .menu-body {
+        .form-control {
+          height: 66px;
+          text-indent: 14px;
+        }
+      }
+
+    }
+  }
+}
+
+#wrap {
+  .slick-dots {
+
+    li {
+      height: 15px;
+      width: 15px;
+
+      button {
+        /*height: 15px;
+        width: 15px;
+        background: image_url("buttons/banner_slide.png");*/
+        background: image_url('icons/sprite-icon-gt.png') no-repeat;
+        background-position: -85px -71px; width: 15px; height: 15px;
+
+        &:before {
+          width: 0;
+          height: 0;
+          content: '';
+        }
+
+      }
+      &.slick-active {
+        button {
+          /*background: image_url("buttons/banner_slide_select.png");*/
+          background: image_url('icons/sprite-icon-gt.png') no-repeat;
+          background-position: -85px -91px; width: 15px; height: 15px;
+        }
+
+      }
+    }
+  }
+}
+
+// homeowners/checklist
+.content-static-page {
+  h1 {
+    font-size: 35px;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+  }
+}

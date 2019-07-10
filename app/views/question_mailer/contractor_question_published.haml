@@ -1,0 +1,8 @@
+%p= "Dear #{account.full_name}"
+
+%p
+  These question on Kluje require your attention!
+
+%p #{link_to question.title, question_url(id: question.slug_url, locale: 'en')}.
+
+%p If you wish to unsubscribe yourself from our mailing list, please click #{link_to 'here', unsubscribe_url(token: account.encrypted_email, locale: 'en')}.

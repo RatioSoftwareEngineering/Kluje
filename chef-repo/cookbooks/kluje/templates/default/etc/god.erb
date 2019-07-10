@@ -1,0 +1,40 @@
+#!/bin/bash
+#
+# god       Startup script for God.
+#
+# chkconfig: - 85 15
+# description: Run god that starts and monitors all Winnow processes
+#
+
+CONF=/etc/god.conf
+RETVAL=0
+GOD=<%= node['kluje']['god_binary'] %>
+
+# Go no further if config directory is missing.
+[ -f "$CONF" ] || exit 0
+
+case "$1" in
+    start)
+      $GOD -c $CONF -l /var/log/god.log -P /var/run/god.pid --no-syslog
+      RETVAL=$?
+  ;;
+    stop)
+      $GOD quit
+      RETVAL=$?
+  ;;
+    status)
+      $GOD status
+      RETVAL=$?
+  ;;
+    restart)
+      $GOD quit
+      $GOD -c $CONF -l /var/log/god.log -P /var/run/god.pid --no-syslog
+      RETVAL=$?
+  ;;
+    *)
+      echo "Usage: god {start|stop|restart}"
+      exit 1
+  ;;
+esac
+
+exit $RETVAL

@@ -1,0 +1,34 @@
+.container
+  .row
+    .col-md-12
+      .container-white
+        .row.text-center
+          .col-md-2
+          .col-md-8
+            %h4.signup-succsess
+              = _('Thank you for signing up with kluje.com!')
+            %p
+              =_("Your 30-day free trial begins now. When your free trial expires, we will prompt you to choose your skills and one of our affordable plans. We are also topping up")
+            %br
+
+            %p=_("Note : Your account may not be topped up immediately as we will conduct a search on your company to verify your details.")
+            %br
+            %p
+              %b
+                = _('Before you get started, here are a few tips:')
+              %ul
+                %li= _('Take a look around your account')
+                %li= _('Customize your profile page as it is the first thing homeowner will see')
+                %li= _('Start buying Job leads and winning work today!')
+              %br
+              = _('If you have any questions you can email us at')
+              = mail_to 'contractorservice@kluje.com'
+
+            %p= _('Thanks again for joining kluje.com!')
+
+            %p= _('Sincerely,')
+
+            %p= _('The Kluje.com Team')
+
+            = link_to _('Go to my account'), jobs_path(locale: current_locale_country), class: 'btn btn-primary'
+          .col-md-2

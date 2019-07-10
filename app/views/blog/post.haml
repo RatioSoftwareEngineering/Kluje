@@ -1,0 +1,42 @@
+- post = @post
+- if post
+  - content_for(:title, "#{post.title} | Renovation and Interior Design Blog")
+  - content_for(:description, post.meta_description)
+  - content_for(:keywords, post.meta_keyword)
+  - content_for(:image, post.image_url)
+
+- content_for :head do
+  %meta{content: "#{@post.meta_description unless @post.nil?}",property: "og:description"}
+  %meta{content: "website", property: "og:type"}/
+  %meta{content: "#{@post.image_url unless @post.nil?}", property: "og:image"}/
+  %meta{content: "#{@post.title unless @post.nil?}", property: "og:title"}/
+  %meta{content: "url", property: "#{@base_url}"}/
+
+.container.blog.margin-top-20.margin-bottom-40
+  .row
+    .col-md-8
+      - if post.present?
+        %article.margin-bottom-20.post{itemprop: "blogPost", itemscope: "itemscope", itemtype: "http://schema.org/BlogPosting"}
+          .header
+            %h1.h2.full-width.full-height{itemprop: :headline}= post.title
+            %hr
+          .body
+            - if post.image_url.present?
+              %img.margin-bottom-20{ src: post.image_url, itemprop: :image }
+            .text
+              = post.body.html_safe
+            = render 'blog/post_a_job'
+          .footer
+            = render 'blog/post_footer', post: post, read_more: false
+    .col-md-4
+      = render 'blog/sidebar'
+    .col-md-8
+      - if @related_posts.present?
+        .post-header-label
+          %h3=_("Recommended Posts:")
+          .row
+            - @related_posts.each do |post|
+              .col-md-6
+                = render 'blog/post_preview', post: post
+
+      = link_to _('Back'), request.env['HTTP_REFERER'], class: 'btn btn-default btn-sm pull-left'

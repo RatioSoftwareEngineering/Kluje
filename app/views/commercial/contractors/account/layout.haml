@@ -1,0 +1,27 @@
+- content_for(:title, _('Contractors - Jobs'))
+
+- content_for :content do
+  - tabs = [ [:new_jobs, commercial_jobs_path(locale: current_locale_country), 'list-ul'],
+             [:purchased_leads, commercial_jobs_path(locale: current_locale_country, state: :purchased), 'folder-open'],
+             [:ratings, ratings_contractors_path(locale: current_locale_country), 'star'] ]
+
+
+  .container.position-relactive
+    .row
+      %aside.col-md-3
+        .widget.sidebar.light-grey-bg
+          .header
+            %h2= _('My menu')
+          .body-without-padding.padding-bottom-50
+            %ul.nav.nav-pills.nav-stacked
+              %li{ class: ( request.path == commercial_jobs_path(locale: current_locale_country) && params[:state] != 'purchased' && 'active') }
+                = link_to _('New jobs'), commercial_jobs_path(locale: current_locale_country), class: 'new-jobs'
+              %li{ class: ( request.path == commercial_jobs_path(locale: current_locale_country) ) && params[:state] == 'purchased' && 'active' }
+                = link_to _('Purchased leads'), commercial_jobs_path(locale: current_locale_country, state: :purchased), class: 'purchased-jobs'
+              %li{ class: ( request.path == ratings_contractors_path(locale: current_locale_country) ) && 'active' }
+                = link_to _('Ratings'), ratings_contractors_path(locale: current_locale_country), class: 'job-rattings'
+      .col-md-9
+        = render 'layouts/flash_messages'
+        = yield
+
+= render file: 'layouts/commercial', layout: false

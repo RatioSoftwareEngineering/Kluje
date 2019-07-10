@@ -1,0 +1,13 @@
+- if params[:success] && params[:success] != 'rating_success'
+  = render 'commercial/jobs/success'
+
+.row.margin-bottom-15
+  .col-xs-12.col-md-6
+    %h3.margin-bottom-15.margin-top-10
+      =_("Job Details")
+      = _("- ##{@job.id}")
+    = render 'commercial/jobs/job_details'
+  = render 'commercial/jobs/sidebar_job'
+.row.margin-bottom-15
+  .col-xs-12.margin-bottom-30
+    = render 'commercial/jobs/options'

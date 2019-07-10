@@ -1,0 +1,8 @@
+- if current_account.contractor? && !meeting.homeowner_id.nil?
+  = form_for :meeting, url: commercial_job_meeting_path(job, meeting), :method => :PATCH do |f|
+    = f.hidden_field(:accept, :value => true)
+    = submit_tag _('Accept '), class: 'btn btn-green ', :disable_with => _("Accepting")
+- elsif current_account.homeowner? && meeting.homeowner_id.nil?
+  = form_for :meeting, url: commercial_job_meeting_path(job, meeting), :method => :PATCH do |f|
+    = f.hidden_field(:accept, :value => true)
+    = submit_tag _('Accept '), class: 'btn btn-green ', :disable_with => _("Accepting")

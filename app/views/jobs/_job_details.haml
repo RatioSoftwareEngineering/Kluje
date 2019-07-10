@@ -1,0 +1,41 @@
+%table.table{style: 'padding:15px;'}
+  %tbody
+    %tr
+      %td
+        %strong= _('Created:')
+      %td= I18n.localize(@job.created_at.in_time_zone('Asia/Singapore'), format: :short)
+    %tr
+      %td
+        %strong= _('Contractor:')
+      %td= _(@job.skill.name) unless @job.skill.nil?
+    %tr
+      %td
+        %strong= _('Type:')
+      %td= _(@job.job_category.name) unless @job.job_category.nil?
+    %tr
+      %td
+        %strong= _('Description:')
+      %td
+        %span{style: 'display:block; max-width: 580px; overflow: hidden;'}= truncate(@job.description, length: 256)
+    %tr
+      %td
+        %strong= _('Availability:')
+      %td= _(@job.availability)
+    %tr
+      %td
+        %strong= _('Budget:')
+      %td= @job.budget.try(:range)
+    - if current_account.contractor?
+      %tr
+        %td
+          %strong= _('Lead Price:')
+        %td
+          = @job.lead_price_formatted(@contractor)
+    %tr
+      %td
+        %strong= _('Location:')
+      %td= _(@job.location)
+    %tr
+      %td
+        %strong= _('Preferred contact time')
+      %td= _(@job.contact_time)

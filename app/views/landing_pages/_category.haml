@@ -1,0 +1,11 @@
+.col-md-4.list-box.margin-bottom-20
+  .orange-light-bg.header.text-center
+    %span.centering-helper
+    = image_tag category.image.url, alt: category.name, class: :icon
+  .black-bg.white.name.thin.upcase.text-center
+    = _("<em>#{category.name}</em> contractors").html_safe
+  .content.white-bg
+    %ul.diamond
+      - current_country.get_landing_pages.published.category(category).language(locale).sort_by(&:title).each do |page|
+        %li
+          = link_to page.title, page.landing_page_url(current_locale, current_locale_country), class: 'black'

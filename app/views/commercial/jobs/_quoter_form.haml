@@ -1,0 +1,45 @@
+%table.table.table-condensed.margin-bottom-0
+  %thead{style: 'background-color:#f5f5f5'}
+    %tr
+      %th= _('Contractor')
+      %th= _('Quoted at')
+      %th= _('Amount')
+      %th
+  %tbody
+    - if @job.has_bids?
+      - @job.bids.each do |bid|
+        - if @contractor.id == bid.contractor.id
+          %tr
+            %td
+              - name = "#{bid.contractor.company_name} (#{bid.contractor.verified ? '' : 'un'}verified)"
+              = link_to name, bid.contractor.profile_url
+            %td
+              = I18n.localize(bid.created_at.in_time_zone(current_country.time_zone), format: :short)
+            %td
+              - if bid.accept == true
+                = number_to_currency(bid.amount_quoter, :unit => "#{bid.currency}")
+              - else
+                - if bid.amount_quoter.present? && bid.amount_quoter > 0
+                  = number_to_currency(bid.amount_quoter, :unit => "#{bid.currency}")
+                  = form_for :bid, url: commercial_job_update_path(@job, bid), :html => {method: "patch", class: 'form-inline quoter-form'} do |f|
+                    .form-group
+                      = f.number_field :amount_quoter, class: 'form-control ipt-xs', min: 100, step: 10, placeholder: "#{bid.amount_quoter}"
+                      - if !bid.file.present?
+                        = f.file_field :file, class: 'ipt-file'
+                    = f.submit _('Edit'), :class => 'btn btn-success btn-xs', :disable_with => _('Uploading'), style: 'margin-left: 10px;'
+                  - if bid.file.present?
+                    = link_to "Attachment (click to open)", "#{bid.file}", target: '_blank'
+                - else
+                  = form_for :bid, url: commercial_job_update_path(@job, bid), :html => {method: "patch", class: 'quoter-form'} do |f|
+                    .form-group
+                      = f.file_field :file, class: 'ipt-file'
+                    .form-group
+                      = f.number_field :amount_quoter, class: 'form-control ipt-xs', min: 100, step: 10, placeholder: "#{bid.amount_quoter}"
+                    = f.submit _('Upload'), :class => 'btn btn-success btn-xs', :disable_with => _('Uploading'), style: 'margin-left: 10px;'
+            %td.text-center
+              - if bid.accept == true
+                =_('Accepted')
+    - else
+      %tr
+        %td{ colspan: 4 }
+          %p= _('No Contractors have placed any Quotes on Job yet.')

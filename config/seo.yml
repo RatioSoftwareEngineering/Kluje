@@ -1,0 +1,97 @@
+trade_guide:
+  air-conditioning-contractor:
+    contractor: Air Conditioning Contractor
+    skill_id: 1
+    title: Air Conditioning Contractor | Kluje
+    description: Looking for an air conditioning Contractor? We can help you. Request quotes from aircon servicing contractors. Compare quotes and pick the best.
+    keywords: Aircon Contractor, Aircon Contractor Singapore, Aircon, Aircon Servicing, Air Conditioning Servicing, Aircon Installation, Aircon Install
+  carpenter:
+    contractor: Carpenter
+    skill_id: 4
+    title: Carpenter | Kluje
+    description: Looking for a Carpentry Contractor? We can help you. Request quotes from carpenters that want to do your job. Compare quotes and pick the best.
+    keywords: Carpenter, Carpenter Singapore, Carpentry, Carpentry Singapore, Carpentry Services, Carpentry Contractor, Carpentry Contractor Singapore, Carpenters
+  electrician:
+    contractor: Electrician
+    skill_id: 6
+    title: Electrician | Kluje
+    description: Looking for an electrician? We can help you. Request quotes from licensed electrician that want to do your job. Compare quotes and pick the best.
+    keywords: Electrician Singapore, Electrician, Electrical Contractor, Electrical Contractor Singapore, Electrical Install, Electrical Installation, Electrical Repair, Electrical Repair Singapore
+  flooring-contractor:
+    contractor: Flooring Contractor
+    skill_id: 7
+    title: Flooring Contractor | Kluje
+    description: Looking for a Flooring Contractor? We can help you. Request quotes to install laminate, vinyl or wood flooring. Compare quotes and pick the best.
+    keywords: Flooring Contractor, Flooring Contractor Singapore, Flooring Singapore, Flooring, Laminate Flooring Singapore, Laminate flooring, Vinyl Flooring, Vinyl Flooring Singapore
+  general-contractor:
+    contractor: General Contractor
+    skill_id: 9
+    title: General Contractor | Kluje
+    description: Looking for a General Contractor? We can help you. Request quotes from General contractors that want to do your job. Compare quotes and pick the best.
+    keywords: General Contractor, General Contractor Singapore, General Contractor Services, General Contractor Services Singapore, Maincon Singapore, Maincon, General Contractors, General Contractors Singapore
+  handyman:
+    contractor: Handyman
+    skill_id: 18
+    title: Handyman | Kluje
+    description: Looking for handyman services? We can help you. Request quotes from handyman that want to do your home improvements. Compare quotes and pick the best.
+    keywords: Handyman, Handyman Services, Handyman Singapore, Handyman Service Singapore, Handyman Services Singapore, Handyman Service, Handyman Repair Services, Repair Handyman
+  interior-designer:
+    contractor: Interior Designer
+    skill_id: 13
+    title: Interior Designer | Kluje
+    description: Looking for an interior designer to design your BTO, DBSS or Condo? We can help you. Get multiple quotes. Compare interior design quotes,and pick the best.
+    keywords: Renovation Contractor, Renovation, Renovation Singapore, Renovation Contractor Singapore, Renovation Package, Interior Design, Interior Design Singapore, Interior Designer Singapore, Home Renovation
+  landscaping-contractor:
+    contractor: Landscaping Contractor
+    skill_id: 8
+    title: Landscaping Contractor | Kluje
+    description: Looking for a landscaping Contractor? We can help you. Request quotes from Landscapers that want to do your job. Compare quotes and pick the best.
+    keywords: Landscaping Singapore, Landscaping, Garden Maintenance, Garden Maintenance Singapore, Landscaping Services, Landscaping Services Singapore, Garden Maintenance Services, Garden Maintenance Services Singapore
+  painting-contractor:
+    contractor: Painting Contractor
+    skill_id: 11
+    title: Painting Contractor | Kluje
+    description: Looking for painting contractor? We can help you. Request quotes from painters to paint you BTO, DBSS or condo. Compare quotes and pick the best.
+    keywords: Painter, Painter Singapore, Painting Contractor Singapore, Painters, Painters Singapore, Painting Contractor, Painting Services, Painting Services Singapore
+  plumbing-contractor:
+    contractor: Plumbing Contractor
+    skill_id: 12
+    title: Plumbing Contractor | Kluje
+    description: Looking for a Plumbing Contractor? We can help you. Request quotes from plumbers that want to do your job. Compare quotes and pick the best.
+    keywords: Plumber, Plumber Singapore, Plumbing, Plumbing Repair, Plumber Services, Plumber Services Singapore, Plumbing Services, Plumbing Services Singapore
+  renovation-contractor:
+    contractor: Renovation Contractor
+    skill_id: 13
+    title: Renovation Contractor | Kluje
+    description: Looking for renovation Contractors to renovate your BTO, DBSS or Condo? We can help you. Get multiple quotes. Compare renovation packages, pick the best.
+    keywords: Renovation Contractor, Renovation, Renovation Singapore, Renovation Contractor Singapore, Renovation Package, Interior Design, Interior Design Singapore, Interior Designer Singapore, Home Renovation
+  roofing-contractor:
+    contractor: Roofing Contractor
+    skill_id: 14
+    title: Roofing Contractor | Kluje
+    description: Looking for a Roofing Contractors? We can help you. Request quotes from roofing contractors that want to do your home improvements. Compare quotes and pick the best.
+    keywords: Roofing, Roofing Singapore, Roofing Contractor, Roofing Contractor Singapore, Roofing Waterproofing Contractor
+  swimming-pool-contractor:
+    contractor: Swimming Pool Contractor
+    skill_id: 15
+    title: Swimming Pool Contractor | Kluje
+    description: Looking for a Swimming Pool Contractor? We can help you. Request quotes from pool contractors that want to do your job. Compare quotes and pick the best.
+    keywords: Swimming Pool Contractors, Swimming Pool Contractors Singapore, Swimming Pool Service, Pool Maintenance, Pool Maintenance Singapore, Water Feature Singapore, Water Feature Contractor Singapore
+  tilling-contractor:
+    contractor: Tilling Contractor
+    skill_id: 16
+    title: Tiling Contractor | Kluje
+    description: Looking for a Tiling Contractor? We can help you. Request quotes from tiling contractors that want to do your job. Compare quotes and pick the best.
+    keywords: Tilling Contractor, Tilling Contractor Singapore, Tiller, Tiller Singapore, Floor Tilling Contractor Singapore, Ceramic Tile Contractor, Tilling Contractors, Tilling Contractors Singapore
+  waterproofing-contractor:
+    contractor: Waterproofing Contractor
+    skill_id: 14
+    title: Waterproofing Contractor | Kluje
+    description: Looking for a Waterproofing Contractor? Post your job on kluje.com to get up to 3 quotes for your job. Rate your contractor after the job is done.
+    keywords: Waterproofing, Waterproofing Singapore, Waterproofing Contractor, Waterproofing Contractor Singapore, Roofing Waterproofing Contractor
+  window-contractor:
+    contractor: Window Contractor
+    skill_id: 17
+    title: Window Contractor | Kluje
+    description: Looking for a Window Contractor? We can help you. Request quotes from window contractors that want to do your job. Compare quotes and pick the best.
+    keywords: Window Contractor, Window Contractor Singapore, Window Contractors Singapore, HDB Window Contractor, HDB Window Contractor Singapore, Window installer, Window Installation Singapore, Window Repair, Window Repair Singapore

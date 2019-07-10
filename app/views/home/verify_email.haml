@@ -1,0 +1,24 @@
+- email = current_account.try(:email) || params[:email] || 'your email'
+- id = current_account.try(:id) || params[:id] || params[:code]
+- contractor = current_account.try(:contractor?)
+
+.white-bg
+  .container.padding-top-20.padding-bottom-40
+    .row
+      = render 'layouts/flash_messages'
+      .col-md-12.text-center
+        %h1= _('Please Verify Your E-mail')
+        = image_tag 'verify_email.png', width: '120px'
+        %span
+        %h5
+          = _('A verification email has been sent to')
+          %br
+          %a{href: "mailto:#{email}", target: "_top"}= email
+        .cb15
+        %h3= _('If you did not recieve the email please click on the button below.')
+        .cb5
+        = link_to _("Resend Verification Email"), new_account_confirmation_path(email: email), class: 'btn btn-primary btn-lg'
+        .cb10
+        %h6
+          = _('If you experience any problems, please email us at:')
+          %a{href: "mailto:support@kluje.com", target: "_top"}support@kluje.com

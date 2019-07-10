@@ -1,0 +1,26 @@
+- title = "#{@page.title} in #{current_country.name} | Kluje"
+= render 'landing_pages/tags', title: title, description: @page.description, keywords: @page.keywords
+
+%div
+  = render 'layouts/flash_messages'
+
+= render 'landing_pages/banner'
+
+.container-fluid
+  .row.padding-top-10
+    .col-md-8.padding-left-20
+      = @page.content.try(:html_safe)
+    .col-md-4
+      = render 'widgets/homeowner_how_it_works'
+      = render 'widgets/homeowner_tips'
+      = render 'landing_pages/link_rss'
+
+= render 'home/post_a_job', black: false, skill_id: @page.skill_id, country_id: current_country.id, city_id: @city.try(:id)
+- if current_country.commercial? && current_city && current_city.commercial?
+  = render 'home/commercial_property'
+.white-noise-bg
+  .container
+    = render 'home/landing_pages'
+= render 'home/post_a_job', black: true, skill_id: @page.skill_id, country_id: current_country.id, city_id: @city.try(:id)
+= render 'home/mobile_apps'
+= render 'layouts/header_transition'

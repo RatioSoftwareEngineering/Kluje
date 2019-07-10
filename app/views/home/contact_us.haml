@@ -1,0 +1,32 @@
+- content_for :title, _('Contact Kluje')
+- content_for :description, _('Need to talk to us? All our contact details are here. We are happy to respond to your requests.')
+- content_for :keywords, _('kluje, contact, address, phone number')
+
+.container.margin-top-20
+  .row
+    .col-md-8
+      %h1.page-title= _('Contact Us')
+      %h4= _('Have a Question for Kluje?')
+      %h5= _('Address')
+      73 Loewen Road, #01-21
+      %br
+      Singapore 248843
+      %br
+      %br
+
+      %h5= _('Operating Hours')
+      = _('9:00 am - 5:00 pm')
+      %br
+      = _('Monday to Friday')
+      %br
+      %br
+
+      %h5= _("Email:")
+      = _('If you are a homeowner')
+      = link_to 'homeownerservice@kluje.com', 'mailto:homeownerservice@kluje.com'
+      %br
+      = _('If you are a contractor')
+      = link_to('contractorservice@kluje.com', 'mailto:contractorservice@kluje.com')
+    .col-md-4
+      = render 'widgets/stats'
+      = render 'widgets/facebook'

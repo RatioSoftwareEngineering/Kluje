@@ -1,0 +1,12 @@
+- country = location_country
+- content_for(:description, _("Looking for a commercial renovation contractor in #{country}? Post your commercial renovation project for free and get up to 5 Quotes."))
+- content_for(:keywords, _("commercial renovation #{country}, restaurant renovation, office renovation, renovation #{country}, commercial contractor #{country}, commercial property"))
+
+= render 'commercial/home/banner'
+= render 'commercial/home/how_it_work'
+= render 'commercial/home/renovation_service'
+-# = render 'commercial/home/concierge_service'
+= render 'commercial/home/commercial_contractors'
+/#= render 'commercial/home/reviews'
+= render 'commercial/home/renovation'
+= render 'layouts/header_transition'

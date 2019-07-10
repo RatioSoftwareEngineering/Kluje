@@ -1,0 +1,167 @@
+- location = @city.present? ? "#{@city.name}, #{@city.country.name}" : current_country.name
+- content_for(:title, _('Kluje | Ask an Expert'))
+- content_for(:description, _('Have a question about your home improvement project? Our contractors in %{location} can help. Simply post your question and they will answer it!') % { location: location } )
+- keywords = _('query, question, home improvement, ask our expert, contractor, project, renovation')
+- keywords = "#{keywords}, #{@questions.map {|q| q.category.name}.join(", ")}" unless @questions.blank? || @questions.size == 0
+- content_for(:keywords, keywords)
+
+= render 'questions/ask_an_expert'
+
+%section.questions.bg-grey.padding-top-30
+  .container
+    .row
+      .col-md-8
+        .row
+          .col-sm-8
+            %h2 Previously Asked Questions
+          .col-sm-4.text-right
+            %button#btn-ask-expert.btn.btn-primary.upcase Ask An Expert
+
+    .row
+      .col-md-8
+        .btn-group.btn-group-justified.margin-bottom-10{ role: :group }
+          = link_to 'Default', questions_path(locale: current_locale_country), class: "btn #{'active' if params[:filter].blank? }"
+          = link_to 'Recent', questions_path({locale: current_locale_country, filter: 'recent'}), class: "btn #{'active' if params[:filter].to_s.eql?('recent') }"
+          = link_to 'Most Popular', questions_path({locale: current_locale_country, filter: 'popular'}), class: "btn #{'active' if params[:filter].to_s.eql?('popular') }"
+
+        %h5.margin-top-20.margin-bottom-20
+          - if @questions.count > 0
+            #{pluralize(@questions.count, 'Question')}
+          - else
+            %h3.text-center.padding-20.grey No questions found
+
+        - @questions.each do |question|
+          = render 'questions/question', question: question, answer: false
+
+        = will_paginate @questions, renderer: BootstrapPagination::Rails
+
+      .col-md-4
+        = render 'questions/filter', q: @q
+
+- unless signed_in?
+  #question-info-modal.modal.fade.in{ aria: { labelledby: :conductModalLabel }, role: 'dialog', tabindex: '-1'}
+    .modal-dialog
+      .modal-content
+        .modal-header.text-center
+          %button.close{'data-dismiss' => 'modal', type: 'button'} ×
+          %h3.modal-title Your information
+        .modal-body.text-center
+          .row
+            .col-md-5.full-height
+              = form_for :ask_expert, url: questions_path({format: :js}), role: :form, method: :post, remote: true, html: { class: 'remote-form', id: 'ask-expert-modal' } do |f|
+                = f.hidden_field :category_id, id: 'category-id-modal'
+                = f.hidden_field :title, id: 'title-modal'
+                = f.hidden_field :body, id: 'body-modal'
+                = f.hidden_field :anonymous, id: 'anonymous-modal'
+
+                = f.text_field :first_name, class: 'form-control margin-bottom-10', required: true, placeholder: _("First Name *")
+                = f.text_field :last_name, class: 'form-control margin-bottom-10', required: true, placeholder: _("Last Name *")
+                = f.email_field :email, class: 'form-control margin-bottom-10', required: true, placeholder: _("Email *")
+                = f.select :country_id, Country.available.pluck(:name, :id), { prompt: _("Country *"), selected: current_account.try(:country_id) }, class: 'form-control margin-bottom-10', required: true
+
+                = f.submit 'Submit', class: 'modal-button btn btn-primary btn-block padding-10', data: { disable_with: "Sending ..." }
+
+            .col-md-2.text-center
+              .vertical-separator
+                %hr.fading
+                %span.fa-stack.fa-2x
+                  %span.fa.fa-circle.black.fa-stack-2x
+                  %span.fa-stack-1x.white.upcase.subscript= _("or")
+
+            .col-md-5.full-height
+              %h4{style: "line-height: 33px"}= _('Sign in with social media')
+              %a.btn.btn-social.btn-facebook.margin-bottom-10.full-width{href: '/auth/facebook'}
+                %span.fa.fa-facebook
+                = _('Sign in with Facebook')
+              %a.btn.btn-social.btn-google-plus.full-width{href: '/auth/google_oauth2'}
+                %span.fa.fa-google-plus
+                = _('Sign in with Google')
+
+= content_for :extra_footer_tags do
+  :javascript
+    $('document').ready(function(){
+      $('#ask-expert-form').validate({
+        ignore: [],
+        rules: {
+          'ask_expert[category_id]':{
+            required: true
+          },
+          'ask_expert[title]':{
+            required: true
+          },
+          'ask_expert[body]': {
+            required: true,
+            minlength: 30,
+            maxlength: 1000
+          },
+          'ask_expert[agree_terms]':{
+            required: true
+          },
+        },
+        errorPlacement: function (error, element) {
+          if ($.inArray(element.attr("type"), ['checkbox', 'select']) != -1) {
+            error.insertAfter($(element).parent());
+          } else {
+            error.insertAfter($(element));
+          }
+        },
+        messages: {
+          'ask_expert[category_id]': {
+            required: '* Please enter your question category'
+          },
+          'ask_expert[title]': {
+            required: '* Please enter your question title'
+          },
+          'ask_expert[body]': {
+            required: '* Please enter your question content',
+            minlength: $.validator.format("Your question description must be longer than {0} characters"),
+            maxlength: $.validator.format("Your question description must be smaller than {0} characters")
+          },
+          'ask_expert[agree_terms]': {
+            required: '* You have to agree our terms and conditions to continue',
+          }
+        }
+      });
+
+      $("#btn-ask-expert").on('click', function() {
+        $('html, body').animate({
+          scrollTop: $("#ask-expert").offset().top - $('.navbar-fixed-top').outerHeight()
+        }, 500);
+      });
+
+      $('#btn-need-info').on('click', function(){
+        if ($('#ask-expert-form').valid()){
+          $("#ask-expert-modal input").each(function(){
+            var name = $(this).attr('name');
+            var cookieValue = Cookies.get(name);
+            if (cookieValue != undefined){
+              $(this).val(cookieValue);
+            }
+          });
+
+          $('#question-info-modal').modal();
+        }
+      });
+
+      $("#ask-expert-form input:not([type='submit']), #ask-expert-form select, #ask-expert-form textarea").on('change', function(){
+        var name = $(this).attr('name');
+        if ($(this).attr('type') === 'checkbox' ){
+          Cookies.set(name, $(this).is(":checked"));
+        }else{
+          Cookies.set(name, $(this).val());
+        }
+      });
+
+      $("#ask-expert-form input:not([type='submit']), #ask-expert-form select, #ask-expert-form textarea").each(function(){
+        var name = $(this).attr('name');
+        var cookieValue = Cookies.get(name);
+        if (cookieValue != undefined){
+          console.log($(this).attr('type'));
+          if ($(this).attr('type') === 'checkbox' ){
+            $(this).prop('checked', cookieValue === 'true');
+          }else{
+            $(this).val(cookieValue);
+          }
+        }
+      });
+    });

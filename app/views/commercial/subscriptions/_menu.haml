@@ -1,0 +1,10 @@
+%aside.col-md-3
+  .widget.sidebar.light-grey-bg
+    .header
+      %h2= _('My menu')
+    .body-without-padding.padding-bottom-100
+      %ul.nav.nav-pills.nav-stacked
+        %li{ class: request.path =~ /subscriptions\/?$/ ? 'active' : '' }
+          = link_to _('Subscription'), commercial_subscriptions_path(locale: current_locale_country), class: 'links-invoices'
+        %li{ class: request.path =~ /invoices\/?$/ ? 'active' : '' }
+          = link_to _('Invoices'), commercial_subscriptions_invoices_path(locale: current_locale_country), class: 'links-invoices'

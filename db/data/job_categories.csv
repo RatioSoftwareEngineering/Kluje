@@ -1,0 +1,271 @@
+id,"name","description",skill_id,"deleted_at","created_at","updated_at",min_budget,max_budget
+1,"Aircon Servicing 1 off","Need some one to perform a service on your air-conditioner",1,NULL,"2015-01-19 03:26:27","2015-03-25 08:32:20",100,4999
+2,"Aircon Repair","Air con has stopped working and need it repaired",1,NULL,"2015-01-19 03:26:27","2015-03-25 08:32:21",100,4999
+3,"Contract Maintenance 1-2 unit (Twice per Year)","''",1,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",100,4999
+4,"Contract Maintenance 3-6 Unit (Three per year)","''",1,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",200,5999
+5,"Chemical Overhaul per Fan Coil","''",1,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",100,4999
+6,"Aircon System single Split Supply and Fit","''",1,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",1000,8999
+7,"Aircon System 2 Supply and Fit","''",1,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",2000,9999
+8,"Aircon System 3 Supply and Fit","''",1,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",3000,10999
+9,"Aircon System 4 Supply and Fit","''",1,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",4000,11999
+10,"Aircon Compressor Supply and Fit","''",1,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",1000,8999
+11,"Bathroom Design Service","Need help with the layout for a new bathroom",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",1000,8999
+12,"Full Bathroom Installation Supply and Fit","Want a whole new bathroom fitted or just a shower, bath or toilet  fitted",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",3000,10999
+13,"Minor Bathroom Repair"," ",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",100,4999
+14,"Minor Bathroom Plumbing"," ",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",100,4999
+15,"Toilet/basin Replacement"," ",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",100,4999
+16,"Toilet/basin Supply and Fit"," ",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",300,5999
+17,"Shower Repair"," ",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",100,4999
+18,"Shower Installation Supply and Fit"," ",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",800,7999
+19,"Bath Tub Installation"," ",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",500,6999
+20,"Bath Tub Installation supply and Fit"," ",2,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",800,7999
+21,"Custom Design & Build Furniture"," ",4,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",1000,8999
+22,"Build In Wardrobe Supply and fit"," ",4,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",800,7999
+23,"Build In Wardrobe Installation"," ",4,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",200,5999
+24,"Internal/External Door Installation/Repair"," ",4,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",100,4999
+25,"Internal Door Installation Supply and Fit"," ",4,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",300,5999
+26,"External Door Installation Supply and Fit"," ",4,NULL,"2015-01-19 03:26:28","2015-03-25 08:32:21",500,6999
+27,"Internal/External Door Repair Installation"," ",4,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+28,"Minor Wood Work Repair/Maintenance"," ",4,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+29,"Major Wood Work Repair/Maintenance"," ",4,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",500,6999
+30,"Flat Pack Furniture Assembly"," ",4,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+31,"Electrical Inspecting / Testing"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+32,"Minor Lighting & Power - Internal"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+33,"Major Lighting & Power - Internal"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",500,6999
+34,"Minor Lighting & Power - external"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+35,"Major Lighting & Power - external"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",500,6999
+36,"Lighting Fittings Repair and Installation"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+37,"Access Control / Door Entry Repair"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+38,"Access Control / Door Entry installation"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",500,6999
+39,"Electrical Appliance Repair"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+40,"Electrical Appliance Installation"," ",6,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",100,4999
+41,"Floor Sanding & Finishing"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",500,6999
+42,"1-2 Rooms Linoleum/wood/Laminate"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:21",500,6999
+43,"2 Or More Rooms Linoleum/wood/Laminate"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",1000,8999
+44,"Screeding/Polished Concrete"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",500,6999
+45,"Floor Leveling"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",100,4999
+46,"1-2 Rooms Carpet Laying Supply and Fit"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",300,5999
+47,"2 Or More Rooms Carpet Laying Supply and Fit"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",800,7999
+48,"General Flooring Repair"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",100,4999
+49,"General Flooring Installation Labour only"," ",7,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",200,5999
+50,"Decking/Wood and Composite"," ",8,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",500,6999
+51,"Decking/Wood and Composite Supply and Fit"," ",8,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",1000,8999
+52,"Garden Maintenance Service"," ",8,NULL,"2015-01-19 03:26:29","2015-03-25 08:32:22",100,4999
+53,"Garden Clearance"," ",8,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",100,4999
+54,"Pond & Water Feature Instal"," ",8,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",100,4999
+55,"Pond & Water Feature Supply and Fit"," ",8,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",500,6999
+56,"Lawn Mowing"," ",8,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",100,4999
+57,"Hard Landscaping"," ",8,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",600,7999
+58,"Garden Design Service"," ",8,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",1000,8999
+59,"Plasterer / Renderer"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",200,5999
+60,"Bricklayer"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",200,5999
+61,"Ironmongery/Metalwork"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",200,5999
+62,"Scaffolding"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",500,6999
+63,"Demolition/Hacking"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",100,4999
+64,"Room Dividers/Sound Booths"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",300,5999
+65,"Ceiling Installation Large room"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",1000,8999
+66,"Ceiling Installation Small room"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",500,6999
+67,"General building Work"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",1000,8999
+68,"Internal/External Door Repair Installation"," ",9,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",100,4999
+69,"Kitchen Design and Installation"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",10000,59999
+70,"Standard Kitchen Installation Supply and Fit"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",5000,12999
+71,"Bespoke Kitchen Furniture Design"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",1000,8999
+72,"Specialist Worktop Installation"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",500,6999
+73,"Specialist Worktop Supply and Fit"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",2000,9999
+74,"General Worktop Installation"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",200,5999
+75,"General Worktop Supply and Fit"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",500,6999
+76,"Minor Kitchen Repairs"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",100,4999
+77,"Major Kitchen Repairs"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",500,6999
+78,"Glass Curtain Wall Supply and Fit"," ",10,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",300,5999
+79,"Minor External Painting Repairs"," ",11,NULL,"2015-01-19 03:26:30","2015-03-25 08:32:22",200,5999
+80,"Major External Painting"," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:22",1000,8999
+81,"1-2 Rooms Internal Painting"," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:22",300,5999
+82,"3-5 Rooms Internal Painting"," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:22",1000,8999
+83,"Decorative Painting Per Room"," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:22",200,5999
+84,"Decorative Painting Whole Home"," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:22",1000,8999
+85,"Cornice / Beading Per Room"," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:22",200,5999
+86,"Cornice / Beading 4-5 Room HDB Flats "," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:22",700,7999
+87,"Wallpapering Supply and Fit per Wall"," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",500,6999
+88,"Wallpapering per Wall Installation"," ",11,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",200,5999
+89,"Water Heating Repair"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",100,4999
+90,"Water Heating Installation Only"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",200,5999
+91,"Water Heating Supply and Fix"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",600,7999
+92,"Major Plumbing Works"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",1000,8999
+93,"Minor Plumbing Repair & Maintenance"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",100,4999
+94,"Drain Cleaning Services / Blocked Drains"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",100,4999
+95,"Solar Heating System"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",1000,8999
+96,"Tap Repair/Replace (Excluding Parts)"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",100,4999
+97,"Toilet Cistern Repair"," ",12,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",100,4999
+98,"Minor Roofing Installation"," ",14,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",1000,8999
+99,"Major Roofing Installation"," ",14,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",5000,12999
+100,"Minor Sealing/Treatment/Waterproofing"," ",14,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",500,6999
+101,"Major Sealing/Treatment/Waterproofing"," ",14,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",2000,9999
+102,"Minor Roofing Repair/maintenance"," ",14,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",300,5999
+103,"Major Roofing Repair/maintenance"," ",14,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",500,6999
+104,"Fascias / Soffits / Cladding Repair Install"," ",14,NULL,"2015-01-19 03:26:31","2015-03-25 08:32:23",200,5999
+105,"Awnings/Skylights Repair"," ",14,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",200,5999
+106,"Awnings/Skylights Installation"," ",14,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",500,6999
+107,"Awnings/Skylights Supply and Fit"," ",14,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",1000,8999
+108,"Swimming Pool Installation"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",10000,59999
+109,"Swimming Pool Design"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",10000,59999
+110,"Swimming Pool Maintenance Service"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",100,4999
+111,"Swimming Pool pump Repair"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",100,4999
+112,"Swimming Pool Pump Replacement"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",300,5999
+113,"Spa & Jacuzzi Installation"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",500,6999
+114,"Spa & Jacuzzi Supply and Fit"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",4000,11999
+115,"Water Feature installation"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",500,6999
+116,"Water Feature Supply and Fit"," ",15,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",200,5999
+117,"1 Room floor Tiling Installation"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",500,6999
+118,"2 rooms Or More floor Tiling Installation"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",1000,8999
+119,"1 Room floor Tiling Supply and Fit"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",1000,8999
+120,"2 rooms Or More floor Tiling Supply and Fit"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",2000,9999
+121,"2 Or More Rooms Wall Tiling Installation"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",1000,8999
+122,"1 Room  Wall Tiling Installation"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",200,5999
+123,"2 Or More Rooms Wall Tiling Supply and Fit"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",1000,8999
+124,"1 Room  Wall Tiling Supply and Fit"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",500,6999
+125,"External Tiling Supply and Fit"," ",16,NULL,"2015-01-19 03:26:32","2015-03-25 08:32:23",500,6999
+126,"External Tiling Installation"," ",16,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:23",200,5999
+127,"Tile Repair"," ",16,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:23",100,4999
+128,"Brick/Stone/Concrete Paving"," ",16,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:23",500,6999
+129,"Minor Window Repair"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+130,"Window Installation per Window Small"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",200,5999
+131,"Window Installation per Window Large"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",300,5999
+132,"Window Grille Installation 2X3 feet"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+133,"Window Grille Installation 5X3 feet"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",200,5999
+134,"Window Grille Installation 6X6 feet"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",600,7999
+135,"Invisible Window Grilles per Window 2x3 feet"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+136,"Invisible Window Grilles per Window 5x3 feet"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",200,5999
+137,"Invisible Window Grilles per Window 6x6 feet"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",300,5999
+138,"Whole Home Window Grille Installation"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",1000,8999
+139,"Outside Door Gate Supply and Fit"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",300,5999
+140,"Glass Repair or Repalcement/Furniture"," ",17,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+141,"General Maintenance & Decorating"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+142,"General Kitchen Repair & Maintenance"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+143,"General Bathroom Repair & Maintenance"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+144,"General External Property Maintenance"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+145,"General Garden Maintenance"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+146,"Flatpack & Fitted Furniture assembly Only"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+147,"General Electrical fitting and fixtures"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+148,"General Plumbing Repair"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+149,"Fittings and Fixtures"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+150,"Picture Hanging"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+151,"Curtain & Blinds Installation"," ",18,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+152,"House Moving Service"," ",3,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",200,5999
+153,"Office Moving Service"," ",3,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+154,"Packing & Unpacking Service"," ",3,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",200,5999
+155,"Disposal Service"," ",3,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+156,"Storage Services"," ",3,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+157,"Safe/ Piano & Organ Removal Service"," ",3,NULL,"2015-01-19 03:26:33","2015-03-25 08:32:24",100,4999
+158,"International Moving Service"," ",3,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",1000,8999
+159,"Lock Change/Installation"," ",5,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+160,"Lock Repair Service"," ",5,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+161,"Lock Opening Service"," ",5,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+162,"Access Control services"," ",5,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+163,"Emergency Lockout Services"," ",5,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+164,"Safes - Opening / Combination Change"," ",5,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+165,"Office Cleaning Service Monthly"," ",19,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",200,5999
+166,"Home Cleaning Service Mothly"," ",19,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",200,5999
+167,"One Off Cleaning Service Spring Cleaning"," ",19,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",200,5999
+168,"Steam Cleaning Services Single Item"," ",19,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+169,"Carpet/ Rug Cleaning Service Single item"," ",19,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+170,"Furniture Cleaning per item"," ",19,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+171,"Window Cleaning Services"," ",19,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",100,4999
+172,"Whole Internal Refurbishment"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:24",15000,1000000
+173,"Major Single Room Renovation"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",5000,12999
+174,"Minor Single Room Renovation"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",1000,8999
+175,"Sound & Audio Visual Installation "," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",1000,8999
+176,"2 room Renovation (excluding accessories)"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",10000,59999
+177,"3 room Renovation (excluding accessories)"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",15000,1000000
+178,"4 room Renovation (excluding accessories)"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",20000,1000000
+179,"5 room Renovation (excluding accessories)"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",30000,1000000
+180,"Bathroom Renovation"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",2000,9999
+181,"Kitchen Renovation"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",3000,10999
+182,"Interior Design Consultant"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",1500,8999
+183,"Single Floor Room Addition"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",15000,1000000
+184,"2 Storey Room Addition"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",25000,1000000
+185,"Small Room Additions (Toilet/ Bathroom)"," ",13,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",3000,10999
+186,"Pipe Leak Repair"," ",12,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",100,4999
+187,"Toilet Replacement (Excluding Parts)"," ",12,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",100,4999
+188,"Toilet Replacement (Including Parts)"," ",12,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",300,5999
+189,"Basin Replacement (Excluding Parts)"," ",12,NULL,"2015-01-19 03:26:34","2015-03-25 08:32:25",100,4999
+190,"Basin Replacement (Including Parts)"," ",12,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+191,"Shower Mixer Replacement (Excluding Parts)"," ",12,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+192,"Shower Mixer Replacement (Including Parts)"," ",12,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",200,5999
+193,"Tap Repair/Replace (Including Parts)"," ",12,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",200,5999
+194,"Waste Pipe Repair / Replace"," ",12,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+195,"Repair Leaking Toilet"," ",12,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+196,"Concealed pipe leak"," ",12,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",500,6999
+197,"Paint 1-2 Walls"," ",11,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+198,"Minor Painting Repairs"," ",11,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+199,"Paint whole Property Ceilings"," ",11,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",400,6999
+200,"Paint Internal Doors"," ",11,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+201,"Paint wood Internal Staircase Railings"," ",11,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+202,"Paint 1 Room Ceiling"," ",11,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+203,"Paint Kitchen Doors"," ",11,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+204,"Replace / Repair Grille Lock or Latch"," ",17,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+205,"Install Glass Partition"," ",17,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",600,7999
+206,"Install Glass Sliding Doors"," ",17,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",500,6999
+207,"Install Glass Shop Front"," ",17,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",1000,8999
+208,"Replace Window Glass"," ",17,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+209,"Glass Cutting"," ",17,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+210,"Epoxy Coating"," ",14,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",300,5999
+211,"New Light Fixture Installation Only"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+212,"Install New Light Fixture Supply and Fit"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",200,5999
+213,"New Light Switches Installation Only"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+214,"Install New Light Switches Supply and Fit"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",200,5999
+215,"Light Bulbs Replacement"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+216,"Fault Wiring Repair"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",100,4999
+217,"Install Outside Lights Supply and Fit"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:25",200,5999
+218,"Outside Lights Installation Only"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:26",100,4999
+219,"Exhaust Fan Installation"," ",6,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:26",100,4999
+220,"Door Frame Repair"," ",4,NULL,"2015-01-19 03:26:35","2015-03-25 08:32:26",100,4999
+221,"Wood Furniture Repair"," ",4,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+222,"Wood Staircase Repair"," ",4,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+223,"Dismantle and Reassemble Wardrobe/Furniture"," ",4,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+224,"Replace/Repair Kitchen Unit"," ",10,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",500,6999
+225,"Replace/Repair Kitchen Unit Supply and Fit","",10,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",1000,8999
+226,"Replace/Repair Kitchen Doors"," ",10,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+227,"Replace/Repair Kitchen Doors Supply and Fit"," ",10,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",200,5999
+228,"Install new Kitchen Door Fixtures"," ",10,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+229,"Wood Kitchen Worktop Refinish/Repair"," ",10,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+230,"Replace/Repair Kitchen Sink"," ",10,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+231,"Replace Kitchen Sink Supply and Fit","",200,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",200,5999
+232,"Aircon Compressor Repair"," ",1,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+233,"Aircon Repair Fan not working"," ",1,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+234,"Aircon Not Switching On"," ",1,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+235,"Replace 1 Aircon With New"," ",1,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",1000,8999
+236,"Clean Single Aircon"," ",1,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+237,"Clean 2-4 Aircon's"," ",1,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",200,5999
+238,"Pond & Water Feature Maintenance"," ",8,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+239,"Lay New Lawn Turf"," ",8,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",200,5999
+240,"Tree Surgeon Service"," ",8,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+241,"Plant Trimming and Watering"," ",8,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+242,"Install Partition Wall"," ",9,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",300,5999
+243,"Concrete Repair"," ",9,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",100,4999
+244,"Brick Wall and Fencing Installation"," ",9,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",300,5999
+245,"Minor Building Structure Works"," ",9,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",1000,8999
+246,"Major Building Structure Works"," ",9,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",5000,12999
+247,"Epoxy Painting Services"," ",9,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",300,5999
+248,"1 Room Marble Floor Polishing"," ",7,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",300,5999
+249,"1-2 Rooms Parquet Floor Supply and Fit"," ",7,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",800,7999
+250,"1-2 Rooms Parquet Floor Installation"," ",7,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",300,5999
+251,"Parquet Flooring Refinishing"," ",7,NULL,"2015-01-19 03:26:36","2015-03-25 08:32:26",200,5999
+252,"Repair Laminate or Wood Flooring"," ",7,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",300,5999
+253,"Carpet Installation Labour Only"," ",7,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",100,4999
+254,"Carpet Installation Supply and Fit"," ",7,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",300,5999
+255,"Spa & Jacuzzi Pump Replacement"," ",15,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",200,5999
+256,"Spa & Jacuzzi  Pump Repair"," ",15,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",100,4999
+257,"Spa & Jacuzzi Maintenance"," ",15,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",100,4999
+258,"Swimming Pool Cleaning Service"," ",15,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",100,4999
+259,"Water Feature Pump Replacement"," ",15,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",100,4999
+260,"Water Feature Pump Repair"," ",15,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",100,4999
+261,"Water Feature Pump Maintenance"," ",15,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:26",100,4999
+262,"Mounting of Cloths Dryer"," ",18,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",100,4999
+263,"Install Wall or Ceiling Fan"," ",18,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",100,4999
+264,"Install TV Mounting"," ",18,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",100,4999
+265,"DBSS Full Renovation"," ",13,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",10000,59999
+266,"2 room (including accessories)"," ",13,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",15000,1000000
+267,"3 room (including accessories)"," ",13,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",25000,1000000
+268,"4 room (including accessories)"," ",13,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",35000,1000000
+269,"5 room (including accessories)"," ",13,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",45000,1000000
+270,"Whole Home Window Installation"," ",17,NULL,"2015-01-19 03:26:37","2015-03-25 08:32:27",1000,8999

@@ -1,0 +1,126 @@
+- content_for :extra_head_tags do
+  = javascript_include_tag 'https://js.braintreegateway.com/v2/braintree.js'
+  =# javascript_include_tag 'https://js.braintreegateway.com/js/beta/braintree-hosted-fields-beta.18.min.js'
+
+:javascript
+  var clientToken = "#{Braintree::ClientToken.generate}";
+
+  $( document ).ready(function() {
+    var braintree_form = $('#top_up_form');
+    if (braintree_form.length > 0) {
+      braintree.setup(clientToken, "custom", {
+        id: "top_up_form",
+        hostedFields: {
+          number: {
+            selector: '#card-number',
+            placeholder: 'Debit/Credit Card Number'
+          },
+          expirationDate: {
+            selector: '#expiration-date',
+            placeholder: 'MM/YY'
+          },
+          cvv: {
+            selector: '#cvv',
+            placeholder: 'CVV',
+            required: true
+          },
+          styles: {
+            "input": {
+              "font-size": "14px",
+              "font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+              "color": "#3A3A3A",
+              "transition": "color 160ms linear",
+              "-webkit-transition": "color 160ms linear"
+            },
+            ".invalid": {
+              "color": "#FF0000"
+            },
+            ":focus": {
+              "color": "#333333"
+            }
+          },
+          onFieldEvent: function (event) {
+            if (event.type == "fieldStateChange") {
+              if (event.card) {
+                console.log(event.card.type);
+              }
+            }
+          }
+        }
+      });
+
+      braintree_form.on('submit', function(e){
+        event.preventDefault();
+        if( $('#top_up_form .braintree-hosted-fields-valid').length == 3){
+          $("#top_up_form input[type=submit]").attr("disabled", "disabled");
+          $("#top_up_form input[type=submit]").val('Redirecting');
+          braintree_form.submit();
+        }
+      });
+    }
+    $('.top-up-btn').click(function() {
+      var modal = $('#topup_modal');
+      var data = $(this).data();
+
+      var braintree_form = modal.find('#top_up_form');
+
+      if (braintree_form.length > 0) {
+        var submit = braintree_form.find('input[type=submit]');
+        braintree_form.find('input[name=amount]').val(data['amount']);
+        braintree_form.find('input[name=item_name]').val(data['itemName']);
+        submit.val( submit.val().replace(/\d+ \w+/, data['amount']+' '+data['currencyCode']) );
+      }
+
+      var paypal_form = modal.find('#paypal_form');
+
+      if (paypal_form.length > 0) {
+        paypal_form.find('input[name=amount]').val(data['amount']);
+        paypal_form.find('input[name=item_name]').val(data['itemName']);
+        paypal_form.find('input[name=custom]').val(data['custom']);
+      }
+      modal.show();
+    });
+  });
+
+#topup_modal.modal.fade.in{ aria: { hidden: true, labelledby: :conductModalLabel }, role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %span.fa-stack.fa-lg.fa-2x.orange
+          %i.fa.fa-circle.fa-stack-2x
+          %i.fa.fa-usd.fa-stack-1x.fa-inverse
+        %h5.modal-title=_('Top Up your Kluje account')
+      .modal-body
+        - if current_country.paypal?
+          = form_tag Settings['paypal']['submit_url'], id: 'paypal_form', class: 'top_up', method: "post", target: "_top" do |f|
+            - fields.each do |key, value|
+              = hidden_field_tag key, value
+            = hidden_field_tag 'item_name', ''
+            = hidden_field_tag 'custom', ''
+            = hidden_field_tag 'amount', ''
+            = hidden_field_tag 'currency_code', current_country.currency_code.upcase
+            = submit_tag _("PayPal"), class: 'btn btn-paypal full-width', data: { disable_with: _('Redirecting') }
+        - if current_country.paypal? && current_country.braintree?
+          .separator
+            Or
+        - if current_country.braintree?
+          = form_tag top_up_payments_path, id: 'top_up_form', class: 'top_up', method: "post", target: "_top" do |f|
+            = hidden_field_tag 'item_name', ''
+            = hidden_field_tag 'amount', ''
+            = hidden_field_tag 'currency_code', current_country.currency_code.upcase
+            .form-group
+              #card-number.form-control
+            .form-group
+              .form-inline
+                #expiration-date.form-control
+                #cvv.form-control.pull-right
+            .form-group
+              = submit_tag _("Top Up %s Now") % "50 SGD", class: 'btn btn-warning full-width', disable_with: _('Redirecting')
+          .seals
+            Secured By
+            %br
+            = image_tag 'https://s3.amazonaws.com/braintree-badges/braintree-badge-wide-light.png', class: 'seal'
+            = image_tag 'https://seal.godaddy.com/images/3/en/siteseal_gd_3_h_l_m.gif', title: 'GoDaddy SSL certificate', class: 'seal'
+        - if !current_country.paypal? && !current_country.braintree?
+          = _("We're working on bringing payments to your country. Please check this page in a few days.")

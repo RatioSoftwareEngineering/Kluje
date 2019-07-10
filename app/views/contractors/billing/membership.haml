@@ -1,0 +1,23 @@
+- cost = current_country.price_format % current_country.top_up_amounts.third
+%h4
+  - if @contractor.present?
+    = _('Your current plan:')
+    %span.color-orange-light= 'Free'
+
+.row.margin-bottom-20
+  .col-md-4.plan.basic
+    .plan-name
+      %h2= _('Basic')
+    .plan-price.padding-5
+      = _('Free')
+    .plan-benefits.padding-10
+      = _('Benefits:')
+      %ul.benefits-list{:align=>'left'}
+        %li= _('Unlimited number of skills')
+        %li= _('Unlimited number of locations')
+
+- questions = { _('What is a Premium Member?') => _('When you become a premium member you get to view the job leads 3 hours before the free members. This means that you increase your chance to bid on the best leads before anyone else.'),
+                _('How do I become a Premium Member?') => _('Simple top up with %{cost} in credit and you will automatically become a premium member for 30 days from the date you topped up.  After the 30 days premium membership has expired you will automatically become a free member again. To reactivate premium membership for a further 30 days you just have to top up with %{cost} in credit.') % { cost: cost } }
+
+%h3.text-left=_('Frequently Asked Questions')
+= render 'home/faq', questions: questions

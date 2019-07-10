@@ -1,0 +1,19 @@
+%p
+  = _('Hi') + ' ' + homeowner.first_name + ','
+
+%p= _("Oh My! Where did the time go? Our contractors are very,very busy and it seems they are not interested in your job. Although it has been viewed by %d contractors, no one has bought your lead.") % job.suitable_contractors.count
+
+%p= _("Now it seems your job is about to expire and we are wondering what you want to do:")
+%br
+%p= _("Repost your job, after editing the description and budget to attract contractors to buy your lead.")
+= link_to _('Click to repost the job'), Kluje.settings.host + Kluje.url(:update_job_repost, id: job.id, repost: 1)
+%br
+%p=_("or")
+%br
+%p=_("Archive your job as it has already been done or forgotten about. This will remove it from the active queue.")
+%br
+= link_to _('Click to archive the job'), Kluje.settings.host + Kluje.url(:jobs, :cancel, id: job.id)
+%p= _("So what you need to do is log on to your account and edit your job details, taking into consideration the points above. Once you do that we will re-approve your job and re-send alerts to contractors who fit your amended requirements.")
+
+%p=_("If you don't want to do either then you can simply wait for your job to expire and it will automatically be removed from our lead boards.")
+%p=_("Thank you for using Kluje.com!")

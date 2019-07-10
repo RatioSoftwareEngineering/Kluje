@@ -1,0 +1,39 @@
+.white-bg.padding-top-30.padding-bottom-30
+  .container.customer-reviews
+    .row.text-center
+      %h2.black.upcase.w-100=_('What people are saying')
+    .row.padding-boxttom-50.padding-top-50.margin-bottom-20
+      .col-md-6.col-md-offset-3
+        .carousel.slide{"data-ride" => "carousel", id: 'carousel-reviews'}
+          .carousel-inner{role: "listbox"}
+            .item.text-center.active
+              .circle.user-image
+                = image_tag 'commercial/users/user.png', alt: '', class: 'img-responsive inline-block'
+              .user-name
+                = ( _("Neque porro quisquam, <span>lorem ipsum</span>")).html_safe
+              .user-review
+                = _('“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae elit mi. Morbi interdum, neque eu pulvinar sodales, libero litgula hendrerit tellus”')
+            .item.text-center
+              .circle.user-image
+                = image_tag 'commercial/users/user.png', alt: '', class: 'img-responsive inline-block'
+              .user-name
+                = ( _("Neque porro quisquam, <span>lorem ipsum</span>")).html_safe
+              .user-review
+                = _('“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae elit mi. Morbi interdum, neque eu pulvinar sodales, libero litgula hendrerit tellus”')
+            .item.text-center
+              .circle.user-image
+                = image_tag 'commercial/users/user.png', alt: '', class: 'img-responsive inline-block'
+              .user-name
+                = ( _("Neque porro quisquam, <span>lorem ipsum</span>")).html_safe
+              .user-review
+                = _('“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae elit mi. Morbi interdum, neque eu pulvinar sodales, libero litgula hendrerit tellus”')
+          %a.left.carousel-control{data: {slide: 'prev'}, role: 'button', href: '#carousel-reviews'}
+            %span.glyphicon.glyphicon-chevron-left{aria: {hidden: 'true'}}
+            %span.sr-only=_('Previous')
+          %a.right.carousel-control{data: {slide: 'next'}, role: 'button', href: '#carousel-reviews'}
+            %span.glyphicon.glyphicon-chevron-right{aria: {hidden: 'true'}}
+            %span.sr-only=_('Next')
+          %ol.carousel-indicators
+            %li.active{data: {target: 'carousel-reviews', "slide-to" => 0}}
+            %li{data: {target: 'carousel-reviews', "slide-to" => 1}}
+            %li{data: {target: 'carousel-reviews', "slide-to" => 2}}

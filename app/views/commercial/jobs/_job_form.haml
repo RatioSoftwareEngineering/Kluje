@@ -1,0 +1,230 @@
+- edit ||= false
+- content_for :extra_head_tags do
+  = javascript_include_tag '/en/skills', '/en/countries', :homeowner, :exit_msg
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'validations/job_new_validation', 'commercial/job_new'
+
+- tooltip_params = { rel: 'tooltip', data: { placement: 'top', html: 'true' } }
+- form_url = @job.id ? commercial_job_path(locale: current_locale_country, id: @job.id) : commercial_jobs_path(locale: current_locale_country)
+- form_method = @job.id ? :patch : :post
+
+- country = @job.homeowner.try(:country) || Country.available.find_by_id(params[:country_id]) || current_country
+- city = @job.city || country.cities.find_by_id(params[:city_id]) || current_account.try(:jobs).try(:last).try(:city) || country.cities.commercial.first
+
+.margin-0
+  = form_for @job, url: form_url, class: 'form-horizontal', role: :form, method: form_method, id: "create_job", multipart: true do |f|
+    .form-group.row
+      - unless current_account
+        - if params[:specific_contractor_id].present?
+          .col-md-6.margin-bottom-15
+            %label.w-400
+              = _('Which contractor do you want to use?')
+            %em.required *
+            %br/
+            = (@specific_contractor||@contractor).try(:company_name)
+        .col-md-6.margin-bottom-15
+          %label.w-400
+            = _('What country is the property in?')
+          %em.required *
+          %br/
+          %label.select
+            = f.fields_for :homeowner, @job.homeowner do |g|
+              = g.select :country_id, Country.available.commercial.map{|c| [_(c.name), c.id, {data: { postal_codes: c.postal_codes }}]}, { selected: country.id }, { class: 'form-control' }
+      - if current_account && current_account.country && current_account.country.cities.commercial.count <= 1
+        = f.hidden_field :city_id, value: city.id
+      - else
+        .col-md-6.margin-bottom-15
+          %label.w-400
+            = _('What region is the property in?')
+          %label.select
+            = f.select :city_id, country.cities.commercial.map{|c| [_(c.name), c.id]}, { selected: city.id }, { class: 'form-control' }
+    .form-group.row
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Number of Quotes')
+          %em.required *
+        %label.select
+          = f.select :number_of_quote, options_for_select([['3', 3],['5', 5,],['8', 8]], @job.try(:number_of_quote)), { include_blank: "---Select number of quotes---" }, { class: "form-control" }
+      - if current_account && current_account.agent?
+        = f.fields_for :homeowner, @job.homeowner do |g|
+          .col-md-6.margin-bottom-15
+            %label.w-400
+              = _('Partner code')
+              %em.required *
+            .form-group
+              = g.text_field :partner_code, class: 'form-control', value: current_account.partner_code, disabled: true
+    .form-group.row
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Property Usage')
+          %em.required *
+        %label.select
+          = f.select :property_type, localize_select(@property_types), { include_blank: _('---Select the property type---') }, { class: 'form-control' }
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Renovation Type')
+          %em.required *
+        %label.select
+          = f.select :renovation_type, localize_select(@renovation_types), { include_blank: _('---Select the renovation type---') }, { class: 'form-control' }
+    .form-group.row
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Floor Size')
+          %em.required *
+        %label.select
+          = f.select :floor_size, localize_select(@floor_sizes), { include_blank: _('---Select the floor size---') }, { class: 'form-control' }
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Approximate Project Start Date')
+          %em.required *
+        .input-group.date
+          = f.text_field :start_date, class: 'form-control date', data: { provide: 'datepicker' }
+          %span.input-group-addon
+            %i.glyphicon.glyphicon-th
+    .form-group.row
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Upload Floor Plan (Optional)')
+        %br/
+        .note= _('Note: Image size up to 5MB (jpeg, jpg, pdf, png)')
+        - (1..2).each do |i|
+          .document-upload{id: "image#{i}-div"}
+            = f.file_field :"image#{i}", id: "image#{i}",class: 'image hidden-file'
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Upload Images (Optional) ')
+        %br/
+        .note= _('Note: Image size up to 5MB (jpeg, jpg, png)')
+        - (3..5).each do |i|
+          .document-upload{id: "image#{i}-div"}
+            = f.file_field :"image#{i}", id: "image#{i}",class: 'image hidden-file'
+    .form-group.row
+      .col-md-12
+        %label.w-400
+          = _('Describe Your Renovation')
+          %em.required *
+        = f.text_area :description, class: 'form-control', rows: '4', required: true,data:{msg:{required: "Please write the description for your job"}},placeholder: _('Describe')
+    .form-group.row
+      .col-md-12
+        %label.w-400
+          = _('What is Your Approximate Budget (%{currency})') % { currency: current_country.currency_code.upcase }
+          %em.required *
+        = f.number_field :budget_value, class: 'form-control', min: 100, step: 10
+    .form-group.row
+      .col-md-12
+        %label.w-400
+          = _('Address')
+          %em.required *
+        = f.text_area :address, class: 'form-control', rows: '2', required: true,data:{msg:{required: "Please write your address"}},placeholder: _('Address')
+    .form-group.row
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Postal Code')
+          %em.required *
+        = f.text_field :postal_code, class: 'form-control ', value: @job.postal_code || current_account.try(:last_postal_code), placeholder: _('Example:') + ' 139951', required: current_country.postal_codes
+      .col-md-6.margin-bottom-15
+        %label.w-400
+          = _('Preferred Contact Time')
+          %em.required *
+        %label.select
+          = f.select :contact_time_id, localize_select(@contact_times), {}, { class: 'form-control', required: true }
+    .form-group.row
+      -# .col-md-12.margin-bottom-15
+      -#   %label.w-400
+      -#     = _('Concierge Service')
+      -#     %em.required *
+      -#   .note
+      -#     =_('Choose "Yes" you will need to pay for Concierges Service a Fee')
+      -#   .radio
+      -#     %label.margin-right-10
+      -#       = f.radio_button :concierge_service, true, checked: @job.blank? || @job.concierge_service
+      -#       = _('Yes')
+      -#     %label
+      -#       = f.radio_button :concierge_service, false, checked: @job && !@job.concierge_service
+      -#       = _('No')
+      = f.hidden_field :concierge_service, value: false
+      = f.hidden_field :concierges_service_amount, value: 0
+    - if !current_account || !current_account.agent
+      .form-group.row
+        .col-md-6.margin-bottom-15
+          %label.w-400
+            = _('Partner code')
+          .note
+            =_('Please enter your partner code if you have partner')
+          = f.text_field :partner_code, class: 'form-control'
+    - if current_account && current_account.agent?
+      .row
+        .col-md-12.margin-bottom-30
+          .page-header.margin-bottom-5.padding-0
+            %h2.padding-bottom-10.margin-0.w-100= _('Client Information')
+      .row
+        .col-md-6.margin-bottom-15
+          %label.w-400
+            = _('Client First Name')
+            %em.required *
+          = f.text_field :client_first_name, class: 'form-control', required: true
+        .col-md-6.margin-bottom-15
+          %label.w-400
+            = _('Client Last Name')
+            %em.required *
+          = f.text_field :client_last_name, class: 'form-control', required: true
+        .col-md-6.margin-bottom-15
+          %label.w-400
+            = _('Client Email')
+            %em.required *
+          = f.email_field :client_email, class: 'form-control', required: true
+        .col-md-6.margin-bottom-15
+          %label.w-400
+            = _('Client Mobile Number')
+            %em.required *
+          = f.text_field :client_mobile_number, class: 'form-control', required: true
+    - if current_account.nil?
+      .row
+        .col-md-12.margin-bottom-30
+          .page-header.margin-bottom-5.padding-0
+            %h2.padding-bottom-10.margin-0.w-100= _('Please create your Account')
+      .row
+        = f.fields_for :homeowner, @job.homeowner do |g|
+          .col-md-6.margin-bottom-15
+            %label.w-400
+              = _('First Name')
+              %em.required *
+            .form-group
+              = g.text_field :first_name, class: 'form-control',placeholder: _('First Name')
+          .col-md-6.margin-bottom-15
+            %label.w-400
+              = _('Last Name')
+              %em.required *
+            .form-group
+              = g.text_field :last_name, class: 'form-control',placeholder: _('Last Name')
+          .col-md-6.margin-bottom-15
+            %label.w-400
+              = _('Email')
+              %em.required *
+            .form-group
+              = g.email_field :email, class: 'form-control',placeholder: _('Email')
+          .col-md-6.margin-bottom-15
+            %label.w-400
+              = _('What is your mobile number?')
+              %em.required *
+            .form-group
+              = g.text_field :mobile_number, class: 'form-control',placeholder: _('Mobile number')
+          .col-md-6.margin-bottom-15
+            %label.w-400
+              = _('Password')
+              %em.required *
+            .form-group
+              = g.password_field :password, class: 'form-control', value: '',placeholder: _('Password')
+          .col-md-6.margin-bottom-15
+            %label.w-400
+              = _('Re enter Password')
+              %em.required *
+            .form-group
+              = g.password_field :password_confirmation, class: 'form-control', value: '',placeholder: _('Re enter Password')
+    .form-group.row
+      .col-md-12
+        - if @job.id
+          = submit_tag _('Update'), class: 'btn btn-danger btn-lg', disable_with: "Updating"
+        - else
+          %br
+          = submit_tag _('Post your Requirements'), class: 'btn btn-danger btn-xlg', disable_with: "Submitting"

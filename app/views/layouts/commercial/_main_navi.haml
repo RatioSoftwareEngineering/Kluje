@@ -1,0 +1,43 @@
+%ul.nav.navbar-nav
+  - if !account_signed_in?
+    - if current_page?(commercial_home_path)
+      %li
+        = link_to _('Home'), commercial_home_path
+    - else
+      %li
+        = link_to _('Home'), commercial_home_path
+    %li
+      = link_to _('About us'), about_us_path
+    %li
+      = link_to _('Residential'), home_path
+  - if account_signed_in? && (current_account.homeowner? && !current_account.agent?)
+    %li
+      = link_to _('My Account'), account_path(locale: current_locale_country)
+    %li
+      = link_to _('Residential Jobs'), jobs_path(locale: current_locale_country)
+    %li
+      = link_to _('Commercial Jobs'), commercial_jobs_path(locale: current_locale_country)
+    %li
+      = link_to _('Invoice'), commercial_invoices_path(locale: current_locale_country)
+  - if account_signed_in? && current_account.agent?
+    %li
+      = link_to _('My Account'), account_path(locale: current_locale_country)
+    %li
+      = link_to _('Commercial Jobs'), commercial_jobs_path(locale: current_locale_country)
+    %li
+      = link_to _('Invoice'), commercial_invoices_path(locale: current_locale_country)
+  - if account_signed_in? && current_account.contractor?
+    %li
+      = link_to _('Residential'), jobs_path(locale: current_locale_country)
+    %li
+      = link_to _('Commercial'), commercial_jobs_path(locale: current_locale_country)
+    %li
+      = link_to _('Profile'), current_account.contractor.profile_url
+    %li
+      = link_to _('Account'), account_details_contractors_path(locale: current_locale_country)
+    - if current_account.contractor?
+      %li
+        = link_to _('Invoice'), commercial_invoices_path(locale: current_locale_country)
+  - if account_signed_in? && current_account.admin?
+    %li
+      = link_to _('Admin'), admin_admin_root_path

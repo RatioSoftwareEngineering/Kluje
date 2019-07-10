@@ -1,0 +1,8 @@
+#signin.modal.fade.in{ aria: { labelledby: :conductModalLabel }, role: 'dialog', tabindex: '-1'}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{'data-dismiss' => 'modal', type: 'button'} ×
+        %h4.modal-title= _('Log in to Kluje.com')
+      .modal-body
+        = render 'devise/sessions/form'

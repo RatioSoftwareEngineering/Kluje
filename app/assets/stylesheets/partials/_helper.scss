@@ -1,0 +1,27 @@
+.text-color {
+  color: #666;
+}
+
+.bg-grey{
+  background-color: #f8f8f8;
+}
+
+.highlight {
+  color: color("orange");
+  font-weight: 400;
+}
+
+.medium{
+  font-weight: 600;
+}
+
+.dot-3{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.pointer{
+  cursor: pointer;
+}

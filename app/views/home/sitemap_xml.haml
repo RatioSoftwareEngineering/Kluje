@@ -1,0 +1,65 @@
+- host = Kluje.settings.host
+
+- # Home
+- special = [[home_path, :weekly, 1.0], [contractors_path, :monthly, 0.9]]
+
+- general = []
+- # General
+- general << about_us_path
+- general << contact_us_path
+- general << locations_path
+- general << questions_path(locale: current_locale_country)
+- City.available.each do |city|
+  - general << home_path(city)
+- general << sitemap_path
+
+- # Homeowner
+- general << new_job_path(locale: current_locale_country)
+- general << how_it_works_homeowners_path
+- general << faq_homeowners_path
+- general << checklist_homeowners_path
+
+- # Contractor
+- general << signup_contractors_path
+- general << how_it_works_contractors_path
+- general << faq_contractors_path
+
+- # Landing Pages
+- LandingPage.published.each do |page|
+  - general << page.landing_page_url(current_locale, current_locale_country)
+
+- # Blog
+- general << blog_path()
+- Category.all.each do |category|
+  - general << blog_path(category: category.slug_url)
+- Post.pluck(:meta_keyword).join(',').split(',').each do |tag|
+  - general << blog_path(tag: tag.strip.parameterize)
+- Blog.all.each do |post|
+  - general << post.blog_url(current_locale, current_locale_country)
+
+
+- # Contractor profiles
+- general << members_path(locale: current_locale_country, category: :all)
+- Contractor.top.each do |contractor|
+  - general << contractor.profile_url.sub(/#{host}/,'')
+
+- # Legals
+- LegalDocument.all.each do |document|
+  - general << legal_path(slug: document.slug)
+
+!!! XML
+%urlset{'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9", 'xmlns:xsi' => "http://www.w3.org/2001/XMLSchema-instance", 'xsi:schemaLocation' => "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"}
+  - special.each do |url, frequency, priority|
+    %url
+      %loc
+        = host + url
+      %changefreq
+        = frequency
+      %priority
+        = priority
+  - general.each do |url|
+    %url
+      %loc
+        = host + url
+      %changefreq
+        weekly

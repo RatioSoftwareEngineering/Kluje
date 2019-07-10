@@ -1,0 +1,10 @@
+%p
+  = _('Dear %s,') % homeowner.first_name || homeowner.last_name
+
+%p
+  = _("%s just bid on your job! Please expect them to contact you shortly. Remember our contractors pay a fee for the opportunity to quote on your job so please allow them every opportunity to do so!") % contractor.company_name
+  %br
+  = _('You can also view the contractors details under your job in your account.')
+
+%p{align: 'center'}
+  = link_to _("Click to view the contractor's profile"), url, style: 'color: #fcb61a; font-weight: 600;'

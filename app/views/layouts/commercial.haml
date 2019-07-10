@@ -1,0 +1,48 @@
+!!! Strict
+%html{:lang => "#{I18n.locale}", :xmlns => 'http://www.w3.org/1999/xhtml'}
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=UTF-8'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
+    %meta{content: 'IE=edge', 'http-equiv' => "X-UA-Compatible"}/
+    - city = params[:city] && City.find_by_name(params[:city].humanize)
+    - location = city.present? ? "#{city.name}, #{city.country.name}" : location_country     
+    - title = content_for(:title) || "Find a Contractor in #{location} | Kluje"
+    - description = content_for(:description) || "Find an Interior Designer, Handyman, Electrician, Plumber or Commercial Renovation Contractor in #{location}? Post a job, Get up to 3 QUOTES."
+    - keywords = content_for(:keywords) || "find a contractor in #{location}, renovation contractor #{location}, contractors #{location}, interior designer #{location}, handyman #{location}, electrician #{location}, plumber #{location}, commercial contractors #{location}, kluje"
+    - image = content_for(:image) || asset_path('kluje-logo.png')
+    %meta{content: '-FUwWoPTB6WWPWhoI5M71V4UXxIv6tbw2kSX5c9SYo0', name: 'google-site-verification'}/
+    %title= title
+    %link{ rel: :canonical, href: canonical_url }
+    = render 'layouts/hreflang'
+    = csrf_meta_tags
+    %meta{:name => 'description', :content => description, :property => 'og:description'}
+    %meta{:name => 'keywords', :content => keywords}
+
+    %meta{:property => 'og:title', :content => title}
+    %meta{:property => 'og:site_name', :content => 'Kluje'}
+    %meta{:property => 'og:type', :content => :website}
+    %meta{:property => 'og:image', :content => image}
+    %meta{:property => 'og:url', :content => request.url}
+
+    = render 'layouts/tracking_code'
+
+    = content_for :head
+
+    = stylesheet_link_tag :commercial
+
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,400italic,500,700,900"
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Domine:400,700"
+    = javascript_include_tag :commercial
+    %script{:async => "", :src => "/#{I18n.locale}/countries.js?commercial=true"}
+    = content_for :extra_head_tags
+    = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
+    = favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png'
+
+  %body
+    = render 'layouts/commercial/header'
+
+    %main{:class => 'main'}
+      .container-fluid.white-bg#wrap
+        .row= content_for(:content) || yield
+
+    = render 'layouts/commercial/footer'

@@ -1,0 +1,47 @@
+= render 'commercial/jobs/marks'
+
+%section.clearfix
+  %table.table.table-condensed
+    %thead.black-bg.white
+      %tr
+        %th
+        %th.w-300= _("ID")
+        %th.w-300= _("Property Usage")
+        %th.w-300= _("Renovation Type")
+        %th.w-300= _("Budget")
+        - if current_account.contractor?
+          %th.w-300= _("Availability")
+        %th.w-300= _("Posted at")
+        - if current_account.homeowner?
+          %th.w-300= _("Bids")
+        %th.w-300= _("Details")
+    %tbody
+      - @jobs.each do |job|
+        %tr
+          %td
+            - if current_account.homeowner? && !job.archived?
+              - if job.is_bidded?
+                - if job.is_completed?
+                  .fa.fa-circle.grey
+                - else
+                  .fa.fa-circle.orange
+              - elsif job.is_approved?
+                .fa.fa-circle.green
+              - elsif job.is_pendding?
+                .fa.fa-circle.red
+            - elsif current_account.contractor?
+              - if job.is_not_bidded?
+                .fa.fa-circle.orange
+              - elsif job.is_completed?
+                .fa.fa-circle.grey
+          %td= _("# #{job.id}")
+          %td= job.property_type_name
+          %td= job.renovation_type_name
+          %td= job.budget_value
+          - if current_account.contractor?
+            %td= _(job.availability)
+          %td= I18n.localize(job.created_at.in_time_zone(current_country.time_zone), format: :short)
+          - if current_account.homeowner?
+            %td= job.bids.count
+          %td.text-center= link_to "<i class='fa fa-list-alt fa-fw'></i>".html_safe, commercial_job_path(locale: current_locale_country, id: job.id)
+  = will_paginate @jobs, renderer: BootstrapPagination::Rails

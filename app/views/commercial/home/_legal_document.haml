@@ -1,0 +1,8 @@
+- content_for(:title, "#{@document.title} | Kluje Commercial")
+- content_for(:description, @document.seo_description)
+- content_for(:keywords, @document.seo_keywords)
+
+.container
+  %h1= @document.title
+  .content.padding-bottom-20
+    = @document.content.html_safe

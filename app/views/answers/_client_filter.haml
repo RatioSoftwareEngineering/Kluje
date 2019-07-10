@@ -1,0 +1,49 @@
+.widget#filter
+  .header
+    %h2.upcase Filter Topic
+  .body
+    .upcase By Answer
+    .mt-radio.margin-top-10
+      %input{ id: 'filter-my-answer', type: :radio, name: :answer, value: :me, checked: 'me'.eql?(params[:answer]) || params[:answer].blank? }
+      %label{ for: 'filter-my-answer' } My Answers (#{@my_answers_count})
+
+    .mt-radio.margin-top-10
+      %input{ id: 'filter-unanswered', type: :radio, name: :answer, value: :unanswered, checked: 'unanswered'.eql?(params[:answer]) }
+      %label{ for: 'filter-unanswered' } Unanswered Questions (#{@unanswered_questions_count})
+
+    .upcase.margin-top-10 By Status
+    - selected_status = params[:state].to_a
+    .mt-checkbox.margin-top-10
+      %input{ id: 'filter-status-approved', type: :checkbox, name: 'state[]', value: :approved, checked: selected_status.include?('approved') && !'unanswered'.eql?(params[:answer]), disabled: 'unanswered'.eql?(params[:answer]) }
+      %label{ for: 'filter-status-approved' } Published (#{@published_answers_count})
+
+    .mt-checkbox.margin-top-10
+      %input{ id: 'filter-status-pending', type: :checkbox, name: 'state[]', value: :pending, checked: selected_status.include?('pending') && !'unanswered'.eql?(params[:answer]), disabled: 'unanswered'.eql?(params[:answer]) }
+      %label{ for: 'filter-status-pending' } Waiting for Approve (#{@pending_answers_count})
+
+    .mt-checkbox.margin-top-10
+      %input{ id: 'filter-status-rejected', type: :checkbox, name: 'state[]', value: :rejected, checked: selected_status.include?('rejected') && !'unanswered'.eql?(params[:answer]), disabled: 'unanswered'.eql?(params[:answer]) }
+      %label{ for: 'filter-status-rejected' } Rejected (#{@rejected_answers_count})
+
+= content_for :extra_footer_tags do
+  :javascript
+    $('document').ready(function(){
+      $('#filter input').on('change', function(){
+        var url = window.location.pathname + '?';
+
+        var params = [];
+        if ($("#filter input[name='state[]']:checked").length > 0) {
+          params.push($("#filter input[name='state[]']:checked").serialize());
+        }
+
+        if ($("#filter input[name='answer']:checked").length > 0){
+          params.push($('input[name="answer"]:checked').serialize());
+        }
+
+        if ($("input[name='q[title_or_body_cont]']").val() !== '' && $("input[name='q[title_or_body_cont]']").val() !== undefined){
+          params.push($("input[name='q[title_or_body_cont]']").serialize());
+        }
+
+        window.location = url + params.join('&');
+      });
+    });

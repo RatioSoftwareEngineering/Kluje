@@ -1,0 +1,46 @@
+%p
+  = _('Hello')
+  = contractor.company_name + ','
+%p
+  = _('We have a job lead that you may be interested in!')
+
+- if contractor.commercial?
+  %p
+    = _("If you're interested in the lead, click the link below")
+- else
+  %p
+    = _("If you're interested in buying this lead, click the link below")
+
+%p{align: 'center'}
+  = link_to _('Click to view the job'), url, style: 'color: #fcb61a; font-weight: 600;'
+
+%table
+  %tr
+    %td
+      %strong= _('Client Type')
+    %td
+      = job.client_type
+  %tr
+    %td
+      %strong= _('Property Type')
+    %td
+      = job.property_type_name
+  %tr
+    %td
+      %strong= _('Renovation Type')
+    %td
+      = job.renovation_type_name
+  %tr
+    %td
+      %strong= _('Budget')
+    %td
+      = job.budget.try(:range)
+  %tr
+    %td
+      %strong Description
+    %td
+      = job.description
+  %tr
+    %td{colspan: 2, valign: 'top', style: 'padding: 15px 5px 5px 5px;'}
+      - job.photos.each do |photo|
+        %img{width: "250", src: "#{photo.image_name.url}", alt: "image", style: 'vertical-align: top;'}

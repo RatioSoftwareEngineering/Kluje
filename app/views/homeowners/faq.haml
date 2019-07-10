@@ -1,0 +1,227 @@
+- content_for(:title, _('Homeowners - Advice & tips'))
+- content_for(:description, _('Looking for advice on how to use kluje.com? This page has all the answers. Post your job, choosing a contractor, its all here.'))
+- content_for(:keywords, _('homeowner, contractor, update, quailty, renovation, budget, quote, qualified,references, finding a contractor, ratings,workmanship, guarantee, qualifications, reviews, profile'))
+
+.container.margin-top-20
+  .row
+    .col-md-8
+      %content.content-static-page
+        .text-center
+          %h1.page-title= _('FAQ')
+        %h3{style: "font-size:18;"}=_("We encourage all homeowners to look at the Contactors profile page for reviews and qualifications. It is very important to ask about these credentials before hiring any Contractor. If in doubt, ask the contractor for past customers' references.")
+        %br
+        %i.fa.fa-book
+        = _("For more advice:")
+        %a{href: "https://www.kluje.com/en-sg/blog/selecting-the-right-contractor",target:"_blank"}=_("Selecting the right contractor")
+        %br
+        %br
+        %h4=_("Posting your job:")
+        %ul
+          %li
+            %h3=_("How long does it take?")
+            %p=_("It only takes 5 min to post.")
+          %li
+            %h3=_("Select a Contractor.")
+            =_("It is important to choose a contractor that is best suited for the job you want done.  This will help ensure that you are contacted by a contractor who is qualified to do your job.")
+          %li
+            %h3=_("Choose a budget.")
+            =_("The budget is an estimated budget and will help The contractor decide whether they can do your job. Consider labour and materials costs when choosing a budget.")
+          %li
+            %h3=_("Add a description.")
+            =_("Give as much detail about your job, consider the size, location and whether materials are included. The more detail the easier it is for a contractor to decide to purchase your lead. Don't add any personal details in the description.")
+          %li
+            %h3=_("Add a photo.")
+            =_("Add a photo to help the contractor to understand the work you need done.")
+        %br
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseOne"}
+                %h3=_("Why do you need my name and contact details?")
+            #collapseOne.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('We need your details so that our contractors can contact you to provide a quote. Your contact details are sent to a contractor once they have purchased your job lead.To protect your personal information, a maximum of 3 contractor will only be able to view your name and contact details.')
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseTwo"}
+                %h3=_("Will you publish my contact details when I post a job?")
+            #collapseTwo.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("No. Your contact details will never be made public on the platform. Your contact details are only available to the contractors that purchase your job lead,")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseThree"}
+                %h3=_("Why should I add a photo to my job?")
+            #collapseThree.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('Yes, if you a have photo to add, you should. A photo of your job will help contractors to better understand your job requirements and provide a more accurate quote. Contractors are also more likely to respond to a job that includes extra information, such as a photo. A photo can be plans, drawings or images of what needs to be done.')
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse18"}
+                %h3=_("What happens after I post my job?")
+            #collapse18.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_('After you post your job, we will forward your job lead to all relevant contractors in your area. The contractors who are interested in completing your job will pay to see your contact details and contact you to quote. Up to 3 contractors will contact you to provide a quotation.Once a contractor has purchased your job lead we will send you the contractors details and ratings. If you have not been contacted by at least 1 contractor within 3 days, consider updating your job description with more details or a revised budget.')
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse4"}
+                %h3=_("Why do I validate my email")
+            #collapse4.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("Validation is a method of ensuring that there is an actual user behind created accounts and that your email address was typed in correctly. This also ensures that there is a valid contact detail for the contractor.Note: If you receive a request to verify an email address that you didn't initiate, contact us immediately . Someone else might be trying to use your email address for their account.")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse5"}
+                %h3=_("How to get quotes?")
+            #collapse5.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("Getting quotes on Kluje.com is free. Just fill in the form telling us the type of work that needs doing. A detailed description and an approximate, but realistic, budget for the job.")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse6"}
+                %h3=_("How do I update a job?")
+            #collapse6.panel-collapse.collapse
+              .panel-body
+                %ul
+                  %li=_("Login")
+                  %li=_("Find the page in My Account")
+                  %li=_("Update your job with more information")
+                  %li=_("Submit the changes")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse7"}
+                %h3=_("Getting your 3 quotes")
+            #collapse7.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("Once you have posted your job, we will then contact all of the Contractors who have the right skills and location to be able to quote. Up to 3 Contractors will be provided with your contact details. You’ll receive a phone call or message from the Contractor so that they can proceed with a quote.")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse8"}
+                %h3=_("Choosing a Contractor")
+            #collapse8.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("Once you have received quotes from the contractors you can choose which Contractor to proceed with. Every Kluje.com Contractor has a profile page showing their description, qualifications, accreditations and any previous ratings from past customers. We advise using all of this information together with the quote to make a decision on whom to proceed with. This way you get good quality at a fair price.")
+                = image_tag asset_url('checklist.png', host: Kluje.settings.host), style: "margin-left:20px;margin-right:10px;"
+                =_("For more advice:")
+                %a{href: "https://www.kluje.com/en-sg/blog/selecting-the-right-contractor",targer: '_blank'}=_("Selecting the right contractor")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse9"}
+                %h3=_("Giving feedback and ratings")
+            #collapse9.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("After the work has been completed the Contractor will request a rating from you on the quality, value and professionalism of their work. This feedback is invaluable for future customers to choose the right Contractor and is really important to help a good Contractor grow their businesses.")
+                = image_tag asset_url('checklist.png', host: Kluje.settings.host), style: "margin-left:20px;margin-right:10px;"
+                =_("For more advice:")
+                %a{href: "https://www.kluje.com/en-sg/blog/contractor-ratings-part-2",target: '_blank'}=_("Selecting the right contractor: Part 2")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse10"}
+                %h3=_("What should I do if no Contractor contacts me?")
+            #collapse10.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("The job posted may not have had sufficient detail in the description, or the budget was unrealistic. You can repost the job with more information in the description box, and adjust your budget higher or lower. With multiple quotes you can be confident of finding a fair price, so you do not need to be cautious about putting in a high budget.")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse11"}
+                %h3=_("Why have I been asked to update a job?")
+            #collapse11.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("Jobs leads with an unrealistic budget or very short descriptions may not get a response from Contractors. If no Contractors have responded within 1 day we ask you to update the job.")
+                %ul
+                  %li=_("Login")
+                  %li=_("Find the ‘jobs’ page in ‘My account’")
+                  %li=_("Update your job with more information")
+                  %li=_("Submit the changes")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse12"}
+                %h3=_("Do we guarantee the quality of the Contractors work?")
+            #collapse12.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("Contractors that have signed up to Kluje.com operate as independent companies and are not working on behalf of Kluje.com, therefore we cannot guarantee the quality of their work.Contractors are rated by previous customers. The ratings are based on:")
+                %ul
+                  %li=_("Quality of work")
+                  %li=_("Professionalism")
+                  %li=_("Value for money")
+                %p.space-bot=_("These ratings are used by other homeowners to make a more informed decision about which Contractor to hire. All Contractors who join our service agree to abide to the Kuje.com Code of Conduct. Contractors not doing so are permanently removed from our community.")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse13"}
+                %h3=_("Are homeowner ratings genuine?")
+            #collapse13.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("Only homeowners who have hired a Contractor via Kluje.com can submit a rating for that specific Contractor. Ratings are done once the job has been finished. Homeowners are able to amend their rating at any time and the Contractor can comment/respond. We additionally screen ratings for offensive language. Random spot checks on both positive and negative ratings are conducted to ensure that homeowners can confidently hire a Contractor.")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse14"}
+                %h3=_("What can I do if I am not happy with the Contractors work?")
+            #collapse14.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("Firstly, we encourage you and the contractor to try and resolve the situation between yourselves. However, if asked to do so, Kluje.com can act as a mediator. Please remember that Kluje.com cannot resolve any legal situation and can only try to help resolve the situation before it becomes a legal matter. Complaints are handled on a case by case basis.If you’re not happy with the quality of workmanship you should leave a rating stating why the Contractor did not live up to your expectations. Contractors who fail to deliver quality work can be permanently suspended from Kluje.com.")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse15"}
+                %h3=_("When a Contractor signs up they have no ratings, how do I know if I am getting a quality Contractor?")
+            #collapse15.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("A good, quality Contractor should have a portfolio of previous work. Contractors are asked to fill out their profile page with their, qualifications, a description of their services and to upload pictures of previous jobs. We always advise you to ask for previous customer references.Contractors without ratings have most likely just joined. Although they don’t have any ratings yet, it doesn’t mean they’re not quality Contractors. In fact, this means that Contractors are encouraged to do a quality job to ensure that they get a brilliant first rating, allowing them to start building their reputation online and gain more work in the future.")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse16"}
+                %h3=_("Do you blacklist or suspend accounts?")
+            #collapse16.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("In the unlikely event that a Contractor has acted unscrupulously, we can suspend an account. Our policy is to close accounts under the following circumstances:")
+                %ul
+                  %li=_("If a Contractor receives any serious complaints from a homeowner in their first month of having joined our service")
+                  %li=_("If a Contractor has received a total of 3 medium to high level complaints from a homeowner")
+                  %li=_("If a Contractor is acting unscrupulously: including inappropriate language, racism, sexism, threats, bullying and abusing the trust of the homeowner")
+                %p.space-bot=_("It is important to note that each complaint must be dealt on a case by case basis as circumstances vary. Kluje.com conducts each investigation, usually within 5-10 business days")
+        #accordion.panel-group
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+              %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse17"}
+                %h3=_("The Contractor I have hired has asked me to pay a deposit, what should I do?")
+            #collapse17.panel-collapse.collapse
+              .panel-body
+                %p.space-bot=_("We never recommend paying the entire amount up front; you shouldn’t part with a substantial sum without knowing what you’re getting. The deposit should not be more than 30% of the overall job cost and the Contractor should be able to explain what it’s covering. If you pay a deposit make sure you have it in writing and you have received an invoice with the deposit clearly stated on it.")
+        .margin-top-20.margin-bottom-40.text-center
+          %a.btn.btn-warning.btn-lg{href: new_job_path(locale: current_locale_country)}= _("Post a Job Now!")
+
+    .col-md-4
+      = render 'home/hw_sidebar'

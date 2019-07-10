@@ -1,0 +1,21 @@
+%p
+  = _('Hi')
+  = homeowner.first_name + ','
+
+%p= _('OH NO! You have no bids on your job lead!')
+
+%p= _("Although it has been viewed by %d contractors, no one has bid on your lead.") % job.suitable_contractors.count
+
+%p= _("Don't panic yet there are still a few things you can do. In our experience there are three main reasons why contractors don't bid on your job lead:")
+
+%p= _("1. You Job Description is not detailed enough. Use as much detail as you can. Include details, as applicable, such as room size, number of rooms, or dimensions. Really try to explain the problem as clearly as you can.")
+%p
+  %i= _("Note: Don't add too many separate jobs to a single post instead split the job up into smaller jobs. It's easy to post job from within your account.")
+
+%p= _("2. Your estimated budget should match your job description. Contractors choose to buy your lead based on whether they think your chosen budget is achievable. So try to adjust your budget up one notch.")
+
+%p= _("3. Your timing may be either too short or too long for your job. For example, if your job is a whole interior renovation then make sure you choose at least one month. Conversely, if your job is to hang some pictures on the wall, then shorter timeframe like one week is better.")
+
+%p= _("Simply repost your job by clicking below:")
+
+= link_to _('Click to repost the job'), Kluje.settings.host + Kluje.url(:update_job_repost, id: job.id, repost: 1)

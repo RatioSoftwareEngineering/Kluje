@@ -1,0 +1,8 @@
+- flash.each do |type, messages|
+  .alert{ 'data-alert' => 'alert', :class => "alert #{twitterized_type(type)}" }
+    - if messages.kind_of?(Array)
+      - messages.each do |msg|
+        %b= msg
+        %br
+    - else
+      %b= messages

@@ -1,0 +1,34 @@
+.row
+  %div.meta{ class: read_more ? 'col-xs-8 col-lg-9' : 'col-xs-8 col-lg-6' }
+    %span.post-author.vcard
+      %i.fa.fa-user
+      - if post.author_google_plus_url.present?
+        %a{href: "#{post.author_google_plus_url}"}= post.author
+      - else
+        %span= post.author
+      
+    .clearfix
+    %span.post-timestamp
+      %i.fa.fa-clock-o
+      %time.published{ title: "#{post.published_at.try(:strftime, "%d/%m/%Y")}" }
+        = post.published_at.try(:strftime, "%d-%m-%Y")
+    - post.meta_keyword.split(',').each do |tag|
+      %span.post-labels
+        %i.fa.fa-tags.padding-left-5
+        %a{href: tag_blog_path(tag: tag.parameterize), rel: "canonical"}
+          = tag
+    %br
+  - if read_more
+    .col-xs-4.col-lg-3.margin-top-10.read-more.padding-left-10
+      %a.btn.btn-success.btn-xs{href: post.blog_url(current_locale, current_locale_country), rel: "canonical"}
+        Read More
+  - else
+    .col-xs-4.col-lg-6.margin-top-10.read-more.padding-left-10.share-this
+      %span{class: 'st_facebook_hcount', displayText: 'Facebook'}
+      %span{class: 'st_twitter_hcount', displayText: 'Tweet'}
+      %span{class: 'st_sharethis_hcount', displayText: 'ShareThis'}
+      %script{type: "text/javascript"}
+        var switchTo5x=true;
+      %script{ type:"text/javascript", src: "https://ws.sharethis.com/button/buttons.js"}
+      %script{type: "text/javascript"}
+        stLight.options({publisher: "f4502ae3-04c6-4c7e-a15b-95d23aa61e3e", doNotHash: false, doNotCopy: false, hashAddressBar: false});

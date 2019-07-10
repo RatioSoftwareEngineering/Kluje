@@ -1,0 +1,11 @@
+.widget
+  .header
+    %h2= _('Blog Categories')
+  .body
+    %ul.fa-ul
+      - @categories.each do |category|
+        %li
+          %i.fa.fa-li.fa-home
+          %a{dir: "ltr", href: category_blog_path(category: category.slug_url), rel: "canonical"}
+            = category.name
+            ="(#{current_country.blogs.published.category(category).count})"

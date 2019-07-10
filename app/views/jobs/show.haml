@@ -1,0 +1,19 @@
+- if params[:success] && params[:success] != 'rating_success'
+  = render 'jobs/success'
+
+.row
+  .col-xs-12.col-md-6
+    %h4
+      =_("Job Details:")
+      = @job.id
+    = render 'jobs/job_details'
+  - if current_account.homeowner?
+    .col-xs-12.col-md-6
+      %h4= _("My Contractors")
+      = render 'jobs/bids'
+  - unless @job.photos.blank?
+    .col-xs-12.col-md-6
+      %h4= _("Images")
+      = render 'jobs/images'
+  .col-xs-12
+    = render 'jobs/options'

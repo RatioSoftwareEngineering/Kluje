@@ -1,0 +1,14 @@
+.widget
+  .header
+    %h2= _('Statistics')
+  .body
+    %p.inline
+      = _('Jobs Posted:')
+      %strong= jobs_counter.to_s
+    %p.margin-bottom-0
+      = _('Average Contractor Rating:')
+      %span.fa.fa-star
+      %span.fa.fa-star
+      %span.fa.fa-star
+      %span.fa.fa-star
+      %span.fa.fa-star-o

@@ -1,0 +1,81 @@
+- languages = { en: 'English', th: 'ไทย', zh_HK: '中文' }.with_indifferent_access
+
+#left-menu.modal.fade.in{ aria: { labelledby: :conductModalLabel }, role: 'dialog', tabindex: '-1'}
+  .menu-dialog
+    .menu-content
+      .menu-header
+        %button.close{'data-dismiss' => 'modal', type: 'button'}
+        %h4.upcase= _('Menu')
+      .menu-body
+        - if !account_signed_in?
+          %a.upcase.margin-top-20.margin-bottom-20.btn.btnf.mobile-item{href: new_commercial_job_path(locale: current_locale_country, country_id: current_country.id, city_id: @city.try(:id)), rel: 'canonical', class: 'button-orange'}
+            = _('Register')
+          %button.margin-top-20.margin-bottom-30{ 'data-dismiss' => 'modal', data: { toggle: 'modal', target: '#signin'}, class: 'mobile-item btn btnf upcase button-orange' }
+            = _('Log In')
+        - else
+          = form_for :account, url: destroy_account_session_path, html: { class: 'frm-signout mobile-item' }, method: :delete do |f|
+            %strong= _('Hi, %{name}') % { name: current_account.full_name }
+            -if current_account.contractor?
+              = " (#{current_country.price_format % current_account.contractor.credits_balance})"
+            = submit_tag _('Sign Out'), :class => :'margin-top-20 btn btnf upcase button-orange'
+        %ul
+          - if !account_signed_in?
+            %li
+              = link_to _('Home'), commercial_home_path, class: 'upcase'
+            %li
+              = link_to _('About us'), about_us_path, class: 'upcase'
+            %li
+              = link_to _('Residential'), home_path, class: 'upcase'
+          - if account_signed_in? && (current_account.homeowner? && !current_account.agent?)
+            %li
+              = link_to _('My Account'), account_path(locale: current_locale_country), class: 'upcase'
+            %li
+              = link_to _('Residential Jobs'), jobs_path(locale: current_locale_country), class: 'upcase'
+            %li
+              = link_to _('Commercial Jobs'), commercial_jobs_path(locale: current_locale_country), class: 'upcase'
+            %li
+              = link_to _('Invoice'), commercial_invoices_path(locale: current_locale_country), class: 'upcase'
+          - if account_signed_in? && current_account.agent?
+            %li
+              = link_to _('My Account'), account_path(locale: current_locale_country), class: 'upcase'
+            %li
+              = link_to _('Commercial Jobs'), commercial_jobs_path(locale: current_locale_country), class: 'upcase'
+            %li
+              = link_to _('Invoice'), commercial_invoices_path(locale: current_locale_country), class: 'upcase'
+          - if account_signed_in? && current_account.contractor?
+            %li
+              = link_to _('Residential'), jobs_path(locale: current_locale_country), class: 'upcase'
+            %li
+              = link_to _('Commercial'), commercial_jobs_path(locale: current_locale_country), class: 'upcase'
+            %li
+              = link_to _('Profile'), current_account.contractor.profile_url, class: 'upcase'
+            %li
+              = link_to _('Account'), account_details_contractors_path(locale: current_locale_country), class: 'upcase'
+            - if current_account.country.commercial_subscription_price > 0
+              %li
+                = link_to _('Subscription'), commercial_subscriptions_path(locale: current_locale_country), class: 'upcase'
+            %li
+              = link_to _('Invoice'), commercial_invoices_path(locale: current_locale_country), class: 'upcase'
+          - if account_signed_in? && current_account.admin?
+            %li
+              = link_to _('Admin'), admin_admin_root_path, class: 'upcase'
+        .locale-menu
+          = form_tag change_locale_session_path, method: :put do
+            = hidden_field_tag :controller_name, params[:controller]
+            = hidden_field_tag :action_name, action_name.to_s.gsub(/^\/:/, '')
+            = hidden_field_tag :query, params.except(:contractor, :action, :locale, :utf8).to_query
+            .location
+              .language
+                %div.margin-top-10.margin-bottom-10= _('Choose Language')
+                = select_tag :new_locale, options_for_select(languages.map{|c| [_(c[1]), c[0]]}, locale.to_s),  id: 'language-selector', class: 'form-control'
+              .country.check
+                %div.margin-top-10.margin-bottom-10= _('Select country')
+                = select_tag :country_id, options_for_select(Country.commercial.available.map{|c| [_(c.name), c.id]}, current_country.id),  id: 'country-selector', class: 'form-control'
+              .city
+                %div.margin-top-10.margin-bottom-10= _('Select city')
+                = select_tag :city_id, options_for_select(current_country.cities.commercial.available.map{|c| [_(c.name), c.id]}, current_city ? current_city.id : ''), id: 'city-selector', class: 'form-control'
+            .buttons.margin-top-30
+              = submit_tag _('Apply'), class: 'upcase btn btnf button-orange'
+
+        :javascript
+          var locale = { 'lang': '#{locale}', 'country_id': #{current_country.id}, 'city_id': #{current_city ? current_city.id : '0'} };

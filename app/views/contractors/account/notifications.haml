@@ -1,0 +1,51 @@
+.row
+  .col-md-6
+    %h3.text-center= _("Email Notifications")
+    = form_for current_account, url: update_alerts_contractors_path, id: 'frmEmailAlert', method: :post do |f|
+      - active = current_account.contractor.email_alerts && !current_account.contractor.is_deactivated
+      = f.hidden_field 'email_alerts', value: (!active).to_s
+      %br
+      = f.text_field :email, class: 'form-control', disabled: true, required: true
+      %br
+      - if active
+        = f.submit _('Deactivate E-mail alerts'), class: 'btn btn-danger', id: 'deactivate', disable_with: _('Saving')
+      - else
+        = f.submit _('Activate E-mail alerts'), class: 'btn btn-warning', id: 'activate', disable_with: _('Saving')
+
+  .col-md-6
+    %h3.text-center= _("SMS Notifications")
+    = form_for current_account, url: update_alerts_contractors_path, id: 'frmSmsAlert', method: :post do |f|
+      - active = current_account.contractor.mobile_alerts && !current_account.contractor.is_deactivated
+      = f.hidden_field 'mobile_alerts', value: (!active).to_s
+      %br
+      = f.text_field :mobile_number, class: 'form-control', disabled: true, required: true
+      %br
+      - if active
+        = f.submit _('Deactivate SMS alerts'), class: 'btn btn-danger', id: 'deactivate', disable_with: _('Saving')
+      - else
+        = f.submit _('Activate SMS alerts'), class: 'btn btn-warning', id: 'activate', disable_with: _('Saving')
+      .pull-right
+        = current_account.contractor.sms_count
+        = _("SMS Remaining")
+    .clearfix
+  .col-xs-12.margin-top-20
+    %h3.text-left=_("Frequently Asked Questions")
+    #accordion.panel-group
+      = faq_item _("What are E-mail alerts?") do
+        %p.font-size-12=_("You can receive job alerts via E-mail. Every time a new job matching your skills is posted you will receive an email with the details. You can then proceed to the website to bid on the job. If you're not a premium contractor the notifications will be delayed by 3h.")
+      = faq_item _("What are SMS alerts?") do
+        %p.font-size-12=_("SMS alerts are very much like E-mail alerts with one notable difference. SMS alerts allow you to bid on the job directly from your phone by replying to the alert with job's unique ID.")
+      = faq_item _("How do I buy a job lead through SMS?") do
+        %ol
+          %li=_("You will receive a job alert via SMS to your mobile.")
+          %li=_("If you are interested in buying the lead, simply reply using the code provided in the SMS.")
+          %li=_("You will now receive another SMS with the contact details for the Homeowner.")
+          %li=_("The cost for the lead will be automatically deducted from your credit.")
+      = faq_item _("Can I cancel job alerts?") do
+        %p=_("Yes, simply login to your account. In the Notifications tab click 'Deactivate E-mail alerts' and 'Deactivate SMS alerts'. You will no longer receive job alerts. If you have unused SMS they will remain in your account until you reactivate.")
+      = faq_item _("What is the cost and how do I pay for SMS alerts?") do
+        %ol
+          %li=_("We charge %s per 100 SMS.") % current_country.formatted_sms_bundle_price
+          %li=_("The cost for the SMS is deducted from your credits in your account.")
+          %li=_("Once you have run out of the SMS you will automatically be topped up with another 100 SMS. The cost of %s will automatically be deducted from your credits. If you want to stop SMS you need to deactivate SMS before you run out of SMS.") % current_country.formatted_sms_bundle_price
+          %li=_("We do not do refunds for SMS.")

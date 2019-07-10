@@ -1,0 +1,24 @@
+<% if @answer.errors.count == 0 %>
+  if ($("#answer-form-<%= @answer.parent.id %>").length > 0){
+    $("#answer-form-<%= @answer.parent.id %>").addClass('hide');
+  }
+
+  if ($("#answer-action-<%= @answer.parent.id %>").length > 0){
+    $("#answer-action-<%= @answer.parent.id %>").removeClass('hide');
+  }
+
+  $('.remote-form textarea').val('');
+  $('.remote-form option:selected').prop('selected', false);
+
+  $('#info-modal .modal-title').html('Thank you for submitting your answer');
+  $('#info-modal .message').html(
+    'We will review your details and get back to you shortly.'
+  );
+  $('#info-modal .modal-button').html('OK');
+
+  $('#info-modal').modal('show');
+<% else %>
+  $('#info-modal .modal-title').html('Error');
+  $('#info-modal .message').html("<p class='error'><%=  @answer.errors.full_messages.first %></p>");
+  $('#info-modal').modal('show');
+<% end %>

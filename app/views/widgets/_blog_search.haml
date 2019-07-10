@@ -1,0 +1,8 @@
+.widget
+  .header
+    %h2= _('Search Blog')
+  .body.text-center
+    .form-group
+      = text_field_tag :q, placeholder: 'Enter keywords', class: 'form-control'
+    .form-group
+      = submit_tag 'Search', class: 'btn btn-default'

@@ -1,0 +1,9 @@
+- languages = [ 'en', 'th', 'zh_HK' ]
+- host = request.url[0..request.url.index('/', 9)-1] + '/'
+- path = request.path_info[1..-1] + '/'
+- languages.each do |lang|
+  - if path.start_with?(lang)
+    - path = path[lang.size..-1]
+    - break
+- languages.each do |lang|
+  %link{ rel: :alternate, hreflang: lang, href: host + lang + path }

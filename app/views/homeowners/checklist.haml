@@ -1,0 +1,125 @@
+- content_for(:title, _('Kluje | Homeowners - Checklist'))
+- content_for(:description, _("Use kluje.com's checklist when selecting your contractor. We always suggest checking the ratings and profile page to help you make the best decision."))
+- content_for(:keywords, _('homeowner, contractor, renovation, budget, quote, qualified,references, ratings,workmanship, guarantee, subcontractors, rated, reviewed'))
+
+.container.margin-top-20.content-static-page
+  .row
+    .col-md-8
+      %content
+        .text-center
+          %h1= _('Customer Safety When Hiring a Contractor')
+        %br
+        %br
+        %h2= _('Warning Signs')
+        %label
+          %h3= _("Lack of a license")
+        %p= _("If a Service Provider is not properly licensed to handle the work you need done, the work they are doing is most likely suspect at best and, in the worst-case scenario, could even be hazardous.")
+        %br
+        %label
+          %h3= _("Skirting the law")
+        %p= _("If a Service Provider is willing to work without pulling the correct permits or completing the proper inspections, he’s not doing so to save your time or money. It’s typically because he is not qualified to pull the permit, or he knows that he is doing sub-par work.")
+        %br
+        %label
+          %h3= _("No insurance")
+        %p= _("If your Service Provider does not carry General Liability or Workers Compensation insurance, any mishap could become your very costly responsibility.")
+        %br
+        %label
+          %h3= _("Seems too good to be true.")
+        %p= _("He is the lowest bidder and it seems like a really good deal, or the timeline seems too short (or too long). Either of these scenarios is a red flag that signals he may be inexperienced at handling your type of project or he may be cutting corners to win the job. If your Service Provider seems pushy or desperate for your work, you should also consider this as a red flag.")
+        %br
+        %label
+          %h3= _("Just trust me")
+        %p= _("It’s very concerning if important details are only vaguely addressed. If your Service Provider makes statements like, “Don’t worry, you’ll love the cabinets!” but you never get to select or even see them, it’s a signal that you might not be getting what you expect or have paid for.")
+        %br
+        %label
+          %h3= _("Inexperience")
+        %p= _("If the Service Provider doesn’t seem to have expertise in your type of project – whether it’s renovation, event planning or project management – you should be very wary. Some projects may require true experts to manage, not to mention successfully and efficiently navigating any issues that may emerge.")
+        %br
+        %label
+          %h3= _("Communication")
+        %p= _("The Service Provider that doesn’t understand the importance of good communication. If he can’t handle the relatively simple task of effectively communicating with clients on the front end, imagine how quickly things can spiral out of control once the job begins. You simply do not seem to be a good fit. Whether you are considering renovating or doing a repair job, a project is in many ways like a marriage. You’ll be in close contact and communication with your Service Provider for the duration, and if you don’t feel comfortable with him/her, or your personalities simply don’t mesh, it won’t be a pleasant process. There are many qualified, professional Service Providers out there; you just need to find the one who is right for you.")
+        %br
+        %h2.text-left=_('Reputation')
+        %label
+          %h3= _("Ratings")
+        %p= _("View the Service Providers profile page to check their ratings to find out what experiences other customers have had. The ratings are the online word of mouth recommendations. The Service Providers on Kluje are rated on quality, professionalism and value, so that you can make a more informed decision on which Service Providers to hire.")
+        %br
+        %label
+          %h3= _("Previous work")
+        %p= _("Depending on the type of job, ask to speak to previous customers and if possible, visit previous jobs that they have completed. Don’t forget to view the Service Provider's Kluje profile page.")
+        %i.fa.fa-book
+        = _("Read more about:")
+        %a{href: "https://www.kluje.com/en-sg/blog/contractor-ratings-how-they-help-you",target: "_blank",rel: "canonical"}=_("Contract ratings: How they help you?")
+        %br
+        %br
+        %h2.text-left=_('The contract')
+        %label
+          %h3= _("The quote")
+        %p= _("Ask for a quotation for the work described, this differs from an estimate, which is a rough price and not binding. The quote should include a detailed job specification, price, conditions and a payment schedule. GST/VAT - It is a good idea to clarify up front whether the Service Providers is GST/VAT registered and whether you will be charged any GST/VAT.")
+        %br
+        %label
+          %h3= _("Deposit")
+        %p= _("A deposit should always be documented with a detailed invoice. The deposit should not be more than 30%-50% of the overall job price, but should cover the Service Providers tools, materials and travel. The deposit % will vary from one Service Providers to another.")
+        %br
+        %label
+          %h3= _("Payment schedule")
+        %p= _("A quote should outline the payment schedule the contractor expects, this will avoid any misunderstanding later on. Each stage of the payment schedule should be documented with an invoice, and should only cover work that has clearly been completed.")
+        %br
+        %label
+          %h3= _("Subcontractors")
+        %p= _("Not all Service Providers who do the quote carry out the work themselves. They may work alongside other subcontractors, or hire subcontractors to complete the entire job. While this is perfectly normal it is good to clarify this up front.")
+        %br
+        %label
+          %h3= _("Guarantees")
+        %p= _("A Service Providers should guarantee their workmanship for a period of time. Make sure you have clarified what this period is and that you have the relevant paperwork available if you need to make a claim at a later stage.")
+        %br
+        %label
+          %h3= _("Cheapest quote")
+        %p= _("Don’t always go for the cheapest quote, but this does not mean that you should discard the lowest straight away. Check all the tips given above first. If you go for the cheapest make sure you have got a detailed quote with materials, waste disposal and labour detailed clearly in the quote. Also ask if GST/VAT is included; make sure it is clear on the quote.")
+        %br
+        %br
+        %h2.text-left=_('Qualifications/Licensing')
+        %label
+          %h3= _("Singapore") + ':'
+        %ul
+          %li= _("BCA: The Building and Construction Authority (Construction)")
+          %li= _("HDB: The Housing & Development Board")
+          %li= _("EMA: Energy Market Authority (Electrical Licensing)")
+          %li= _("PUB: Water Service Plumbers (Plumbing Licensing)")
+          %li= _("NEA: National Environment Agency (Food Hygiene Licensing)")
+          %li= _("ACRA: Accounting and Corporate Regulatory Authority (Business registration)")
+        %label
+          %h3= _("Malaysia") + ':'
+        %ul
+          %li= _("ST: Energy Commission of Malaysia (Electrical)")
+          %li= _("National Water Services Commission (Plumbing)")
+          %li= _("Companies Commission of Malaysia (Business Registration)")
+        %br
+        %br
+        %h2.text-left=_('Requesting quotes')
+        %label
+          %h3= _("The quote")
+        %ul
+          %li= _("Make sure you select the contractor that will be best suited to complete the job correctly.")
+          %li= _("Make sure that your budget is sufficient for the work to be completed. If your budget is too low, you may not get any interest. So if you want your kitchen tiled, your budget should be $500 not $100. Try to be realistic with the budget.")
+          %i.fa.fa-book
+          = _("Read more about:")
+          %a{href: "https://www.kluje.com/en-sg/blog/renovation-budget-set-right-one",target: "_blank",rel: "canonical"}=_("Renovation budget: How to set the right one?")
+          %li= _("Give as much detail about the work that needs to be done. This will help the Contractor to decide if they want to accept your job and will draw more interest to your job post.")
+          %i.fa.fa-book
+          = _("Read more about:")
+          %a{href: "https://www.kluje.com/en-sg/blog/renovation-cost",target: "_blank",rel: "canonical"}=_("What a renovation will cost?")
+        %br
+        %br
+        %h2.text-left=_('Kluje Disclaimer')
+        %label
+          %h3= _("Use of the Service")
+        %p= _("You are responsible for ensuring that you are legally entitled to publish any information, which you upload. You may only use the Service to request quotes for genuine Projects where you have authority to appoint one or more contractors and your intention is to do so subject to agreeing appropriate terms. You may not request quotes for any Project, which is not legal.")
+        %p= _("It is your responsibility to select a suitable contractor and to negotiate the terms of any Project to be performed by the contractor selected. We do not guarantee any specific contractors information, accreditation, or registration. We make no warranty regarding any goods or services purchased or obtained through listing a Project on the Service or any transactions entered into through the Service, and you should in all cases make your own enquiries. In particular, it is your responsibility to carry out appropriate checks on any contractor that you are considering engaging and to request evidence of relevant trade or industry accreditations, and to satisfy yourself that the contractor is solvent and has appropriately qualified and certified personnel to complete the Project prior to contracting. You should not engage any contractor or make any deposit or other payment to them without having conducted such checks to your full satisfaction. While our hope is that you will be happy with every contractor you find through the Service, you should not engage any contractor if you have any doubts or concerns about it.")
+        %p= _("We will not be a party to any contract made between you and any contractor and therefore we shall not be liable for any loss or damage that results from any dealings between you and any contractor including but not limited to any direct, indirect or consequential or inconsequential loss of any kind.")
+        %br
+        .margin-top-20.margin-bottom-40.text-center
+          %a.btn.btn-warning.btn-lg{href: new_job_path(locale: current_locale_country),rel: "canonical"}=_("Get a Quote Today - it's Free")
+
+    .col-md-4
+      = render 'home/hw_sidebar'

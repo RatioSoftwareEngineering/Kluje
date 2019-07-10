@@ -1,0 +1,42 @@
+- if current_account.homeowner?
+  .col-xs-12.col-md-6.widget-grey-bg.margin-bottom-15
+    %h3.margin-bottom-15.margin-top-10= _("My Clarifications")
+    = render 'commercial/jobs/clarification', job: @job
+  .col-xs-12.col-md-6.widget-grey-bg.margin-bottom-15
+    %h3.margin-bottom-15.margin-top-10= _("My Contractors")
+    = render 'commercial/jobs/bids'
+  .col-xs-12.col-md-6.widget-grey-bg.margin-bottom-15
+    %h3.margin-bottom-15.margin-top-10= _("Job Quotes")
+    = render 'commercial/jobs/job_quotes'
+  .col-xs-12.col-md-6.widget-grey-bg.margin-bottom-15
+    %h3.margin-bottom-15.margin-top-10= _("Job Invoice")
+    = render 'commercial/jobs/job_invoice'
+- if current_account.contractor?
+  .col-xs-12.col-md-6.widget-grey-bg.margin-top-10.margin-bottom-15
+    .margin-bottom-15
+      %h3.margin-bottom-15.margin-top-10= _("Need any Clarification on Job?")
+      = render 'clarifications/new', job: @job
+    .margin-bottom-15
+      = render 'clarifications/list'
+  - if @contractor.has_bidded_for_job?(@job)
+    .col-xs-12.col-md-6.widget-grey-bg.margin-bottom-15
+      %h3.margin-bottom-15.margin-top-10= _("My Initial Quote")
+      %span.w-300=_("(Initial Quote is quote which you would provide to client for the job)")
+      = render 'commercial/jobs/quoter_form'
+    .col-xs-12.col-md-6.widget-grey-bg.margin-bottom-15
+      %h3.margin-bottom-15.margin-top-10= _("Final Invoice")
+      %span.w-300=_("(Final Invoice is which you send to Client and Kluje Commerial)")
+      - if @job.has_invoices? && @contractor.has_invoice_for_job?(@job)
+        = render 'commercial/jobs/job_invoice'
+      - else
+        = render 'invoices/new', job: @job
+    - if @contractor.has_meeting_for_job?(@job)
+      .col-xs-12.col-md-6.widget-grey-bg.margin-bottom-15
+        %h3.margin-bottom-15.margin-top-10
+          = _("Meeting Request")
+          = link_to _('View Details'), '#', class: "toggle-details btn btn-primary pull-right", id: "show#{@contractor.meetings.first.id}"
+          = link_to _('Hide Details'), '#', class: "toggle-details btn btn-primary pull-right", id: "hide#{@contractor.meetings.first.id}", hidden: true, style: 'display: none'
+        .details{id: "details#{@contractor.meetings.first.id}", hidden: true}
+          - @contractor.meetings.each do |meeting|
+            - if meeting.job_id == @job.id
+              = render 'commercial/meetings/show', meeting: meeting

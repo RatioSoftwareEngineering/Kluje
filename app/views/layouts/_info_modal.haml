@@ -1,0 +1,9 @@
+#info-modal.modal.fade.in{ aria: { labelledby: :conductModalLabel }, role: 'dialog', tabindex: '-1'}
+  .modal-dialog
+    .modal-content
+      .modal-header.text-center
+        %button.close{'data-dismiss' => 'modal', type: 'button'} ×
+        %h3.modal-title
+      .modal-body.text-center
+        .message
+        %button.modal-button.btn.btn-primary.margin-top-20.padding-10.padding-left-50.padding-right-50{'data-dismiss' => 'modal', type: 'button'} Cancel

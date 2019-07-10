@@ -1,0 +1,31 @@
+.col-md-6.margin-bottom-15
+  %h4
+    =_('Client Details')
+  .table-responsive
+    %table.table.table-nonborder
+      - @homeowner = @job.homeowner
+      %tr
+        %td.text-nowrap
+          = _('First name:')
+        %td
+          = @homeowner.first_name
+      %tr
+        %td.text-nowrap
+          = _('Last name:')
+        %td
+          = @homeowner.last_name
+      %tr
+        %td.text-nowrap
+          = _('Email:')
+        %td{width:'85%'}
+          = @homeowner.email
+      %tr
+        %td.text-nowrap
+          = _('Mobile No:')
+        %td
+          = @homeowner.mobile_number
+      %tr
+        %td.text-nowrap
+          = _('Preferred contact time:')
+        %td
+          = Residential::Job.contact_times[@job.contact_time_id]

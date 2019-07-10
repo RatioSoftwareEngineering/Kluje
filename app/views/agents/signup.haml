@@ -1,0 +1,16 @@
+- content_for :extra_head_tags do
+  = javascript_include_tag :exit_msg
+
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'validations/contractor_signup_validation'
+
+- content_for(:title, _('Kluje | Partner - Sign up'))
+- content_for(:description, _("It's never been easier to sign up with kluje.com, the only online service that helps you find customers and build your reputation at the same time."))
+- content_for(:keywords, _('contractor, contractors, reputation, leads, customers,trades, Air-conditioning, Flooring ,Painter, Decorator, Swimming Pool, Water Feature, Bathroom, Garden, Landscaping, Plumber, Tiler,Paver, Carpenter, Joiner, General Contractor, Renovation, Window,Electrician.Kitchen, Roofing, Waterproofing,Handyman'))
+
+.container.margin-top-20.margin-bottom-40
+  .row
+    = render 'layouts/flash_messages'
+    .col-md-6.col-md-offset-3
+      %content
+        = render 'agents/account_form'

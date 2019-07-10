@@ -1,0 +1,19 @@
+:javascript
+  $(document).ready(function(){
+    $.ajax({
+      url: '/en/api/v1/charts/top_up_history?country_id=' + '#{country.id}',
+      crossDomain: true,
+      success: function(data){
+        drawLineChart(
+          "#{country.currency_code.upcase}_top_ups_history",
+          data,
+          {
+            chartArea: { width: '65%' },
+            title: 'TopUps',
+            width: window.innerWidth * 0.4
+          }
+        )
+      }
+    });
+  });
+

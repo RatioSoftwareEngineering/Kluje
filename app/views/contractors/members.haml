@@ -1,0 +1,102 @@
+- category = @skill.try(:name)
+- location = @city.present? ? "#{@city.name}, #{@city.country.name}" : @country.name
+- locale_country = I18n.locale.to_s + '-' + @country.cca2
+- content_for(:title, "Browse our #{category || 'Contractors'} in #{location} | Kluje")
+- if @skill
+  - content_for(:description, _("Search the Kluje.com members list in #{location} for #{category}. Find the best #{category} and get QUOTES from them."))
+  - content_for(:keywords, _("find a #{category} in #{location}, get #{category} quotes #{location}, #{category} #{location}, #{category} list #{location}, kluje."))
+- else
+  - content_for(:description, _("Search the Kluje.com members list in #{location} for interior designers, handyman, electricians, plumbers, commercial renovation contractors."))
+  - content_for(:keywords, _("find a contractor in #{location}, renovation contractor #{location}, contractors #{location}, interior designer #{location}, handyman #{location}, electrician #{location}, plumber #{location}, commercial contractors #{location}, kluje."))
+.find-contractor.padding-top-20.padding-bottom-20
+  .container.text-center
+    %h1.page-title= _('Find Contractors in %s') % _(@city.try(:name) || @country.name)
+    %h2.h-3= _('Contractors are available for all home needs')
+
+.container.member
+  = render 'layouts/flash_messages'
+
+  .row.margin-top-20
+    .col-md-2.col-sm-4
+      %input{type: 'text', id: 'city_filter'}
+    .col-md-3.col-sm-6
+      %input{type: 'text', id: 'category_filter'}
+
+  %hr.grey
+  .row
+    - @contractors.each do |c|
+      .col-md-4.col-sm-6.text-center.margin-bottom-20
+        = render 'home/contractor', contractor: c
+    .col-xs-12
+      = will_paginate @contractors, renderer: BootstrapPagination::Rails
+
+- content_for :extra_footer_tags do
+  :javascript
+    var cities = JSON.parse('#{raw @cities.to_json}');
+    var city = '#{@city.blank? ? "" : @city.name.parameterize}';
+
+    var skills = JSON.parse('#{raw @skills.to_json}');
+    var skill = '#{@skill.blank? ? "" : @skill.name.parameterize}';
+    var cityPlaceHolder = '#{_('City')}';
+    var skillPlaceHolder = '#{_('Skill Category')}';
+
+    $('document').ready(function(){
+      $('#city_filter').selectize({
+        maxItems: 1,
+        persist: false,
+        valueField: 'id',
+        labelField: 'name',
+        searchField: ['name'],
+        sortField: 'name',
+        placeholder: cityPlaceHolder,
+        items: [city],
+        options: cities,
+        onChange: function(value){
+          console.log(value);
+          city = value;
+          buildURLFilter(city, skill);
+        }
+      });
+
+      $('#category_filter').selectize({
+        maxItems: 1,
+        persist: false,
+        valueField: 'id',
+        labelField: 'name',
+        searchField: ['name'],
+        sortField: 'name',
+        placeholder: skillPlaceHolder,
+        items: [skill],
+        options: skills,
+        onChange: function(value){
+          console.log(value);
+          skill = value;
+          buildURLFilter(city, skill);
+        }
+      });
+
+      function buildURLFilter(city = null, skill = null){
+        var url = window.location.pathname;
+
+        // remove skill
+        var removedSkill = url.slice(url.indexOf('/members/'));
+        url = url.replace(removedSkill, '/members/all');
+
+        var params = [];
+        if(city && city.length > 0) {
+          params.push('city=' +  city);
+        }
+
+        if(skill && skill.length > 0){
+          var skillFilter = '/members/' + skill;
+          var replacedString = url.slice(url.indexOf('/members/'));
+          url = url.replace(replacedString, skillFilter);
+        }
+
+        if(params.length > 0){
+          url = url + '?' + params.join('&');
+        }
+        
+        window.location = url;
+      }
+    });

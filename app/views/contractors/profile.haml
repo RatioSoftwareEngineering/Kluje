@@ -1,0 +1,143 @@
+- content_for :extra_head_tags do
+  = stylesheet_link_tag :profile
+  = javascript_include_tag :skills
+  = stylesheet_link_tag :skills
+:javascript
+  $(document).ready( function() {
+    $('.carousel-inner :first-child').addClass('active');
+  });
+- content_for :head do
+  %meta{content: "#{@contractor.company_description}",property: "og:description"}
+  %meta{content: "website", property: "og:type"}/
+  %meta{content: "#{@share_image}", property: "og:image"}/
+  %meta{content: "#{@contractor.company_name}", property: "og:title"}/
+  %meta{content: "url", property: "#{@base_url}"}/
+.container
+  .row
+    .col-md-12
+      = render 'layouts/flash_messages'
+      .container-white{style: 'padding:0px;'}
+      .jumbotron{style: "background: white;padding:0px;"}
+        .wrap
+          %img.img-thumbnail{alt: "Drag Image", src: @contractor.selected_header_image.url, style: "width:100%;",id: 'selected_header_image'}/
+        .profile-wraper
+          %img{src: @contractor.company_logo.url, width: '100%',style: 'min-height:120px;margin-top:-20%;max-height:200px;'}
+  .row
+    .col-md-12
+      .container-white
+        .row
+          .col-md-6
+            .row
+              .col-md-10
+                %h3#companyName{style: 'padding:10px;'}
+                  = @contractor.company_name
+                %p#companyDescription{style: 'padding:10px;'}=truncate(@contractor.company_description, :length => 256)
+          .col-md-4
+            .row
+              .col-md-10
+                %h3=_("Licenses")
+                %ul.logo-container
+                  %li
+                    %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                      %tr
+                        %td
+                          - if @contractor.uen_number.present?
+                            %img{:src=>'/images/logo-image1.jpg'}
+                          - else
+                            %img{:src=>'/images/logo-image1.jpg', :class=>"disabled"}
+                  %li
+                    %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                      %tr
+                        %td
+                          - if @contractor.case_member == 'true'
+                            %img{:src=>'/images/logo-image2.jpg'}
+                          - else
+                            %img{:src=>'/images/logo-image2.jpg', :class=>"disabled"}
+                  %li
+                    %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                      %tr
+                        %td
+                          - if @contractor.scal_member == 'true'
+                            %img{:src=>'/images/logo-image3.jpg'}
+                          - else
+                            %img{:src=>'/images/logo-image3.jpg', :class=>"disabled"}
+                  %li
+                    %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                      %tr
+                        %td
+                          - if @contractor.bizsafe_member == 'true'
+                            %img{:src=>'/images/logo-image4.jpg'}
+                          - else
+                            %img{:src=>'/images/logo-image4.jpg', :class=>"disabled"}
+                  %li
+                    %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                      %tr
+                        %td
+                          - if @contractor.bca_license.present?
+                            %img{:src=>'/images/logo-image5.jpg'}
+                          - else
+                            %img{:src=>'/images/logo-image5.jpg', :class=>"disabled"}
+                  %li
+                    %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                      %tr
+                        %td
+                          - if @contractor.hdb_license.present?
+                            %img{:src=>'/images/logo-image6.jpg'}
+                          - else
+                            %img{:src=>'/images/logo-image6.jpg', :class=>"disabled"}
+                  %li
+                    %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                      %tr
+                        %td
+                          - if @contractor.pub_license.present?
+                            %img{:src=>'/images/logo-image7.jpg'}
+                          - else
+                            %img{:src=>'/images/logo-image7.jpg', :class=>"disabled"}
+                  %li
+                    %table{:cellpadd=>'0', :cellspacing=>'0', :border=>'0'}
+                      %tr
+                        %td
+                          - if @contractor.ema_license.present?
+                            %img{:src=>'/images/logo-image8.jpg'}
+                          - else
+                            %img{:src=>'/images/logo-image8.jpg', :class=>"disabled"}
+          .col-md-2
+            %h3=_('Ratings')
+            %br
+            .raty{"data-score"=> @contractor.average_rating}
+            %br
+            %br
+            %a.btn.btn-warning.btn-lg=_("Get a Quote")
+  %br
+  .row
+    .col-md-12
+      = render 'contractors/carousel', contractor: @contractor
+  %br
+  .row
+    .col-md-12
+      .row
+        .col-md-4
+          .col-md-4
+          .container-white
+            .row
+              .col-md-10
+                %h2{style: 'text-align:left;'}=_("Skills")
+            %ul
+              - @contractor.skills.each do |skill|
+                %li= skill.name
+          %br
+          .col-md-4
+          .container-white{style: 'text-align:center;'}
+            %a.btn.btn-social-icon.btn-facebook{onclick: "window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('#{@base_url}'),'facebook-share-dialog','width=626,height=436');return false;"}
+              %i.fa.fa-facebook
+            %a.btn.btn-social-icon.btn-google-plus{href: "https://plus.google.com/share?url={#{@base_url}}", rel: "publisher", onclick: "javascript:window.open(this.href,\r\n  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"}
+              %i.fa.fa-google-plus
+            %a.btn.btn-social-icon.btn-linkedin{href: "http://www.linkedin.com/shareArticle?mini=true&url=#{@base_url}&title=Article Tile Goes Here&summary=Put your summary here", target: "_blank"}
+              %i.fa.fa-linkedin
+            %a.btn.btn-social-icon.btn-twitter{href: "https://twitter.com/share?url=#{@base_url}", target: "_blank"}
+              %i.fa.fa-twitter
+        .col-md-8
+          .container-white
+            %h2{style: 'text-align:left;font-weight:bold;'}=_("Rating")
+            %div.separator
+            %div.ratings-container

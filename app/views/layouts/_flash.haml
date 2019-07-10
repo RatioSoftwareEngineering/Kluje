@@ -1,0 +1,9 @@
+- if controller.devise_controller? && resource.present? && resource.errors.any?
+  = content_tag :div, class: 'alert alert-danger' do
+    = resource.errors.full_messages.to_sentence
+
+- if !flash.empty?
+  %div#flash
+    - flash.keys.each do |k|
+      .alert{ class: "alert-#{k}" }
+        = flash[k]

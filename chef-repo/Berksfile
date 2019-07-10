@@ -1,0 +1,8 @@
+source "https://supermarket.chef.io"
+
+cookbook 'ntp'
+cookbook 'apt'
+cookbook 'rvm', git: 'https://github.com/fnichol/chef-rvm.git'
+cookbook 'nginx', git: 'https://github.com/shinyaK2014/nginx.git'
+cookbook 'logrotate'
+cookbook 'magic_shell'

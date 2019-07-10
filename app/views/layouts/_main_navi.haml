@@ -1,0 +1,92 @@
+%ul.nav.navbar-nav
+  - if !account_signed_in?
+    - if @hpage.nil?
+      %li
+        = link_to _('Homeowners'), home_path
+    - else
+      %li.dropdown
+        %a.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}=_('Homeowners')
+        %ul.dropdown-menu
+          %li
+            = link_to _('Browse Contractors'), members_path(locale: current_locale_country, category: :all)
+          %li
+            = link_to _('How it Works'), how_it_works_homeowners_path
+          %li
+            = link_to _('Checklist'), checklist_homeowners_path
+          %li
+            = link_to _('FAQ'), faq_homeowners_path
+    - if @cpage.nil?
+      %li
+        = link_to _('Contractors'), contractors_path
+    - else
+      %li.dropdown
+        %a.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}= _('Contractors')
+        %ul.dropdown-menu
+          %li
+            = link_to _('How it Works'), how_it_works_contractors_path
+          %li
+            = link_to _('FAQ'), faq_contractors_path
+
+    - if current_country.commercial? && current_city.present? && current_city && current_city.commercial?
+      %li
+        = link_to(_('Commercial'), commercial_home_path)
+    %li
+      = link_to(_('Blog'), blog_path())
+
+  - if account_signed_in? && (current_account.homeowner? && !current_account.agent?)
+    %li
+      = link_to _('My Account'), account_path(locale: current_locale_country)
+    %li
+      = link_to _('Residential Jobs'), jobs_path(locale: current_locale_country)
+    %li
+      = link_to _('Commercial Jobs'), commercial_jobs_path(locale: current_locale_country)
+    %li.dropdown
+      %a.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}=_('Help')
+      %ul.dropdown-menu
+        %li
+          = link_to _('Ask an Expert'), questions_path(locale: current_locale_country)
+        %li
+          = link_to _('How it Works'), how_it_works_homeowners_path
+        %li
+          = link_to _('Checklist'), checklist_homeowners_path
+        %li
+          = link_to _('FAQ'), faq_homeowners_path
+      %li
+        = link_to _('Blog'), blog_path()
+  - if account_signed_in? && current_account.agent?
+    %li
+      = link_to _('My Account'), account_path(locale: current_locale_country)
+    %li
+      = link_to _('Commercial Jobs'), commercial_jobs_path(locale: current_locale_country)
+    %li.dropdown
+      %a.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}=_('Help')
+      %ul.dropdown-menu
+        %li
+          = link_to _('Ask an Expert'), questions_path(locale: current_locale_country)
+        %li
+          = link_to _('How it Works'), how_it_works_homeowners_path
+        %li
+          = link_to _('Checklist'), checklist_homeowners_path
+        %li
+          = link_to _('FAQ'), faq_homeowners_path
+      %li
+        = link_to _('Blog'), blog_path()
+  - if account_signed_in? && current_account.contractor?
+    - if current_account.commercial?
+      %li
+        = link_to _('Residential'), jobs_path(locale: current_locale_country)
+      %li
+        = link_to _('Commercial'), commercial_jobs_path(locale: current_locale_country)
+    - else
+      %li
+        = link_to _('Jobs'), jobs_path(locale: current_locale_country)
+    %li
+      = link_to _('Profile'), current_account.contractor.profile_url
+    %li
+      = link_to _('Account'), account_details_contractors_path(locale: current_locale_country)
+    - if current_account.contractor?
+      %li
+        = link_to _('Billing'), billing_top_up_contractors_path(locale: current_locale_country)
+  - if account_signed_in? && current_account.admin?
+    %li
+      = link_to _('Admin'), admin_admin_root_path

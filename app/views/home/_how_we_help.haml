@@ -1,0 +1,27 @@
+.white-bg.padding-bottom-30.padding-top-30
+  .row
+    .col-md-8.col-md-offset-2
+      %h2.text-center=_("How does Kluje help you find a Contractor?")
+      %p
+        = _("Kluje.com was founded to provide homeowners with an easy way to find contractors for not only")
+        = link_to _('Renovation'), landing_page_path(trade: 'renovation-contractor'), class: 'renovation', rel: "canonical"
+        = _("or")
+        = link_to _('Interior Design'), landing_page_path(trade: 'interior-designer'), class: 'interior designer', rel: "canonical"
+        = _("but also to find")
+        = link_to _('Carpenters'), landing_page_path(trade: 'carpenter'), class: 'carpenter', rel: "canonical"
+        = _(",")
+        = link_to _('Electricians'), landing_page_path(trade: 'electrician'), class: 'electrician', rel: "canonical"
+        = _(",")
+        = link_to _('Plumbers'), landing_page_path(trade: 'plumbing-contractor'), class: 'plumber', rel: "canonical"
+        = _("and")
+        = link_to _('Handyman Services'), landing_page_path(trade: 'handyman'), class: 'handyman', rel: "canonical"
+        = _(".")
+        = _("We understand that it is not easy to find good contractor and the experience can be very stressful. So we do all the legwork for you, no more endless phone calls, waiting for the contractors to call you back, or even being told they are too busy or simply can’t do your job. With kluje.com, simply post your job for FREE on our quick form and we will match your request to relevant contractors. They will contact you to arrange a quotation. No hassle No fuss.")
+      %p
+        = _("What kluje .com does differently is provide contractors with a unique public profile page, which you can review before selection. We ask contractors to provide their qualifications, photos of previous work and ratings. It is important that you review the contractor and")
+        %a{href: "https://www.kluje.com/en/homeowners-checklist"}="check"
+        = _("their qualification with the relevant authorities before hiring them. After your selected contractor has done the job, we ask that you provide a")
+        %a{href: "https://www.kluje.com/en/blog/contractor-ratings-part-2"}="rating"
+        = _("for the job done in terms of value, reliability and quality. This will be attached to the contractors profile page and will be visible by all of our community.")
+      %p
+        =_("We believe that providing ratings will help sort out the great contractors from the bad. Together we can build “Better Quality Contractors”")

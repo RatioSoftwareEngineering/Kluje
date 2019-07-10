@@ -1,0 +1,31 @@
+.row.rating{class: rating.approved? ? '' : 'grey'}
+  .col-xs-12
+    - if rating.job.present?
+      - if rating.job.commercial?
+        %strong= _("JobID: #{rating.job.id}")
+      - else
+        %strong= _(rating.job.job_category.name)
+      - unless rating.approved?
+        %i= "(pending moderation)"
+    - else
+      %i= "(pending moderation)"
+  .col-xs-12.margin-bottom-5
+    %i= rating.created_at.strftime("%d-%b-%Y")
+  - [:professionalism, :quality, :value].each do |category|
+    .col-sm-4.col-xs-12
+      %strong= _(category.to_s.humanize)
+      %br
+      - score = rating.send(category)
+      - 5.times do |i|
+        %i.orange.fa{class: i < score ? 'fa-star' : 'fa-star-o'}
+  .col-xs-12.margin-top-5<
+    - rating.comments.split("\n").each do |line|
+      - if line[0] == ' '
+        = '&nbsp;'.html_safe + line.strip
+      - else
+        = line.strip
+      %br<
+    %hr.margin-left-5.margin-right-5.margin-top-10.margin-bottom-10.orange
+    .pull-right.margin-right-20
+      - if rating.job.present?
+        %i= "- #{rating.job.homeowner.first_name}, #{_(rating.job.city.name)}"

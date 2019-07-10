@@ -1,0 +1,12 @@
+- error_code ||= response.status
+- header = { 404 => _("Page not found"), 500 => _("Internal Server Error") }
+- message = { 404 => _("Sorry, the page you are looking for doesn't exist!"),
+              500 => _("Sorry, something went wrong") }
+
+.container.padding-30
+  .row
+    .col-md-12.text-center
+      %h1.margin-bottom-30= header[error_code]
+      = image_tag "errors/#{error_code}.svg", class: 'error'
+      %h3.margin-top-30.margin-bottom-30= message[error_code]
+      = link_to '< Back to Home page', home_path, class: 'btn btn-success btn-rounded'

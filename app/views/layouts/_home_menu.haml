@@ -1,0 +1,117 @@
+- skill_id ||= nil
+- country_id ||= current_country.id
+- city_id ||= @city.try(:id)
+- if current_country.commercial? && current_city && current_city.commercial?
+  - url_job = new_commercial_job_path(locale: current_locale_country, skill_id: skill_id, country_id: country_id, city_id: city_id)
+- else
+  - url_job = new_job_path(locale: current_locale_country, skill_id: skill_id, country_id: country_id, city_id: city_id)
+- languages = { en: 'English', th: 'ไทย', zh_HK: '中文' }.with_indifferent_access
+
+#left-menu.modal.fade.in{ aria: { labelledby: :conductModalLabel }, role: 'dialog', tabindex: '-1'}
+  .menu-dialog
+    .menu-content
+      .menu-header
+        %button.close{'data-dismiss' => 'modal', type: 'button'}
+        %h4.upcase= _('Menu')
+      .menu-body
+        - if !account_signed_in?
+          %a.upcase.margin-top-20.margin-bottom-20.btn.btnf.mobile-item{href: signup_contractors_path, rel: 'canonical', class: 'button-orange'}
+            = _('List Your Business')
+          %button{ data: { toggle: 'modal', target: '#signin'}, 'data-dismiss' => 'modal', class: 'mobile-item btn btnf upcase button-orange' }
+            = _('Log In')
+        -else
+          = form_for :account, url: destroy_account_session_path, method: :delete, html: { class: 'frm-signout mobile-item' } do |f|
+            %strong= _('Hi, %{name}') % { name: current_account.full_name }
+            -if current_account.contractor?
+              = " (#{current_country.price_format % current_account.contractor.credits_balance})"
+            = submit_tag _('Sign Out'), :class => :'margin-top-20 btn btnf upcase button-orange'
+        %a.upcase.margin-top-20.margin-bottom-10.btn.btnf{href: url_job, rel: 'canonical', class: 'button-orange'}
+          = _('Post a Job Now!')
+        %a.upcase.margin-top-20.margin-bottom-30.btn.btnf{href: questions_path(locale: current_locale_country), rel: 'canonical', class: 'btn-tol'}
+          = _('Ask An Expert')
+        %ul
+          - if !account_signed_in?
+            - if @hpage.nil?
+              %li= link_to _('Homeowners'), home_path, class: 'upcase'
+            - else
+              %li.dropdown
+                %a.upcase.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}=_('Homeowners')
+                %ul.dropdown-menu
+                  %li= link_to _('Browse Contractors'), members_path(locale: current_locale_country, category: :all)
+                  %li= link_to _('How it Works'), how_it_works_homeowners_path
+                  %li= link_to _('Checklist'), checklist_homeowners_path
+                  %li= link_to _('FAQ'), faq_homeowners_path
+            - if @cpage.nil?
+              %li= link_to _('Contractors'), contractors_path, class: 'upcase'
+            - else
+              %li.dropdown
+                %a.upcase.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}= _('Contractors')
+                %ul.dropdown-menu
+                  %li= link_to _('How it Works'), how_it_works_contractors_path
+                  %li= link_to _('FAQ'), faq_contractors_path
+
+            - if current_country.commercial? && current_city.present? && current_city && current_city.commercial?
+              %li= link_to(_('Commercial'), commercial_home_path, class: 'upcase')
+            %li= link_to(_('Blog'), blog_path(), class: 'upcase')
+
+          - if account_signed_in? && (current_account.homeowner? && !current_account.agent?)
+            %li.homeowner= link_to _('My Account'), account_path(locale: current_locale_country), class: 'upcase'
+            %li= link_to _('Residential Jobs'), jobs_path(locale: current_locale_country), class: 'upcase'
+            %li= link_to _('Commercial Jobs'), commercial_jobs_path(locale: current_locale_country), class: 'upcase'
+            %li.dropdown
+              %a.upcase.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}=_('Help')
+              %ul.dropdown-menu
+                %li= link_to _('Ask an Expert'), questions_path(locale: current_locale_country)
+                %li= link_to _('How it Works'), how_it_works_homeowners_path
+                %li= link_to _('Checklist'), checklist_homeowners_path
+                %li= link_to _('FAQ'), faq_homeowners_path
+              %li= link_to _('Blog'), blog_path(), class: 'upcase'
+              %li= link_to _('My Q&A'), me_questions_path(locale: current_locale_country), class: 'upcase'
+
+
+          - if account_signed_in? && current_account.agent?
+            %li.agent= link_to _('My Account'), account_path(locale: current_locale_country), class: 'upcase'
+            %li= link_to _('Commercial Jobs'), commercial_jobs_path(locale: current_locale_country), class: 'upcase'
+            %li.dropdown
+              %a.upcase.dropdown-toggle{'data-toggle' => 'dropdown', href: '#'}=_('Help')
+              %ul.dropdown-menu
+                %li= link_to _('Ask an Expert'), questions_path(locale: current_locale_country)
+                %li= link_to _('How it Works'), how_it_works_homeowners_path
+                %li= link_to _('Checklist'), checklist_homeowners_path
+                %li= link_to _('FAQ'), faq_homeowners_path
+              %li= link_to _('Blog'), blog_path(), class: 'upcase'
+
+          - if account_signed_in? && current_account.contractor?
+            - if current_account.commercial?
+              %li= link_to _('Residential'), jobs_path(locale: current_locale_country), class: 'upcase'
+              %li= link_to _('Commercial'), commercial_jobs_path(locale: current_locale_country), class: 'upcase'
+            - else
+              %li= link_to _('Jobs'), jobs_path(locale: current_locale_country), class: 'upcase'
+            %li= link_to _('Profile'), current_account.contractor.profile_url, class: 'upcase'
+            %li.contractor= link_to _('Account'), account_details_contractors_path(locale: current_locale_country), class: 'upcase'
+            - if current_account.contractor?
+              %li= link_to _('Billing'), billing_top_up_contractors_path(locale: current_locale_country), class: 'upcase'
+              %li= link_to _('My Q&A'), me_answers_path(locale: current_locale_country), class: 'upcase'
+          - if account_signed_in? && current_account.admin?
+            %li.admin= link_to _('Admin'), admin_admin_root_path, class: 'upcase'
+
+        .locale-menu
+          = form_tag change_locale_session_path, method: :put do
+            = hidden_field_tag :controller_name, params[:controller]
+            = hidden_field_tag :action_name, action_name.to_s.gsub(/^\/:/, '')
+            = hidden_field_tag :query, params.except(:contractor, :action, :locale, :utf8).to_query
+            .location
+              .language
+                %div.margin-top-10.margin-bottom-10= _('Choose Language')
+                = select_tag :new_locale, options_for_select(languages.map{|c| [_(c[1]), c[0]]}, locale.to_s),  id: 'language-selector', class: 'form-control'
+              .country.check
+                %div.margin-top-10.margin-bottom-10= _('Select country')
+                = select_tag :country_id, options_for_select(Country.available.map{|c| [_(c.name), c.id]}, current_country.id),  id: 'country-selector', class: 'form-control'
+              .city
+                %div.margin-top-10.margin-bottom-10= _('Select city')
+                = select_tag :city_id, options_for_select(current_country.cities.available.map{|c| [_(c.name), c.id]}, current_city ? current_city.id : ''), id: 'city-selector', class: 'form-control'
+            .buttons.margin-top-30
+              = submit_tag _('Apply'), class: 'upcase btn btnf button-orange'
+
+        :javascript
+          var locale = { 'lang': '#{locale}', 'country_id': #{current_country.id}, 'city_id': #{current_city ? current_city.id : '0'} };

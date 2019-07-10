@@ -1,0 +1,35 @@
+%h4
+  =_('Homeowner Details')
+.table-responsive
+  %table.table
+    - @homeowner = @job.homeowner
+    %tr
+      %td
+        %strong
+          = _('First name:')
+      %td
+        = @homeowner.first_name
+    %tr
+      %td
+        %strong
+          = _('Last name:')
+      %td
+        = @homeowner.last_name
+    %tr
+      %td
+        %strong
+          = _('Email:')
+      %td{width:'85%'}
+        = @homeowner.email
+    %tr
+      %td
+        %strong
+          = _('Mobile No:')
+      %td
+        = @homeowner.mobile_number
+    %tr
+      %td
+        %strong
+          = _('Preferred contact time:')
+      %td
+        = Residential::Job.contact_times[@job.contact_time_id]

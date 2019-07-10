@@ -1,0 +1,31 @@
+:javascript
+  if(window.scrollY < 532){
+    var headerHeight = 242;
+    var range = 290;
+    var scrollTop = $(this).scrollTop();
+
+    var offset = headerHeight + range;
+
+    var calc = 0.6 + (scrollTop - headerHeight) * 0.4 / range;
+
+    if ( calc < 0.6 ) {
+      calc = 0.6;
+    }
+    $(".nav-background").css({ 'opacity': calc });
+  }
+  $(window).on("scroll", function() {
+    var headerHeight = 242;
+    var range = 290;
+    var scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+    var offset = headerHeight + range;
+
+    var calc = 0.6 + (scrollTop - headerHeight) * 0.4 / range;
+
+    if ( calc > 1 ) {
+      calc = 1;
+    } else if ( calc < 0.6 ) {
+      calc = 0.6;
+    }
+    $(".nav-background").css({ 'opacity': calc });
+  });

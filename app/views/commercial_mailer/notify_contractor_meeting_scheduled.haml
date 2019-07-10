@@ -1,0 +1,13 @@
+%p=_('Meeting scheduled ')
+%p
+  =_("A meeting has been scheduled by the Kluje Team for %s to provide a quote.") % contractor.company_name
+%p
+  =_("When:")
+  = meeting.date.strftime("%Y/%m/%d")
+  =_(" and ")
+  = meeting.time.strftime("%I:%M %p")
+
+  %br
+  =_("Where: %s") % meeting.place
+  %br
+  =_("Who: %s") % contractor.company_name

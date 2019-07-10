@@ -1,0 +1,167 @@
+- edit ||= false
+- content_for :extra_head_tags do
+  = javascript_include_tag skills_path, countries_path, :homeowner, :exit_msg
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'validations/job_new_validation', :job_new
+
+- tooltip_params = { rel: 'tooltip', data: { placement: 'top', html: 'true' } }
+- form_url = @job.id ? job_path(locale: current_locale_country, id: @job.id) : jobs_path(locale: current_locale_country)
+- form_method = @job.id ? :patch : :post
+
+- country = @job.homeowner.try(:country) || Country.available.find_by_id(params[:country_id]) || current_country
+- city = @job.city || country.cities.find_by_id(params[:city_id]) || current_account.try(:jobs).try(:last).try(:city) || country.cities.available.first
+
+.margin-0
+  = form_for @job, url: form_url, class: 'form-horizontal', role: :form, method: form_method, id: "create_job", multipart: true do |f|
+    - unless edit
+      %h2.grey-header
+        .fa-stack
+          .fa.fa-circle.fa-stack-2x.orange
+          .fa.fa-stack-1x.white= 1
+        = _('Please tell us about your requirements')
+    - unless current_account
+      - if params[:specific_contractor_id].present?
+        .form-group.row
+          .col-md-6
+            %label
+              = _('Which contractor do you want to use?')
+          .col-md-6
+            = (@specific_contractor||@contractor).try(:company_name)
+      .form-group.row
+        .col-md-6
+          %label
+            = _('What country is the property in?')
+        .col-md-6
+          = f.fields_for :homeowner, @job.homeowner do |g|
+            = g.select :country_id, Country.available.map{|c| [_(c.name), c.id, {data: { postal_codes: c.postal_codes }}]}, { selected: country.id }, { class: 'form-control' }
+    - if current_account && current_account.country && current_account.country.cities.available.count <= 1
+      = f.hidden_field :city_id, value: current_account.country.cities.first.id
+    - else
+      .form-group.row
+        .col-md-6
+          %label
+            = _('What region is the property in?')
+        .col-md-6
+          = f.select :city_id, country.cities.available.map{|c| [_(c.name), c.id]}, { selected: city.id }, { class: 'form-control' }
+    - if @job.id
+      = f.hidden_field :skill_id, value: @job.skill_id
+    - else
+      .form-group.row
+        .col-sm-6
+          %label
+            = _('What type of')
+            %span.form_tooltip{tooltip_params.merge(title: _('This is the general category. Choose the closest work type.'))}
+              %u= _('contractor')
+            = _('do you need?')
+        .col-sm-6
+          = f.select :skill_id, @skills.map{|s| [_(s.translated_name),s.id]}, { selected: @job.skill_id, include_blank: _('Select the contractor type') }, { class: 'form-control ' }
+    .form-group.row
+      .col-sm-6
+        %label
+          = _('What type of')
+          %span.form_tooltip{tooltip_params.merge(title: _('This is the subcategory. Be more specific here.'))}
+            %u= _('job')
+          = _('is it?')
+      .col-sm-6
+        = f.select :job_category_id, [], { include_blank: _('Select the job category') }, { class: 'form-control' }
+        = f.hidden_field :hid_job_category_id, value: @job.job_category_id
+    .form-group.row
+      .col-sm-6
+        %label
+          = _('When would you like the job to')
+          %span.form_tooltip{tooltip_params.merge(title: _('Contractors use this to determine if they have the time to do your job based on their current schedule of jobs.'))}
+            %u= _('start')
+          = _('?')
+      .col-sm-6
+        = f.select :availability_id, @availabilities, { include_blank: _('Select the timing') }, { class: 'form-control' }
+    .form-group.row
+      .col-sm-6
+        %label
+          = _('What is your approximate')
+          %span.form_tooltip{tooltip_params.merge(title: _('Your budget should match your job description. Contractors choose to bid your lead based on whether they think your chosen budget is achievable.'))}
+            %u= _('budget')
+          = _('?')
+
+      .col-sm-6
+        - job_category_id = @job.try(:job_category_id) || (params[:residential_job] && params[:residential_job][:job_category_id])
+        - if job_category_id.present?
+          - job_category = JobCategory.find(job_category_id)
+          - country = current_country
+          - budgets = job_category.budgets.map{|b| [country.budgets.find_by(budget_id: b.id).try(:range), b.id]}
+        - else
+          - budgets = []
+        = f.select :budget_id, budgets,  { include_blank: _('Select the budget') }, { class: 'form-control', disabled: true }
+        = f.hidden_field :hid_budget_id, value: @job.budget_id
+    .form-group.row
+      .col-sm-6
+        %label= _('Which type of property?')
+      .col-sm-6
+        = f.select :property_type, localize_select(@property_types), { include_blank: _('Select the property type') }, { class: 'form-control' }
+    .form-group.row#postal_code_group{class: country.postal_codes ? '' : 'hidden'}
+      .col-sm-6
+        %label
+          = _("What's the postal code?")
+      .col-sm-6
+        = f.text_field :postal_code, class: 'form-control ', value: @job.postal_code || current_account.try(:last_postal_code), placeholder: _('Example:') + ' 139951', required: current_country.postal_codes
+    - if !current_account || !current_account.mobile_number
+      .form-group.row
+        .col-sm-6
+          %label{:id=>'spn_job_mobile_number'}= _('What is your mobile number?')
+        .col-sm-6
+          = f.fields_for :homeowner do |homeowner|
+            - mobile_number = params[:residential_job] && params[:residential_job][:homeowner] && params[:residential_job][:homeowner][:mobile_number]
+            = homeowner.text_field :mobile_number, value: mobile_number, class: 'form-control', required: true, maxlength: 14, placeholder: _('Example:')+' +6597799779'
+    .form-group.row
+      .col-sm-6
+        %label{:id=>'spn_job_contact_time'}= _('When do you prefer to be contacted?')
+      .col-sm-6
+        = f.select :contact_time_id, localize_select(@contact_times), {}, { class: 'form-control', required: true }
+    .form-group.row
+      .col-sm-6
+        %label= _('Please write the description for your job')
+        %span#spn_job_description{tooltip_params.merge(title: _('Use as much detail as you can. Include as applicable; room size, number of rooms, whether the contractor needs to supply materials or items, dimensions. Really try to explain the problem as clearly as you can.'))}
+        %br/
+        .f-small-btm= _('Note: This will help contractors give a better quotation.')
+      .col-sm-6
+        = f.text_area :description, class: 'form-control', rows: '2', required: true,data:{msg:{required: "Please write the description for your job"}},placeholder: _('Do NOT put your contact details here, as your privacy will not be protected.')
+    .form-group.row
+      .col-sm-6.col-xs-6.m-top-7
+        %label= _('Upload up to 5 photos (Optional):')
+        %br/
+        .txt-grey-small= _('Note: Image size up to 5MB (jpeg, jpg, pdf, png)')
+      .col-sm-6
+        - (1..5).each do |i|
+          .document-upload{id: "image#{i}-div"}
+            = f.file_field :"image#{i}", id: "image#{i}",class: 'image hidden-file'
+    - if current_account.nil?
+      .top_title
+        %h2.grey-header
+          .fa-stack
+            .fa.fa-circle.fa-stack-2x.orange
+            .fa.fa-stack-1x.white= 2
+          = _('Please create your Account')
+      .row
+        = f.fields_for :homeowner, @job.homeowner do |g|
+          .col-sm-6
+            .form-group
+              = g.text_field :first_name, class: 'form-control',placeholder: _('First Name')
+            .form-group
+              = g.text_field :last_name, class: 'form-control',placeholder: _('Last Name')
+            .form-group
+              = g.email_field :email, class: 'form-control',placeholder: _('Email')
+            .form-group
+              = g.password_field :password, class: 'form-control', value: '',placeholder: _('Password')
+    .col-sm-8
+      .form-group.row
+        - unless edit
+          .subscript
+            %span= _("By clicking the button below, you declare you have read and agreed to Kluje.com's")
+            = link_to(_('Terms and Conditions'), legal_path(slug: 'terms-and-conditions-for-referral-program'),target: '_blank')
+            = _('and')
+            = link_to _('Privacy Policy'), legal_path(slug: 'privacy-policy'), target: '_blank'
+        - if @job.id
+          = submit_tag _('Update'), class: 'btn btn-warning btn-lg', disable_with: "Updating"
+        - else
+          .alert.alert-danger#error-div{role: 'alert',tabindex: 1}
+          %br
+          = submit_tag _('Post the Job'), class: 'btn btn-warning btn-lg', disable_with: "Submitting"

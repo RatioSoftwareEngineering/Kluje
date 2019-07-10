@@ -1,0 +1,11 @@
+.widget
+  .header
+    %h2= _("RSS feed")
+  .body
+    %ul.list-inline
+      %li
+        %a.sm-icon{href: @page.landing_page_url(current_locale, current_locale_country), target: "_blank"}
+          %span.fa-stack.yellow
+            %span.fa.fa-square.fa-stack-2x
+            %span.fa.fa-inverse.fa-stack-1x.fa-rss
+          %span= _("RSS feed")

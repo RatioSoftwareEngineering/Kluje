@@ -1,0 +1,26 @@
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'slider'
+
+.box.white-bg.grey-border
+  %h3= _('Photo gallery')
+  %hr
+    .photos.preview.slider-nav
+      - @contractor.photos.each do |photo|
+        .photo.preview
+          = image_tag photo.image_name.url
+      - if edit
+        .photo.preview.padding-bottom-10
+          = form_tag update_profile_contractors_path, multipart: true do
+            %span.btn.btn-default.btn-file.btn-dashed
+              %i.fa.fa-plus.fa-2x
+              = file_field_tag 'photo', class: 'autoupload'
+
+
+    .photos.large.slider-content
+      - @contractor.photos.each do |photo|
+        .photo.large
+          %center
+            = image_tag photo.image_name.url
+          - if edit
+            = link_to destroy_photo_contractors_path(id: photo.id), method: :delete, class: 'edit remove' do
+              %i.fa.fa-times.fa-2x

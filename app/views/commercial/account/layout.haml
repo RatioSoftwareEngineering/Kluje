@@ -1,0 +1,22 @@
+- content_for :content do
+  .container.position-relactive
+    .row
+      %aside.col-md-3
+        .widget.sidebar.light-grey-bg
+          .header
+            %h2= _('My menu')
+          .body-without-padding.padding-bottom-100
+            %ul.nav.nav-pills.nav-stacked
+              %li{ class: request.path =~ /jobs\/?$/ ? 'active' : '' }
+                = link_to _('Jobs'), commercial_jobs_path(locale: current_locale_country), class: 'links-jobs'
+              %li{ class: request.path =~ /archived/ ? 'active' : '' }
+                = link_to _('Archived'), commercial_jobs_index_path(locale: current_locale_country, state: :archived), class: 'archived-jobs'
+              %li{ class: request.path =~ /account/ ? 'active' : '' }
+                = link_to _('Account details'), commercial_account_path(locale: current_locale_country), class: 'links-account'
+
+      .col-md-9.margin-top-20.margin-bottom-30
+        = render 'layouts/flash_messages'
+        .main
+          = yield
+
+= render file: 'layouts/commercial', layout: nil

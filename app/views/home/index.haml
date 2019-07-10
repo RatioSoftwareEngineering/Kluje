@@ -1,0 +1,17 @@
+- location = @city.present? ? "#{@city.name}, #{@city.country.name}" : current_country.name
+- content_for(:title, _('Find a Contractor in %{location} | Kluje') % { location: location } )
+.alert-home
+  = render 'layouts/flash_messages'
+
+= render 'home/banner'
+=# render 'home/how_we_help'
+= render 'home/how_it_works'
+= render 'home/post_a_job', black: false, country_id: current_country.id, city_id: @city.try(:id)
+- if current_country.commercial? && current_city && current_city.commercial?
+  = render 'home/commercial_property'
+= render 'home/contractors'
+= render 'home/landing_pages'
+= render 'home/post_a_job', black: true, country_id: current_country.id, city_id: @city.try(:id)
+= render 'home/as_seen_in'
+= render 'home/mobile_apps'
+= render 'layouts/header_transition'

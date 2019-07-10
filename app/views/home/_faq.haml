@@ -1,0 +1,7 @@
+#accordion.panel-group
+  - questions.to_a.each do |question, answer|
+    = faq_item question do
+      = answer.html_safe
+
+- content_for :extra_head_tags do
+  = javascript_include_tag 'faq'

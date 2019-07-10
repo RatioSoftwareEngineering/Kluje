@@ -1,0 +1,32 @@
+- unless @contractor.photos.empty?
+  #myCarouselSlider.carousel.slide.well.visible-lg.visible-md.details-container
+    .carousel-inner.container
+      - remainer = @contractor.photos.count % 4 
+      - if remainer == 0
+        - (1..(@contractor.photos.count/4).to_i).each do |i|
+          .item.container
+            .row
+              #slider-thumbs.col-md-12.hidden-sm.hidden-xs
+              %ul.list-inline
+                - (((i*4)-3)..(i*4)).each do |index|
+                  %li
+                    %a{:id=>"carousel-selector-#{index}"}
+                    .container
+                      %a.example-image-link{"data-lightbox" => "example-set", href: "#{@contractor.photos[index-1].image_name.url}", title: "Press the right arrow on your keyboard."}
+                        %img.img-thumbnail.example-image-link{src: @contractor.photos[index-1].image_name.url,:style => "width:150px; height:100px;",:data=>{"lightbox"=>'example-set'}}/
+      - else 
+        - (1..((@contractor.photos.count/4)+1).to_i).each do |i|
+          .item.container
+            .row
+              #slider-thumbs.col-md-12.hidden-sm.hidden-xs
+              %ul.list-inline
+                - (((i*4)-3)..(i*4)).each do |index|
+                  %li
+                    %a{:id=>"carousel-selector-#{index}"}
+                    .container
+                      - unless @contractor.photos[index-1]  .nil?
+                        %a.example-image-link{"data-lightbox" => "example-set", href: "#{@contractor.photos[index-1].image_name.url}", title: "Press the right arrow on your keyboard."}
+                          %img.img-thumbnail.example-image-link{src: @contractor.photos[index-1].image_name.url,:style => "width:150px; height:100px;",:data=>{"lightbox"=>'example-set'}}/
+    %a.carousel-control.left{"data-slide" => "prev", href: "#myCarouselSlider"}
+    %a.carousel-control.right{"data-slide" => "next", href: "#myCarouselSlider"}
+    

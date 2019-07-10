@@ -1,0 +1,12 @@
+.top-banner.smaller.vertical-center{style: @page.banner.url && @page.banner.url != '' ? "background-image:url('#{@page.banner.url}'); background-size: cover;" : "background: url('#{image_url('banners/image-slide.jpg')}'); background-size: cover;"}
+  .container.text-center.title
+    %h1.upcase.white= _(@page.header).gsub('Singapore', current_country.name).html_safe
+    .padding-top-20
+      %div.text-center
+        = link_to new_job_path(locale: current_locale_country, skill_id: @page.skill_id, country_id: current_country.id, city_id: @city.try(:id)), class: 'btn button-orange upcase', rel: 'canonical' do
+          .get-quote-heading= _('Post a Residential Job Now!')
+        - if current_country.commercial? && current_city && current_city.commercial?
+          = link_to new_commercial_job_path(locale: current_locale_country, country_id: current_country.id, city_id: @city.try(:id)), class: 'btn button-dark upcase', rel: 'canonical' do
+            .get-quote-heading= _('Post a Commercial Job Now!')
+    .padding-top-30.text-center
+      %h3.white= _('Post a Job and up to 3 contractors will contact you')

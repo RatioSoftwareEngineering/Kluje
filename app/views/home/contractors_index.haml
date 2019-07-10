@@ -1,0 +1,14 @@
+- content_for(:title, "Find More Work in #{current_country.name} | Kluje")
+- content_for(:description, 'Are you a contractor? Looking for more work and new customers? Kluje can help you. Sign up for free and view the list of jobs today!')
+- content_for(:keywords, "work, #{current_country.name}, customers, construction, renovation, contractors, contracting, #{Skill.all.map(&:name).join(', ')}")
+
+= render 'layouts/flash_messages'
+
+= render 'home/banner_contractors'
+= render 'home/how_it_works_contractors'
+= render 'home/sign_up', black: false
+= render 'home/why_join_kluje'
+= render 'home/sign_up', black: true
+= render 'home/mobile_apps'
+= render 'layouts/header_transition'
+= javascript_include_tag 'slider'

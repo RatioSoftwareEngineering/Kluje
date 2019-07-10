@@ -1,0 +1,13 @@
+.container
+  .row.margin-top-40.margin-bottom-40
+    .col-xs-12.col-md-6.col-md-offset-3
+      %h2 Resend confirmation instructions
+      = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+        = devise_error_messages!
+        .form-group
+          = f.label :email
+          %br/
+          = f.email_field :email, class: 'form-control', autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email || params[:email])
+        .actions
+          = f.submit "Resend confirmation instructions", class: 'btn btn-success'
+      = render "devise/shared/links"

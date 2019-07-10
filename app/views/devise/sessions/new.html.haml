@@ -1,0 +1,7 @@
+- content_for(:title, _('Sign in to Kluje'))
+.container.margin-top-20.margin-bottom-100
+  .row
+    .col-md-8.col-md-offset-2
+      = render 'layouts/flash_messages'
+      %h4=_('Log in to Kluje.com')
+      = render 'devise/sessions/form'

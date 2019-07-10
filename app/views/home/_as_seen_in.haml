@@ -1,0 +1,14 @@
+- media = { yahoo_finance: 'http://sg.finance.yahoo.com/news/botched-bathroom-renovation-led-kluje-010008692.html',
+            sg_business_review: 'http://sbr.com.sg/telecom-internet/exclusive/how-horrible-renovation-experience-inspired-kluje-build-home-renovation-e',
+            computerworld_sg: 'http://www.computerworld.com.sg/resource/industries/talent-unleashed-2014-shortlists-singapore-candidates-for-the-first-time-ever/' }
+
+.white-noise-bg.padding-top-50.padding-bottom-50
+  .container.as-seen-in.text-center.padding-top-30
+    .row
+      %h2.upcase.orange-light=_('As seen in')
+    .row
+      %h3.dark-grey= _('Kluje as featured in the Media')
+    .row.padding-boxttom-50.padding-top-20
+      - media.each do |service, url|
+        = link_to url, target: '_blank'  do
+          = image_tag "logos/#{service}.png"

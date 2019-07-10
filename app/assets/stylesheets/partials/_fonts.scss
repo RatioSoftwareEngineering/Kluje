@@ -1,0 +1,54 @@
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,400italic,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Domine:400,700);*/
+
+
+$font-default: $font-family-sans-serif;
+$font-menu: $font-family-sans-serif;
+$font-thin: $font-family-sans-serif;
+$font-thick: "Roboto Black", "Roboto", $font-family-sans-serif;
+$font-light: "Helvetica Light", "Helvetica Neue Light", "HelveticaNeue-Light", $font-family-sans-serif;
+$font-regular: "Helvetica Neue Regular", $font-family-sans-serif;
+
+$font-awesome: FontAwesome;
+
+.menu {
+    font-family: $font-menu;
+    font-weight: 300;
+}
+
+.light {
+    font-family: $font-light;
+    font-weight: 200;
+}
+
+.thin {
+    font-family: $font-thin;
+    font-weight: 200;
+}
+
+.regular {
+    font-family: $font-regular;
+    font-weight: 200;
+}
+
+.thick {
+    font-family: $font-thick;
+    font-weight: 600;
+}
+
+.heavy {
+    font-weight: 700;
+}
+
+.upcase {
+    text-transform: uppercase;
+}
+
+
+.subscript {
+    font-size: 13px;
+}
+
+.bigger {
+    font-size: 16px;
+}

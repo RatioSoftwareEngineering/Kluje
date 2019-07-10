@@ -1,0 +1,157 @@
+- content_for :extra_head_tags do
+  = javascript_include_tag 'commercial'
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'commercial/date'
+%h2.text-left=_('Verification Form')
+.row
+  = form_for current_account.contractor, url: verification_request_contractors_path(locale: current_locale_country), method: :put, role: :form, class: 'frm-cmp-detail', id: 'frmContractor' do |f|
+    .form-group
+      = f.hidden_field(:verification_request, :value => 1)
+    .margin-bottom-15.clearfix
+      .col-md-12.margin-bottom-15
+        %h3= _('Verify your business with us and win more jobs.')
+        %p
+          %b=_('Why should you get verified?')
+        %p=_("The reason is quite simple: out customers generally choose a verified and rated kluje.com contractor over someone who isn't. Wouldn't you?")
+    .margin-bottom-15.clearfix
+      .col-md-12.margin-bottom-15
+        %h3= _('Company Details')
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Company Name:')
+          %span.require= '*'
+          = f.text_field :company_name ,:disabled=>'disabled',class: 'form-control'
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Company Registration Expiry Date:')
+          %span.require= '*'
+          .input-group.date
+            = f.text_field :company_red, class: 'form-control date', data: { provide: 'datepicker' }
+            %span.input-group-addon
+              %i.glyphicon.glyphicon-th
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Company Registration Number:')
+          %span.require= '*'
+          = f.text_field :company_rn ,class: 'form-control'
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Date of Incorporation:')
+          %span.require= '*'
+          .input-group.date
+            = f.text_field :date_incor, class: 'form-control date', data: { provide: 'datepicker' }
+            %span.input-group-addon
+              %i.glyphicon.glyphicon-th
+      .col-md-12.margin-bottom-15
+        .form-group
+          - if @contractor.company_rd.present? && @contractor.company_rd.file.present? && @contractor.company_rd.file.respond_to?(:url, true)
+            = f.label _("Current Company Registration Doc  :")
+            = link_to @contractor.company_rd.file.filename, @contractor.company_rd.file.url
+            %p
+          = f.label _('Upload Company Registration Doc  :')
+          %span.require= '*'
+          .clear.clearfix
+            = f.file_field :company_rd, class: 'image hidden-file'
+    .clearfix.margin-bottom-15
+      .col-md-12.margin-bottom-15
+        %h3= _('Company Address')
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Company street no:')
+          %span.require= '*'
+          = f.text_field :company_street_no, class: 'form-control'
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Company street name:')
+          = f.text_field :company_street_name, class: 'form-control'
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Company unit no:')
+          = f.text_field :company_unit_no, class: 'form-control'
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Company building name:')
+          = f.text_field :company_building_name, class: 'form-control'
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Company postal code:')
+          = f.text_field :company_postal_code, class: 'form-control'
+    .clearfix.margin-bottom-15
+      .col-md-12.margin-bottom-15
+        %h3= _('Contact Details')
+      = f.fields_for :account do |fa|
+        .col-md-6.margin-bottom-15
+          .form-group
+            = fa.label _('First Name:')
+            %span.require= '*'
+            = fa.text_field :first_name, class: 'form-control', value: current_account.first_name, required: true,data:{msg:{required: "Please enter the first name!"}}
+        .col-md-6.margin-bottom-15
+          .form-group
+            = fa.label _('Last Name:')
+            %span.require= '*'
+            = fa.text_field :last_name, class: 'form-control', value: current_account.last_name,required: true,data:{msg:{required: "Please enter the last name!"}}
+        .col-md-6.margin-bottom-15
+          .form-group
+            = fa.label _('Email:')
+            = fa.email_field :email,:disabled=>'disabled', value: current_account.email,class: 'form-control', disabled: true
+        .col-md-6.margin-bottom-15
+          .form-group
+            = fa.label _('Mobile No:'), data: {msg:{required: "Please enter mobile number!"}}
+            = fa.text_field :mobile_number, class: 'form-control', value: current_account.mobile_number, required: true,disabled: true
+        .col-md-6.margin-bottom-15
+          .form-group
+            = fa.label _('Country:'), data: { msg: {required: "Please enter mobile number!"} }
+          = fa.text_field :country, class: 'form-control', value: current_account.country.name, required: true, disabled: true
+    .clearfix.margin-bottom-15
+      .col-md-12.margin-bottom-15
+        %h3.margin-bottom-5= _('Building Associations / Authorities You Are Registered With')
+        %label.w-300=_('Example MBMA Malaysia, BCA Singapore, HKCA Hong Kong, TCA Thailand or VACC Vietnam ')
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Association/Authority Name')
+          %span.require= '*'
+          = f.text_field :association_name, class: 'form-control'
+      .col-md-6.margin-bottom-15
+        .form-group
+          = f.label _('Membership Number')
+          %span.require= '*'
+          = f.text_field :membership_no, class: 'form-control'
+    .clearfix.margin-bottom-15
+      .col-md-12.margin-bottom-15
+        %h3.margin-bottom-5= _('Completed and Current Projects ')
+        %label.w-300=_('Please submit your Company brochure plus a separate list of your completed and current projects which should include the following information')
+        %label.w-300=_('a) Title of Project')
+        %label.w-300=_('b) Commencement and Completion Date')
+        %label.w-300=_('c) Name of Owner and Consultant')
+        %label.w-300=_('d) Location')
+        %label.w-300=_('e) Contract Value')
+      .col-md-6.margin-bottom-15
+        .form-group
+          - if @contractor.company_brochures.first.id.present?
+            = f.label _("Current Company Brochure")
+            %br
+            - @contractor.company_brochures.each do |brochure|
+              = link_to brochure.file.file.filename, brochure.file.url
+          %p
+          = f.label _('Upload Company Brochure')
+          .clear.clearfix
+            = f.fields_for :company_brochures do |cb_form|
+              = cb_form.file_field :file
+      .col-md-6.margin-bottom-15
+        .form-group
+          - if @contractor.company_projects.first.id.present?
+            = f.label _("Current Company Project")
+            %br
+            - @contractor.company_projects.each do |project|
+              = link_to project.file.file.filename, project.file.url
+          %p
+          = f.label _('Upload Current and Completed Projects ')
+          .clear.clearfix
+            = f.fields_for :company_projects do |cp_form|
+              = cp_form.file_field :file, class: 'image hidden-file'
+    .clearfix.margin-bottom-15
+      .col-md-12.margin-bottom-15
+        %h3.margin-bottom-5= _('Declaration')
+        %p=_('By clicking the button, I declare that the facts contained in this application form supporting documents are true to the best of my knowledge. I understand that false declaration or providing false information may result in penalties including delisting of my firm.I authorise Kluje Pte Ltd to conduct any enquiry on the particulars and neither Kluje Pte Ltd nor its officers shall be held liable for any los, injury, or damages howsoever caused by Kluje Pre LTD processing of a decision on this application. I accept the Terms and Conditions of Registration.  ')
+    .clear.clearfix.text-left.col-md-12
+      = submit_tag _('Submit Application'), class: 'btn btn-danger btn-lg', disable_with: _('Submitting'), id: 'btnSubmit'

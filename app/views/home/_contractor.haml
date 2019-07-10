@@ -1,0 +1,21 @@
+.business-card
+  .body
+    - if contractor.company_logo.present?
+      .logo
+        = link_to contractor.profile_url do
+          = image_tag contractor.company_logo.url
+    - else
+      .logo
+        = link_to contractor.profile_url do
+          = image_tag 'logos/default_contractor.png'
+  .footer
+    %h3.com-name.h-3= contractor.company_name
+    .pull-left.com-rate
+      = rating(contractor.average_rating)
+  .info
+    .description
+      %strong= _('Services we offer:')
+      %br
+      %p= contractor.skills.map{|s| _(s.name.gsub('Contractor','').strip)}.to_sentence.truncate(250)
+    .button
+      = link_to 'View more', contractor.profile_url, class: 'more upcase'

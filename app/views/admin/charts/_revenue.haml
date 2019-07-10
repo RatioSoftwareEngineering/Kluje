@@ -1,0 +1,18 @@
+:javascript
+  $(document).ready(function(){
+    $.ajax({
+      url: '/en/api/v1/charts/revenue?country_id=' + '#{country.id}',
+      crossDomain: true,
+      success: function(data){
+        drawLineChart(
+          "#{country.currency_code.upcase}_revenue",
+          data,
+          {
+            chartArea: { width: '65%' },
+            title: 'Revenue',
+            width: window.innerWidth * 0.8
+          }
+        )
+      }
+    });
+  });

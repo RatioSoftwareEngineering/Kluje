@@ -1,0 +1,43 @@
+- content_for :extra_footer_tags do
+  =# javascript_include_tag 'validations/sms_confirmation_validation'
+  = javascript_include_tag 'intlTelInput.min'
+  = javascript_include_tag 'mobile_number'
+  = stylesheet_link_tag 'intlTelInput'
+
+.white-bg
+  .container.padding-top-30.padding-bottom-50
+    = render 'layouts/flash_messages'
+    .row
+      .col-md-12.text-center
+        %h1=('Please Verify Your Mobile Number')
+        = image_tag 'verify_mobile.png', width: '120px'
+        %span
+        %h4
+          =('We need you to verify your contact number,')
+          %br
+        %h3=('Please provide your contact mobile number')
+        .row
+          = form_tag api_phone_verifications_path, method: :post,id: "frmSmsConfirmation", remote: true, role: :form do
+            .col-sm-4.col-sm-offset-4
+              .form-group
+                .col-sm-7.padding-0
+                  = hidden_field_tag :account_id, current_account.id
+                  = hidden_field_tag :mobile_number, '', id: :mobile_number
+                  = text_field_tag :mobile_number_input, '', id: :mobile_number_input, class: 'form-control', required: true, data: { country: current_account.country.cca2 }
+                .col-sm-5
+                  = submit_tag :SEND, id: :send_verification_code, class: 'btn btn-primary btn-middle'
+        .row
+          %h3=('Please enter the code sent to your mobile')
+        .row
+          = form_tag verify_number_api_phone_verifications_path, method: :put, id: 'frmSmsCode', role: :form do
+            .col-sm-4.col-sm-offset-4
+              .form-group
+                .col-md-7.padding-0
+                  = hidden_field_tag :account_id, current_account.id
+                  = hidden_field_tag :mobile_number, '', id: :mobile_number2
+                  = text_field_tag :verification_code, '', class: 'form-control',placeholder: "5 Digit Number", required: true, maxlength: '5'
+                .col-md-5
+                  = submit_tag :VERIFY, class: 'btn btn-primary btn-middle number-reliant', disabled: true
+        .row
+          %h6= _('If you experience any problems, please email us at:')
+          %a{href: "mailto:support@kluje.com", target: "_top"}support@kluje.com

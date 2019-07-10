@@ -1,0 +1,48 @@
+- price = current_country.commercial_subscription_price
+- cost = current_country.price_format % price
+
+- content_for :content do
+  .container.position-relactive
+    .row
+      = render 'menu'
+
+      .col-md-9.margin-top-10.margin-bottom-30
+        = render 'layouts/flash_messages'
+        .main
+          .content
+            %h2.margin-bottom-25=_('Subscription')
+            %section
+              %h4
+                - if @contractor.commercial_subscribe?
+                  - if Subscription.payment_active?(@contractor)
+                    = _("Now you're subscribing")
+                  - else
+                    - expiry_date = @contractor.commercial_subscription_expiry_date.strftime('%d-%b-%Y')
+                    = _("You have been unsubscribed. You can enjoy subscription until ")
+                    %b
+                      =_("#{expiry_date}.")
+
+                .col-md-10.plan.premium
+                  .plan-name
+                    %h2= _('Subscription')
+                  .plan-price.padding-5
+                    = _('%{cost} per Month') % { cost: cost }
+                  .plan-benefits.padding-10
+                    = _('Benefits:')
+                    %ul.benefits-list{:align=>'left'}
+                      %li= _('No commission')
+                      %li= _('No bid fee for jobs')
+                      %li= _('Unlimited number of bids (Bid as many jobs as you want)')
+                      %li= _('Unlimited number of skills')
+                      %li= _('Unlimited number of locations')
+                      %li= _('Listing contact information on profile page')
+                    .price-btn.margin-top-10
+                      - unless @contractor.commercial_subscribe?
+                        - if current_country.subscription_flag
+                          = link_to _('Subscribe now') % { cost: cost }, '#subscribe_modal', class: 'btn btn-warning top-up-btn', data: { toggle: 'modal', amount: price, currency_code: current_country.currency_code.upcase, item_name: "CommercialSubscription", custom: "Subscription,#{current_account.contractor.id},#{ price }" }
+                          = render 'commercial/subscriptions/subscribe_modal', fields: fields
+                        - else
+                          %h3=_('Sorry, currently membership is full. You can request to be put in the waiting list by selecting the button below. You will then be added when an available slot opens. ')
+                          %br
+                          = link_to _('Put me on a waiting list'), commercial_waiting_list_path,class: 'btn btn-warning top-up-btn'
+

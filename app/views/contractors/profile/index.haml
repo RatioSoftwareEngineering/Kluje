@@ -1,0 +1,26 @@
+- content_for(:title, "#{@contractor.company_name} | Kluje")
+- @contractor.company_logo.present? && content_for(:image, @contractor.company_logo.url)
+- content_for(:description, "#{@contractor.company_name} profile at Kluje. #{@contractor.company_description.try(:strip)} Services provided: #{@contractor.skills.pluck(:name).map{|s| s.gsub(/ Contractor/, '')}.to_sentence}.")
+- content_for(:keywords, "#{@contractor.company_name}, contractor in #{@contractor.account.country.name}, contractor, worker, #{@contractor.skills.map(&:name).join(', ')}")
+
+- content_for :extra_footer_tags do
+  = javascript_include_tag 'profile'
+
+- edit = params[:edit] == 'true' && current_account && @contractor == current_account.contractor
+
+.container.profile
+  .row
+    .col-xs-12
+      = render 'contractors/profile/header', edit: edit
+    .col-md-5.col-xs-12.pull-left.margin-bottom-10
+      = render 'contractors/profile/description', edit: edit
+      = render 'contractors/profile/skills', edit: edit
+
+    - if @contractor.photos.present? || edit
+      .col-md-7.col-xs-12.pull-right
+        = render 'contractors/profile/photos', edit: edit
+      .col-md-12.col-xs-12
+        = render 'contractors/profile/ratings', edit: edit, items: 3
+    - else
+      .col-md-7.col-xs-12.pull-right
+        = render 'contractors/profile/ratings', edit: edit, items: 1

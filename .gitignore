@@ -2,3 +2,5 @@
 tmp
 log
 dump.rdb
+.ruby-gemset
+.ruby-version

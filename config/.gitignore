@@ -4,3 +4,4 @@ newrelic.yml
 redis.yml
 secrets.yml
 twilio.yml
+resque_schedule.yml

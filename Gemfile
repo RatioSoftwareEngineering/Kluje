@@ -93,10 +93,10 @@ group :development, :test do
   gem 'letter_opener'
   gem 'ruby_parser'
   gem 'rails-erd'
-  # gem 'pry'
-  # gem 'pry-rails'
-  # gem 'pry-doc'
-  # gem 'pry-byebug'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
   gem 'database_cleaner'
 
   # Use Capistrano for deployment

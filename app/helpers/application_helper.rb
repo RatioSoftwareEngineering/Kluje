@@ -75,7 +75,7 @@ module ApplicationHelper
   end
 
   def current_country
-    @city.try(:country) || current_account.try(:country) || Country.find(retrieve_country_id)
+    @current_country ||= @city.try(:country) || current_account.try(:country) || Country.find(retrieve_country_id)
   end
 
   def location_country

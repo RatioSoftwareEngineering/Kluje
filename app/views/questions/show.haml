@@ -95,6 +95,13 @@
             - @blogs.each do |blog|
               = render 'blog/post_preview', post: blog
               %hr.grey.margin-0
+          .body.padding-top-0
+            .row
+              .meta.col-xs-12
+                .margin-top-10.read-more.text-center
+                  %a.btn.btn-success.btn-xs{href: category_blog_path(category: @question.category.slug_url), rel: "canonical"}
+                    Read More Blogs
+
 
 = content_for :extra_footer_tags do
   :javascript

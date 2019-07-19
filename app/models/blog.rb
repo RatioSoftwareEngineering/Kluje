@@ -45,6 +45,6 @@ class Blog < Post
   validates :slug_url, uniqueness: { case_sensitive: false, message: '%{value} already exit.' }
 
   def blog_url current_locale, current_locale_country
-    self.visible_all_countries? ? Rails.application.routes.url_helpers.post_blog_path(locale: current_locale, post: self.slug_url) : Rails.application.routes.url_helpers.post_blog_path(locale: current_locale_country, post: self.slug_url)
+    visible_all_countries? ? Rails.application.routes.url_helpers.post_blog_path(locale: current_locale, post: slug_url) : Rails.application.routes.url_helpers.post_blog_path(locale: current_locale_country, post: slug_url)
   end
 end

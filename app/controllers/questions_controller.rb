@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  BLOGS_PREVIEW_COUNT = 5
   skip_before_action :verify_authenticity_token, if: :js_request?
   before_action :ensure_signed_in, only: [:me]
   before_action :require_country_code, only: [:index, :show, :me, :filter, :new]
@@ -82,6 +83,7 @@ class QuestionsController < ApplicationController
     @blogs = []
     if @question.category
       @blogs = Blog.published.latest.category(@question.category)
+      @blogs = @blogs.first(BLOGS_PREVIEW_COUNT) if defined? BLOGS_PREVIEW_COUNT
     end
   end
 

@@ -120,6 +120,9 @@ group :development do
   gem 'bundler-audit'
   gem 'rubocop', '0.35.1', require: false
   gem 'meta_request'
+  gem 'rbnacl'
+  gem 'bcrypt_pbkdf'
+  gem 'rbnacl-libsodium'
 end
 
 group :test do

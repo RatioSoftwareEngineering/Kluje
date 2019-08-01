@@ -75,6 +75,7 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
+    bcrypt_pbkdf (1.0.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-datepicker-rails (1.4.0)
@@ -397,6 +398,10 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.2)
+    rbnacl (3.4.0)
+      ffi
+    rbnacl-libsodium (1.0.15.1)
+      rbnacl (>= 3.0.1)
     rdoc (4.2.0)
       json (~> 1.4)
     redis (3.3.2)
@@ -536,6 +541,7 @@ DEPENDENCIES
   annotate
   aws-sdk (< 2)
   bcrypt
+  bcrypt_pbkdf
   bootstrap-datepicker-rails
   bootstrap-sass
   bootstrap-timepicker-rails
@@ -601,6 +607,8 @@ DEPENDENCIES
   rails (= 4.2.7.1)
   rails-erd
   ransack
+  rbnacl
+  rbnacl-libsodium
   resque
   resque-scheduler
   resque-web

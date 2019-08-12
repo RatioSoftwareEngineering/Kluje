@@ -1,0 +1,6 @@
+archive_job:
+  cron: "*/50 * * * *"
+  class: "DailyArchiveJob"
+  queue: high
+  args: 
+  description: Run to archived the job

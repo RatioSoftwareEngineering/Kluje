@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.8.1'
 
-set :repo_url, 'git@github.com:KlujePteLtd/kluje.git'
+set :repo_url, 'git@github.com:RatioSoftwareEngineering/Kluje.git'
 set :user, 'ubuntu'
 
 set :rvm, File.join('/home', fetch(:user), '.rvm', 'bin', 'rvm')
@@ -14,9 +14,7 @@ set :rvm_type, :system
 set :keep_releases, 5
 
 set :ssh_options, {
-                   keys: [File.join(ENV['HOME'],'.ssh','kluje','aws','kluje-staging.pem'),
-                          File.join(ENV['HOME'],'.ssh','kluje','aws','kluje-production.pem'),
-                          File.join(ENV['HOME'],'.ssh','id_rsa')],
+                   keys: [File.join(ENV['HOME'],'.ssh','id_rsa')],
                    forward_agent: true
                    }
 

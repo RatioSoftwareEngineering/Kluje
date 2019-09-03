@@ -12,7 +12,8 @@ Dir["#{Padrino.root}/app/jobs/*.rb"].each { |file| require file }
 
 # The schedule doesn't need to be stored in a YAML, it just needs to
 # be a hash.  YAML is usually the easiest.
-Resque.schedule = YAML.load_file("#{Padrino.root}/config/resque_schedule.yml")
+schedule_hash = YAML.load_file("#{Padrino.root}/config/resque_schedule.yml")
+Resque.schedule = schedule_hash || {}
 
 Resque.after_fork do |_job|
   Resque.redis.client.reconnect

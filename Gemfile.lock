@@ -350,7 +350,7 @@ GEM
       voight_kampff (~> 0.2)
     rabl (0.11.6)
       activesupport (>= 2.3.14)
-    rack (1.6.5)
+    rack (1.6.12)
     rack-contrib (1.8.0)
       rack (~> 1.4)
     rack-mini-profiler (0.10.1)
